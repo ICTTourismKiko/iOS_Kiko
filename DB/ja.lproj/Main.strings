@@ -1,0 +1,57 @@
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "3Wv-VD-q35"; */
+"3Wv-VD-q35.normalTitle" = "保存";
+
+/* Class = "UIButton"; normalTitle = "戻る"; ObjectID = "47Q-fH-SNy"; */
+"47Q-fH-SNy.normalTitle" = "戻る";
+
+/* Class = "UIButton"; normalTitle = "戻る"; ObjectID = "DZo-IH-TEk"; */
+"DZo-IH-TEk.normalTitle" = "戻る";
+
+/* Class = "UILabel"; text = "text"; ObjectID = "F3t-Tg-mhU"; */
+"F3t-Tg-mhU.text" = "text";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ghk-AS-Kiu"; */
+"Ghk-AS-Kiu.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "List"; ObjectID = "J2S-Hj-2t0"; */
+"J2S-Hj-2t0.normalTitle" = "List";
+
+/* Class = "UIButton"; normalTitle = "add"; ObjectID = "Rbf-L2-fj6"; */
+"Rbf-L2-fj6.normalTitle" = "add";
+
+/* Class = "UILabel"; text = "photoPath"; ObjectID = "S4z-72-yrf"; */
+"S4z-72-yrf.text" = "photoPath";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "d0U-2C-hiy"; */
+"d0U-2C-hiy.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "カメラ起動"; ObjectID = "f3p-4P-TrM"; */
+"f3p-4P-TrM.normalTitle" = "カメラ起動";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hEW-Ud-E2U"; */
+"hEW-Ud-E2U.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "inc-ga-RUp"; */
+"inc-ga-RUp.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "kbj-ya-Oe0"; */
+"kbj-ya-Oe0.normalTitle" = "Map";
+
+/* Class = "UILabel"; text = "positionX"; ObjectID = "pKO-sl-JLy"; */
+"pKO-sl-JLy.text" = "positionX";
+
+/* Class = "UILabel"; text = "title"; ObjectID = "pbh-MT-EpJ"; */
+"pbh-MT-EpJ.text" = "title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vre-YN-yCd"; */
+"vre-YN-yCd.text" = "Label";
+
+/* Class = "UILabel"; text = "info"; ObjectID = "xjw-bg-sLX"; */
+"xjw-bg-sLX.text" = "info";
+
+/* Class = "UILabel"; text = "categoryID"; ObjectID = "yNL-Ie-0DP"; */
+"yNL-Ie-0DP.text" = "categoryID";
+
+/* Class = "UILabel"; text = "positionY"; ObjectID = "yk9-gj-dCL"; */
+"yk9-gj-dCL.text" = "positionY";
