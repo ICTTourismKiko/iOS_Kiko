@@ -11,11 +11,10 @@ import MapKit
 
 class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     
-    @IBOutlet weak var CardTop: UILabel!
-    @IBOutlet weak var CardLabel: UILabel!
     @IBOutlet weak var CardMap: MKMapView!
     @IBOutlet weak var camera2View: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
+    @IBOutlet weak var ChangeTextButton: UIButton!
     
     var myLocationManager: CLLocationManager!
     
@@ -33,13 +32,15 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var PinArray: Array<Pin> = []
     var PinAddress = 0
     
+    var CardSyousai = UILabel()
+    var CardPoemu = UILabel()
+    var CardTopSyousai = UILabel()
+    var CardTopPoemu = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //テストのため、フラグを全てたてる
-//        for(var i = 0; i < DB().cardListSize(); i++){
-//              DB().setFlag(i+1, flagStatement: true)
-//        }
+        ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
         let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
@@ -49,13 +50,32 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         let pic_id = appDelegate.P_ID
         
         
-        CardLabel.text = DB().getCard(pic_id!).cardText?.text
+        //ラベルの設置
+        CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+        CardPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 120)
+        CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50,self.view.frame.height-160,220,20)
+        CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 20)
+        CardTopSyousai.textAlignment = NSTextAlignment.Center
+        CardTopPoemu.textAlignment = NSTextAlignment.Center
+        CardTopSyousai.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
+        CardTopPoemu.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
+        CardPoemu.alpha = 0.0
+        CardTopPoemu.alpha = 0.0
+        self.view.addSubview(CardSyousai)
+        self.view.addSubview(CardPoemu)
+        self.view.addSubview(CardTopSyousai)
+        self.view.addSubview(CardTopPoemu)
+        
+        CardSyousai.text = DB().getCard(pic_id!).cardText?.text
+        
         //カードの画像を表示
         camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id!).photo?.photoData)!)
         camera2View.layer.cornerRadius = 30
         camera2View.layer.masksToBounds = true
-
-        CardLabel.numberOfLines = 30
+        
+        CardSyousai.numberOfLines = 30
+        CardPoemu.numberOfLines = 30
+        
         self.CardMap.delegate = self
         
         var region:MKCoordinateRegion = self.CardMap.region
@@ -111,8 +131,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[PinArray.count-1].imageName = "picup.png"
         }
         
-        CardTop.text = "詳細情報"
-        CardLabel.text = PinArray[PinArray.count-1].title! + "\n" + PinArray[PinArray.count-1].info
+        CardTopSyousai.text = "詳細情報"
+        CardTopPoemu.text = "スポット紹介"
+        CardSyousai.text = PinArray[PinArray.count-1].title! + "\n" + PinArray[PinArray.count-1].info
+        CardPoemu.text = PinArray[PinArray.count-1].text
         
         CardMap.addAnnotations(PinArray)
     }
@@ -134,9 +156,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         self.CardLabelShowText = 0
         for(PinAddress = 0; PinAddress < PinArray.count; PinAddress++){
             if(PinArray[PinAddress].hash == view.annotation!.hash){
-                CardLabel.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
-                CardTop.text = "詳細情報"
+                CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
                 camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)
+                CardPoemu.text = PinArray[PinAddress].text
                 break;
             }
         }
@@ -169,43 +191,47 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     
     //カード(カード上の透明なボタン)をタップしたとき
     @IBAction func CardLabelTapped(sender: AnyObject) {
-        var ShowLabelNumber = 0
-        if(UserAnnotationTap == 0){   //アノテーションを一度もタップしていない
-            ShowLabelNumber = PinArray.count-1
-        }else{
-            ShowLabelNumber = PinAddress
-        }
         
-        if(CardLabelShowText == 0){
+        if(CardLabelShowText == 0){     //詳細情報を表示中
             CardLabelShowText = 1
-            UIView.animateWithDuration(0.7) { () -> Void in
-                self.CardLabel.transform = CGAffineTransformScale(self.CardLabel.transform, 1.0, -1.0)
-                self.CardLabel.alpha = 0.0
+            UIView.animateWithDuration(0.4) { () -> Void in
+                //詳細情報を画面外へ
+                self.CardSyousai.frame = CGRectMake(-220, self.view.frame.height-140, 220, 120)
+                self.CardSyousai.alpha = 0.0
+                self.CardTopSyousai.frame = CGRectMake(-220, self.view.frame.height-160, 220, 20)
+                self.CardTopSyousai.alpha = 0.0
+                
+                //スポット紹介を表示
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardPoemu.alpha = 1.0
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                self.CardTopPoemu.alpha = 1.0
+                
+                self.ChangeTextButton.setImage(UIImage(named: "back.png"), forState: .Normal)
             }
-            
-            UIView.animateWithDuration(0.7) { () -> Void in
-                self.CardLabel.alpha = 1.0
-                self.CardLabel.transform = CGAffineTransformScale(self.CardLabel.transform, 1.0, -1.0)
-                self.CardTop.text = "スポット紹介"
-                self.CardLabel.text = self.PinArray[ShowLabelNumber].title! + "\n" + self.PinArray[ShowLabelNumber].text
-            }
-        }else{
+        }else{      //スポット紹介を表示中
             
             CardLabelShowText = 0
-            UIView.animateWithDuration(0.7) { () -> Void in
-                self.CardLabel.transform = CGAffineTransformScale(self.CardLabel.transform, 1.0, -1.0)
-                self.CardLabel.alpha = 0.0
+            UIView.animateWithDuration(0.4) { () -> Void in
+                //スポット紹介を画面外へ
+                self.CardPoemu.alpha = 0.0
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width, self.view.frame.height-140, 220, 120)
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width+30, self.view.frame.height-160, 220, 20)
+                self.CardTopPoemu.alpha = 0.0
+                
+                //詳細情報を表示
+                self.CardSyousai.alpha = 1.0
+                self.CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardTopSyousai.alpha = 1.0
+                self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                
+                self.ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
+                
             }
-            
-            UIView.animateWithDuration(0.7) { () -> Void in
-                self.CardLabel.alpha = 1.0
-                self.CardLabel.transform = CGAffineTransformScale(self.CardLabel.transform, 1.0, -1.0)
-                self.CardTop.text = "詳細情報"
-                self.CardLabel.text =  self.PinArray[ShowLabelNumber].title! + "\n" + self.PinArray[ShowLabelNumber].info
-            }
-            
         }
     }
     
-    
+    @IBAction func backbutton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

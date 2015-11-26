@@ -104,6 +104,14 @@ class DB {
         return card
     }
     
+    func update(id: Int, update: Bool){
+        let card = getCard(id)
+        let realm = try! Realm(path: getRealmPath())
+        try! realm.write{
+            card.updated = update
+        }
+    }
+    
     /* ---------------------------
     絞り込み検索で使用するメソッド
     --------------------------- */
@@ -170,6 +178,8 @@ class DB {
         photo.display = true
         
         addRecord(photo)
+        
+        update(id, update: true)
     }
     
     //photoIDに対応する写真を削除する
@@ -182,6 +192,9 @@ class DB {
         //削除する写真がカードにひも付けられている場合
         if realm.objects(CardData).filter("ID = %@", photo.ID)[0].photo?.photoID == photo.photoID {
             linkToCardData(getDefaultPhoto(photo.ID))
+        }
+        if getAllPhoto(photo.ID).count <= 1 {
+            update(photo.ID, update: false)
         }
         
         try! realm.write {

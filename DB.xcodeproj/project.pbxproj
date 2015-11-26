@@ -13,10 +13,19 @@
 		37583B201BF6C2A700AC331D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1C1BF6C2A700AC331D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37583B261BF6CAC700AC331D /* flag_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 37583B251BF6CAC700AC331D /* flag_on.png */; };
 		377328211BE46D9C00E929F9 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 377328201BE46D9C00E929F9 /* flag.png */; };
+		378BDDEC1C05A1B7000DD5BB /* album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEB1C05A1B7000DD5BB /* album.swift */; };
+		378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */; };
+		378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */; };
+		378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */; };
+		378BDDF51C05A406000DD5BB /* PagingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */; };
+		378BDDF71C05A57A000DD5BB /* haikei.png in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDF61C05A57A000DD5BB /* haikei.png */; };
+		378BDDF91C05A643000DD5BB /* b300.png in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDF81C05A643000DD5BB /* b300.png */; };
 		379112EE1BD817D80024E678 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379112ED1BD817D80024E678 /* Map.swift */; };
 		379112F01BD818E90024E678 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112EF1BD818E90024E678 /* MapKit.framework */; };
 		379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112F11BD818F50024E678 /* CoreLocation.framework */; };
 		37CEB24F1BF3BCCD000FF28B /* picup.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEB24E1BF3BCCD000FF28B /* picup.png */; };
+		37FBD82E1C06B247008AAD03 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82C1C06B247008AAD03 /* back.png */; };
+		37FBD82F1C06B247008AAD03 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82D1C06B247008AAD03 /* next.png */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F4D42AE1BF0ADC90024984F /* IMG_0059.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4D42AD1BF0ADC90024984F /* IMG_0059.jpg */; };
 		8F4D42B81BF259100024984F /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4D42B71BF259100024984F /* map2.png */; };
@@ -78,10 +87,19 @@
 		37583B1C1BF6C2A700AC331D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		37583B251BF6CAC700AC331D /* flag_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_on.png; sourceTree = "<group>"; };
 		377328201BE46D9C00E929F9 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		378BDDEB1C05A1B7000DD5BB /* album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = album.swift; sourceTree = "<group>"; };
+		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
+		378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionView.swift; sourceTree = "<group>"; };
+		378BDDF61C05A57A000DD5BB /* haikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei.png; sourceTree = "<group>"; };
+		378BDDF81C05A643000DD5BB /* b300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b300.png; sourceTree = "<group>"; };
 		379112ED1BD817D80024E678 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		379112EF1BD818E90024E678 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		379112F11BD818F50024E678 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		37CEB24E1BF3BCCD000FF28B /* picup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picup.png; sourceTree = "<group>"; };
+		37FBD82C1C06B247008AAD03 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		37FBD82D1C06B247008AAD03 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -143,9 +161,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378BDDED1C05A3C3000DD5BB /* PagingCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */,
+				378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */,
+				378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */,
+				378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */,
+			);
+			name = PagingCollectionView;
+			sourceTree = "<group>";
+		};
 		DC23BFFF1BD7826B000B2465 = {
 			isa = PBXGroup;
 			children = (
+				378BDDED1C05A3C3000DD5BB /* PagingCollectionView */,
 				37583B1B1BF6C2A700AC331D /* Realm.framework */,
 				37583B1C1BF6C2A700AC331D /* RealmSwift.framework */,
 				DCE7BBE81BF6AA890012BCB9 /* cardData.realm */,
@@ -171,7 +201,11 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				37FBD82C1C06B247008AAD03 /* back.png */,
+				37FBD82D1C06B247008AAD03 /* next.png */,
 				9C66225F1BF488F1002E112B /* leaf.jpg */,
+				378BDDF81C05A643000DD5BB /* b300.png */,
+				378BDDF61C05A57A000DD5BB /* haikei.png */,
 				8F4D42B71BF259100024984F /* map2.png */,
 				8F4D42BB1BF25B650024984F /* camera1.png */,
 				9C66225B1BF1D9B1002E112B /* 5200574633_baefe45590_b.jpg */,
@@ -187,6 +221,7 @@
 				379112ED1BD817D80024E678 /* Map.swift */,
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				378BDDEB1C05A1B7000DD5BB /* album.swift */,
 				9CA1E0231C0432370083591E /* setCardList2.swift */,
 				9CACB5551BDE15970024707B /* setCardList.swift */,
 				9CACB5531BDE15760024707B /* cardData.swift */,
@@ -322,12 +357,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
 				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
+				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
+				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				37583B261BF6CAC700AC331D /* flag_on.png in Resources */,
 				377328211BE46D9C00E929F9 /* flag.png in Resources */,
 				8F4D42B81BF259100024984F /* map2.png in Resources */,
+				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
+				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
 				8F4D42AE1BF0ADC90024984F /* IMG_0059.jpg in Resources */,
 				8F4D42BC1BF25B650024984F /* camera1.png in Resources */,
 				DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */,
@@ -359,17 +399,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */,
 				9CACB5521BDE150E0024707B /* cardList.swift in Sources */,
 				9CA1E0241C0432370083591E /* setCardList2.swift in Sources */,
 				8F35236C1BDA141900983274 /* PhotoController.swift in Sources */,
+				378BDDEC1C05A1B7000DD5BB /* album.swift in Sources */,
 				379112EE1BD817D80024E678 /* Map.swift in Sources */,
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
 				DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */,
 				9CACB5541BDE15760024707B /* cardData.swift in Sources */,
 				9CACB5561BDE15970024707B /* setCardList.swift in Sources */,
+				378BDDF51C05A406000DD5BB /* PagingCollectionView.swift in Sources */,
 				DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */,
 				DC75B6691BD7B16D0025142E /* DB.swift in Sources */,
+				378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
