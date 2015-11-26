@@ -73,7 +73,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         return data
     }
     
-    //Stringを写真データに変換
+    //NSDataを写真データに変換
     func NSSImage(data:NSData) -> UIImage?{
         
         //NSDataの生成が成功していたら

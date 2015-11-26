@@ -19,7 +19,6 @@ UINavigationControllerDelegate{
     
     var cardID = 0
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,7 +41,9 @@ UINavigationControllerDelegate{
         self.iconImage.layer.masksToBounds = true
         
         cardID = card.id+1
-        
-}
-
+    }
+    @IBAction func select_photo(sender: AnyObject) {
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.cardID[appDelegate.picID] = cardID
+    }
 }

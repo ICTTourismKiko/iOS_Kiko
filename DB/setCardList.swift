@@ -19,15 +19,12 @@ UINavigationControllerDelegate{
     @IBOutlet weak var introText: UILabel!
     @IBOutlet weak var open_photo: UIButton!
     @IBOutlet weak var flag: UIButton!
-//    @IBOutlet weak var back: UIButton!
-    
     
     
     var flagSituation = false
-    
     var cardID = 0
-    
     let db = DB() //DBのインスタンス生成
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,17 +68,15 @@ UINavigationControllerDelegate{
     
     //写真を選択したときに、IDを渡す
     @IBAction func open_photo(sender: AnyObject) {
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.P_ID = cardID
     }
+    //mapボタン
     @IBAction func CellButtonTapped(sender: AnyObject) {
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.P_ID = cardID
     }
     
     /* フラグボタンを押した時の処理 */
     @IBAction func flagOnOff(sender: AnyObject) {
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.P_ID = cardID
         
         //フラグ登録してなかったら赤に、してたら元どおりに
@@ -93,9 +88,5 @@ UINavigationControllerDelegate{
             db.setFlag(appDelegate.P_ID!, flagStatement: false)
         }
     }
-//    @IBAction func back(sender: AnyObject) {
-//        print(cardID)
-//        DB().getDefaultPhoto(1)
-//    }
     
 }

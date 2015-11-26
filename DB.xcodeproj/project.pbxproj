@@ -31,6 +31,13 @@
 		8F4D42B81BF259100024984F /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4D42B71BF259100024984F /* map2.png */; };
 		8F4D42BA1BF25B360024984F /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4D42B91BF25B360024984F /* back1.png */; };
 		8F4D42BC1BF25B650024984F /* camera1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4D42BB1BF25B650024984F /* camera1.png */; };
+		8F71FCAB1C074BF000891228 /* SelectPhoto1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCAA1C074BF000891228 /* SelectPhoto1Controller.swift */; };
+		8F71FCAD1C074C0B00891228 /* SelectPhoto2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCAC1C074C0B00891228 /* SelectPhoto2Controller.swift */; };
+		8F71FCAF1C07961B00891228 /* noimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F71FCAE1C07961B00891228 /* noimage.jpg */; };
+		8F71FCB11C07962700891228 /* omote.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F71FCB01C07962700891228 /* omote.png */; };
+		8F71FCB31C079AAC00891228 /* noneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB21C079AAC00891228 /* noneViewController.swift */; };
+		8F71FCB51C07AAE700891228 /* CreatePicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB41C07AAE700891228 /* CreatePicController.swift */; };
+		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		9C66225C1BF1D9B1002E112B /* 5200574633_baefe45590_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C66225B1BF1D9B1002E112B /* 5200574633_baefe45590_b.jpg */; };
 		9C6622601BF488F1002E112B /* leaf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C66225F1BF488F1002E112B /* leaf.jpg */; };
 		9CA1E0221C0430840083591E /* cardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0211C0430840083591E /* cardList2.swift */; };
@@ -107,6 +114,13 @@
 		8F4D42B71BF259100024984F /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map2.png; sourceTree = "<group>"; };
 		8F4D42B91BF25B360024984F /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
 		8F4D42BB1BF25B650024984F /* camera1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera1.png; sourceTree = "<group>"; };
+		8F71FCAA1C074BF000891228 /* SelectPhoto1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhoto1Controller.swift; sourceTree = "<group>"; };
+		8F71FCAC1C074C0B00891228 /* SelectPhoto2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhoto2Controller.swift; sourceTree = "<group>"; };
+		8F71FCAE1C07961B00891228 /* noimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noimage.jpg; sourceTree = "<group>"; };
+		8F71FCB01C07962700891228 /* omote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omote.png; sourceTree = "<group>"; };
+		8F71FCB21C079AAC00891228 /* noneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noneViewController.swift; sourceTree = "<group>"; };
+		8F71FCB41C07AAE700891228 /* CreatePicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePicController.swift; sourceTree = "<group>"; };
+		8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintPreviewController.swift; sourceTree = "<group>"; };
 		9C66225B1BF1D9B1002E112B /* 5200574633_baefe45590_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5200574633_baefe45590_b.jpg; sourceTree = "<group>"; };
 		9C66225F1BF488F1002E112B /* leaf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leaf.jpg; sourceTree = "<group>"; };
 		9CA1E0211C0430840083591E /* cardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList2.swift; sourceTree = "<group>"; };
@@ -201,6 +215,8 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				8F71FCB01C07962700891228 /* omote.png */,
+				8F71FCAE1C07961B00891228 /* noimage.jpg */,
 				37FBD82C1C06B247008AAD03 /* back.png */,
 				37FBD82D1C06B247008AAD03 /* next.png */,
 				9C66225F1BF488F1002E112B /* leaf.jpg */,
@@ -220,8 +236,13 @@
 				DC75B6681BD7B16D0025142E /* DB.swift */,
 				379112ED1BD817D80024E678 /* Map.swift */,
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
-				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
 				378BDDEB1C05A1B7000DD5BB /* album.swift */,
+				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				8F71FCB41C07AAE700891228 /* CreatePicController.swift */,
+				8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */,
+				8F71FCB21C079AAC00891228 /* noneViewController.swift */,
+				8F71FCAA1C074BF000891228 /* SelectPhoto1Controller.swift */,
+				8F71FCAC1C074C0B00891228 /* SelectPhoto2Controller.swift */,
 				9CA1E0231C0432370083591E /* setCardList2.swift */,
 				9CACB5551BDE15970024707B /* setCardList.swift */,
 				9CACB5531BDE15760024707B /* cardData.swift */,
@@ -357,7 +378,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F71FCB11C07962700891228 /* omote.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
+				8F71FCAF1C07961B00891228 /* noimage.jpg in Resources */,
 				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
 				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
@@ -399,20 +422,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F71FCAD1C074C0B00891228 /* SelectPhoto2Controller.swift in Sources */,
 				378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */,
 				9CACB5521BDE150E0024707B /* cardList.swift in Sources */,
 				9CA1E0241C0432370083591E /* setCardList2.swift in Sources */,
+				8F71FCB31C079AAC00891228 /* noneViewController.swift in Sources */,
 				8F35236C1BDA141900983274 /* PhotoController.swift in Sources */,
 				378BDDEC1C05A1B7000DD5BB /* album.swift in Sources */,
 				379112EE1BD817D80024E678 /* Map.swift in Sources */,
+				8F71FCAB1C074BF000891228 /* SelectPhoto1Controller.swift in Sources */,
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
+				8F71FCB51C07AAE700891228 /* CreatePicController.swift in Sources */,
 				DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */,
 				9CACB5541BDE15760024707B /* cardData.swift in Sources */,
 				9CACB5561BDE15970024707B /* setCardList.swift in Sources */,
 				378BDDF51C05A406000DD5BB /* PagingCollectionView.swift in Sources */,
 				DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */,
 				DC75B6691BD7B16D0025142E /* DB.swift in Sources */,
+				8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */,
 				378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

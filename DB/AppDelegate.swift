@@ -12,7 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     var P_ID:Int?
+    
+    var cardID = Array(count: 9, repeatedValue: 0)
+    
+    var picID = 0
+    
+    var view_pic: UIImage!
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
