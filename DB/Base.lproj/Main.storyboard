@@ -340,6 +340,10 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBf-6l-LBI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="0.0"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="アルバム" id="hjH-Ag-Fzq">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="iSm-Dc-Xjl">
@@ -394,15 +398,31 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="1ページ目" id="1yC-Dt-Lmc">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="FE2-sW-LY9">
-                                            <connections>
-                                                <segue destination="5Yw-qv-psP" kind="show" id="Vup-SI-JDe"/>
-                                            </connections>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="PXA-Tl-jTS">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bkf-Pc-3Nk">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="5Yw-qv-psP" kind="show" id="k11-e9-7tk"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="Su9-Ms-Ey0">
-                                            <connections>
-                                                <segue destination="ue7-Gg-Fp2" kind="show" id="548-9I-aRd"/>
-                                            </connections>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="H2n-12-QB0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ETx-Jb-Pcg">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="次へ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ue7-Gg-Fp2" kind="show" id="J5J-MQ-tTh"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -442,7 +462,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="barItem1" destination="FE2-sW-LY9" id="eW0-tS-wbq"/>
                         <outlet property="navigation" destination="XM3-uc-bPr" id="Otf-6Y-WLy"/>
                         <outlet property="photo1" destination="nBE-uT-MiD" id="2q7-L7-iN7"/>
                         <outlet property="photo2" destination="Y9f-pk-n3F" id="5hX-me-GMO"/>
@@ -473,15 +492,31 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="2ページ目" id="Bd8-jx-JpY">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="hs6-rg-S4x">
-                                            <connections>
-                                                <segue destination="OG9-KZ-Qbw" kind="show" id="Y2N-sX-U0d"/>
-                                            </connections>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="htB-WS-40Q">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TnQ-LY-HBa">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="OG9-KZ-Qbw" kind="show" id="f50-YB-PaE"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="完了" id="cCN-3L-q0j">
-                                            <connections>
-                                                <action selector="finish:" destination="ue7-Gg-Fp2" id="oMV-9c-MTB"/>
-                                            </connections>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="9RH-Ap-QiK">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R6h-br-I6f">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="完了">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="J8o-2T-ppR" kind="show" id="YVb-Ga-EmB"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -791,17 +826,34 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-a6-3TY">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="0.0"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="印刷プレビュー" id="T0x-fK-mtL">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="nR2-XF-vDa">
-                                            <connections>
-                                                <segue destination="ue7-Gg-Fp2" kind="show" id="5KR-9Z-nO0"/>
-                                            </connections>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="OHi-Ui-XnR">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NjP-Rh-XY8">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ue7-Gg-Fp2" kind="show" id="wCb-3s-vey"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="印刷" id="70S-VZ-npl">
-                                            <connections>
-                                                <action selector="print:" destination="J8o-2T-ppR" id="5rE-W1-NT3"/>
-                                            </connections>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="EW1-jx-QrR">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mgH-GN-2Lt">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="印刷">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -850,10 +902,10 @@
         <image name="top画面2.png" width="474" height="842"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y2N-sX-U0d"/>
-        <segue reference="548-9I-aRd"/>
-        <segue reference="o1S-3n-q0z"/>
-        <segue reference="Vup-SI-JDe"/>
+        <segue reference="k11-e9-7tk"/>
+        <segue reference="f50-YB-PaE"/>
+        <segue reference="wCb-3s-vey"/>
+        <segue reference="kwe-MC-klH"/>
         <segue reference="gzK-BT-kq2"/>
     </inferredMetricsTieBreakers>
 </document>
