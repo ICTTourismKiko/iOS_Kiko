@@ -50,7 +50,7 @@ UINavigationControllerDelegate{
         cardID = card.id+1
         
         /* フラグボタンの設定 */
-       flag.setImage(UIImage(named: "flag.png")?.imageWithRenderingMode(.AlwaysTemplate), forState: UIControlState.Normal)
+       flag.setImage(UIImage(named: "favourites7 (1).png")?.imageWithRenderingMode(.AlwaysTemplate), forState: UIControlState.Normal)
         
        flagSituation = card.flag
         
@@ -62,7 +62,7 @@ UINavigationControllerDelegate{
       if f == false {
             flag.tintColor = UIColor.lightGrayColor()
         }else {
-            flag.tintColor = UIColor.redColor()
+            flag.tintColor = UIColor.orangeColor()
         }
     }
     
@@ -81,7 +81,7 @@ UINavigationControllerDelegate{
         
         //フラグ登録してなかったら赤に、してたら元どおりに
         if db.getFlagStatement(appDelegate.P_ID!) == false{
-            flag.tintColor = UIColor.redColor()
+            flag.tintColor = UIColor.orangeColor()
             db.setFlag(appDelegate.P_ID!, flagStatement: true)
         } else {
             flag.tintColor = UIColor.lightGrayColor()

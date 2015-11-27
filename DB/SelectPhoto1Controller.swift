@@ -13,11 +13,18 @@ class SelectPhoto1Controller: UIViewController {
     @IBOutlet weak var photo1: UIImageView!
     @IBOutlet weak var photo2: UIImageView!
     @IBOutlet weak var photo3: UIImageView!
+    @IBOutlet weak var navigation: UINavigationBar!
+    @IBOutlet weak var barItem1: UIBarButtonItem!
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        navigation.tintColor = UIColor.whiteColor()
+        
         
         NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("pic_show"),
             userInfo: nil, repeats: false);

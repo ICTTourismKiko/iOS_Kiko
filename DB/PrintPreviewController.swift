@@ -14,6 +14,7 @@ class PrintPreviewController: UIViewController {
 
     @IBOutlet weak var front: UIImageView!
     @IBOutlet weak var back: UIImageView!
+    @IBOutlet weak var navigation: UINavigationBar!
     let image = UIImage(named: "omote.png")
     let filename : NSString = "ki-ko"
     let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -21,6 +22,9 @@ class PrintPreviewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         print_NSData = Image_NSData(appDelegate.view_pic)!

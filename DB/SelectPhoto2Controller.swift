@@ -15,11 +15,15 @@ class SelectPhoto2Controller: UIViewController {
     @IBOutlet weak var photo6: UIImageView!
     @IBOutlet weak var photo7: UIImageView!
     @IBOutlet weak var photo8: UIImageView!
+    @IBOutlet weak var navigation: UINavigationBar!
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("pic_show"),
             userInfo: nil, repeats: false);

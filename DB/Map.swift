@@ -43,7 +43,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         //ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
-        let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         //選択したIDを持ってくる処理
@@ -58,8 +58,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
-        CardTopSyousai.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
-        CardTopPoemu.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
+        CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
         CardPoemu.alpha = 0.0
         CardTopPoemu.alpha = 0.0
         self.view.addSubview(CardSyousai)
