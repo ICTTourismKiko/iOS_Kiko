@@ -22,7 +22,7 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
                 
-        let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         self.setupLists()
