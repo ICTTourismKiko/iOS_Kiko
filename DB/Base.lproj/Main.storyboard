@@ -55,38 +55,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-hh-atO">
-                                <rect key="frame" x="135" y="494" width="220" height="152"/>
-                                <animations/>
-                                <color key="tintColor" red="0.0" green="0.65490196079999996" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                                <rect key="frame" x="300" y="495" width="34" height="32"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
+                                <rect key="frame" x="140" y="494" width="221" height="164"/>
                                 <connections>
-                                    <action selector="CardLabelTapped:" destination="wlr-xO-CWA" eventType="touchUpInside" id="A0B-Iw-dNY"/>
+                                    <action selector="CardLabelTapped:" destination="wlr-xO-CWA" eventType="touchUpInside" id="Bq9-JS-ixH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ltv-RK-fmw" firstAttribute="top" secondItem="uMO-SB-xsq" secondAttribute="bottom" constant="16" id="3Zm-gW-JYw"/>
                             <constraint firstItem="BC6-KA-hls" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="-20" id="6O4-le-eyS"/>
-                            <constraint firstItem="LV9-hh-atO" firstAttribute="trailing" secondItem="H0t-4b-RQZ" secondAttribute="trailingMargin" id="Bfk-rG-wAt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zOo-rN-wYP" secondAttribute="trailing" constant="-6" id="CYy-Ex-PGo"/>
                             <constraint firstItem="uMO-SB-xsq" firstAttribute="top" secondItem="BC6-KA-hls" secondAttribute="bottom" id="ESp-nD-11q"/>
                             <constraint firstItem="HmE-aY-WFF" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="-11" id="Fgo-Rp-hfh"/>
                             <constraint firstItem="uMO-SB-xsq" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="-20" id="G5w-p7-w3A"/>
-                            <constraint firstItem="LV9-hh-atO" firstAttribute="top" secondItem="uMO-SB-xsq" secondAttribute="bottom" constant="7" id="IwF-Hm-TeT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BC6-KA-hls" secondAttribute="trailing" constant="-20" id="KMq-w5-ccm"/>
                             <constraint firstItem="HmE-aY-WFF" firstAttribute="top" secondItem="uMO-SB-xsq" secondAttribute="bottom" constant="7" id="Qs4-MG-W8a"/>
-                            <constraint firstItem="LV9-hh-atO" firstAttribute="leading" secondItem="HmE-aY-WFF" secondAttribute="trailing" constant="3" id="V6p-sa-wKO"/>
-                            <constraint firstItem="Ngz-xv-RnY" firstAttribute="top" secondItem="LV9-hh-atO" secondAttribute="bottom" constant="21" id="WSH-3Q-w33"/>
                             <constraint firstItem="Ngz-xv-RnY" firstAttribute="top" secondItem="HmE-aY-WFF" secondAttribute="bottom" constant="9" id="XAB-rZ-AQo"/>
+                            <constraint firstItem="Ngz-xv-RnY" firstAttribute="top" secondItem="zOo-rN-wYP" secondAttribute="bottom" constant="9" id="gTI-LY-Tc7"/>
+                            <constraint firstItem="zOo-rN-wYP" firstAttribute="top" secondItem="uMO-SB-xsq" secondAttribute="bottom" constant="7" id="hGS-Jb-Jqg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMO-SB-xsq" secondAttribute="trailing" constant="-20" id="r4R-xF-Mvz"/>
+                            <constraint firstItem="zOo-rN-wYP" firstAttribute="leading" secondItem="HmE-aY-WFF" secondAttribute="trailing" constant="8" id="rr4-xL-dwM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Co9-3T-iPV" secondAttribute="trailing" constant="-20" id="uIb-bs-kTl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ltv-RK-fmw" secondAttribute="trailing" constant="21" id="x6h-5U-fOc"/>
                             <constraint firstItem="Ngz-xv-RnY" firstAttribute="top" secondItem="Co9-3T-iPV" secondAttribute="bottom" id="xeE-W4-UrF"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="CardMap" destination="uMO-SB-xsq" id="3W2-bo-vUd"/>
-                        <outlet property="ChangeTextButton" destination="LV9-hh-atO" id="g3f-Gf-tqt"/>
+                        <outlet property="ChangeTextButton" destination="zOo-rN-wYP" id="hDO-qo-UQn"/>
+                        <outlet property="arrow" destination="ltv-RK-fmw" id="kGI-rE-FIt"/>
                         <outlet property="camera2View" destination="HmE-aY-WFF" id="ibh-Me-l9m"/>
                         <outlet property="navigation" destination="BC6-KA-hls" id="fdM-QP-hw6"/>
                     </connections>
@@ -307,7 +311,6 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navigation" destination="o5w-vb-Bw8" id="9JH-Rp-ffV"/>
@@ -791,13 +794,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="表側" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-KL-qCh">
                                 <rect key="frame" x="174" y="87" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="裏側" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK8-io-dh6">
                                 <rect key="frame" x="170" y="371" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -820,12 +823,13 @@
         <image name="camera1.png" width="116" height="93"/>
         <image name="flag.png" width="200" height="200"/>
         <image name="map2.png" width="72" height="81"/>
+        <image name="next.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vup-SI-JDe"/>
-        <segue reference="Y2N-sX-U0d"/>
-        <segue reference="5KR-9Z-nO0"/>
-        <segue reference="kwe-MC-klH"/>
+        <segue reference="qIg-zi-0Zd"/>
         <segue reference="gzK-BT-kq2"/>
+        <segue reference="o1S-3n-q0z"/>
+        <segue reference="Y2N-sX-U0d"/>
+        <segue reference="548-9I-aRd"/>
     </inferredMetricsTieBreakers>
 </document>

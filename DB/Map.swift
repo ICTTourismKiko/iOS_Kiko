@@ -15,6 +15,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var camera2View: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var ChangeTextButton: UIButton!
+    @IBOutlet weak var arrow: UIImageView!
     
     var myLocationManager: CLLocationManager!
     
@@ -40,7 +41,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
+        //ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
         let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
@@ -207,7 +208,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
                 
-                self.ChangeTextButton.setImage(UIImage(named: "back.png"), forState: .Normal)
+                self.arrow.image = UIImage(named: "back.png")
             }
         }else{      //スポット紹介を表示中
             
@@ -225,7 +226,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopSyousai.alpha = 1.0
                 self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
                 
-                self.ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
+                self.arrow.image = UIImage(named: "next.png")
                 
             }
         }
