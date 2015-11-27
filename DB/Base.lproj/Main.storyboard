@@ -514,9 +514,12 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="J8o-2T-ppR" kind="show" id="YVb-Ga-EmB"/>
+                                                    <action selector="finish:" destination="ue7-Gg-Fp2" eventType="touchUpInside" id="Va1-li-6cN"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="finish:" destination="ue7-Gg-Fp2" id="dZP-ui-Qre"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
