@@ -84,20 +84,20 @@ extension PagingCollectionView: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         if(appDelegate.pic_segmented == 0){   //撮影写真の場合
-            let cell1 = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
             var UpdateCardIDArray1 = DB().getUpdatedCardIDArray()        //updateがtrueになっているID配列をDBからコピー
             let NSphotodata1 = DB().getCard(UpdateCardIDArray1[indexPath.row]).photo?.photoData   //ID配列でDBからレコード内の写真データ(NSdata)を取得
-            cell1.photo.image = PhotoController().NSSImage(NSphotodata1!)  //写真データ(NSdata)をimageに変換
+            cell.photo.image = PhotoController().NSSImage(NSphotodata1!)  //写真データ(NSdata)をimageに変換
+            
             let titletext1 = DB().getCard(UpdateCardIDArray1[indexPath.row]).cardText?.title
             let introtext1 = (DB().getCard(UpdateCardIDArray1[indexPath.row]).cardText?.text)!
-            cell1.TitleLabel.text = titletext1
-            cell1.introLabel.text = introtext1
             
-            return cell1
+            cell.TitleLabel.text = titletext1
+            cell.introLabel.text = introtext1
+            
+            return cell
         }else{  //サンプル写真の場合
-            let cell2 = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
-            
-            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
             let cardcounts = DB().cardListSize()
             var IDArray2:[Int] = []
             
@@ -107,15 +107,15 @@ extension PagingCollectionView: UICollectionViewDataSource {
             
             let NSphotodata2 = DB().getDefaultPhoto(IDArray2[indexPath.row]).photoData
             
-            cell2.photo.image = PhotoController().NSSImage(NSphotodata2!)  //写真データ(NSdata)をimageに変換
+            cell.photo.image = PhotoController().NSSImage(NSphotodata2!)  //写真データ(NSdata)をimageに変換
             
             let titletext2 = DB().getCard(IDArray2[indexPath.row]).cardText?.title
-            
             let introtext2 = (DB().getCard(IDArray2[indexPath.row]).cardText?.text)!
-            cell2.TitleLabel.text = titletext2
-            cell2.introLabel.text = introtext2
             
-            return cell2
+            cell.TitleLabel.text = titletext2
+            cell.introLabel.text = introtext2
+            
+            return cell
         }
     }
 }
