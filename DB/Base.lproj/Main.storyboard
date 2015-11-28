@@ -1020,6 +1020,13 @@
                                     <action selector="segmentedchanged:" destination="UeK-Jl-0AE" eventType="valueChanged" id="Jhd-kb-K9T"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLZ-cq-92i">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="64"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="backbutton:" destination="UeK-Jl-0AE" eventType="touchUpInside" id="daQ-nH-GcS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

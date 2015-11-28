@@ -38,4 +38,7 @@ class album_defaultphoto: UIViewController {
             break
         }
     }
+    @IBAction func backbutton(sender: AnyObject) {
+        self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
