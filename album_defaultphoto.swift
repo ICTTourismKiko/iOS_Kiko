@@ -19,7 +19,7 @@ class album_defaultphoto: UIViewController {
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
     }
     
     override func didReceiveMemoryWarning() {

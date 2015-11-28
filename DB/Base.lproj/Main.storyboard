@@ -370,12 +370,12 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-TS-2ll" customClass="PagingCollectionView" customModule="DB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="87" width="375" height="580"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HkP-ez-ooK">
-                                <rect key="frame" x="190" y="64" width="185" height="29"/>
+                                <rect key="frame" x="190" y="74" width="185" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="撮影写真"/>
@@ -998,12 +998,12 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15K-H1-nFs" customClass="PagingCollectionView" customModule="DB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="87" width="375" height="580"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="FrT-Y3-Y8R">
-                                <rect key="frame" x="190" y="64" width="185" height="29"/>
+                                <rect key="frame" x="190" y="74" width="185" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="撮影写真"/>

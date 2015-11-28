@@ -22,9 +22,8 @@ class album_userphoto: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-          let navBarImage = UIImage(named: "bar6.png") as UIImage?
-                self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
-        //        self.collectionview.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
     }
     
