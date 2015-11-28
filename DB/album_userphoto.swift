@@ -11,21 +11,19 @@ import UIKit
 class album_userphoto: UIViewController {
     
     
+    @IBOutlet weak var navigationbar: UINavigationBar!
+    
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var backbutton = UIButton()
     
     
     @IBOutlet weak var segmented: UISegmentedControl!
-    //    @IBOutlet weak var navigationbar: UINavigationBar!
-    //    @IBOutlet weak var collectionview: PagingCollectionView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
-        //        self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+          let navBarImage = UIImage(named: "bar6.png") as UIImage?
+                self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         //        self.collectionview.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
     }

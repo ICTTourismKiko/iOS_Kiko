@@ -12,9 +12,13 @@ class album_defaultphoto: UIViewController {
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    @IBOutlet weak var navigationbar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         // Do any additional setup after loading the view.
     }
     
