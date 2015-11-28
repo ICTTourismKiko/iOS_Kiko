@@ -25,12 +25,10 @@ class album_defaultphoto: UIViewController {
     
     @IBAction func segmentedchanged(sender: AnyObject) {
         switch sender.selectedSegmentIndex{
-        case 0:
-            print("撮影写真")
+        case 0: //撮影写真
             appDelegate.pic_segmented = 0
             self.dismissViewControllerAnimated(false, completion: nil)
-        case 1:
-            print("サンプル")
+        case 1: //サンプル写真
             appDelegate.pic_segmented = 1
         default:
             break

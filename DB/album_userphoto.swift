@@ -38,10 +38,10 @@ class album_userphoto: UIViewController {
     
     @IBAction func segmentedchanged(sender: AnyObject) {
         switch sender.selectedSegmentIndex{
-        case 0:
+        case 0: //撮影写真
             appDelegate.pic_segmented = 0
             
-        case 1:
+        case 1: //サンプル写真
             appDelegate.pic_segmented = 1
             let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier("album_defaultphoto")
             self.presentViewController( targetViewController, animated: false, completion: nil)
