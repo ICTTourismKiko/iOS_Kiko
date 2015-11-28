@@ -385,6 +385,13 @@
                                     <action selector="segmentedchanged:" destination="Nfw-Ig-AWS" eventType="valueChanged" id="tPD-MS-FxO"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58T-lQ-iyc">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="64"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="backbutton:" destination="Nfw-Ig-AWS" eventType="touchUpInside" id="2VU-bl-VlC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

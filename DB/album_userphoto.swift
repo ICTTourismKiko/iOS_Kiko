@@ -47,4 +47,6 @@ class album_userphoto: UIViewController {
             break
         }
     }
+    @IBAction func backbutton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)    }
 }
