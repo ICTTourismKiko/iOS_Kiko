@@ -10,6 +10,8 @@ import UIKit
 
 class PagingCollectionView: UIView {
     
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     // MARK: - Properties
     internal let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
     internal var contentSize: CGSize {
@@ -31,8 +33,6 @@ class PagingCollectionView: UIView {
         
         self.collectionView.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
         self.collectionView.frame = CGRectMake(0.0, 0.0, self.contentSize.width, self.contentSize.height)
-        print(self.contentSize.width)
-        print(self.contentSize.height)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.showsHorizontalScrollIndicator = false
@@ -68,7 +68,9 @@ class PagingCollectionView: UIView {
 extension PagingCollectionView: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DB().getUpdatedCardIDArray().count       //撮った写真の数だけ表示
+        
+        return DB().getUpdatedCardIDArray().count
+        
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -77,21 +79,42 @@ extension PagingCollectionView: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
+        let cell1 = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
+        let cell2 = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
         
-        var UpdateCardIDArray = DB().getUpdatedCardIDArray()        //updateがtrueになっているID配列をDBからコピー
+        var UpdateCardIDArray1 = DB().getUpdatedCardIDArray()        //updateがtrueになっているID配列をDBからコピー
+        let cardcounts = DB().cardListSize()
+        var IDArray2:[Int] = []
         
-        let NSphotodata = DB().getCard(UpdateCardIDArray[indexPath.row]).photo?.photoData   //ID配列でDBからレコード内の写真データ(NSdata)を取得
-        cell.photo.image = PhotoController().NSSImage(NSphotodata!)  //写真データ(NSdata)をimageに変換
+        for(var i = 1; i <= cardcounts; i++){
+            IDArray2.append(i)
+        }
         
-        let titletext = DB().getCard(UpdateCardIDArray[indexPath.row]).cardText?.title
+        let NSphotodata1 = DB().getCard(UpdateCardIDArray1[indexPath.row]).photo?.photoData   //ID配列でDBからレコード内の写真データ(NSdata)を取得
+        let NSphotodata2 = DB().getDefaultPhoto(IDArray2[indexPath.row]).photoData
+            
+        cell1.photo.image = PhotoController().NSSImage(NSphotodata1!)  //写真データ(NSdata)をimageに変換
+        cell2.photo.image = PhotoController().NSSImage(NSphotodata2!)  //写真データ(NSdata)をimageに変換
         
-        let introtext = (DB().getCard(UpdateCardIDArray[indexPath.row]).cardText?.text)!
+        let titletext1 = DB().getCard(UpdateCardIDArray1[indexPath.row]).cardText?.title
+        let titletext2 = DB().getCard(IDArray2[indexPath.row]).cardText?.title
         
-        cell.TitleLabel.text = titletext
-        cell.introLabel.text = introtext
+        let introtext1 = (DB().getCard(UpdateCardIDArray1[indexPath.row]).cardText?.text)!
+        let introtext2 = (DB().getCard(IDArray2[indexPath.row]).cardText?.text)!
         
-        return cell
+        cell1.TitleLabel.text = titletext1
+        cell1.introLabel.text = introtext1
+        
+        cell2.TitleLabel.text = titletext2
+        cell2.introLabel.text = introtext2
+        
+        if(appDelegate.pic_segmented == 0){
+            print(appDelegate.pic_segmented)
+            return cell1
+        }else{
+            print(appDelegate.pic_segmented)
+            return cell2
+        }
     }
     
 }
