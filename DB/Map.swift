@@ -129,9 +129,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         if((flagTrueIDList.indexOf(pic_id!)) != nil){
             PinArray[flagTrueIDList.indexOf(pic_id!)!].imageName = ""
-            PinArray[PinArray.count-1].imageName = "picup.png"
+            PinArray[PinArray.count-1].imageName = "redpin.png"
         }else{
-            PinArray[PinArray.count-1].imageName = "picup.png"
+            PinArray[PinArray.count-1].imageName = "redpin.png"
         }
         
         CardTopSyousai.text = "詳細情報"

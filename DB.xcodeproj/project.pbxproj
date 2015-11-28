@@ -43,16 +43,16 @@
 		DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C0141BD7826B000B2465 /* LaunchScreen.storyboard */; };
 		DC23C0211BD7826C000B2465 /* DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C0201BD7826C000B2465 /* DBTests.swift */; };
 		DC23C02C1BD7826C000B2465 /* DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C02B1BD7826C000B2465 /* DBUITests.swift */; };
+		DC4430481C0958FC0006D4F5 /* redpin.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4430471C0958FC0006D4F5 /* redpin.png */; };
+		DC4430501C0959380006D4F5 /* bar6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4430491C0959380006D4F5 /* bar6.png */; };
+		DC4430511C0959380006D4F5 /* camera3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304A1C0959380006D4F5 /* camera3-3.png */; };
+		DC4430521C0959380006D4F5 /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304B1C0959380006D4F5 /* card6.png */; };
+		DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304C1C0959380006D4F5 /* favourites7 (1).png */; };
+		DC4430541C0959380006D4F5 /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304D1C0959380006D4F5 /* pencil41.png */; };
+		DC4430551C0959380006D4F5 /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304E1C0959380006D4F5 /* pin56.png */; };
+		DC4430561C0959380006D4F5 /* top画面2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304F1C0959380006D4F5 /* top画面2.png */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
-		DC8D25671C087EEE00A15E0E /* camera3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D255F1C087EEE00A15E0E /* camera3-3.png */; };
-		DC8D25681C087EEE00A15E0E /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25601C087EEE00A15E0E /* card6.png */; };
-		DC8D25691C087EEE00A15E0E /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25611C087EEE00A15E0E /* favourites7 (1).png */; };
-		DC8D256A1C087EEE00A15E0E /* map-pin-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25621C087EEE00A15E0E /* map-pin-red.png */; };
-		DC8D256B1C087EEE00A15E0E /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25631C087EEE00A15E0E /* pencil41.png */; };
-		DC8D256C1C087EEE00A15E0E /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25641C087EEE00A15E0E /* pin56.png */; };
-		DC8D256D1C087EEE00A15E0E /* top画面2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D25651C087EEE00A15E0E /* top画面2.png */; };
-		DC8D256F1C08800400A15E0E /* bar6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8D256E1C08800400A15E0E /* bar6.png */; };
 		DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DCE7BBE81BF6AA890012BCB9 /* cardData.realm */; };
 /* End PBXBuildFile section */
 
@@ -131,16 +131,16 @@
 		DC23C0271BD7826C000B2465 /* DBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC23C02B1BD7826C000B2465 /* DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUITests.swift; sourceTree = "<group>"; };
 		DC23C02D1BD7826C000B2465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4430471C0958FC0006D4F5 /* redpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin.png; sourceTree = "<group>"; };
+		DC4430491C0959380006D4F5 /* bar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar6.png; sourceTree = "<group>"; };
+		DC44304A1C0959380006D4F5 /* camera3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera3-3.png"; sourceTree = "<group>"; };
+		DC44304B1C0959380006D4F5 /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card6.png; sourceTree = "<group>"; };
+		DC44304C1C0959380006D4F5 /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites7 (1).png"; sourceTree = "<group>"; };
+		DC44304D1C0959380006D4F5 /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil41.png; sourceTree = "<group>"; };
+		DC44304E1C0959380006D4F5 /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin56.png; sourceTree = "<group>"; };
+		DC44304F1C0959380006D4F5 /* top画面2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面2.png"; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
-		DC8D255F1C087EEE00A15E0E /* camera3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera3-3.png"; path = "../../使用素材/camera3-3.png"; sourceTree = "<group>"; };
-		DC8D25601C087EEE00A15E0E /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card6.png; path = "../../使用素材/card6.png"; sourceTree = "<group>"; };
-		DC8D25611C087EEE00A15E0E /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourites7 (1).png"; path = "../../使用素材/favourites7 (1).png"; sourceTree = "<group>"; };
-		DC8D25621C087EEE00A15E0E /* map-pin-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-pin-red.png"; path = "../../使用素材/map-pin-red.png"; sourceTree = "<group>"; };
-		DC8D25631C087EEE00A15E0E /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil41.png; path = "../../使用素材/pencil41.png"; sourceTree = "<group>"; };
-		DC8D25641C087EEE00A15E0E /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin56.png; path = "../../使用素材/pin56.png"; sourceTree = "<group>"; };
-		DC8D25651C087EEE00A15E0E /* top画面2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top画面2.png"; path = "../../使用素材/top画面2.png"; sourceTree = "<group>"; };
-		DC8D256E1C08800400A15E0E /* bar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bar6.png; path = "../../使用素材/bar6.png"; sourceTree = "<group>"; };
 		DCE7BBE81BF6AA890012BCB9 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,14 +219,14 @@
 				37FBD82D1C06B247008AAD03 /* next.png */,
 				378BDDF81C05A643000DD5BB /* b300.png */,
 				378BDDF61C05A57A000DD5BB /* haikei.png */,
-				DC8D255F1C087EEE00A15E0E /* camera3-3.png */,
-				DC8D256E1C08800400A15E0E /* bar6.png */,
-				DC8D25601C087EEE00A15E0E /* card6.png */,
-				DC8D25611C087EEE00A15E0E /* favourites7 (1).png */,
-				DC8D25621C087EEE00A15E0E /* map-pin-red.png */,
-				DC8D25631C087EEE00A15E0E /* pencil41.png */,
-				DC8D25641C087EEE00A15E0E /* pin56.png */,
-				DC8D25651C087EEE00A15E0E /* top画面2.png */,
+				DC4430471C0958FC0006D4F5 /* redpin.png */,
+				DC4430491C0959380006D4F5 /* bar6.png */,
+				DC44304A1C0959380006D4F5 /* camera3-3.png */,
+				DC44304B1C0959380006D4F5 /* card6.png */,
+				DC44304C1C0959380006D4F5 /* favourites7 (1).png */,
+				DC44304D1C0959380006D4F5 /* pencil41.png */,
+				DC44304E1C0959380006D4F5 /* pin56.png */,
+				DC44304F1C0959380006D4F5 /* top画面2.png */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
@@ -377,23 +377,23 @@
 			files = (
 				8F71FCB11C07962700891228 /* omote.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
-				DC8D25671C087EEE00A15E0E /* camera3-3.png in Resources */,
 				8F71FCAF1C07961B00891228 /* noimage.jpg in Resources */,
 				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
-				DC8D256F1C08800400A15E0E /* bar6.png in Resources */,
 				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
-				DC8D256D1C087EEE00A15E0E /* top画面2.png in Resources */,
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
+				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
+				DC4430561C0959380006D4F5 /* top画面2.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
-				DC8D256A1C087EEE00A15E0E /* map-pin-red.png in Resources */,
-				DC8D25681C087EEE00A15E0E /* card6.png in Resources */,
-				DC8D256C1C087EEE00A15E0E /* pin56.png in Resources */,
+				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
+				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
+				DC4430481C0958FC0006D4F5 /* redpin.png in Resources */,
+				DC4430551C0959380006D4F5 /* pin56.png in Resources */,
+				DC4430521C0959380006D4F5 /* card6.png in Resources */,
 				DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */,
-				DC8D25691C087EEE00A15E0E /* favourites7 (1).png in Resources */,
-				DC8D256B1C087EEE00A15E0E /* pencil41.png in Resources */,
+				DC4430541C0959380006D4F5 /* pencil41.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
