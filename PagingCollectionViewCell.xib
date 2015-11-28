@@ -17,7 +17,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="406" height="633"/>
                             <animations/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-QE-UKO">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-QE-UKO">
                             <rect key="frame" x="19" y="15" width="363" height="368"/>
                             <animations/>
                         </imageView>
