@@ -39,6 +39,23 @@ UINavigationControllerDelegate{
     
     func setCell(card :cardData) {
         
+        
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        //iphoneのサイズによってカードに書かれる文のサイズを変更
+        //iPhone6
+        if height >= 667 {
+            self.introText.font = UIFont.systemFontOfSize(14)
+           
+            //iPhone6 Plus
+//        }else if height == 736 {
+//            self.introText.font = UIFont.systemFontOfSize(15)
+            
+            //iPhone5・5s・5c
+        }else {
+           self.introText.font = UIFont.systemFontOfSize(12)
+        }
+        
         self.title.text = card.title as String
         self.introText.text = card.introText as String
         
