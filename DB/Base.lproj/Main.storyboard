@@ -120,48 +120,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="top画面2.png" translatesAutoresizingMaskIntoConstraints="NO" id="W9J-Kp-icC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="nFR-iE-WqJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="W9J-Kp-icC" secondAttribute="height" multiplier="375:667" id="9H3-Kp-niY"/>
-                                    <constraint firstAttribute="height" constant="667" id="ehm-FM-Qsj"/>
-                                    <constraint firstAttribute="width" constant="375" id="lUL-eO-6Yv"/>
+                                    <constraint firstAttribute="height" constant="667" id="nmq-fb-lp1"/>
+                                    <constraint firstAttribute="width" constant="375" id="zyp-q0-SFO"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-0I-7Qx">
-                                <rect key="frame" x="73" y="230" width="228" height="50"/>
-                                <animations/>
-                                <state key="normal" title="観光してええ"/>
-                                <connections>
-                                    <segue destination="PGL-vA-g2r" kind="show" id="jWk-ve-ZDt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-XO-UQV">
-                                <rect key="frame" x="73" y="309" width="228" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-XO-UQV">
+                                <rect key="frame" x="39" y="312" width="288" height="62"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="振り返りてええ"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="0CL-Rp-p2P"/>
+                                    <constraint firstAttribute="height" constant="62" id="jmE-Nn-vKK"/>
+                                </constraints>
+                                <state key="normal" image="hurikaeri.png"/>
                                 <connections>
                                     <segue destination="Nfw-Ig-AWS" kind="show" id="pll-av-4h7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-N6-vAv">
-                                <rect key="frame" x="73" y="367" width="233" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-N6-vAv">
+                                <rect key="frame" x="39" y="394" width="288" height="62"/>
                                 <animations/>
-                                <state key="normal" title="印刷してええええ"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="YZf-EW-if3"/>
+                                    <constraint firstAttribute="height" constant="62" id="vSw-cm-Nay"/>
+                                </constraints>
+                                <state key="normal" image="print.png"/>
                                 <connections>
                                     <segue destination="OG9-KZ-Qbw" kind="show" id="OWY-Gf-eoP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-0I-7Qx">
+                                <rect key="frame" x="39" y="230" width="288" height="62"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="3zS-p8-agN"/>
+                                    <constraint firstAttribute="height" constant="62" id="Bbh-me-5Ol"/>
+                                </constraints>
+                                <state key="normal" image="kanko.png"/>
+                                <connections>
+                                    <segue destination="PGL-vA-g2r" kind="show" id="jWk-ve-ZDt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-aE-3Vk">
+                                <rect key="frame" x="37" y="96" width="300" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="KyT-A2-ae9"/>
+                                    <constraint firstAttribute="width" constant="300" id="az8-y5-Slk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="W9J-Kp-icC" secondAttribute="bottom" id="2bg-rb-C7e"/>
-                            <constraint firstItem="W9J-Kp-icC" firstAttribute="top" secondItem="oh8-SJ-JD2" secondAttribute="topMargin" id="2gW-qf-0Mo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W9J-Kp-icC" secondAttribute="trailing" constant="-20" id="Hex-PE-1Et"/>
-                            <constraint firstItem="W9J-Kp-icC" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="-20" id="Vvl-rG-wym"/>
+                            <constraint firstItem="2Ti-XO-UQV" firstAttribute="top" secondItem="tJJ-0I-7Qx" secondAttribute="bottom" constant="20" id="15R-4R-uHs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nFR-iE-WqJ" secondAttribute="trailing" constant="-20" id="Bim-iu-Tcd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ti-XO-UQV" secondAttribute="trailing" constant="24" id="DtG-XH-twF"/>
+                            <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="nFR-iE-WqJ" secondAttribute="bottom" id="F4h-h1-4Ix"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yhd-N6-vAv" secondAttribute="trailing" constant="24" id="KDg-Op-GuT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJJ-0I-7Qx" secondAttribute="trailing" constant="24" id="Lwa-j2-AsQ"/>
+                            <constraint firstItem="nFR-iE-WqJ" firstAttribute="top" secondItem="oh8-SJ-JD2" secondAttribute="topMargin" id="QH0-SS-ciE"/>
+                            <constraint firstItem="2Ti-XO-UQV" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="RCW-IH-UNv"/>
+                            <constraint firstItem="yhd-N6-vAv" firstAttribute="top" secondItem="2Ti-XO-UQV" secondAttribute="bottom" constant="20" id="SI2-tG-ohu"/>
+                            <constraint firstItem="tJJ-0I-7Qx" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="THk-ca-alU"/>
+                            <constraint firstItem="yhd-N6-vAv" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="TRh-eF-NmI"/>
+                            <constraint firstItem="nFR-iE-WqJ" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="-20" id="UWT-5A-QsM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="18" id="d3S-1X-MdU"/>
+                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="17" id="qAo-Q9-PfI"/>
+                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="top" secondItem="w8d-mt-eV6" secondAttribute="bottom" constant="76" id="uPu-9g-yRT"/>
+                            <constraint firstItem="tJJ-0I-7Qx" firstAttribute="top" secondItem="bqO-aE-3Vk" secondAttribute="bottom" constant="45" id="uav-bq-HDw"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1048,7 +1077,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15K-H1-nFs" customClass="PagingCollectionView" customModule="DB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="557"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1098,14 +1127,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background.png" width="474" height="842"/>
         <image name="bar6.png" width="375" height="44"/>
         <image name="camera3-3.png" width="64" height="64"/>
         <image name="card6.png" width="508" height="251"/>
         <image name="favourites7 (1).png" width="64" height="64"/>
+        <image name="hurikaeri.png" width="288" height="62"/>
+        <image name="kanko.png" width="288" height="62"/>
         <image name="next.png" width="25" height="25"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
-        <image name="top画面2.png" width="474" height="842"/>
+        <image name="print.png" width="288" height="62"/>
+        <image name="title.png" width="348" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wCb-3s-vey"/>
