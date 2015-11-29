@@ -41,6 +41,7 @@ UINavigationControllerDelegate{
         
         self.title.text = card.title as String
         self.introText.text = card.introText as String
+        
             // 表示する画像を設定する.
         let myImage = PhotoController().NSSImage(card.imageUrl!)
         self.iconImage.image = myImage
