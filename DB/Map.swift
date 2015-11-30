@@ -15,6 +15,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var camera2View: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var ChangeTextButton: UIButton!
+    @IBOutlet weak var arrow: UIImageView!
     
     var myLocationManager: CLLocationManager!
     
@@ -40,9 +41,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
+        //ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
-        let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         //選択したIDを持ってくる処理
@@ -57,8 +58,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
-        CardTopSyousai.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
-        CardTopPoemu.font = UIFont(name: "HelveticaNeue-MediumItalic", size: 18.0)
+        CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+        CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
         CardPoemu.alpha = 0.0
         CardTopPoemu.alpha = 0.0
         self.view.addSubview(CardSyousai)
@@ -126,9 +129,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         if((flagTrueIDList.indexOf(pic_id!)) != nil){
             PinArray[flagTrueIDList.indexOf(pic_id!)!].imageName = ""
-            PinArray[PinArray.count-1].imageName = "picup.png"
+            PinArray[PinArray.count-1].imageName = "redpin.png"
         }else{
-            PinArray[PinArray.count-1].imageName = "picup.png"
+            PinArray[PinArray.count-1].imageName = "redpin.png"
         }
         
         CardTopSyousai.text = "詳細情報"
@@ -207,7 +210,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
                 
-                self.ChangeTextButton.setImage(UIImage(named: "back.png"), forState: .Normal)
+                self.arrow.image = UIImage(named: "back.png")
             }
         }else{      //スポット紹介を表示中
             
@@ -225,7 +228,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopSyousai.alpha = 1.0
                 self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
                 
-                self.ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
+                self.arrow.image = UIImage(named: "next.png")
                 
             }
         }

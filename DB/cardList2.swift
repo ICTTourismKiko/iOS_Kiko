@@ -22,7 +22,7 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let navBarImage = UIImage(named: "leaf.jpg") as UIImage?
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navi.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         self.setupLists()
@@ -63,6 +63,9 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let cell: setCardList2 = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! setCardList2
         cell.setCell(cards[indexPath.row])
         return cell
+    }
+    @IBAction func photo_select(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
