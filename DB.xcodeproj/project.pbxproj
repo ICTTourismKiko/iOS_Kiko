@@ -11,7 +11,6 @@
 		37583B1E1BF6C2A700AC331D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1B1BF6C2A700AC331D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37583B1F1BF6C2A700AC331D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1C1BF6C2A700AC331D /* RealmSwift.framework */; };
 		37583B201BF6C2A700AC331D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1C1BF6C2A700AC331D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		378BDDEC1C05A1B7000DD5BB /* album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEB1C05A1B7000DD5BB /* album.swift */; };
 		378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */; };
 		378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */; };
 		378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */; };
@@ -21,6 +20,8 @@
 		379112EE1BD817D80024E678 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379112ED1BD817D80024E678 /* Map.swift */; };
 		379112F01BD818E90024E678 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112EF1BD818E90024E678 /* MapKit.framework */; };
 		379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112F11BD818F50024E678 /* CoreLocation.framework */; };
+		37BBBC461C095E730098B625 /* album_userphoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBBC451C095E730098B625 /* album_userphoto.swift */; };
+		37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBBC471C095E870098B625 /* album_defaultphoto.swift */; };
 		37FBD82E1C06B247008AAD03 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82C1C06B247008AAD03 /* back.png */; };
 		37FBD82F1C06B247008AAD03 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82D1C06B247008AAD03 /* next.png */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
@@ -33,6 +34,12 @@
 		8FA413C31C0C0EED003BAD1B /* PrintPreview2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA413C21C0C0EED003BAD1B /* PrintPreview2Controller.swift */; };
 		9CA1E0221C0430840083591E /* cardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0211C0430840083591E /* cardList2.swift */; };
 		9CA1E0241C0432370083591E /* setCardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0231C0432370083591E /* setCardList2.swift */; };
+		9CA1E0261C0AEAC90083591E /* top画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0251C0AEAC90083591E /* top画面.png */; };
+		9CA1E0281C0AEC090083591E /* hurikaeri.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0271C0AEC090083591E /* hurikaeri.png */; };
+		9CA1E02A1C0AEC110083591E /* kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0291C0AEC110083591E /* kanko.png */; };
+		9CA1E02C1C0AEC190083591E /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02B1C0AEC190083591E /* print.png */; };
+		9CA1E02E1C0AF3600083591E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02D1C0AF3600083591E /* background.png */; };
+		9CA1E0301C0AF36A0083591E /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02F1C0AF36A0083591E /* title.png */; };
 		9CACB5521BDE150E0024707B /* cardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACB5511BDE150E0024707B /* cardList.swift */; };
 		9CACB5541BDE15760024707B /* cardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACB5531BDE15760024707B /* cardData.swift */; };
 		9CACB5561BDE15970024707B /* setCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACB5551BDE15970024707B /* setCardList.swift */; };
@@ -50,7 +57,6 @@
 		DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304C1C0959380006D4F5 /* favourites7 (1).png */; };
 		DC4430541C0959380006D4F5 /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304D1C0959380006D4F5 /* pencil41.png */; };
 		DC4430551C0959380006D4F5 /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304E1C0959380006D4F5 /* pin56.png */; };
-		DC4430561C0959380006D4F5 /* top画面2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304F1C0959380006D4F5 /* top画面2.png */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
 		DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DCE7BBE81BF6AA890012BCB9 /* cardData.realm */; };
@@ -91,7 +97,6 @@
 /* Begin PBXFileReference section */
 		37583B1B1BF6C2A700AC331D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		37583B1C1BF6C2A700AC331D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		378BDDEB1C05A1B7000DD5BB /* album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = album.swift; sourceTree = "<group>"; };
 		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -101,6 +106,8 @@
 		379112ED1BD817D80024E678 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		379112EF1BD818E90024E678 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		379112F11BD818F50024E678 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		37BBBC451C095E730098B625 /* album_userphoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = album_userphoto.swift; sourceTree = "<group>"; };
+		37BBBC471C095E870098B625 /* album_defaultphoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = album_defaultphoto.swift; path = ../album_defaultphoto.swift; sourceTree = "<group>"; };
 		37FBD82C1C06B247008AAD03 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		37FBD82D1C06B247008AAD03 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
@@ -115,6 +122,12 @@
 		8FA413C21C0C0EED003BAD1B /* PrintPreview2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintPreview2Controller.swift; sourceTree = "<group>"; };
 		9CA1E0211C0430840083591E /* cardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList2.swift; sourceTree = "<group>"; };
 		9CA1E0231C0432370083591E /* setCardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList2.swift; sourceTree = "<group>"; };
+		9CA1E0251C0AEAC90083591E /* top画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面.png"; sourceTree = "<group>"; };
+		9CA1E0271C0AEC090083591E /* hurikaeri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurikaeri.png; sourceTree = "<group>"; };
+		9CA1E0291C0AEC110083591E /* kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanko.png; sourceTree = "<group>"; };
+		9CA1E02B1C0AEC190083591E /* print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = print.png; sourceTree = "<group>"; };
+		9CA1E02D1C0AF3600083591E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9CA1E02F1C0AF36A0083591E /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		9CACB5511BDE150E0024707B /* cardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList.swift; sourceTree = "<group>"; };
 		9CACB5531BDE15760024707B /* cardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardData.swift; sourceTree = "<group>"; };
 		9CACB5551BDE15970024707B /* setCardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList.swift; sourceTree = "<group>"; };
@@ -138,7 +151,6 @@
 		DC44304C1C0959380006D4F5 /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites7 (1).png"; sourceTree = "<group>"; };
 		DC44304D1C0959380006D4F5 /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil41.png; sourceTree = "<group>"; };
 		DC44304E1C0959380006D4F5 /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin56.png; sourceTree = "<group>"; };
-		DC44304F1C0959380006D4F5 /* top画面2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面2.png"; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
 		DCE7BBE81BF6AA890012BCB9 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
@@ -213,6 +225,11 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				9CA1E02D1C0AF3600083591E /* background.png */,
+				9CA1E02F1C0AF36A0083591E /* title.png */,
+				9CA1E0271C0AEC090083591E /* hurikaeri.png */,
+				9CA1E0291C0AEC110083591E /* kanko.png */,
+				9CA1E02B1C0AEC190083591E /* print.png */,
 				8F71FCB01C07962700891228 /* omote.png */,
 				8F71FCAE1C07961B00891228 /* noimage.jpg */,
 				37FBD82C1C06B247008AAD03 /* back.png */,
@@ -225,16 +242,17 @@
 				DC44304B1C0959380006D4F5 /* card6.png */,
 				DC44304C1C0959380006D4F5 /* favourites7 (1).png */,
 				DC44304D1C0959380006D4F5 /* pencil41.png */,
+				9CA1E0251C0AEAC90083591E /* top画面.png */,
 				DC44304E1C0959380006D4F5 /* pin56.png */,
-				DC44304F1C0959380006D4F5 /* top画面2.png */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
 				DC75B6681BD7B16D0025142E /* DB.swift */,
 				379112ED1BD817D80024E678 /* Map.swift */,
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
-				378BDDEB1C05A1B7000DD5BB /* album.swift */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				37BBBC471C095E870098B625 /* album_defaultphoto.swift */,
+				37BBBC451C095E730098B625 /* album_userphoto.swift */,
 				8F71FCB41C07AAE700891228 /* CreatePicController.swift */,
 				8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */,
 				8FA413C21C0C0EED003BAD1B /* PrintPreview2Controller.swift */,
@@ -375,25 +393,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				8F71FCB11C07962700891228 /* omote.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
 				8F71FCAF1C07961B00891228 /* noimage.jpg in Resources */,
+				9CA1E0281C0AEC090083591E /* hurikaeri.png in Resources */,
 				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
 				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
-				DC4430561C0959380006D4F5 /* top画面2.png in Resources */,
+				9CA1E02A1C0AEC110083591E /* kanko.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
+				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
 				DC4430481C0958FC0006D4F5 /* redpin.png in Resources */,
+				9CA1E02C1C0AEC190083591E /* print.png in Resources */,
 				DC4430551C0959380006D4F5 /* pin56.png in Resources */,
 				DC4430521C0959380006D4F5 /* card6.png in Resources */,
 				DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */,
 				DC4430541C0959380006D4F5 /* pencil41.png in Resources */,
+				9CA1E02E1C0AF3600083591E /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +445,13 @@
 				8F71FCAD1C074C0B00891228 /* SelectPhoto2Controller.swift in Sources */,
 				378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */,
 				9CACB5521BDE150E0024707B /* cardList.swift in Sources */,
+				37BBBC461C095E730098B625 /* album_userphoto.swift in Sources */,
 				9CA1E0241C0432370083591E /* setCardList2.swift in Sources */,
 				8F35236C1BDA141900983274 /* PhotoController.swift in Sources */,
-				378BDDEC1C05A1B7000DD5BB /* album.swift in Sources */,
 				379112EE1BD817D80024E678 /* Map.swift in Sources */,
 				8F71FCAB1C074BF000891228 /* SelectPhoto1Controller.swift in Sources */,
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
+				37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
 				8F71FCB51C07AAE700891228 /* CreatePicController.swift in Sources */,
 				DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */,
