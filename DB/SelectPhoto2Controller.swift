@@ -25,8 +25,8 @@ class SelectPhoto2Controller: UIViewController {
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("pic_show"),
-            userInfo: nil, repeats: false);
+        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
+            userInfo: nil, repeats: true);
 
         // Do any additional setup after loading the view.
     }
@@ -51,6 +51,10 @@ class SelectPhoto2Controller: UIViewController {
         appDelegate.picID=8
     }
     
+    @IBAction func back(sender: AnyObject) {
+        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "target1" )
+        self.presentViewController( targetViewController, animated: true, completion: nil)
+    }
     func pic_show(){
         
         if(appDelegate.cardID[4] == 0){

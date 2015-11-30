@@ -64,6 +64,9 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.setCell(cards[indexPath.row])
         return cell
     }
+    @IBAction func photo_select(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
 
