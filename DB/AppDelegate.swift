@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var view_pic: UIImage!
     
-    var pic_segmented = 0
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
