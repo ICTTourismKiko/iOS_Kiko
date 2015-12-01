@@ -14,7 +14,6 @@ class SelectPhoto2Controller: UIViewController {
     @IBOutlet weak var photo5: UIImageView!
     @IBOutlet weak var photo6: UIImageView!
     @IBOutlet weak var photo7: UIImageView!
-    @IBOutlet weak var photo8: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -47,13 +46,11 @@ class SelectPhoto2Controller: UIViewController {
     @IBAction func pic7_select(sender: AnyObject) {
         appDelegate.picID=7
     }
-    @IBAction func pic8_select(sender: AnyObject) {
-        appDelegate.picID=8
-    }
+ 
     
     @IBAction func back(sender: AnyObject) {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "target1" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+//        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "target1" )
+//        self.presentViewController( targetViewController, animated: true, completion: nil)
     }
     func pic_show(){
         
@@ -78,16 +75,10 @@ class SelectPhoto2Controller: UIViewController {
         }else{
             photo7.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[7]).photo?.photoData)!)
         }
-        if(appDelegate.cardID[8] == 0){
-            photo8.image = UIImage(named: "noimage.jpg")
-        }else{
-            photo8.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[8]).photo?.photoData)!)
-        }
-        
     }
     
     @IBAction func finish(sender: AnyObject) {
-        if((appDelegate.cardID[1]==0)||(appDelegate.cardID[2]==0)||(appDelegate.cardID[3]==0)||(appDelegate.cardID[4]==0)||(appDelegate.cardID[5]==0)||(appDelegate.cardID[6]==0)||(appDelegate.cardID[7]==0)||(appDelegate.cardID[8]==0)
+        if((appDelegate.cardID[1]==0)||(appDelegate.cardID[2]==0)||(appDelegate.cardID[3]==0)||(appDelegate.cardID[4]==0)||(appDelegate.cardID[5]==0)||(appDelegate.cardID[6]==0)||(appDelegate.cardID[7]==0)
             ){
                 let myAlert: UIAlertController = UIAlertController(title: "エラー", message: "画像を全て選んでください", preferredStyle: .Alert)
                 // OKのアクションを作成する.
