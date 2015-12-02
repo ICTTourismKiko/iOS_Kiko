@@ -14,6 +14,7 @@ class SelectPhoto1Controller: UIViewController {
     @IBOutlet weak var photo2: UIImageView!
     @IBOutlet weak var photo3: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
+    @IBOutlet weak var barItem1: UIBarButtonItem!
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -25,8 +26,8 @@ class SelectPhoto1Controller: UIViewController {
         navigation.tintColor = UIColor.whiteColor()
         
         
-        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
-            userInfo: nil, repeats: true);
+        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("pic_show"),
+            userInfo: nil, repeats: false);
 
         // Do any additional setup after loading the view.
     }
@@ -34,10 +35,6 @@ class SelectPhoto1Controller: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func next(sender: AnyObject) {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "target2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
     }
     @IBAction func photo1_select(sender: AnyObject) {
         appDelegate.picID=1
