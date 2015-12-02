@@ -26,8 +26,8 @@ class SelectPhoto1Controller: UIViewController {
         navigation.tintColor = UIColor.whiteColor()
         
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("pic_show"),
-            userInfo: nil, repeats: false);
+        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
+            userInfo: nil, repeats: true);
 
         // Do any additional setup after loading the view.
     }
