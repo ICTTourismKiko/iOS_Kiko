@@ -58,6 +58,8 @@
 		DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304C1C0959380006D4F5 /* favourites7 (1).png */; };
 		DC4430541C0959380006D4F5 /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304D1C0959380006D4F5 /* pencil41.png */; };
 		DC4430551C0959380006D4F5 /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304E1C0959380006D4F5 /* pin56.png */; };
+		DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430A91C0FFEA90006D4F5 /* omote.jpg */; };
+		DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
 		DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DCE7BBE81BF6AA890012BCB9 /* cardData.realm */; };
@@ -153,6 +155,8 @@
 		DC44304C1C0959380006D4F5 /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites7 (1).png"; sourceTree = "<group>"; };
 		DC44304D1C0959380006D4F5 /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil41.png; sourceTree = "<group>"; };
 		DC44304E1C0959380006D4F5 /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin56.png; sourceTree = "<group>"; };
+		DC4430A91C0FFEA90006D4F5 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = omote.jpg; path = ../omote.jpg; sourceTree = "<group>"; };
+		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
 		DCE7BBE81BF6AA890012BCB9 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				DC4430A91C0FFEA90006D4F5 /* omote.jpg */,
+				DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */,
 				9CA1E02D1C0AF3600083591E /* background.png */,
 				9CA1E02F1C0AF36A0083591E /* title.png */,
 				9CA1E0271C0AEC090083591E /* hurikaeri.png */,
@@ -396,6 +402,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
+				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				8F71FCB11C07962700891228 /* omote.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
