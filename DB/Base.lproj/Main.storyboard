@@ -629,10 +629,6 @@
                                 <rect key="frame" x="200" y="118" width="106" height="151"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-Fe-xb8">
-                                <rect key="frame" x="255" y="393" width="106" height="151"/>
-                                <animations/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWY-99-0ka">
                                 <rect key="frame" x="134" y="393" width="106" height="151"/>
                                 <animations/>
@@ -673,14 +669,6 @@
                                     <segue destination="Re1-92-Xwj" kind="show" id="EgP-1Z-cQx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlp-6o-xnT">
-                                <rect key="frame" x="255" y="393" width="106" height="151"/>
-                                <animations/>
-                                <connections>
-                                    <action selector="pic8_select:" destination="ue7-Gg-Fp2" eventType="touchUpInside" id="5oF-e7-Kl2"/>
-                                    <segue destination="Re1-92-Xwj" kind="show" id="0wA-L6-2s8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -696,32 +684,11 @@
                         <outlet property="photo5" destination="Nw8-nV-5kI" id="ttm-Ir-giA"/>
                         <outlet property="photo6" destination="h6s-Ql-1hK" id="fyp-kc-B9r"/>
                         <outlet property="photo7" destination="YWY-99-0ka" id="yPp-jl-oeN"/>
-                        <outlet property="photo8" destination="BGU-Fe-xb8" id="GIX-Di-oHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEM-sI-3sI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083.5" y="2243.5"/>
-        </scene>
-        <!--None View Controller-->
-        <scene sceneID="zne-qq-TsV">
-            <objects>
-                <viewController id="alm-iL-X77" customClass="noneViewController" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7Xc-hS-nNu"/>
-                        <viewControllerLayoutGuide type="bottom" id="rko-vD-asE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="v3b-FV-QcK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A6v-US-Sbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1083.5" y="3075.5"/>
         </scene>
         <!--Card List2-->
         <scene sceneID="Ctj-P2-dDH">
@@ -755,9 +722,6 @@
                                                 <state key="normal" title="戻る">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="alm-iL-X77" kind="show" id="gzK-BT-kq2"/>
-                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -807,8 +771,8 @@
                                                     <animations/>
                                                     <state key="normal" title="写真を選択"/>
                                                     <connections>
+                                                        <action selector="photo_select:" destination="Re1-92-Xwj" eventType="touchUpInside" id="Bma-1q-geb"/>
                                                         <action selector="select_photo:" destination="55M-Ae-TkD" eventType="touchUpInside" id="uGu-5H-2Kc"/>
-                                                        <segue destination="alm-iL-X77" kind="show" id="cX5-x6-Qsg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -875,81 +839,10 @@
             </objects>
             <point key="canvasLocation" x="1439" y="1460"/>
         </scene>
-        <!--Create Pic Controller-->
-        <scene sceneID="7pB-ah-LpJ">
-            <objects>
-                <viewController storyboardIdentifier="sample" id="jO3-Xv-7tt" customClass="CreatePicController" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iGq-s4-aju"/>
-                        <viewControllerLayoutGuide type="bottom" id="PT3-bi-Hxy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g64-Jo-rUT">
-                        <rect key="frame" x="0.0" y="0.0" width="1754" height="1240"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q85-Kd-exx">
-                                <rect key="frame" x="0.0" y="0.0" width="1754" height="1240"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-V6-dNn">
-                                <rect key="frame" x="10" y="10" width="240" height="329"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-5r-DJ0">
-                                <rect key="frame" x="617" y="425" width="280" height="384"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aec-KE-qvM">
-                                <rect key="frame" x="570" y="15" width="232" height="318"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-Hu-Zx3">
-                                <rect key="frame" x="319" y="425" width="243" height="333"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-Lz-zLx">
-                                <rect key="frame" x="20" y="425" width="243" height="333"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-be-AO9">
-                                <rect key="frame" x="294" y="20" width="235" height="324"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuo-BX-UDp">
-                                <rect key="frame" x="844" y="15" width="217" height="297"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diG-eb-RLt">
-                                <rect key="frame" x="1455" y="838" width="279" height="382"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1754" height="1240"/>
-                    <connections>
-                        <outlet property="background_view" destination="g64-Jo-rUT" id="XPf-ue-Hm8"/>
-                        <outlet property="backimage" destination="Q85-Kd-exx" id="xoh-Te-poR"/>
-                        <outlet property="pic1" destination="Ei4-V6-dNn" id="8AP-Oq-UV2"/>
-                        <outlet property="pic2" destination="qYK-be-AO9" id="bUf-Yl-YGy"/>
-                        <outlet property="pic3" destination="aec-KE-qvM" id="DZ6-Gi-F71"/>
-                        <outlet property="pic4" destination="uuo-BX-UDp" id="flf-WH-O17"/>
-                        <outlet property="pic5" destination="rK1-Lz-zLx" id="sKh-8y-W0e"/>
-                        <outlet property="pic6" destination="cvg-Hu-Zx3" id="lzE-x3-7qe"/>
-                        <outlet property="pic7" destination="e5H-5r-DJ0" id="8hn-dG-FX2"/>
-                        <outlet property="pic8" destination="diG-eb-RLt" id="LPX-sj-LD1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJn-mw-ahi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1023" y="4135"/>
-        </scene>
         <!--Print Preview Controller-->
         <scene sceneID="zUi-2L-GK5">
             <objects>
-                <viewController storyboardIdentifier="print" id="J8o-2T-ppR" customClass="PrintPreviewController" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J8o-2T-ppR" customClass="PrintPreviewController" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L8X-Si-M0v"/>
                         <viewControllerLayoutGuide type="bottom" id="7UE-it-3pb"/>
@@ -976,9 +869,6 @@
                                                 <state key="normal" title="戻る">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="ue7-Gg-Fp2" kind="show" id="wCb-3s-vey"/>
-                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="EW1-jx-QrR">
@@ -1036,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vR-SY-nKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642.5" y="2837.5"/>
+            <point key="canvasLocation" x="1513.5" y="2243.5"/>
         </scene>
         <!--Album defaultphoto-->
         <scene sceneID="JVp-5B-DOw">
@@ -1125,6 +1015,251 @@
             </objects>
             <point key="canvasLocation" x="95.5" y="2723.5"/>
         </scene>
+        <!--Print Preview1 Controller-->
+        <scene sceneID="RiM-5D-F9z">
+            <objects>
+                <viewController storyboardIdentifier="print" id="VPM-Wm-mGb" customClass="PrintPreview1Controller" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seC-fa-g3w"/>
+                        <viewControllerLayoutGuide type="bottom" id="vRy-Em-P0o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b9Y-Aw-IHa">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="omote.png" translatesAutoresizingMaskIntoConstraints="NO" id="vyD-OR-YJF">
+                                <rect key="frame" x="20" y="14" width="464" height="347"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrZ-07-Ak5">
+                                <rect key="frame" x="520" y="85" width="114" height="30"/>
+                                <state key="normal" title="2ページ目を見る"/>
+                                <connections>
+                                    <segue destination="cWc-Ua-8nY" kind="modal" id="H1Y-Ah-5Jw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUG-an-SHP">
+                                <rect key="frame" x="510" y="241" width="135" height="30"/>
+                                <state key="normal" title="写真選択画面に戻る"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nfv-vS-lUU"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwl-zQ-wOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302.5" y="2889.5"/>
+        </scene>
+        <!--Print Preview2 Controller-->
+        <scene sceneID="cul-h1-MRQ">
+            <objects>
+                <viewController id="cWc-Ua-8nY" customClass="PrintPreview2Controller" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0pY-Ty-cb2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gPT-fn-oMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y1d-Qh-WSC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrM-RX-vL6">
+                                <rect key="frame" x="520" y="78" width="112" height="30"/>
+                                <state key="normal" title="1ページ目を見る"/>
+                                <connections>
+                                    <segue destination="VPM-Wm-mGb" kind="modal" id="yho-vF-yPP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idO-Bu-thR">
+                                <rect key="frame" x="20" y="20" width="464" height="347"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-VX-NfD">
+                                <rect key="frame" x="541" y="173" width="60" height="30"/>
+                                <state key="normal" title="印刷する"/>
+                                <connections>
+                                    <action selector="print:" destination="cWc-Ua-8nY" eventType="touchUpInside" id="UZC-JK-ng4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-ca-rpR">
+                                <rect key="frame" x="509" y="262" width="135" height="30"/>
+                                <state key="normal" title="写真選択画面に戻る"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="page2Image" destination="idO-Bu-thR" id="E3T-ZZ-GaS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pR-2E-cpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292.5" y="3417.5"/>
+        </scene>
+        <!--Create View Controller-->
+        <scene sceneID="KVf-aB-mDR">
+            <objects>
+                <viewController storyboardIdentifier="sample" id="wyl-zo-DXF" customClass="CreateViewController" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9B-jX-OVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="4cj-Y3-0Ll"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AUE-Cb-MuV">
+                        <rect key="frame" x="0.0" y="0.0" width="1754" height="1240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-ha-HpC">
+                                <rect key="frame" x="0.0" y="0.0" width="1754" height="1240"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-tl-Stw">
+                                <rect key="frame" x="10" y="20" width="504" height="671"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-Nk-8pz">
+                                <rect key="frame" x="1488" y="883" width="246" height="337"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9RG-cR-jwE">
+                                <rect key="frame" x="896" y="20" width="270" height="361"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-2z-fbM">
+                                <rect key="frame" x="10" y="882" width="255" height="340"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-jf-1Cj">
+                                <rect key="frame" x="548" y="20" width="269" height="359"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QR-kN-MZ9">
+                                <rect key="frame" x="1230" y="20" width="495" height="659"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b24-5V-buC">
+                                <rect key="frame" x="625" y="479" width="511" height="701"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ts7-WO-ndg">
+                                <rect key="frame" x="10" y="699" width="504" height="141"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="am7-hG-gNv">
+                                <rect key="frame" x="273" y="979" width="344" height="241"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-Xa-fc0">
+                                <rect key="frame" x="548" y="387" width="269" height="49"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-Ri-gfL">
+                                <rect key="frame" x="896" y="387" width="270" height="49"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4IG-xN-c8D">
+                                <rect key="frame" x="627" y="1188" width="507" height="44"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-lM-8WY">
+                                <rect key="frame" x="1230" y="687" width="495" height="173"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPD-Mn-NhT">
+                                <rect key="frame" x="1142" y="1003" width="338" height="217"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49X-cK-1el">
+                                <rect key="frame" x="32" y="753" width="473" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wge-r5-LYA">
+                                <rect key="frame" x="560" y="397" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-XR-Gs0">
+                                <rect key="frame" x="907" y="397" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-kZ-0f6">
+                                <rect key="frame" x="1239" y="699" width="476" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4I-9K-uqu">
+                                <rect key="frame" x="295" y="989" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK4-Hj-Ksx">
+                                <rect key="frame" x="1155" y="1017" width="313" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Np-2s-7Xg">
+                                <rect key="frame" x="1250" y="733" width="465" height="113"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEg-sI-TMH">
+                                <rect key="frame" x="295" y="1034" width="308" height="173"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-eh-Spp">
+                                <rect key="frame" x="1155" y="1059" width="313" height="153"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTv-5n-uZq">
+                                <rect key="frame" x="641" y="1199" width="473" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWc-fp-0h5">
+                                <rect key="frame" x="20" y="707" width="485" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1754" height="1240"/>
+                    <connections>
+                        <outlet property="background_view" destination="AUE-Cb-MuV" id="Hba-Bh-HLd"/>
+                        <outlet property="backimage" destination="Pdq-ha-HpC" id="sV0-KL-fwS"/>
+                        <outlet property="pic1" destination="rjB-tl-Stw" id="imf-fp-SFi"/>
+                        <outlet property="pic2" destination="tE5-jf-1Cj" id="wwG-bk-KSY"/>
+                        <outlet property="pic3" destination="9RG-cR-jwE" id="Hok-u5-m6g"/>
+                        <outlet property="pic4" destination="7QR-kN-MZ9" id="grh-7X-IkM"/>
+                        <outlet property="pic5" destination="ITh-2z-fbM" id="f7q-XS-X47"/>
+                        <outlet property="pic6" destination="b24-5V-buC" id="JH6-uB-vy4"/>
+                        <outlet property="pic7" destination="Ht0-Nk-8pz" id="4Ez-xy-vNJ"/>
+                        <outlet property="text1" destination="49X-cK-1el" id="97u-7C-B6t"/>
+                        <outlet property="text4" destination="5Np-2s-7Xg" id="1TB-9a-mbk"/>
+                        <outlet property="text5" destination="LEg-sI-TMH" id="bi1-5N-gdF"/>
+                        <outlet property="text7" destination="0cc-eh-Spp" id="Jy5-av-7Um"/>
+                        <outlet property="textback1" destination="Ts7-WO-ndg" id="QCf-Rz-pGb"/>
+                        <outlet property="textback2" destination="S0q-Xa-fc0" id="IBg-be-vaE"/>
+                        <outlet property="textback3" destination="zZg-Ri-gfL" id="tzQ-cI-bId"/>
+                        <outlet property="textback4" destination="jQP-lM-8WY" id="2TC-hu-m3k"/>
+                        <outlet property="textback5" destination="am7-hG-gNv" id="q03-S2-b6B"/>
+                        <outlet property="textback6" destination="4IG-xN-c8D" id="LSX-vj-iWQ"/>
+                        <outlet property="textback7" destination="lPD-Mn-NhT" id="wmQ-aI-W60"/>
+                        <outlet property="title1" destination="IWc-fp-0h5" id="8nv-m3-cLo"/>
+                        <outlet property="title2" destination="Wge-r5-LYA" id="Zie-CT-Oh3"/>
+                        <outlet property="title3" destination="Tfs-XR-Gs0" id="YP2-Gs-M1v"/>
+                        <outlet property="title4" destination="hUI-kZ-0f6" id="W83-dD-Azr"/>
+                        <outlet property="title5" destination="O4I-9K-uqu" id="yIX-ST-hbp"/>
+                        <outlet property="title6" destination="gTv-5n-uZq" id="sff-aX-BFS"/>
+                        <outlet property="title7" destination="nK4-Hj-Ksx" id="Xdo-3W-iyM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Di-SV-3WH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="4361"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="474" height="842"/>
@@ -1135,16 +1270,15 @@
         <image name="hurikaeri.png" width="288" height="62"/>
         <image name="kanko.png" width="288" height="62"/>
         <image name="next.png" width="25" height="25"/>
+        <image name="omote.png" width="842" height="595"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
         <image name="print.png" width="288" height="62"/>
         <image name="title.png" width="348" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wCb-3s-vey"/>
         <segue reference="kwe-MC-klH"/>
-        <segue reference="gzK-BT-kq2"/>
+        <segue reference="f50-YB-PaE"/>
         <segue reference="qIg-zi-0Zd"/>
-        <segue reference="OWY-Gf-eoP"/>
     </inferredMetricsTieBreakers>
 </document>
