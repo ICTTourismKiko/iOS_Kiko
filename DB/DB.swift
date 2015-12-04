@@ -112,6 +112,13 @@ class DB {
         }
     }
     
+    func initAll(){
+        for var i=1; i<self.cardListSize(); i++ {
+            self.linkToCardData(self.getDefaultPhoto(i))
+            self.linkToCardData(self.getDefaultText(i))
+        }
+    }
+    
     /* ---------------------------
     絞り込み検索で使用するメソッド
     --------------------------- */
@@ -252,6 +259,13 @@ class DB {
         card.ID = cardText.ID
         card.cardText = cardText
         addRecord(card)
+    }
+    
+    //デフォルトのテキストを取得
+    func getDefaultText(id: Int) -> CardText {
+        let realm = try! Realm(path: getRealmPath())
+        return realm.objects(CardText).filter("ID = %@", id)[0]
+        
     }
     
     /*

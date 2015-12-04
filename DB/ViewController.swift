@@ -19,4 +19,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func initButton(sender: AnyObject) {
+    }
 }
