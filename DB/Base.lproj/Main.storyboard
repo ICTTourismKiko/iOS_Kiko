@@ -171,6 +171,12 @@
                                     <constraint firstAttribute="width" constant="300" id="az8-y5-Slk"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-8N-NAR">
+                                <rect key="frame" x="29" y="560" width="146" height="79"/>
+                                <connections>
+                                    <action selector="initButton:" destination="5Yw-qv-psP" eventType="touchUpInside" id="7vF-1Y-h1T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1277,8 +1283,8 @@
         <image name="title.png" width="348" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kwe-MC-klH"/>
-        <segue reference="f50-YB-PaE"/>
         <segue reference="qIg-zi-0Zd"/>
+        <segue reference="OWY-Gf-eoP"/>
+        <segue reference="kwe-MC-klH"/>
     </inferredMetricsTieBreakers>
 </document>
