@@ -255,10 +255,11 @@ class DB {
     
     //CardDataレコードとCardTextレコードを関連付ける
     func linkToCardData(cardText: CardText){
-        let card = CardData()
-        card.ID = cardText.ID
-        card.cardText = cardText
-        addRecord(card)
+        let realm = try! Realm(path: getRealmPath())
+        let card = getCard(cardText.ID)
+        try! realm.write {
+            card.cardText = cardText
+        }
     }
     
     //デフォルトのテキストを取得
