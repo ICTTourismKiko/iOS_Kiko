@@ -20,5 +20,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     @IBAction func initButton(sender: AnyObject) {
+        DB().initAll()
     }
 }
