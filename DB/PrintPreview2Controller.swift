@@ -12,7 +12,7 @@ class PrintPreview2Controller: UIViewController {
 
     @IBOutlet weak var page2Image: UIImageView!
     
-    let page1Image = UIImage(named: "omote.png")
+    let page1Image = UIImage(named: "omote.jpg")
     var print_NSData = NSData()
     let filename : NSString = "ki-ko"
     let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -46,7 +46,7 @@ class PrintPreview2Controller: UIViewController {
         UIGraphicsBeginPDFContextToFile(pdfFilename, CGRectZero, nil)
         
         // 1ページを開始する
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 843, 596), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 1690, 1195), nil)
         // 1枚目画像を描画する
         let point1 = CGPointMake(0, 0)
         page1Image!.drawAtPoint(point1)

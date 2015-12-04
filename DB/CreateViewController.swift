@@ -50,7 +50,7 @@ class CreateViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        backimage.image = UIImage(named: "haikei.png")
+        backimage.image = UIImage(named: "haikei.jpg")
         
         textback1.image = UIImage(named: "b300.png")
         textback2.image = UIImage(named: "b300.png")

@@ -17,6 +17,7 @@
 		378BDDF51C05A406000DD5BB /* PagingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */; };
 		378BDDF71C05A57A000DD5BB /* haikei.png in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDF61C05A57A000DD5BB /* haikei.png */; };
 		378BDDF91C05A643000DD5BB /* b300.png in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDF81C05A643000DD5BB /* b300.png */; };
+		378E84611C117AF9008B0E39 /* kiko.png in Resources */ = {isa = PBXBuildFile; fileRef = 378E84601C117AF9008B0E39 /* kiko.png */; };
 		379112EE1BD817D80024E678 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379112ED1BD817D80024E678 /* Map.swift */; };
 		379112F01BD818E90024E678 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112EF1BD818E90024E678 /* MapKit.framework */; };
 		379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379112F11BD818F50024E678 /* CoreLocation.framework */; };
@@ -106,6 +107,7 @@
 		378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionView.swift; sourceTree = "<group>"; };
 		378BDDF61C05A57A000DD5BB /* haikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei.png; sourceTree = "<group>"; };
 		378BDDF81C05A643000DD5BB /* b300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b300.png; sourceTree = "<group>"; };
+		378E84601C117AF9008B0E39 /* kiko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiko.png; sourceTree = "<group>"; };
 		379112ED1BD817D80024E678 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		379112EF1BD818E90024E678 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		379112F11BD818F50024E678 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -198,6 +200,7 @@
 				378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */,
 				378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */,
 				378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */,
+				378E84601C117AF9008B0E39 /* kiko.png */,
 			);
 			name = PagingCollectionView;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
+				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				8F71FCB11C07962700891228 /* omote.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
