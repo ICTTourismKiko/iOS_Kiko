@@ -344,18 +344,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="b300.png" translatesAutoresizingMaskIntoConstraints="NO" id="nlF-Zl-hFm">
-                                <rect key="frame" x="9" y="332" width="355" height="60"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pen67.png" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-uX-Tvf">
-                                <rect key="frame" x="20" y="349" width="25" height="25"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ここにあなたの旅行の思い出を残しましょう。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qD-QS-qYJ">
-                                <rect key="frame" x="51" y="341" width="320" height="41"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
-                                <color key="textColor" white="0.046823601973684216" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjV-8C-nIV">
                                 <rect key="frame" x="283" y="274" width="72" height="30"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
@@ -376,30 +364,43 @@
                                     <action selector="defaultButton:" destination="yiO-eE-nys" eventType="touchUpInside" id="3QU-RD-tu7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ki-ko01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BlH-IK-QBj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ki-ko01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BlH-IK-QBj">
                                 <rect key="frame" x="26" y="379" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BlH-IK-QBj" secondAttribute="height" multiplier="1:1" id="fmX-J7-nq6"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-7z-5D1">
                                 <rect key="frame" x="20" y="100" width="127" height="166"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="openImage:" destination="yiO-eE-nys" eventType="touchUpInside" id="b75-cV-Fuw"/>
                                     <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="yQM-lS-wbh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="edit_tips.png" translatesAutoresizingMaskIntoConstraints="NO" id="YDJ-S3-KQw">
+                                <rect key="frame" x="-1" y="328" width="377" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YDJ-S3-KQw" secondAttribute="height" multiplier="377:46" id="yRX-EE-X2b"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BlH-IK-QBj" firstAttribute="leading" secondItem="sFM-DY-Nox" secondAttribute="leadingMargin" constant="6" id="Dwq-g8-B6Y"/>
                             <constraint firstItem="yk9-LD-rGb" firstAttribute="leading" secondItem="sFM-DY-Nox" secondAttribute="leadingMargin" constant="-17" id="EQU-WH-3pu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YDJ-S3-KQw" secondAttribute="trailing" constant="-21" id="JCx-bV-bAi"/>
+                            <constraint firstItem="YDJ-S3-KQw" firstAttribute="top" secondItem="yk9-LD-rGb" secondAttribute="bottom" constant="8" id="Jij-tX-9fs"/>
+                            <constraint firstItem="9iL-eG-gCr" firstAttribute="top" secondItem="BlH-IK-QBj" secondAttribute="bottom" id="Qwg-um-ThR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yk9-LD-rGb" secondAttribute="trailing" constant="-16" id="WJe-c3-KaC"/>
                             <constraint firstItem="JGC-j5-70c" firstAttribute="leading" secondItem="sFM-DY-Nox" secondAttribute="leadingMargin" constant="-20" id="ck7-c8-iY0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GXe-67-vx2" secondAttribute="trailing" constant="-20" id="dfx-qt-4Q0"/>
                             <constraint firstItem="fxL-Aj-R2z" firstAttribute="leading" secondItem="sFM-DY-Nox" secondAttribute="leadingMargin" id="e8V-hb-Hw8"/>
                             <constraint firstItem="TjV-8C-nIV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ecg-nD-qWI" secondAttribute="trailing" constant="20" id="g8v-fD-92R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BlH-IK-QBj" secondAttribute="trailing" constant="41" id="iHH-rN-dma"/>
                             <constraint firstItem="9iL-eG-gCr" firstAttribute="top" secondItem="GXe-67-vx2" secondAttribute="bottom" id="nGL-ud-FaA"/>
+                            <constraint firstItem="YDJ-S3-KQw" firstAttribute="leading" secondItem="sFM-DY-Nox" secondAttribute="leadingMargin" constant="-21" id="p8R-Gb-D19"/>
                             <constraint firstItem="3gh-AV-9a7" firstAttribute="leading" secondItem="B4F-7z-5D1" secondAttribute="trailing" constant="19" id="pTf-J1-niX"/>
                             <constraint firstItem="3gh-AV-9a7" firstAttribute="trailing" secondItem="sFM-DY-Nox" secondAttribute="trailingMargin" id="q2L-ZE-t60"/>
-                            <constraint firstItem="nlF-Zl-hFm" firstAttribute="top" secondItem="TjV-8C-nIV" secondAttribute="bottom" constant="28" id="q3c-vJ-2Wr"/>
                             <constraint firstItem="TjV-8C-nIV" firstAttribute="trailing" secondItem="sFM-DY-Nox" secondAttribute="trailingMargin" id="rjK-ZK-1Wm"/>
                             <constraint firstItem="3ai-V4-sf6" firstAttribute="trailing" secondItem="sFM-DY-Nox" secondAttribute="trailingMargin" id="squ-gP-xK0"/>
                             <constraint firstItem="3ai-V4-sf6" firstAttribute="leading" secondItem="B4F-7z-5D1" secondAttribute="trailing" constant="19" id="vZh-Me-4fv"/>
@@ -1330,18 +1331,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="b300.png" width="300" height="189"/>
         <image name="background.png" width="474" height="842"/>
         <image name="bar6.png" width="375" height="44"/>
         <image name="camera3-3.png" width="64" height="64"/>
         <image name="card6.png" width="508" height="251"/>
+        <image name="edit_tips.png" width="460" height="56"/>
         <image name="favourites7 (1).png" width="64" height="64"/>
         <image name="haikei.jpg" width="842" height="595"/>
         <image name="hurikaeri.png" width="288" height="62"/>
         <image name="kanko.png" width="288" height="62"/>
         <image name="ki-ko01.png" width="1654" height="1654"/>
         <image name="next.png" width="25" height="25"/>
-        <image name="pen67.png" width="64" height="64"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
         <image name="print.png" width="288" height="62"/>
@@ -1349,6 +1349,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qIg-zi-0Zd"/>
-        <segue reference="Bda-Vk-JCy"/>
+        <segue reference="yQM-lS-wbh"/>
     </inferredMetricsTieBreakers>
 </document>
