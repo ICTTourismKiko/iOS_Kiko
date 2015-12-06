@@ -29,6 +29,8 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +65,12 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let cell: setCardList = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! setCardList
         cell.setCell(cards[indexPath.row])
         return cell
+    }
+    
+    func reload(){
+        cards.removeAll()
+        setupLists()
+        tableView.reloadData()
     }
     
 }
