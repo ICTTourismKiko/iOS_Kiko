@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Yw-qv-psP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Yw-qv-psP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Photo Viewer-->
+        <scene sceneID="Jvm-UD-Suu">
+            <objects>
+                <viewController storyboardIdentifier="photoViewer" id="Lty-aC-0Gv" customClass="photoViewer" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zii-Ej-Jff"/>
+                        <viewControllerLayoutGuide type="bottom" id="WyH-qA-dvz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQ7-z8-UR2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntG-aK-ffU">
+                                <rect key="frame" x="0.0" y="79" width="375" height="510"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhe-LP-D2T">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="511"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYR-wb-L0G">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backbutton:" destination="Lty-aC-0Gv" eventType="touchUpInside" id="4ff-BK-40S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jlT-ly-ANI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myImageView" destination="xhe-LP-D2T" id="1od-vg-Y63"/>
+                        <outlet property="myScrollView" destination="ntG-aK-ffU" id="gq0-5a-NbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iL-VW-4L4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2196.5" y="1173.5"/>
+        </scene>
         <!--Map-->
         <scene sceneID="gHM-54-W73">
             <objects>
@@ -64,8 +105,16 @@
                                 <rect key="frame" x="300" y="495" width="34" height="32"/>
                                 <animations/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf3-kG-kG3">
+                                <rect key="frame" x="18" y="499" width="104" height="148"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openImage:" destination="wlr-xO-CWA" eventType="touchUpInside" id="Dbh-BG-Rfg"/>
+                                    <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="dNd-oi-ntL"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
-                                <rect key="frame" x="140" y="494" width="221" height="164"/>
+                                <rect key="frame" x="140" y="495" width="221" height="164"/>
                                 <animations/>
                                 <connections>
                                     <action selector="CardLabelTapped:" destination="wlr-xO-CWA" eventType="touchUpInside" id="Bq9-JS-ixH"/>
@@ -106,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vu-WT-Uq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438.5" y="725.5"/>
+            <point key="canvasLocation" x="1567.5" y="648.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P32-3L-iHC">
@@ -299,6 +348,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ki-ko01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BlH-IK-QBj">
                                 <rect key="frame" x="26" y="379" width="288" height="288"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-7z-5D1">
+                                <rect key="frame" x="20" y="100" width="127" height="166"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openImage:" destination="yiO-eE-nys" eventType="touchUpInside" id="b75-cV-Fuw"/>
+                                    <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="yQM-lS-wbh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -312,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bj6-sB-AHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550.5" y="517.5"/>
+            <point key="canvasLocation" x="1567.5" y="-93.5"/>
         </scene>
         <!--Card List-->
         <scene sceneID="xah-ai-Mm6">
@@ -414,6 +471,14 @@
                                                     <connections>
                                                         <action selector="CellButtonTapped:" destination="8lD-tQ-t7t" eventType="touchUpInside" id="tBV-G9-Piw"/>
                                                         <segue destination="yiO-eE-nys" kind="show" id="sFZ-r8-OYQ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-oI-oJ7">
+                                                    <rect key="frame" x="22" y="14" width="97" height="132"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="openImage:" destination="8lD-tQ-t7t" eventType="touchUpInside" id="Rek-77-02h"/>
+                                                        <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="sEM-aE-9tf"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -609,6 +674,9 @@
                                                 <state key="normal" title="戻る">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="backbutton:" destination="Re1-92-Xwj" eventType="touchUpInside" id="KYB-Vv-LWd"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -662,6 +730,14 @@
                                                         <action selector="select_photo:" destination="55M-Ae-TkD" eventType="touchUpInside" id="uGu-5H-2Kc"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7C-KB-uXE">
+                                                    <rect key="frame" x="16" y="12" width="102" height="136"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="openImage:" destination="55M-Ae-TkD" eventType="touchUpInside" id="Mus-zl-H2G"/>
+                                                        <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="Bda-Vk-JCy"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -704,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX7-4y-Uvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656.5" y="3075.5"/>
+            <point key="canvasLocation" x="1567.5" y="2255.5"/>
         </scene>
         <!--Photo Controller-->
         <scene sceneID="It0-Zy-9Z2">
@@ -724,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpS-4F-2ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="1460"/>
+            <point key="canvasLocation" x="1540" y="1372"/>
         </scene>
         <!--Print Preview Controller-->
         <scene sceneID="zUi-2L-GK5">
@@ -819,7 +895,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vR-SY-nKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625.5" y="2228.5"/>
+            <point key="canvasLocation" x="1089.5" y="2992.5"/>
         </scene>
         <!--Album defaultphoto-->
         <scene sceneID="JVp-5B-DOw">
@@ -1223,6 +1299,7 @@
         <image name="title.png" width="348" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qIg-zi-0Zd"/>
+        <segue reference="rXM-PX-Xa9"/>
+        <segue reference="Bda-Vk-JCy"/>
     </inferredMetricsTieBreakers>
 </document>

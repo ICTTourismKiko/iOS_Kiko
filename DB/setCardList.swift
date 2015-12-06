@@ -92,6 +92,10 @@ UINavigationControllerDelegate{
     @IBAction func CellButtonTapped(sender: AnyObject) {
         appDelegate.P_ID = cardID
     }
+    //画像タップ
+    @IBAction func openImage(sender: AnyObject) {
+        appDelegate.P_ID = cardID
+    }
     
     /* フラグボタンを押した時の処理 */
     @IBAction func flagOnOff(sender: AnyObject) {

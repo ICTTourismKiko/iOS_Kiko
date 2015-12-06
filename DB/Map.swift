@@ -17,7 +17,11 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var ChangeTextButton: UIButton!
     @IBOutlet weak var arrow: UIImageView!
     
+    var cardID = 0
+
+    
     var myLocationManager: CLLocationManager!
+    
     
     class Pin : MKPointAnnotation{
         var ID = 0
@@ -38,9 +42,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var CardTopSyousai = UILabel()
     var CardTopPoemu = UILabel()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         //ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
@@ -49,7 +54,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         //選択したIDを持ってくる処理
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let pic_id = appDelegate.P_ID
-        
+        cardID = appDelegate.P_ID!
         
         //ラベルの設置
         CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
@@ -232,6 +237,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 
             }
         }
+    }
+    
+    @IBAction func openImage(sender: AnyObject) {
+    
     }
     
     @IBAction func backbutton(sender: AnyObject) {

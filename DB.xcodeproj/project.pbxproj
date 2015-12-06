@@ -31,6 +31,7 @@
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
 		8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */; };
+		9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D92301C141CF8009A5659 /* photoViewer.swift */; };
 		9CA1E0221C0430840083591E /* cardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0211C0430840083591E /* cardList2.swift */; };
 		9CA1E0241C0432370083591E /* setCardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0231C0432370083591E /* setCardList2.swift */; };
 		9CA1E0261C0AEAC90083591E /* top画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0251C0AEAC90083591E /* top画面.png */; };
@@ -123,6 +124,7 @@
 		8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintPreviewController.swift; sourceTree = "<group>"; };
 		8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		9C4D92301C141CF8009A5659 /* photoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoViewer.swift; sourceTree = "<group>"; };
 		9CA1E0211C0430840083591E /* cardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList2.swift; sourceTree = "<group>"; };
 		9CA1E0231C0432370083591E /* setCardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList2.swift; sourceTree = "<group>"; };
 		9CA1E0251C0AEAC90083591E /* top画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面.png"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
 				DC08FCBD1C13E6A1002252F2 /* Edit.swift */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				9C4D92301C141CF8009A5659 /* photoViewer.swift */,
 				8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */,
 				8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */,
 				8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */,
@@ -470,6 +473,7 @@
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
 				37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
+				9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */,
 				DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */,
 				9CACB5541BDE15760024707B /* cardData.swift in Sources */,
 				9CACB5561BDE15970024707B /* setCardList.swift in Sources */,

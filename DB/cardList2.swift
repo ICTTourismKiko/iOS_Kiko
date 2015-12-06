@@ -68,5 +68,8 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func backbutton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
