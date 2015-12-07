@@ -39,6 +39,7 @@ class album_defaultphoto: UIViewController {
         }
     }
     @IBAction func backbutton(sender: AnyObject) {
+        appDelegate.pic_segmented = 0
         self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
