@@ -23,7 +23,7 @@ class PrintPreviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let navBarImage = UIImage(named: "bar6.jpg") as UIImage?
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

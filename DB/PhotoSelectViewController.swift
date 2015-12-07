@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoSelectViewController: UIViewController {
 
+    @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var backimage: UIImageView!
     @IBOutlet weak var pic1: UIImageView!
     @IBOutlet weak var pic2: UIImageView!
@@ -22,6 +23,9 @@ class PhotoSelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         backimage.image=UIImage(named:"haikei.jpg")
         
@@ -124,4 +128,7 @@ class PhotoSelectViewController: UIViewController {
         }
     }
 
+    @IBAction func backButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
