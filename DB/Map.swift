@@ -78,7 +78,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         //カードの画像を表示
         camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id!).photo?.photoData)!)
-        camera2View.layer.cornerRadius = 30
+        camera2View.layer.cornerRadius = 10
         camera2View.layer.masksToBounds = true
         
         CardSyousai.numberOfLines = 30
@@ -116,7 +116,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[i].x = db.getCard(flagTrueIDList[i]).position_x
             PinArray[i].y = db.getCard(flagTrueIDList[i]).position_y
             PinArray[i].coordinate = CLLocationCoordinate2DMake(PinArray[i].x, PinArray[i].y)
-            PinArray[i].imageName = "flag_on.png"
+            PinArray[i].imageName = "fa3.png"
         }
         
         

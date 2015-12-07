@@ -47,6 +47,9 @@
 		DC08FCBE1C13E6A1002252F2 /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08FCBD1C13E6A1002252F2 /* Edit.swift */; };
 		DC08FCC21C13ECD6002252F2 /* pen67.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC11C13ECD6002252F2 /* pen67.png */; };
 		DC08FCC41C13EF04002252F2 /* ki-ko01.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC31C13EF04002252F2 /* ki-ko01.png */; };
+		DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC51C1585C4002252F2 /* tablebackground.png */; };
+		DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD31C158ADA002252F2 /* favopin7.png */; };
+		DC08FCDA1C158D09002252F2 /* fa3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD91C158D09002252F2 /* fa3.png */; };
 		DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C00B1BD7826B000B2465 /* AppDelegate.swift */; };
 		DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C00D1BD7826B000B2465 /* ViewController.swift */; };
 		DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C00F1BD7826B000B2465 /* Main.storyboard */; };
@@ -141,6 +144,9 @@
 		DC08FCBD1C13E6A1002252F2 /* Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
 		DC08FCC11C13ECD6002252F2 /* pen67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen67.png; sourceTree = "<group>"; };
 		DC08FCC31C13EF04002252F2 /* ki-ko01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ki-ko01.png"; sourceTree = "<group>"; };
+		DC08FCC51C1585C4002252F2 /* tablebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tablebackground.png; path = ../tablebackground.png; sourceTree = "<group>"; };
+		DC08FCD31C158ADA002252F2 /* favopin7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favopin7.png; path = ../favopin7.png; sourceTree = "<group>"; };
+		DC08FCD91C158D09002252F2 /* fa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fa3.png; path = ../fa3.png; sourceTree = "<group>"; };
 		DC23C0081BD7826B000B2465 /* DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC23C00B1BD7826B000B2465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC23C00D1BD7826B000B2465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +244,9 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				DC08FCD91C158D09002252F2 /* fa3.png */,
+				DC08FCD31C158ADA002252F2 /* favopin7.png */,
+				DC08FCC51C1585C4002252F2 /* tablebackground.png */,
 				DC4430A91C0FFEA90006D4F5 /* omote.jpg */,
 				DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */,
 				9CA1E02D1C0AF3600083591E /* background.png */,
@@ -411,6 +420,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
+				DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */,
+				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,

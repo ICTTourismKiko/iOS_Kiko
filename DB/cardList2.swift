@@ -32,7 +32,7 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.tableView2.dataSource = self
         
         let imageView = UIImageView(frame: CGRectMake(0, 0, self.tableView2.frame.width, self.tableView2.frame.height))
-        let image = UIImage(named: "haikei.jpg")
+        let image = UIImage(named: "tablebackground.png")
         imageView.image = image
         self.tableView2.backgroundView = imageView
     }
