@@ -104,7 +104,12 @@ class Edit: UIViewController, UITextFieldDelegate{
             alertController.addAction(cancelAction)
             presentViewController(alertController, animated: true, completion: nil)
         }
-        
-        
     }
+    
+  
+    @IBAction func openImage(sender: AnyObject) {
+    }
+    
+    
+    
 }

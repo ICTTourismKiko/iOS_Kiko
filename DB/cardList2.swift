@@ -18,6 +18,7 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var cards:[cardData] = [cardData]()
     let set = setCardList2()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -68,5 +69,8 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func backbutton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 

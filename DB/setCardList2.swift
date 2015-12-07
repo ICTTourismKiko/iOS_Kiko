@@ -18,6 +18,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var introText: UILabel!
     
     var cardID = 0
+    let appdelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,6 +59,11 @@ UINavigationControllerDelegate{
         
         cardID = card.id+1
     }
+    
+    @IBAction func openImage(sender: AnyObject) {
+        appdelegate.P_ID = cardID
+    }
+    
     @IBAction func select_photo(sender: AnyObject) {
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.cardID[appDelegate.picID] = cardID
