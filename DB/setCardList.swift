@@ -62,7 +62,7 @@ UINavigationControllerDelegate{
             // 表示する画像を設定する.
         let myImage = PhotoController().NSSImage(card.imageUrl!)
         self.iconImage.image = myImage
-        self.iconImage.layer.cornerRadius = 10
+        self.iconImage.layer.cornerRadius = 5
         self.iconImage.layer.masksToBounds = true
         
         cardID = card.id+1

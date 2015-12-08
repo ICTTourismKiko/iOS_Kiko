@@ -30,6 +30,11 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         self.tableView2.delegate = self
         self.tableView2.dataSource = self
+        
+        let imageView = UIImageView(frame: CGRectMake(0, 0, self.tableView2.frame.width, self.tableView2.frame.height))
+        let image = UIImage(named: "tablebackground.png")
+        imageView.image = image
+        self.tableView2.backgroundView = imageView
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +68,8 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell: setCardList2 = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! setCardList2
         cell.setCell(cards[indexPath.row])
+        cell.backgroundColor = UIColor.clearColor()
+        cell.contentView.backgroundColor = UIColor.clearColor()
         return cell
     }
     @IBAction func photo_select(sender: AnyObject) {
