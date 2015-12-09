@@ -74,7 +74,7 @@
                                 <rect key="frame" x="5" y="491" width="365" height="173"/>
                                 <animations/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uMO-SB-xsq">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uMO-SB-xsq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="423"/>
                                 <animations/>
                             </mapView>
@@ -86,7 +86,7 @@
                                     <constraint firstAttribute="height" constant="140" id="RaB-Ne-v9K"/>
                                 </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BC6-KA-hls">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BC6-KA-hls">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
                                 <textAttributes key="titleTextAttributes">
@@ -116,20 +116,10 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf3-kG-kG3">
-                                <rect key="frame" x="18" y="499" width="96" height="130"/>
+                                <rect key="frame" x="18" y="499" width="104" height="148"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Vf3-kG-kG3" secondAttribute="height" multiplier="48:65" id="9ph-p2-PM7"/>
                                     <constraint firstAttribute="width" secondItem="Vf3-kG-kG3" secondAttribute="height" multiplier="26:37" id="DUL-F0-cXX"/>
-                                    <constraint firstAttribute="width" secondItem="Vf3-kG-kG3" secondAttribute="height" multiplier="97:132" id="sLt-ep-jme"/>
-                                    <constraint firstAttribute="width" secondItem="Vf3-kG-kG3" secondAttribute="height" multiplier="8:11" id="yHe-Wn-Kzy"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DUL-F0-cXX"/>
-                                        <exclude reference="sLt-ep-jme"/>
-                                        <exclude reference="yHe-Wn-Kzy"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="openImage:" destination="wlr-xO-CWA" eventType="touchUpInside" id="Dbh-BG-Rfg"/>
                                     <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="dNd-oi-ntL"/>
@@ -153,7 +143,6 @@
                             <constraint firstItem="HmE-aY-WFF" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="5" id="Fgo-Rp-hfh"/>
                             <constraint firstItem="uMO-SB-xsq" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="-20" id="G5w-p7-w3A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pV4-24-IuA" secondAttribute="trailing" constant="-15" id="Hrs-jE-ADN"/>
-                            <constraint firstItem="BC6-KA-hls" firstAttribute="top" secondItem="Ifc-9s-m5j" secondAttribute="bottom" id="JMz-3r-hsR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BC6-KA-hls" secondAttribute="trailing" constant="-20" id="KMq-w5-ccm"/>
                             <constraint firstItem="pV4-24-IuA" firstAttribute="leading" secondItem="H0t-4b-RQZ" secondAttribute="leadingMargin" constant="-15" id="MvX-qo-g94"/>
                             <constraint firstItem="HmE-aY-WFF" firstAttribute="top" secondItem="uMO-SB-xsq" secondAttribute="bottom" constant="7" id="Qs4-MG-W8a"/>
@@ -397,19 +386,12 @@
                                     <constraint firstAttribute="width" secondItem="YDJ-S3-KQw" secondAttribute="height" multiplier="377:46" id="yRX-EE-X2b"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdK-qp-IIa">
-                                <rect key="frame" x="355" y="626" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0FY-D2-zhQ">
-                                <rect key="frame" x="11" y="597" width="187" height="62"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9p5-PN-Knr">
+                                <rect key="frame" x="-1" y="596" width="182" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">木古内町観光マスコットキャラクター
 キーコ</string>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -1400,6 +1382,6 @@
         <image name="title.png" width="348" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yQM-lS-wbh"/>
+        <segue reference="sEM-aE-9tf"/>
     </inferredMetricsTieBreakers>
 </document>

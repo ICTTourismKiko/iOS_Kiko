@@ -380,7 +380,7 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3W722UE7AL;
+						DevelopmentTeam = TLVYAZUQZL;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -643,7 +643,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kan;
+				PRODUCT_BUNDLE_IDENTIFIER = project03A.DB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -661,7 +661,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kan;
+				PRODUCT_BUNDLE_IDENTIFIER = project03A.DB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
