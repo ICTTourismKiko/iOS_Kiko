@@ -57,10 +57,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         cardID = appDelegate.P_ID!
         
         //ラベルの設置
-        CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
-        CardPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 120)
-        CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50,self.view.frame.height-160,220,20)
-        CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 20)
+        CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
+        CardPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 120)
+        CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50,self.view.frame.height-140,220,20)
+        CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
         CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
@@ -204,15 +204,15 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             CardLabelShowText = 1
             UIView.animateWithDuration(0.4) { () -> Void in
                 //詳細情報を画面外へ
-                self.CardSyousai.frame = CGRectMake(-220, self.view.frame.height-140, 220, 120)
+                self.CardSyousai.frame = CGRectMake(-220, self.view.frame.height-120, 220, 120)
                 self.CardSyousai.alpha = 0.0
-                self.CardTopSyousai.frame = CGRectMake(-220, self.view.frame.height-160, 220, 20)
+                self.CardTopSyousai.frame = CGRectMake(-220, self.view.frame.height-140, 220, 20)
                 self.CardTopSyousai.alpha = 0.0
                 
                 //スポット紹介を表示
-                self.CardPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
                 self.CardPoemu.alpha = 1.0
-                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
                 
                 self.arrow.image = UIImage(named: "back.png")
@@ -223,15 +223,15 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             UIView.animateWithDuration(0.4) { () -> Void in
                 //スポット紹介を画面外へ
                 self.CardPoemu.alpha = 0.0
-                self.CardPoemu.frame = CGRectMake(self.view.frame.width, self.view.frame.height-140, 220, 120)
-                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width+30, self.view.frame.height-160, 220, 20)
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width, self.view.frame.height-120, 220, 120)
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width+30, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 0.0
                 
                 //詳細情報を表示
                 self.CardSyousai.alpha = 1.0
-                self.CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
                 self.CardTopSyousai.alpha = 1.0
-                self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 
                 self.arrow.image = UIImage(named: "next.png")
                 
