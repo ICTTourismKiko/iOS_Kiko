@@ -76,37 +76,37 @@ class PhotoSelectViewController: UIViewController {
     func pic_show(){
         
         if(appDelegate.cardID[1] == 0){
-            pic1.image = UIImage(named: "noimage.jpg")
+            pic1.image = UIImage(named: "noimage.png")
         }else{
             pic1.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[1]).photo?.photoData)!)
         }
         if(appDelegate.cardID[2] == 0){
-            pic2.image = UIImage(named: "noimage.jpg")
+            pic2.image = UIImage(named: "noimage.png")
         }else{
             pic2.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[2]).photo?.photoData)!)
         }
         if(appDelegate.cardID[3] == 0){
-            pic3.image = UIImage(named: "noimage.jpg")
+            pic3.image = UIImage(named: "noimage.png")
         }else{
             pic3.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[3]).photo?.photoData)!)
         }
         if(appDelegate.cardID[4] == 0){
-            pic4.image = UIImage(named: "noimage.jpg")
+            pic4.image = UIImage(named: "noimage.png")
         }else{
             pic4.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[4]).photo?.photoData)!)
         }
         if(appDelegate.cardID[5] == 0){
-            pic5.image = UIImage(named: "noimage.jpg")
+            pic5.image = UIImage(named: "noimage.png")
         }else{
             pic5.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[5]).photo?.photoData)!)
         }
         if(appDelegate.cardID[6] == 0){
-            pic6.image = UIImage(named: "noimage.jpg")
+            pic6.image = UIImage(named: "noimage.png")
         }else{
             pic6.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[6]).photo?.photoData)!)
         }
         if(appDelegate.cardID[7] == 0){
-            pic7.image = UIImage(named: "noimage.jpg")
+            pic7.image = UIImage(named: "noimage.png")
         }else{
             pic7.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[7]).photo?.photoData)!)
         }
@@ -126,9 +126,5 @@ class PhotoSelectViewController: UIViewController {
             let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "sample" )
             self.presentViewController( targetViewController, animated: true, completion: nil)
         }
-    }
-
-    @IBAction func backButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
