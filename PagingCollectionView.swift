@@ -12,6 +12,8 @@ class PagingCollectionView: UIView {
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    var label = UILabel()
+    
     // MARK: - Properties
     internal let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
     internal var contentSize: CGSize {
@@ -96,7 +98,13 @@ extension PagingCollectionView: UICollectionViewDataSource {
                 cell.TitleLabel.text = ""
                 cell.introLabel.text = ""
                 cell.NoPhotoLabel.text = "撮影写真がありません。\n写真を撮ると表示されます。"
+                label.frame = CGRectMake(60, 310, 300, 120)
+                label.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+                label.text = "木古内町観光マスコットキャラクターキーコ"
+                label.numberOfLines = 1
                 
+                self.addSubview(label)
+
                 return cell
             }else{
                 var UpdateCardIDArray1 = DB().getUpdatedCardIDArray()        //updateがtrueになっているID配列をDBからコピー
