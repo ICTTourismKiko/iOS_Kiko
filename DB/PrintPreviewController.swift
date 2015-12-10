@@ -15,6 +15,7 @@ class PrintPreviewController: UIViewController {
     @IBOutlet weak var front: UIImageView!
     @IBOutlet weak var back: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
+  //  @IBOutlet weak var scroll: UIScrollView!
     let image = UIImage(named: "omote.jpg")
     let filename : NSString = "ki-ko"
     let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -28,6 +29,22 @@ class PrintPreviewController: UIViewController {
         
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         print_NSData = Image_NSData(appDelegate.view_pic)!
+        
+        
+//        // スクロールビューの設定
+//        self.scroll.delegate = self
+//        self.scroll.minimumZoomScale = 1
+//        self.scroll.maximumZoomScale = 4
+//        self.scroll.scrollEnabled = true
+//        self.scroll.showsHorizontalScrollIndicator = true
+//        self.scroll.showsVerticalScrollIndicator = true
+//        
+//        
+//        // ピンチイン・ピンチアウト
+//        func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+//            // print("pinch")
+//            return self
+//        }
         
         //裏、表のプレビュー表示
         back.image=appDelegate.view_pic

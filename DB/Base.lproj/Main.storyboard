@@ -205,7 +205,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Ti-XO-UQV" secondAttribute="height" multiplier="144:31" id="TK2-gR-laj"/>
                                 </constraints>
-                                <state key="normal" image="hurikaeri.png"/>
+                                <state key="normal" image="s_hurikaeri.png"/>
                                 <connections>
                                     <segue destination="Nfw-Ig-AWS" kind="show" id="pll-av-4h7"/>
                                 </connections>
@@ -216,7 +216,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yhd-N6-vAv" secondAttribute="height" multiplier="144:31" id="o1O-jF-G2f"/>
                                 </constraints>
-                                <state key="normal" image="print.png"/>
+                                <state key="normal" image="s_print.png"/>
                                 <connections>
                                     <segue destination="zkJ-4I-dO6" kind="show" id="r15-4z-RgU"/>
                                 </connections>
@@ -227,37 +227,41 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJJ-0I-7Qx" secondAttribute="height" multiplier="144:31" id="osx-MB-DRd"/>
                                 </constraints>
-                                <state key="normal" image="kanko.png"/>
+                                <state key="normal" image="s_kanko.png"/>
                                 <connections>
                                     <segue destination="PGL-vA-g2r" kind="show" id="jWk-ve-ZDt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-aE-3Vk">
-                                <rect key="frame" x="33" y="96" width="300" height="79"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="300:79" id="Fqc-by-2U1"/>
-                                    <constraint firstAttribute="height" constant="79" id="KyT-A2-ae9"/>
-                                    <constraint firstAttribute="width" constant="300" id="az8-y5-Slk"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KyT-A2-ae9"/>
-                                        <exclude reference="az8-y5-Slk"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-8N-NAR">
                                 <rect key="frame" x="29" y="560" width="146" height="79"/>
                                 <connections>
                                     <action selector="initButton:" destination="5Yw-qv-psP" eventType="touchUpInside" id="7vF-1Y-h1T"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="s_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-aE-3Vk">
+                                <rect key="frame" x="83" y="97" width="209" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="300:79" id="Fqc-by-2U1"/>
+                                    <constraint firstAttribute="height" constant="79" id="KyT-A2-ae9"/>
+                                    <constraint firstAttribute="width" constant="300" id="az8-y5-Slk"/>
+                                    <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="19:5" id="dYW-CX-20R"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fqc-by-2U1"/>
+                                        <exclude reference="KyT-A2-ae9"/>
+                                        <exclude reference="az8-y5-Slk"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Ti-XO-UQV" firstAttribute="top" secondItem="tJJ-0I-7Qx" secondAttribute="bottom" constant="20" id="15R-4R-uHs"/>
+                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="63" id="8vE-Un-FPz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nFR-iE-WqJ" secondAttribute="trailing" constant="-20" id="Bim-iu-Tcd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="63" id="D7Y-Pv-vm8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Ti-XO-UQV" secondAttribute="trailing" constant="24" id="DtG-XH-twF"/>
                             <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="nFR-iE-WqJ" secondAttribute="bottom" id="F4h-h1-4Ix"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yhd-N6-vAv" secondAttribute="trailing" constant="24" id="KDg-Op-GuT"/>
@@ -276,6 +280,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="QH0-SS-ciE"/>
+                                <exclude reference="d3S-1X-MdU"/>
+                                <exclude reference="qAo-Q9-PfI"/>
                             </mask>
                         </variation>
                     </view>
@@ -1379,14 +1385,14 @@
         <image name="edit_tips.png" width="460" height="56"/>
         <image name="favourites7 (1).png" width="64" height="64"/>
         <image name="haikei.jpg" width="842" height="595"/>
-        <image name="hurikaeri.png" width="288" height="62"/>
-        <image name="kanko.png" width="288" height="62"/>
         <image name="ki-ko01.png" width="1654" height="1654"/>
         <image name="next.png" width="25" height="25"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
-        <image name="print.png" width="288" height="62"/>
-        <image name="title.png" width="348" height="92"/>
+        <image name="s_hurikaeri.png" width="288" height="62"/>
+        <image name="s_kanko.png" width="288" height="62"/>
+        <image name="s_print.png" width="288" height="62"/>
+        <image name="s_title.png" width="209" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dNd-oi-ntL"/>
