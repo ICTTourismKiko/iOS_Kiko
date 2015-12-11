@@ -32,10 +32,10 @@
 		8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */; };
 		9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D92301C141CF8009A5659 /* photoViewer.swift */; };
 		9C4D92331C14623A009A5659 /* edit_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92321C14623A009A5659 /* edit_tips.png */; };
-		9C4D92351C19BF3E009A5659 /* s_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92341C19BF3E009A5659 /* s_title.png */; };
-		9C4D92371C19BF49009A5659 /* s_print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92361C19BF49009A5659 /* s_print.png */; };
-		9C4D92391C19BF51009A5659 /* s_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92381C19BF51009A5659 /* s_kanko.png */; };
-		9C4D923B1C19BF59009A5659 /* s_hurikaeri.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D923A1C19BF59009A5659 /* s_hurikaeri.png */; };
+		9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92421C1A4DFC009A5659 /* s_title.png */; };
+		9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */; };
+		9C4D92531C1A513A009A5659 /* s_print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92521C1A513A009A5659 /* s_print.png */; };
+		9C4D92551C1A51CE009A5659 /* s_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92541C1A51CE009A5659 /* s_kanko.png */; };
 		9CA1E0221C0430840083591E /* cardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0211C0430840083591E /* cardList2.swift */; };
 		9CA1E0241C0432370083591E /* setCardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0231C0432370083591E /* setCardList2.swift */; };
 		9CA1E0261C0AEAC90083591E /* top画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0251C0AEAC90083591E /* top画面.png */; };
@@ -132,10 +132,10 @@
 		8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		9C4D92301C141CF8009A5659 /* photoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoViewer.swift; sourceTree = "<group>"; };
 		9C4D92321C14623A009A5659 /* edit_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_tips.png; sourceTree = "<group>"; };
-		9C4D92341C19BF3E009A5659 /* s_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_title.png; sourceTree = "<group>"; };
-		9C4D92361C19BF49009A5659 /* s_print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_print.png; sourceTree = "<group>"; };
-		9C4D92381C19BF51009A5659 /* s_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_kanko.png; sourceTree = "<group>"; };
-		9C4D923A1C19BF59009A5659 /* s_hurikaeri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_hurikaeri.png; sourceTree = "<group>"; };
+		9C4D92421C1A4DFC009A5659 /* s_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_title.png; sourceTree = "<group>"; };
+		9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_hurikaeri.png; sourceTree = "<group>"; };
+		9C4D92521C1A513A009A5659 /* s_print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_print.png; sourceTree = "<group>"; };
+		9C4D92541C1A51CE009A5659 /* s_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_kanko.png; sourceTree = "<group>"; };
 		9CA1E0211C0430840083591E /* cardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList2.swift; sourceTree = "<group>"; };
 		9CA1E0231C0432370083591E /* setCardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList2.swift; sourceTree = "<group>"; };
 		9CA1E0251C0AEAC90083591E /* top画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面.png"; sourceTree = "<group>"; };
@@ -276,10 +276,10 @@
 				DC08FCC11C13ECD6002252F2 /* pen67.png */,
 				9C4D92321C14623A009A5659 /* edit_tips.png */,
 				DC08FCC31C13EF04002252F2 /* ki-ko01.png */,
-				9C4D92341C19BF3E009A5659 /* s_title.png */,
-				9C4D92361C19BF49009A5659 /* s_print.png */,
-				9C4D92381C19BF51009A5659 /* s_kanko.png */,
-				9C4D923A1C19BF59009A5659 /* s_hurikaeri.png */,
+				9C4D92421C1A4DFC009A5659 /* s_title.png */,
+				9C4D92541C1A51CE009A5659 /* s_kanko.png */,
+				9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */,
+				9C4D92521C1A513A009A5659 /* s_print.png */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
@@ -432,26 +432,25 @@
 				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
 				DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
+				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				DC08FCC21C13ECD6002252F2 /* pen67.png in Resources */,
-				9C4D92351C19BF3E009A5659 /* s_title.png in Resources */,
-				9C4D92371C19BF49009A5659 /* s_print.png in Resources */,
+				9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
 				9C4D92331C14623A009A5659 /* edit_tips.png in Resources */,
 				DC08FCC41C13EF04002252F2 /* ki-ko01.png in Resources */,
 				9CA1E0281C0AEC090083591E /* hurikaeri.png in Resources */,
 				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
 				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
-				9C4D923B1C19BF59009A5659 /* s_hurikaeri.png in Resources */,
+				9C4D92551C1A51CE009A5659 /* s_kanko.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
 				9CA1E02A1C0AEC110083591E /* kanko.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
-				9C4D92391C19BF51009A5659 /* s_kanko.png in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
 				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
@@ -464,6 +463,7 @@
 				DC4430521C0959380006D4F5 /* card6.png in Resources */,
 				DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */,
 				DC4430541C0959380006D4F5 /* pencil41.png in Resources */,
+				9C4D92531C1A513A009A5659 /* s_print.png in Resources */,
 				9CA1E02E1C0AF3600083591E /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -239,18 +239,20 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="s_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-aE-3Vk">
-                                <rect key="frame" x="83" y="97" width="209" height="55"/>
+                                <rect key="frame" x="67" y="97" width="242" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="300:79" id="Fqc-by-2U1"/>
                                     <constraint firstAttribute="height" constant="79" id="KyT-A2-ae9"/>
                                     <constraint firstAttribute="width" constant="300" id="az8-y5-Slk"/>
                                     <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="19:5" id="dYW-CX-20R"/>
+                                    <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="121:32" id="kA4-XN-Ykz"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Fqc-by-2U1"/>
                                         <exclude reference="KyT-A2-ae9"/>
                                         <exclude reference="az8-y5-Slk"/>
+                                        <exclude reference="dYW-CX-20R"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -259,6 +261,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Ti-XO-UQV" firstAttribute="top" secondItem="tJJ-0I-7Qx" secondAttribute="bottom" constant="20" id="15R-4R-uHs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="46" id="1Q1-Xg-Vgd"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="63" id="8vE-Un-FPz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nFR-iE-WqJ" secondAttribute="trailing" constant="-20" id="Bim-iu-Tcd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="63" id="D7Y-Pv-vm8"/>
@@ -272,6 +275,7 @@
                             <constraint firstItem="tJJ-0I-7Qx" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="THk-ca-alU"/>
                             <constraint firstItem="yhd-N6-vAv" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="TRh-eF-NmI"/>
                             <constraint firstItem="nFR-iE-WqJ" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="-20" id="UWT-5A-QsM"/>
+                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="47" id="Uce-5o-lJj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="18" id="d3S-1X-MdU"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="17" id="qAo-Q9-PfI"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="top" secondItem="w8d-mt-eV6" secondAttribute="bottom" constant="76" id="uPu-9g-yRT"/>
@@ -280,6 +284,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="QH0-SS-ciE"/>
+                                <exclude reference="8vE-Un-FPz"/>
+                                <exclude reference="D7Y-Pv-vm8"/>
                                 <exclude reference="d3S-1X-MdU"/>
                                 <exclude reference="qAo-Q9-PfI"/>
                             </mask>
@@ -1389,10 +1395,10 @@
         <image name="next.png" width="25" height="25"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
-        <image name="s_hurikaeri.png" width="288" height="62"/>
-        <image name="s_kanko.png" width="288" height="62"/>
-        <image name="s_print.png" width="288" height="62"/>
-        <image name="s_title.png" width="209" height="55"/>
+        <image name="s_hurikaeri.png" width="230" height="50"/>
+        <image name="s_kanko.png" width="230" height="50"/>
+        <image name="s_print.png" width="230" height="50"/>
+        <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dNd-oi-ntL"/>
