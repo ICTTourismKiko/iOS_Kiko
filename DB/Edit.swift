@@ -48,13 +48,13 @@ class Edit: UIViewController, UITextFieldDelegate{
         let changedContent = contentText.text
         if(titleText.text == defaultText.title && contentText.text == defaultText.text) {
             db.linkToCardData(defaultText)
-            cardTitle = changedTitle!
-            cardContent = changedContent!
+            
         }else if !(titleText.text == cardTitle && contentText.text == cardContent) {
             db.updateTitleAndText(id, title: titleText.text!, text: contentText.text)
-            cardTitle = changedTitle!
-            cardContent = changedContent!
+            
         }
+        cardTitle = changedTitle!
+        cardContent = changedContent!
         
         let myAlert = UIAlertController(title: "", message: "保存しました", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)

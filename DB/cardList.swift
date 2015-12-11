@@ -35,6 +35,9 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         imageView.image = image
         self.tableView.backgroundView = imageView
         
+        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
+            userInfo: nil, repeats: true);
+        
         
         //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
