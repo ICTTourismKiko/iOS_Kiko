@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var P_ID:Int?
     
     //var cardID = Array(count: 8, repeatedValue: 0)
-    var cardID = [0,0,2,3,4,5,6,7]
+    var cardID = [0,0,2,3,5,9,6,1]
     
     var picID = 0
     
