@@ -802,20 +802,21 @@
                                                         <constraint firstAttribute="width" constant="102" id="tzU-DP-nZh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-n0-wRI">
-                                                    <rect key="frame" x="207" y="120" width="75" height="30"/>
-                                                    <animations/>
-                                                    <state key="normal" title="写真を選択"/>
-                                                    <connections>
-                                                        <action selector="photo_select:" destination="Re1-92-Xwj" eventType="touchUpInside" id="Bma-1q-geb"/>
-                                                        <action selector="select_photo:" destination="55M-Ae-TkD" eventType="touchUpInside" id="uGu-5H-2Kc"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7C-KB-uXE">
                                                     <rect key="frame" x="16" y="12" width="102" height="136"/>
                                                     <connections>
                                                         <action selector="openImage:" destination="55M-Ae-TkD" eventType="touchUpInside" id="Mus-zl-H2G"/>
                                                         <segue destination="Lty-aC-0Gv" kind="modal" modalTransitionStyle="crossDissolve" id="Bda-Vk-JCy"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-n0-wRI">
+                                                    <rect key="frame" x="174" y="118" width="151" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
+                                                    <state key="normal" title="この写真を使う"/>
+                                                    <connections>
+                                                        <action selector="photo_select:" destination="Re1-92-Xwj" eventType="touchUpInside" id="Bma-1q-geb"/>
+                                                        <action selector="select_photo:" destination="55M-Ae-TkD" eventType="touchUpInside" id="uGu-5H-2Kc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
