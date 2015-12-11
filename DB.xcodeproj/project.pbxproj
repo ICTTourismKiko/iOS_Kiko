@@ -53,6 +53,7 @@
 		DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC51C1585C4002252F2 /* tablebackground.png */; };
 		DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD31C158ADA002252F2 /* favopin7.png */; };
 		DC08FCDA1C158D09002252F2 /* fa3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD91C158D09002252F2 /* fa3.png */; };
+		DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCE71C1A5FE5002252F2 /* cardData.realm */; };
 		DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C00B1BD7826B000B2465 /* AppDelegate.swift */; };
 		DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C00D1BD7826B000B2465 /* ViewController.swift */; };
 		DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C00F1BD7826B000B2465 /* Main.storyboard */; };
@@ -71,7 +72,6 @@
 		DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
-		DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DCE7BBE81BF6AA890012BCB9 /* cardData.realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +153,7 @@
 		DC08FCC51C1585C4002252F2 /* tablebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tablebackground.png; path = ../tablebackground.png; sourceTree = "<group>"; };
 		DC08FCD31C158ADA002252F2 /* favopin7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favopin7.png; path = ../favopin7.png; sourceTree = "<group>"; };
 		DC08FCD91C158D09002252F2 /* fa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fa3.png; path = ../fa3.png; sourceTree = "<group>"; };
+		DC08FCE71C1A5FE5002252F2 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
 		DC23C0081BD7826B000B2465 /* DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC23C00B1BD7826B000B2465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC23C00D1BD7826B000B2465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,7 +178,6 @@
 		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
-		DCE7BBE81BF6AA890012BCB9 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,10 +224,10 @@
 		DC23BFFF1BD7826B000B2465 = {
 			isa = PBXGroup;
 			children = (
+				DC08FCE71C1A5FE5002252F2 /* cardData.realm */,
 				378BDDED1C05A3C3000DD5BB /* PagingCollectionView */,
 				37583B1B1BF6C2A700AC331D /* Realm.framework */,
 				37583B1C1BF6C2A700AC331D /* RealmSwift.framework */,
-				DCE7BBE81BF6AA890012BCB9 /* cardData.realm */,
 				379112F11BD818F50024E678 /* CoreLocation.framework */,
 				379112EF1BD818E90024E678 /* MapKit.framework */,
 				DC23C00A1BD7826B000B2465 /* DB */,
@@ -431,6 +431,7 @@
 			files = (
 				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
 				DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */,
+				DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
 				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
@@ -443,7 +444,6 @@
 				9C4D92331C14623A009A5659 /* edit_tips.png in Resources */,
 				DC08FCC41C13EF04002252F2 /* ki-ko01.png in Resources */,
 				9CA1E0281C0AEC090083591E /* hurikaeri.png in Resources */,
-				DCE7BBE91BF6AA890012BCB9 /* cardData.realm in Resources */,
 				37FBD82F1C06B247008AAD03 /* next.png in Resources */,
 				9C4D92551C1A51CE009A5659 /* s_kanko.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
