@@ -29,6 +29,17 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        let imageView = UIImageView(frame: CGRectMake(0, 0, self.tableView.frame.width, self.tableView.frame.height))
+        let image = UIImage(named: "tablebackground.png")
+        imageView.image = image
+        self.tableView.backgroundView = imageView
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
+            userInfo: nil, repeats: true);
+        
+        
+        //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,8 +73,19 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell: setCardList = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! setCardList
         cell.setCell(cards[indexPath.row])
+        cell.backgroundColor = UIColor.clearColor()
+        cell.contentView.backgroundColor = UIColor.clearColor()
         return cell
     }
     
+    func reload(){
+        cards.removeAll()
+        setupLists()
+        tableView.reloadData()
+    }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 

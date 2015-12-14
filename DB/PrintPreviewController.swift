@@ -15,7 +15,8 @@ class PrintPreviewController: UIViewController {
     @IBOutlet weak var front: UIImageView!
     @IBOutlet weak var back: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
-    let image = UIImage(named: "omote.png")
+  //  @IBOutlet weak var scroll: UIScrollView!
+    let image = UIImage(named: "omote.jpg")
     let filename : NSString = "ki-ko"
     let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
     var myData = NSData()
@@ -29,6 +30,22 @@ class PrintPreviewController: UIViewController {
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         print_NSData = Image_NSData(appDelegate.view_pic)!
         
+        
+//        // スクロールビューの設定
+//        self.scroll.delegate = self
+//        self.scroll.minimumZoomScale = 1
+//        self.scroll.maximumZoomScale = 4
+//        self.scroll.scrollEnabled = true
+//        self.scroll.showsHorizontalScrollIndicator = true
+//        self.scroll.showsVerticalScrollIndicator = true
+//        
+//        
+//        // ピンチイン・ピンチアウト
+//        func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+//            // print("pinch")
+//            return self
+//        }
+        
         //裏、表のプレビュー表示
         back.image=appDelegate.view_pic
         front.image=image
@@ -41,7 +58,7 @@ class PrintPreviewController: UIViewController {
         UIGraphicsBeginPDFContextToFile(pdfFilename, CGRectZero, nil)
         
         // 1ページを開始する
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 843, 596), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 1690, 1195), nil)
         // 1枚目画像を描画する
         let point1 = CGPointMake(0, 0)
         front.image?.drawAtPoint(point1)
@@ -88,4 +105,7 @@ class PrintPreviewController: UIViewController {
 
     }
     
+    @IBAction func back(sender: AnyObject) {
+        self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

@@ -17,7 +17,11 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var ChangeTextButton: UIButton!
     @IBOutlet weak var arrow: UIImageView!
     
+    var cardID = 0
+
+    
     var myLocationManager: CLLocationManager!
+    
     
     class Pin : MKPointAnnotation{
         var ID = 0
@@ -38,9 +42,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var CardTopSyousai = UILabel()
     var CardTopPoemu = UILabel()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         //ChangeTextButton.setImage(UIImage(named: "next.png"), forState: .Normal)
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
@@ -49,13 +54,13 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         //選択したIDを持ってくる処理
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let pic_id = appDelegate.P_ID
-        
+        cardID = appDelegate.P_ID!
         
         //ラベルの設置
-        CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
-        CardPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 120)
-        CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50,self.view.frame.height-160,220,20)
-        CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-140, 220, 20)
+        CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
+        CardPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 120)
+        CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50,self.view.frame.height-140,220,20)
+        CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
         CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
@@ -73,7 +78,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         //カードの画像を表示
         camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id!).photo?.photoData)!)
-        camera2View.layer.cornerRadius = 30
+        camera2View.layer.cornerRadius = 10
         camera2View.layer.masksToBounds = true
         
         CardSyousai.numberOfLines = 30
@@ -111,7 +116,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[i].x = db.getCard(flagTrueIDList[i]).position_x
             PinArray[i].y = db.getCard(flagTrueIDList[i]).position_y
             PinArray[i].coordinate = CLLocationCoordinate2DMake(PinArray[i].x, PinArray[i].y)
-            PinArray[i].imageName = "flag_on.png"
+            PinArray[i].imageName = "fa3.png"
         }
         
         
@@ -199,15 +204,15 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             CardLabelShowText = 1
             UIView.animateWithDuration(0.4) { () -> Void in
                 //詳細情報を画面外へ
-                self.CardSyousai.frame = CGRectMake(-220, self.view.frame.height-140, 220, 120)
+                self.CardSyousai.frame = CGRectMake(-220, self.view.frame.height-120, 220, 120)
                 self.CardSyousai.alpha = 0.0
-                self.CardTopSyousai.frame = CGRectMake(-220, self.view.frame.height-160, 220, 20)
+                self.CardTopSyousai.frame = CGRectMake(-220, self.view.frame.height-140, 220, 20)
                 self.CardTopSyousai.alpha = 0.0
                 
                 //スポット紹介を表示
-                self.CardPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
                 self.CardPoemu.alpha = 1.0
-                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
                 
                 self.arrow.image = UIImage(named: "back.png")
@@ -218,20 +223,24 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             UIView.animateWithDuration(0.4) { () -> Void in
                 //スポット紹介を画面外へ
                 self.CardPoemu.alpha = 0.0
-                self.CardPoemu.frame = CGRectMake(self.view.frame.width, self.view.frame.height-140, 220, 120)
-                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width+30, self.view.frame.height-160, 220, 20)
+                self.CardPoemu.frame = CGRectMake(self.view.frame.width, self.view.frame.height-120, 220, 120)
+                self.CardTopPoemu.frame = CGRectMake(self.view.frame.width+30, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 0.0
                 
                 //詳細情報を表示
                 self.CardSyousai.alpha = 1.0
-                self.CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 120)
+                self.CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
                 self.CardTopSyousai.alpha = 1.0
-                self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-160, 220, 20)
+                self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 
                 self.arrow.image = UIImage(named: "next.png")
                 
             }
         }
+    }
+    
+    @IBAction func openImage(sender: AnyObject) {
+    
     }
     
     @IBAction func backbutton(sender: AnyObject) {

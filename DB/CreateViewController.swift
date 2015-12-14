@@ -1,17 +1,19 @@
 //
-//  CreatePicController.swift
+//  CreateViewController.swift
 //  DB
 //
-//  Created by 池田俊輝 on 2015/11/27.
+//  Created by 池田俊輝 on 2015/12/03.
 //  Copyright © 2015年 project03A. All rights reserved.
 //
 
 import UIKit
 
-class CreatePicController: UIViewController {
-
+class CreateViewController: UIViewController {
+    
     @IBOutlet var background_view: UIView!
+    
     @IBOutlet weak var backimage: UIImageView!
+    
     @IBOutlet weak var pic1: UIImageView!
     @IBOutlet weak var pic2: UIImageView!
     @IBOutlet weak var pic3: UIImageView!
@@ -40,13 +42,15 @@ class CreatePicController: UIViewController {
     @IBOutlet weak var text4: UILabel!
     @IBOutlet weak var text5: UILabel!
     @IBOutlet weak var text7: UILabel!
-
+    
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
         
-        backimage.image = UIImage(named: "haikei.png")
+        backimage.image = UIImage(named: "haikei.jpg")
         
         textback1.image = UIImage(named: "b300.png")
         textback2.image = UIImage(named: "b300.png")
@@ -68,8 +72,8 @@ class CreatePicController: UIViewController {
         text4.text=DB().getCard(appDelegate.cardID[4]).cardText?.text
         text5.text=DB().getCard(appDelegate.cardID[5]).cardText?.text
         text7.text=DB().getCard(appDelegate.cardID[7]).cardText?.text
-
-
+        
+        
         pic1.image=PhotoController().NSSImage((DB().getCard(appDelegate.cardID[1]).photo?.photoData)!)
         pic2.image=PhotoController().NSSImage((DB().getCard(appDelegate.cardID[2]).photo?.photoData)!)
         pic3.image=PhotoController().NSSImage((DB().getCard(appDelegate.cardID[3]).photo?.photoData)!)
@@ -83,11 +87,12 @@ class CreatePicController: UIViewController {
         NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("next"),
             userInfo: nil, repeats: false);
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func getUIImageFromUIView(myUIView:UIView) ->UIImage{
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(1754, 1240), false, 0);//必要なサイズ確保
         let context:CGContextRef = UIGraphicsGetCurrentContext()!;

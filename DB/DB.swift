@@ -112,6 +112,13 @@ class DB {
         }
     }
     
+    func initAll(){
+        for var i=1; i<self.cardListSize(); i++ {
+            self.linkToCardData(self.getDefaultPhoto(i))
+            self.linkToCardData(self.getDefaultText(i))
+        }
+    }
+    
     /* ---------------------------
     絞り込み検索で使用するメソッド
     --------------------------- */
@@ -205,7 +212,7 @@ class DB {
     //IDに対応する写真を全て渡す
     func getAllPhoto(id: Int) -> Results<Photo>{
         let realm = try! Realm(path: getRealmPath())
-        return realm.objects(Photo).filter("ID = %@ and display = true", id)
+        return realm.objects(Photo).filter("ID = %@", id)
     }
     
     //photoIDに対応する写真をCardDataレコードに対応付ける
@@ -248,10 +255,18 @@ class DB {
     
     //CardDataレコードとCardTextレコードを関連付ける
     func linkToCardData(cardText: CardText){
-        let card = CardData()
-        card.ID = cardText.ID
-        card.cardText = cardText
-        addRecord(card)
+        let realm = try! Realm(path: getRealmPath())
+        let card = getCard(cardText.ID)
+        try! realm.write {
+            card.cardText = cardText
+        }
+    }
+    
+    //デフォルトのテキストを取得
+    func getDefaultText(id: Int) -> CardText {
+        let realm = try! Realm(path: getRealmPath())
+        return realm.objects(CardText).filter("ID = %@", id)[0]
+        
     }
     
     /*

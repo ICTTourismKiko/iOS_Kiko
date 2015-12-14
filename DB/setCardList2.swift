@@ -18,6 +18,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var introText: UILabel!
     
     var cardID = 0
+    let appdelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +33,22 @@ UINavigationControllerDelegate{
     
     func setCell(card :cardData) {
         
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        //iphoneのサイズによってカードに書かれる文のサイズを変更
+        //iPhone6
+        if height >= 667 {
+            self.introText.font = UIFont.systemFontOfSize(14)
+            
+            //iPhone6 Plus
+            //        }else if height == 736 {
+            //            self.introText.font = UIFont.systemFontOfSize(15)
+            
+            //iPhone5・5s・5c
+        }else {
+            self.introText.font = UIFont.systemFontOfSize(12)
+        }
+        
         self.title.text = card.title as String
         self.introText.text = card.introText as String
         // 表示する画像を設定する.
@@ -42,6 +59,11 @@ UINavigationControllerDelegate{
         
         cardID = card.id+1
     }
+    
+    @IBAction func openImage(sender: AnyObject) {
+        appdelegate.P_ID = cardID
+    }
+    
     @IBAction func select_photo(sender: AnyObject) {
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.cardID[appDelegate.picID] = cardID

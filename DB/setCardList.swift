@@ -39,12 +39,30 @@ UINavigationControllerDelegate{
     
     func setCell(card :cardData) {
         
+        
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        //iphoneのサイズによってカードに書かれる文のサイズを変更
+        //iPhone6
+        if height >= 667 {
+            self.introText.font = UIFont.systemFontOfSize(14)
+           
+            //iPhone6 Plus
+//        }else if height == 736 {
+//            self.introText.font = UIFont.systemFontOfSize(15)
+            
+            //iPhone5・5s・5c
+        }else {
+           self.introText.font = UIFont.systemFontOfSize(12)
+        }
+        
         self.title.text = card.title as String
         self.introText.text = card.introText as String
+        
             // 表示する画像を設定する.
         let myImage = PhotoController().NSSImage(card.imageUrl!)
         self.iconImage.image = myImage
-        self.iconImage.layer.cornerRadius = 10
+        self.iconImage.layer.cornerRadius = 5
         self.iconImage.layer.masksToBounds = true
         
         cardID = card.id+1
@@ -72,6 +90,10 @@ UINavigationControllerDelegate{
     }
     //mapボタン
     @IBAction func CellButtonTapped(sender: AnyObject) {
+        appDelegate.P_ID = cardID
+    }
+    //画像タップ
+    @IBAction func openImage(sender: AnyObject) {
         appDelegate.P_ID = cardID
     }
     

@@ -13,9 +13,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         DB().copyDB()
+        DB().showDBPass()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    @IBAction func initButton(sender: AnyObject) {
+        DB().initAll()
     }
 }

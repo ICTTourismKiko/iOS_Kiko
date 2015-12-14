@@ -87,8 +87,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         
     }
     func back() {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "target" ) 
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

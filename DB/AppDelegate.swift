@@ -15,12 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var P_ID:Int?
     
-    var cardID = Array(count: 9, repeatedValue: 0)
+    //var cardID = Array(count: 8, repeatedValue: 0)
+    var cardID = [0,0,2,3,5,9,6,1]
     
     var picID = 0
     
     var view_pic: UIImage!
     
+    var pic_segmented = 0
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
