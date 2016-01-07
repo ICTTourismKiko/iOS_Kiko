@@ -35,13 +35,16 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         imageView.image = image
         self.tableView.backgroundView = imageView
         
-        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
-            userInfo: nil, repeats: true);
+//        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
+//            userInfo: nil, repeats: true);
         
         
         //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.reload()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
