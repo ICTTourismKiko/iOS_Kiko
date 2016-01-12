@@ -8,9 +8,11 @@
 
 import UIKit
 
-class Edit: UIViewController, UITextFieldDelegate{
+class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     @IBOutlet weak var titleText: UITextView!
+    @IBOutlet weak var titleNum: UILabel!
     @IBOutlet weak var contentText: UITextView!
+    @IBOutlet weak var contentNum: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
     
@@ -20,6 +22,8 @@ class Edit: UIViewController, UITextFieldDelegate{
     var defaultText = CardText()
     var cardTitle = ""
     var cardContent = ""
+    let titleLength = 10
+    let contentLength = 70
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,12 @@ class Edit: UIViewController, UITextFieldDelegate{
         
         titleText.becomeFirstResponder()
         
+        titleText.delegate = self
+        contentText.delegate = self
+        
+        titleNum.text = String(titleLength - titleText.text.characters.count)
+        contentNum.text = String(contentLength - contentText.text.characters.count)
+        
     }
     
     //保存ボタンを押したら
@@ -46,25 +56,30 @@ class Edit: UIViewController, UITextFieldDelegate{
         //DBに保存して
         let changedTitle = titleText.text
         let changedContent = contentText.text
-        if(titleText.text == defaultText.title && contentText.text == defaultText.text) {
-            db.linkToCardData(defaultText)
-            
-        }else if !(titleText.text == cardTitle && contentText.text == cardContent) {
-            db.updateTitleAndText(id, title: titleText.text!, text: contentText.text)
-            
-        }
-        cardTitle = changedTitle!
-        cardContent = changedContent!
         
         let myAlert = UIAlertController(title: "", message: "保存しました", preferredStyle: .Alert)
+        
+        if(changedTitle.characters.count > titleLength){
+            myAlert.message = "タイトルは" + String(titleLength) + "文字以内で入力してください"
+        }else if(changedContent.characters.count > contentLength){
+            myAlert.message = "本文は" + String(contentLength) + "文字以内で入力してください"
+        }else{
+            if(titleText.text == defaultText.title && contentText.text == defaultText.text) {
+                db.linkToCardData(defaultText)
+                
+            }else if !(titleText.text == cardTitle && contentText.text == cardContent) {
+                db.updateTitleAndText(id, title: titleText.text!, text: contentText.text)
+            
+            }
+            cardTitle = changedTitle!
+            cardContent = changedContent!
+        
+        }
+        
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         myAlert.addAction(defaultAction)
-        
         presentViewController(myAlert, animated: true, completion: nil)
-        
-        //画面を閉じる
-        //self.view.endEditing(true)
-        //self.dismissViewControllerAnimated(true, completion: nil)
+
     }
     
     //戻るボタンを押したら、画面を閉じる
@@ -106,10 +121,8 @@ class Edit: UIViewController, UITextFieldDelegate{
         }
     }
     
-  
-    @IBAction func openImage(sender: AnyObject) {
+    func textViewDidChange(textView: UITextView){
+        titleNum.text = String(titleLength - titleText.text.characters.count)
+        contentNum.text = String(contentLength - contentText.text.characters.count)
     }
-    
-    
-    
 }
