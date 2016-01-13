@@ -22,7 +22,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     var defaultText = CardText()
     var cardTitle = ""
     var cardContent = ""
-    let titleLength = 10
+    let titleLength = 13
     let contentLength = 70
     
     override func viewDidLoad() {
