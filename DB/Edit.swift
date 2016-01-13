@@ -9,7 +9,7 @@
 import UIKit
 
 class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
-    @IBOutlet weak var titleText: UITextView!
+    @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var titleNum: UILabel!
     @IBOutlet weak var contentText: UITextView!
     @IBOutlet weak var contentNum: UILabel!
@@ -46,7 +46,9 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         titleText.delegate = self
         contentText.delegate = self
         
-        titleNum.text = String(titleLength - titleText.text.characters.count)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
+        
+        titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
         
     }
@@ -59,7 +61,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         let myAlert = UIAlertController(title: "", message: "保存しました", preferredStyle: .Alert)
         
-        if(changedTitle.characters.count > titleLength){
+        if(changedTitle!.characters.count > titleLength){
             myAlert.message = "タイトルは" + String(titleLength) + "文字以内で入力してください"
         }else if(changedContent.characters.count > contentLength){
             myAlert.message = "本文は" + String(contentLength) + "文字以内で入力してください"
@@ -110,7 +112,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
             let otherAction = UIAlertAction(title: "OK", style: .Default) {
                 action in self.titleText.text = self.defaultText.title
                 self.contentText.text = self.defaultText.text
-                self.titleNum.text = String(self.titleLength - self.titleText.text.characters.count)
+                self.titleNum.text = String(self.titleLength - self.titleText.text!.characters.count)
                 self.contentNum.text = String(self.contentLength - self.contentText.text.characters.count)
             }
             let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
@@ -125,7 +127,11 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     }
     
     func textViewDidChange(textView: UITextView){
-        titleNum.text = String(titleLength - titleText.text.characters.count)
+        titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
+    }
+    
+    func textFieldDidChange(notification:NSNotification){
+        titleNum.text = String(titleLength - titleText.text!.characters.count)
     }
 }
