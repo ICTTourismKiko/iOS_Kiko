@@ -43,7 +43,6 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         titleText.becomeFirstResponder()
         
-        titleText.delegate = self
         contentText.delegate = self
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
@@ -127,7 +126,6 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     }
     
     func textViewDidChange(textView: UITextView){
-        titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
     }
     
