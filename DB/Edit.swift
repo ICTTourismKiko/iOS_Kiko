@@ -110,6 +110,8 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
             let otherAction = UIAlertAction(title: "OK", style: .Default) {
                 action in self.titleText.text = self.defaultText.title
                 self.contentText.text = self.defaultText.text
+                self.titleNum.text = String(self.titleLength - self.titleText.text.characters.count)
+                self.contentNum.text = String(self.contentLength - self.contentText.text.characters.count)
             }
             let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
                 action in print("Pushed CANCEL")
@@ -119,6 +121,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
             alertController.addAction(cancelAction)
             presentViewController(alertController, animated: true, completion: nil)
         }
+        
     }
     
     func textViewDidChange(textView: UITextView){
