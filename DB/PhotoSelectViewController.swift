@@ -29,8 +29,12 @@ class PhotoSelectViewController: UIViewController {
         
         backimage.image=UIImage(named:"haikei.jpg")
         
-        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
-            userInfo: nil, repeats: true);
+//        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
+//            userInfo: nil, repeats: true);
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.pic_show()
     }
 
     override func didReceiveMemoryWarning() {
