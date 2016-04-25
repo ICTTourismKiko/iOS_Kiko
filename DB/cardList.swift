@@ -51,7 +51,7 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func setupLists() {
-        for var i = 1; i <= DB().cardListSize(); i++ {
+        for i in 1...DB().cardListSize(){
             let card = DB().getCard(i)
             let f1 = cardData(title: card.cardText!.title,
                 introText: card.cardText!.text, imageUrl: NSData(data: (DB().getCard(i).photo?.photoData)!),id: i-1,flag:DB().getFlagStatement(i))
