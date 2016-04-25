@@ -337,7 +337,7 @@ class DB {
     //DBにIDだけ流し込む
     func initCardData(maxID: Int){
         var cardData = CardData()
-        for(var i=1; i<=maxID; i++){
+        for i in 1...maxID {
             cardData = CardData()
             cardData.ID = i
             addRecord(cardData)
