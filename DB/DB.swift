@@ -128,7 +128,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let flagTrueList = realm.objects(CardData).filter("flag = true")
         var flagTrueID: [Int] = []
-        for(var i=0; i<flagTrueList.count; i++){
+        for i in 0..<flagTrueList.count {
             flagTrueID.append(flagTrueList[i].ID)
         }
         return flagTrueID
