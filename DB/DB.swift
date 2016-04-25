@@ -113,7 +113,7 @@ class DB {
     }
     
     func initAll(){
-        for var i=1; i<self.cardListSize(); i++ {
+        for i in 1..<self.cardListSize(){
             self.linkToCardData(self.getDefaultPhoto(i))
             self.linkToCardData(self.getDefaultText(i))
         }
