@@ -45,7 +45,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         contentText.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(Edit.textFieldDidChange(_:)), name: UITextFieldTextDidChangeNotification, object: nil)
         
         titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
