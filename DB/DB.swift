@@ -360,7 +360,7 @@ class DB {
     var categoryDB = Category()
     func initCategoryDB(){
         let categoryName: [String] = ["散策", "グルメ", "おみやげ"]
-        for(var i=1; i<=categoryName.count; i++){
+        for i in 1...categoryName.count {
             categoryDB = Category()
             categoryDB.categoryID = i
             categoryDB.categoryName = categoryName[i-1]
