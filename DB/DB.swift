@@ -140,7 +140,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let filteredList = realm.objects(CardData).filter("categoryID = %@", categoryID)
         var filteredID: [Int] = []
-        for(var i=0; i<filteredList.count; i++){
+        for i in 0..<filteredList.count {
             filteredID.append(filteredList[i].ID)
         }
         return filteredID
