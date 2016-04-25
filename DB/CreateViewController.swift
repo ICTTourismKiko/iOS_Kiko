@@ -84,7 +84,7 @@ class CreateViewController: UIViewController {
         
         appDelegate.view_pic = getUIImageFromUIView(background_view)
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("next"),
+        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(CreateViewController.next),
             userInfo: nil, repeats: false);
     }
 
