@@ -310,7 +310,7 @@ class DB {
     
     func getFlagStatementList() -> [Bool] {
         var flaglist: [Bool] = []
-        for(var i=1; i<=self.cardListSize(); i++){
+        for i in 1...self.cardListSize() {
             flaglist.append(self.getCard(i).flag)
         }
         return flaglist
