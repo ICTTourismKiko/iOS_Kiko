@@ -14,7 +14,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("camerastart"),
+        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(PhotoController.camerastart),
             userInfo: nil, repeats: false);
     }
 
@@ -49,7 +49,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
                 print(photoID)
                 DB().linkToCard(photoID)
             }
-            NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("back"),
+            NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(PhotoController.back),
                 userInfo: nil, repeats: false);
         }
         
@@ -60,7 +60,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     // 撮影がキャンセルされた時に呼ばれる
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:Selector("back"),
+        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(PhotoController.back),
             userInfo: nil, repeats: false);
     }
     
