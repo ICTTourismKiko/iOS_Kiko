@@ -152,7 +152,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let updatedList = realm.objects(CardData).filter("updated = true")
         var updatedID: [Int] = []
-        for(var i=0; i<updatedList.count; i++){
+        for i in 0..<updatedList.count {
             updatedID.append(updatedList[i].ID)
         }
         return updatedID
