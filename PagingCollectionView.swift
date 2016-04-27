@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//テストコメント
 class PagingCollectionView: UIView {
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
