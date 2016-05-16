@@ -113,7 +113,7 @@ class DB {
     }
     
     func initAll(){
-        for var i=1; i<self.cardListSize(); i++ {
+        for i in 1..<self.cardListSize(){
             self.linkToCardData(self.getDefaultPhoto(i))
             self.linkToCardData(self.getDefaultText(i))
         }
@@ -128,7 +128,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let flagTrueList = realm.objects(CardData).filter("flag = true")
         var flagTrueID: [Int] = []
-        for(var i=0; i<flagTrueList.count; i++){
+        for i in 0..<flagTrueList.count {
             flagTrueID.append(flagTrueList[i].ID)
         }
         return flagTrueID
@@ -140,7 +140,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let filteredList = realm.objects(CardData).filter("categoryID = %@", categoryID)
         var filteredID: [Int] = []
-        for(var i=0; i<filteredList.count; i++){
+        for i in 0..<filteredList.count {
             filteredID.append(filteredList[i].ID)
         }
         return filteredID
@@ -152,7 +152,7 @@ class DB {
         let realm = try! Realm(path: getRealmPath())
         let updatedList = realm.objects(CardData).filter("updated = true")
         var updatedID: [Int] = []
-        for(var i=0; i<updatedList.count; i++){
+        for i in 0..<updatedList.count {
             updatedID.append(updatedList[i].ID)
         }
         return updatedID
@@ -310,7 +310,7 @@ class DB {
     
     func getFlagStatementList() -> [Bool] {
         var flaglist: [Bool] = []
-        for(var i=1; i<=self.cardListSize(); i++){
+        for i in 1...self.cardListSize() {
             flaglist.append(self.getCard(i).flag)
         }
         return flaglist
@@ -337,7 +337,7 @@ class DB {
     //DBにIDだけ流し込む
     func initCardData(maxID: Int){
         var cardData = CardData()
-        for(var i=1; i<=maxID; i++){
+        for i in 1...maxID {
             cardData = CardData()
             cardData.ID = i
             addRecord(cardData)
@@ -360,7 +360,7 @@ class DB {
     var categoryDB = Category()
     func initCategoryDB(){
         let categoryName: [String] = ["散策", "グルメ", "おみやげ"]
-        for(var i=1; i<=categoryName.count; i++){
+        for i in 1...categoryName.count {
             categoryDB = Category()
             categoryDB.categoryID = i
             categoryDB.categoryName = categoryName[i-1]

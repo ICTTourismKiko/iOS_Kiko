@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37583B1D1BF6C2A700AC331D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1B1BF6C2A700AC331D /* Realm.framework */; };
-		37583B1E1BF6C2A700AC331D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1B1BF6C2A700AC331D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		37583B1F1BF6C2A700AC331D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1C1BF6C2A700AC331D /* RealmSwift.framework */; };
-		37583B201BF6C2A700AC331D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37583B1C1BF6C2A700AC331D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		377DAA761CCE798F00B7BA65 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377DAA741CCE798F00B7BA65 /* Realm.framework */; };
+		377DAA771CCE798F00B7BA65 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 377DAA741CCE798F00B7BA65 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		377DAA781CCE798F00B7BA65 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377DAA751CCE798F00B7BA65 /* RealmSwift.framework */; };
+		377DAA791CCE798F00B7BA65 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 377DAA751CCE798F00B7BA65 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */; };
 		378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */; };
 		378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */; };
@@ -92,14 +92,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		37D699581BD92D9700928757 /* Embed Frameworks */ = {
+		377DAA7A1CCE798F00B7BA65 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37583B201BF6C2A700AC331D /* RealmSwift.framework in Embed Frameworks */,
-				37583B1E1BF6C2A700AC331D /* Realm.framework in Embed Frameworks */,
+				377DAA791CCE798F00B7BA65 /* RealmSwift.framework in Embed Frameworks */,
+				377DAA771CCE798F00B7BA65 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,8 +107,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		37583B1B1BF6C2A700AC331D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		37583B1C1BF6C2A700AC331D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		377DAA741CCE798F00B7BA65 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		377DAA751CCE798F00B7BA65 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -185,9 +185,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37583B1D1BF6C2A700AC331D /* Realm.framework in Frameworks */,
+				377DAA761CCE798F00B7BA65 /* Realm.framework in Frameworks */,
 				379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */,
-				37583B1F1BF6C2A700AC331D /* RealmSwift.framework in Frameworks */,
+				377DAA781CCE798F00B7BA65 /* RealmSwift.framework in Frameworks */,
 				379112F01BD818E90024E678 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +224,10 @@
 		DC23BFFF1BD7826B000B2465 = {
 			isa = PBXGroup;
 			children = (
+				377DAA741CCE798F00B7BA65 /* Realm.framework */,
+				377DAA751CCE798F00B7BA65 /* RealmSwift.framework */,
 				DC08FCE71C1A5FE5002252F2 /* cardData.realm */,
 				378BDDED1C05A3C3000DD5BB /* PagingCollectionView */,
-				37583B1B1BF6C2A700AC331D /* Realm.framework */,
-				37583B1C1BF6C2A700AC331D /* RealmSwift.framework */,
 				379112F11BD818F50024E678 /* CoreLocation.framework */,
 				379112EF1BD818E90024E678 /* MapKit.framework */,
 				DC23C00A1BD7826B000B2465 /* DB */,
@@ -334,7 +334,7 @@
 				DC23C0041BD7826B000B2465 /* Sources */,
 				DC23C0051BD7826B000B2465 /* Frameworks */,
 				DC23C0061BD7826B000B2465 /* Resources */,
-				37D699581BD92D9700928757 /* Embed Frameworks */,
+				377DAA7A1CCE798F00B7BA65 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -392,7 +392,7 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3W722UE7AL;
+						DevelopmentTeam = TLVYAZUQZL;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -659,7 +659,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.kiko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -677,7 +677,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenta.kiko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

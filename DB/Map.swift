@@ -105,7 +105,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         var flagTrueIDList: [Int]
         flagTrueIDList = db.getFlagTrueIDArray()
         
-        for(var i = 0; i < flagTrueIDList.count; i++){
+        for i in 0..<flagTrueIDList.count{
             PinArray.append(Pin())
             PinArray[i].ID = db.getCard(flagTrueIDList[i]).ID
             PinArray[i].title = db.getCard(flagTrueIDList[i]).spotName
@@ -162,7 +162,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         self.UserAnnotationTap = 1
         self.CardLabelShowText = 0
-        for(PinAddress = 0; PinAddress < PinArray.count; PinAddress++){
+        for PinAddress in 0..<PinArray.count {
             if(PinArray[PinAddress].hash == view.annotation!.hash){
                 CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
                 camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)

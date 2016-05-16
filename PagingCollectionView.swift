@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//テストコメント
 class PagingCollectionView: UIView {
     
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -126,7 +126,7 @@ extension PagingCollectionView: UICollectionViewDataSource {
             let cardcounts = DB().cardListSize()
             var IDArray2:[Int] = []
             
-            for(var i = 1; i <= cardcounts; i++){
+            for i in 1...cardcounts {
                 IDArray2.append(i)
             }
             

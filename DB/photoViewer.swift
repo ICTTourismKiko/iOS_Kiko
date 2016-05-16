@@ -32,7 +32,7 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         self.myScrollView.showsVerticalScrollIndicator = true
         
         let doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self
-            , action:"doubleTap:")
+            , action:#selector(photoViewer.doubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         self.myImageView.userInteractionEnabled = true
         self.myImageView.addGestureRecognizer(doubleTapGesture)
