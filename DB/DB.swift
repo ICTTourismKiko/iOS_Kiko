@@ -324,7 +324,6 @@ class DB {
             let card = getCard(ID)
             try realm.write{
                 card.flag = flagStatement
-                card.updated = flagStatement
             }
         }catch{
             print("フラグ値上書き失敗")
