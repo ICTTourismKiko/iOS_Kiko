@@ -116,6 +116,7 @@ class DB {
         for i in 1..<self.cardListSize(){
             self.linkToCardData(self.getDefaultPhoto(i))
             self.linkToCardData(self.getDefaultText(i))
+            self.setFlag(i, flagStatement: false)
         }
     }
     
@@ -323,9 +324,23 @@ class DB {
             let card = getCard(ID)
             try realm.write{
                 card.flag = flagStatement
+                card.updated = flagStatement
             }
         }catch{
             print("フラグ値上書き失敗")
+        }
+    }
+    
+    func setUpdated(ID: Int, flagStatement: Bool){
+        do{
+            let realmPath = self.getRealmPath()
+            let realm = try! Realm(path: realmPath)
+            let card = getCard(ID)
+            try realm.write{
+                card.updated = flagStatement
+            }
+        }catch{
+            print("updated値上書き失敗")
         }
     }
     
