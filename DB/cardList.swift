@@ -16,7 +16,6 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var navigation: UINavigationBar!
     
     var cards:[cardData] = [cardData]()
-    let set = setCardList()
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     override func viewDidLoad() {
@@ -79,10 +78,6 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.setCell(cards[indexPath.row])
         cell.backgroundColor = UIColor.clearColor()
         cell.contentView.backgroundColor = UIColor.clearColor()
-        
-        
-        //DBからフラグの情報を配列で受け取る
-        //配列の要素をもとにif文で分岐
         
         if appDelegate.flaglist[indexPath.row] == true {
             cell.flag.tintColor = UIColor.orangeColor()
