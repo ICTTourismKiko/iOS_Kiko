@@ -24,8 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var pic_segmented = 0
 
+    var flaglist: [Bool] = []
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        flaglist = DB().getFlagStatementList()
+
         return true
     }
 
