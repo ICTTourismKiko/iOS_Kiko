@@ -109,6 +109,9 @@ UINavigationControllerDelegate{
             flag.tintColor = UIColor.lightGrayColor()
             db.setFlag(appDelegate.P_ID!, flagStatement: false)
         }
+        
+        appDelegate.flaglist.removeAll()
+        appDelegate.flaglist = DB().getFlagStatementList()
     }
     
 }

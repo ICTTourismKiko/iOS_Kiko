@@ -16,8 +16,8 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var navigation: UINavigationBar!
     
     var cards:[cardData] = [cardData]()
-    let set = setCardList()
-    
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -78,6 +78,13 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.setCell(cards[indexPath.row])
         cell.backgroundColor = UIColor.clearColor()
         cell.contentView.backgroundColor = UIColor.clearColor()
+        
+        if appDelegate.flaglist[indexPath.row] == true {
+            cell.flag.tintColor = UIColor.orangeColor()
+        }else {
+            cell.flag.tintColor = UIColor.lightGrayColor()
+        }
+        
         return cell
     }
     
