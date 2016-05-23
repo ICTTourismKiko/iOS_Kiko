@@ -100,6 +100,13 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         myLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         myLocationManager.startUpdatingLocation()
         
+        let status = CLLocationManager.authorizationStatus()
+        if(status == CLAuthorizationStatus.NotDetermined) {
+            print("didChangeAuthorizationStatus:\(status)");
+            self.myLocationManager.requestAlwaysAuthorization()
+        }
+
+        
         let db = DB()
         db.showDBPass()
         var flagTrueIDList: [Int]
@@ -174,6 +181,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     
     // アノテーション表示の管理
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
         
         let myIdentifier = "myPin"
         
