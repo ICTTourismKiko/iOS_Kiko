@@ -116,7 +116,7 @@ class DB {
         for i in 1..<self.cardListSize(){
             self.linkToCardData(self.getDefaultPhoto(i))
             self.linkToCardData(self.getDefaultText(i))
-            self.setFlag(i, flagStatement: false)
+            self.setUpdated(i, flagStatement: false)
         }
     }
     
