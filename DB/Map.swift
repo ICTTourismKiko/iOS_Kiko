@@ -17,9 +17,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBOutlet weak var ChangeTextButton: UIButton!
     @IBOutlet weak var arrow: UIImageView!
     
-    var cardID = 0
-
-    
     var myLocationManager: CLLocationManager!
     
     
@@ -54,7 +51,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         //選択したIDを持ってくる処理
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let pic_id = appDelegate.P_ID
-        cardID = appDelegate.P_ID!
         
         //ラベルの設置
         CardSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-120, 220, 120)
