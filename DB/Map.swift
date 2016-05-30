@@ -39,7 +39,8 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var CardTopSyousai = UILabel()
     var CardTopPoemu = UILabel()
     
-    
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -49,7 +50,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
         
         //選択したIDを持ってくる処理
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let pic_id = appDelegate.P_ID
         
         //ラベルの設置
@@ -170,6 +170,8 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
                 camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)
                 CardPoemu.text = PinArray[PinAddress].text
+                
+                appDelegate.P_ID = PinArray[PinAddress].ID
                 break;
             }
         }
