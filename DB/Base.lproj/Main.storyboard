@@ -1457,10 +1457,10 @@
                                 <rect key="frame" x="0.0" y="64" width="848" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cx-eK-Lco">
-                                        <rect key="frame" x="0.0" y="1" width="848" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="848" height="603"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-fm-E4s">
-                                                <rect key="frame" x="0.0" y="0.0" width="848" height="603"/>
+                                                <rect key="frame" x="0.0" y="-1" width="848" height="604"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICe-DT-20c">
                                                 <rect key="frame" x="17" y="8" width="250" height="353"/>
@@ -1529,25 +1529,40 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ESn-fm-E4s" firstAttribute="top" secondItem="3Cx-eK-Lco" secondAttribute="top" constant="-1" id="1sg-dl-geX"/>
-                                            <constraint firstAttribute="bottom" secondItem="ESn-fm-E4s" secondAttribute="bottom" constant="1" id="JvL-6j-JJ8"/>
+                                            <constraint firstAttribute="bottom" secondItem="ESn-fm-E4s" secondAttribute="bottom" id="JvL-6j-JJ8"/>
                                             <constraint firstAttribute="width" constant="848" id="XW6-EA-4ia"/>
                                             <constraint firstAttribute="trailing" secondItem="ESn-fm-E4s" secondAttribute="trailing" id="hoz-YN-mme"/>
                                             <constraint firstAttribute="height" constant="603" id="nFD-yY-gxX"/>
                                             <constraint firstItem="ESn-fm-E4s" firstAttribute="leading" secondItem="3Cx-eK-Lco" secondAttribute="leading" id="v3j-hs-SOi"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="nFD-yY-gxX"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3Cx-eK-Lco" firstAttribute="centerX" secondItem="PML-vD-YNu" secondAttribute="centerX" id="53e-uR-ms4"/>
                                     <constraint firstAttribute="trailing" secondItem="3Cx-eK-Lco" secondAttribute="trailing" id="5BJ-im-q3M"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" constant="-1" id="8q3-ol-B6e"/>
+                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="centerY" secondItem="PML-vD-YNu" secondAttribute="centerY" id="8Nc-gA-uUc"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" id="8q3-ol-B6e"/>
                                     <constraint firstItem="3Cx-eK-Lco" firstAttribute="leading" secondItem="PML-vD-YNu" secondAttribute="leading" id="9gE-mj-x9X"/>
                                     <constraint firstAttribute="trailing" secondItem="3Cx-eK-Lco" secondAttribute="trailing" id="KA6-zm-suw"/>
                                     <constraint firstItem="3Cx-eK-Lco" firstAttribute="leading" secondItem="PML-vD-YNu" secondAttribute="leading" id="LUc-RX-o1O"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" constant="1" id="OjL-R4-ns0"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" constant="-1" id="Yfv-B2-iaz"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" constant="1" id="waU-8z-aID"/>
+                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" id="OjL-R4-ns0"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" id="Yfv-B2-iaz"/>
+                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" id="waU-8z-aID"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="53e-uR-ms4"/>
+                                        <exclude reference="9gE-mj-x9X"/>
+                                        <exclude reference="KA6-zm-suw"/>
+                                        <exclude reference="OjL-R4-ns0"/>
+                                        <exclude reference="Yfv-B2-iaz"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1558,12 +1573,22 @@
                             <constraint firstItem="pyP-TM-eaq" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="bottom" id="FYL-Dr-yn9"/>
                             <constraint firstItem="XAQ-4O-OJZ" firstAttribute="leading" secondItem="n7a-fE-Fbd" secondAttribute="leadingMargin" constant="-20" id="GCu-Zn-JGp"/>
                             <constraint firstItem="XAQ-4O-OJZ" firstAttribute="top" secondItem="lth-PD-e2b" secondAttribute="bottom" id="SvS-CB-WeN"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="leading" secondItem="n7a-fE-Fbd" secondAttribute="leadingMargin" constant="-20" id="V7E-po-PAB"/>
+                            <constraint firstItem="PML-vD-YNu" firstAttribute="leading" secondItem="n7a-fE-Fbd" secondAttribute="leadingMargin" id="V7E-po-PAB"/>
                             <constraint firstItem="PML-vD-YNu" firstAttribute="leading" secondItem="XAQ-4O-OJZ" secondAttribute="leading" id="dIK-as-cEx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XAQ-4O-OJZ" secondAttribute="trailing" constant="-20" id="fyh-Zf-gVW"/>
                             <constraint firstItem="PML-vD-YNu" firstAttribute="top" secondItem="XAQ-4O-OJZ" secondAttribute="bottom" id="iCM-gE-OWh"/>
                             <constraint firstItem="PML-vD-YNu" firstAttribute="top" secondItem="XAQ-4O-OJZ" secondAttribute="bottom" id="pLM-hW-wEQ"/>
+                            <constraint firstItem="PML-vD-YNu" firstAttribute="centerX" secondItem="XAQ-4O-OJZ" secondAttribute="centerX" id="xxo-V0-znv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DJs-s1-ean"/>
+                                <exclude reference="V7E-po-PAB"/>
+                                <exclude reference="dIK-as-cEx"/>
+                                <exclude reference="iCM-gE-OWh"/>
+                                <exclude reference="FYL-Dr-yn9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="848" height="667"/>
