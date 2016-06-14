@@ -158,7 +158,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="544F5DE4-13B1-4F77-BE34-E79AB7856099" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5FDA43F2-1F5D-4E67-9BDA-1E8AAF3A07B4" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -1102,6 +1102,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="fGz-31-y4f"/>
+                                        <exclude reference="raK-C5-pEa"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -1638,7 +1639,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="544F5DE4-13B1-4F77-BE34-E79AB7856099" width="25" height="25">
+        <image name="5FDA43F2-1F5D-4E67-9BDA-1E8AAF3A07B4" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
