@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-<<<<<<< HEAD
    LastUpgradeVersion = "0730"
-=======
-   LastUpgradeVersion = "0720"
->>>>>>> a0161fba566026b3054a8f8f56a42c3e98fb98e4
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -32,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC23C01B1BD7826C000B2465"
-               BuildableName = "DBTests.xctest"
-               BlueprintName = "DBTests"
-               ReferencedContainer = "container:DB.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC23C0261BD7826C000B2465"
-               BuildableName = "DBUITests.xctest"
-               BlueprintName = "DBUITests"
-               ReferencedContainer = "container:DB.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

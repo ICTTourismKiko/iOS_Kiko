@@ -125,6 +125,10 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
     }
     
+    @IBAction func openImage(sender: AnyObject) {
+        
+    }
+    
     func textViewDidChange(textView: UITextView){
         contentNum.text = String(contentLength - contentText.text.characters.count)
     }
