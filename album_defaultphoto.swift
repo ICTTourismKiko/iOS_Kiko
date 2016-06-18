@@ -14,6 +14,7 @@ class album_defaultphoto: UIViewController {
     
     @IBOutlet weak var navigationbar: UINavigationBar!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,5 +42,6 @@ class album_defaultphoto: UIViewController {
     @IBAction func backbutton(sender: AnyObject) {
         appDelegate.pic_segmented = 0
         self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
