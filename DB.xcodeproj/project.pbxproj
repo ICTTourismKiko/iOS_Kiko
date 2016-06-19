@@ -25,6 +25,11 @@
 		37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBBC471C095E870098B625 /* album_defaultphoto.swift */; };
 		37FBD82E1C06B247008AAD03 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82C1C06B247008AAD03 /* back.png */; };
 		37FBD82F1C06B247008AAD03 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82D1C06B247008AAD03 /* next.png */; };
+		3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2E1D1407AC00B66C6F /* splash6plus.png */; };
+		3B218F311D1407AC00B66C6F /* splash6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2F1D1407AC00B66C6F /* splash6.png */; };
+		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
+		3B218F371D14088A00B66C6F /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F361D14088A00B66C6F /* splash640.png */; };
+		3B218F391D1408AC00B66C6F /* splash320.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F381D1408AC00B66C6F /* splash320.png */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
@@ -123,6 +128,11 @@
 		37BBBC471C095E870098B625 /* album_defaultphoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = album_defaultphoto.swift; path = ../album_defaultphoto.swift; sourceTree = "<group>"; };
 		37FBD82C1C06B247008AAD03 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		37FBD82D1C06B247008AAD03 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		3B218F2E1D1407AC00B66C6F /* splash6plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash6plus.png; sourceTree = "<group>"; };
+		3B218F2F1D1407AC00B66C6F /* splash6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash6.png; sourceTree = "<group>"; };
+		3B218F321D14080D00B66C6F /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
+		3B218F361D14088A00B66C6F /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
+		3B218F381D1408AC00B66C6F /* splash320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash320.png; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -280,6 +290,11 @@
 				9C4D92541C1A51CE009A5659 /* s_kanko.png */,
 				9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */,
 				9C4D92521C1A513A009A5659 /* s_print.png */,
+				3B218F2E1D1407AC00B66C6F /* splash6plus.png */,
+				3B218F2F1D1407AC00B66C6F /* splash6.png */,
+				3B218F321D14080D00B66C6F /* splash5.png */,
+				3B218F361D14088A00B66C6F /* splash640.png */,
+				3B218F381D1408AC00B66C6F /* splash320.png */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
@@ -438,6 +453,7 @@
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
+				3B218F331D14080D00B66C6F /* splash5.png in Resources */,
 				DC08FCC21C13ECD6002252F2 /* pen67.png in Resources */,
 				9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
@@ -448,17 +464,21 @@
 				9C4D92551C1A51CE009A5659 /* s_kanko.png in Resources */,
 				37FBD82E1C06B247008AAD03 /* back.png in Resources */,
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
+				3B218F391D1408AC00B66C6F /* splash320.png in Resources */,
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
 				9CA1E02A1C0AEC110083591E /* kanko.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
+				3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */,
 				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
+				3B218F371D14088A00B66C6F /* splash640.png in Resources */,
 				DC4430481C0958FC0006D4F5 /* redpin.png in Resources */,
 				8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */,
 				9CA1E02C1C0AEC190083591E /* print.png in Resources */,
+				3B218F311D1407AC00B66C6F /* splash6.png in Resources */,
 				DC4430551C0959380006D4F5 /* pin56.png in Resources */,
 				DC4430521C0959380006D4F5 /* card6.png in Resources */,
 				DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */,

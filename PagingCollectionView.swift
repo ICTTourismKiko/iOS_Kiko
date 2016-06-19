@@ -99,7 +99,23 @@ extension PagingCollectionView: UICollectionViewDataSource {
                 cell.introLabel.text = ""
                 cell.NoPhotoLabel.text = "撮影写真がありません。\n写真を撮ると表示されます。"
                 
-                credit.frame = CGRectMake(70, 310, 300, 120)
+                let height = UIScreen.mainScreen().bounds.size.height
+                
+                //iphoneのサイズによってカードに書かれる文のサイズを変更
+                //iPhone6
+                if height >= 667 {
+                    credit.frame = CGRectMake(20, self.contentSize.height/2, 300, 120)
+
+                    
+                    //iPhone6 Plus
+                            }else if height == 736 {
+                    credit.frame = CGRectMake(20, self.contentSize.height/1.5, 300, 120)
+                    
+                    //iPhone5・5s・5c
+                }else {
+                    credit.frame = CGRectMake(20, self.contentSize.height/2.45, 300, 120)
+                }
+
                 credit.font = UIFont(name: "HiraginoSans-W3", size: 10.0)
                 self.addSubview(credit)
                 credit.text = "木古内町観光マスコットキャラクター キーコ"
