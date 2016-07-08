@@ -49,12 +49,26 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
                 print(photoID)
                 DB().linkToCard(photoID)
             }
+            //ライブラリに写真を保存
+            if image != nil {
+                UIImageWriteToSavedPhotosAlbum(image, self, #selector(PhotoController.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            }
+            
+            
             NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(PhotoController.back),
                 userInfo: nil, repeats: false);
         }
         
         //閉じる処理
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //ライブラリに写真を保存するときのエラー内容表示
+    func image(image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutablePointer<Void>) {
+        
+        if error != nil {
+            print(error.code)
+        }
     }
     
     // 撮影がキャンセルされた時に呼ばれる
