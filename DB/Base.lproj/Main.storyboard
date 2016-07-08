@@ -150,7 +150,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3ADC6889-E111-41A2-9BF0-3E8D9C1B9040" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7E9D4242-47DC-4953-92BE-7C1F90677395" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -962,6 +962,9 @@
                                                         <action selector="select_photo:" destination="55M-Ae-TkD" eventType="touchUpInside" id="uGu-5H-2Kc"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oG6-rm-IMc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="383" height="158"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="M7C-KB-uXE" firstAttribute="leading" secondItem="Gfh-SA-27o" secondAttribute="leadingMargin" constant="8" id="0jy-ob-vUL"/>
@@ -990,6 +993,7 @@
                                         <connections>
                                             <outlet property="iconImage" destination="Ud1-EK-rEz" id="iIr-qp-Upd"/>
                                             <outlet property="introText" destination="kLp-49-OoD" id="Erk-uU-uB7"/>
+                                            <outlet property="select_check" destination="oG6-rm-IMc" id="Ue4-Pp-rHh"/>
                                             <outlet property="title" destination="bdi-E9-aao" id="dLl-Vy-WqD"/>
                                         </connections>
                                     </tableViewCell>
@@ -1635,7 +1639,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3ADC6889-E111-41A2-9BF0-3E8D9C1B9040" width="25" height="25">
+        <image name="7E9D4242-47DC-4953-92BE-7C1F90677395" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1762,6 +1766,6 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sEM-aE-9tf"/>
+        <segue reference="Bda-Vk-JCy"/>
     </inferredMetricsTieBreakers>
 </document>

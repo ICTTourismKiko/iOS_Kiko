@@ -30,6 +30,7 @@
 		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
 		3B218F371D14088A00B66C6F /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F361D14088A00B66C6F /* splash640.png */; };
 		3B218F391D1408AC00B66C6F /* splash320.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F381D1408AC00B66C6F /* splash320.png */; };
+		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
@@ -133,6 +134,7 @@
 		3B218F321D14080D00B66C6F /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
 		3B218F361D14088A00B66C6F /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
 		3B218F381D1408AC00B66C6F /* splash320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash320.png; sourceTree = "<group>"; };
+		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				3B218F321D14080D00B66C6F /* splash5.png */,
 				3B218F361D14088A00B66C6F /* splash640.png */,
 				3B218F381D1408AC00B66C6F /* splash320.png */,
+				8F151AE11D2F746600BED73D /* black.JPG */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
@@ -449,6 +452,7 @@
 				DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
 				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
+				8F151AE21D2F746600BED73D /* black.JPG in Resources */,
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
