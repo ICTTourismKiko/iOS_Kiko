@@ -14,7 +14,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(PhotoController.camerastart),
+        NSTimer.scheduledTimerWithTimeInterval(1.0,target:self,selector:#selector(PhotoController.showActionSheet),
             userInfo: nil, repeats: false);
     }
 
@@ -22,6 +22,50 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //選択画面表示メソッド
+    func showActionSheet(){
+        
+        // インスタンス生成　styleはActionSheet.
+        let myAlert = UIAlertController(title: "選択して下さい", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        // アクションを生成.
+        let myAction_1 = UIAlertAction(title: "カメラで写真を撮る", style: UIAlertActionStyle.Default, handler: {
+            (action: UIAlertAction!) in
+            
+            self.camerastart()
+            
+        })
+        let myAction_2 = UIAlertAction(title: "アルバムから写真を選ぶ", style: UIAlertActionStyle.Default, handler: {
+            (action: UIAlertAction!) in
+            
+            self.pickImageFromLibrary()
+            
+        })
+        let myAction_3 = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.Cancel, handler: {
+            (action: UIAlertAction!) in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        })
+        // アクションを追加.
+        myAlert.addAction(myAction_1)
+        myAlert.addAction(myAction_2)
+        myAlert.addAction(myAction_3)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+    }
+
+    // ライブラリから写真を選択する
+    func pickImageFromLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
     
     func camerastart(){
         let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
