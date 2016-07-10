@@ -80,17 +80,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardSyousai.numberOfLines = 30
         CardPoemu.numberOfLines = 30
         
-        self.CardMap.delegate = self
-        
-        var region:MKCoordinateRegion = self.CardMap.region
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(pic_id!).position_x, DB().getCard(pic_id!).position_y) //マップの中心を選択して来た場所に設定
-        
-        region.center = location
-        region.span.longitudeDelta = 0.005
-        region.span.latitudeDelta = 0.005
-    
-        self.CardMap.setRegion(region, animated: true)
-        
         myLocationManager = CLLocationManager()
         myLocationManager.delegate = self
         myLocationManager.distanceFilter = kCLHeadingFilterNone
@@ -123,9 +112,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[i].imageName = "fa3.png"
         }
         
-        
-        self.CardMap.setRegion(region, animated: true)
-        
         //選択されたカードのピンを作成
         PinArray.append(Pin())
         PinArray[PinArray.count-1].ID = pic_id!
@@ -151,13 +137,51 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardMap.addAnnotations(PinArray)
         
         
+//        self.CardMap.delegate = self
+//        
+//        var region:MKCoordinateRegion = self.CardMap.region
+//        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(pic_id!).position_x, DB().getCard(pic_id!).position_y) //マップの中心を選択して来た場所に設定
+//        
+//        region.center = location
+//        region.span.longitudeDelta = 0.005
+//        region.span.latitudeDelta = 0.005
+//        
+//        self.CardMap.setRegion(region, animated: true)
+        
+        // 出発点の緯度、経度を設定.
+        let myLatitude: CLLocationDegrees = (myLocationManager.location?.coordinate.latitude)!
+        let myLongitude: CLLocationDegrees = (myLocationManager.location?.coordinate.longitude)!
+        
+        // 目的地の緯度、経度を設定.
+        let requestLatitude: CLLocationDegrees = PinArray[PinArray.count-1].x
+        let requestLongitude: CLLocationDegrees = PinArray[PinArray.count-1].y
+        
+        // Delegateを設定.
+        self.CardMap.delegate = self
+        
+        // 地図の中心を出発点と目的地の中間に設定する.
+        let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake((myLatitude + requestLatitude)/2, (myLongitude + requestLongitude)/2)
+        
+        // mapViewに中心をセットする.
+        CardMap.setCenterCoordinate(center, animated: true)
+        
+        // 縮尺を指定.
+        let mySpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let myRegion: MKCoordinateRegion = MKCoordinateRegion(center: center, span: mySpan)
+        
+        CardMap.region = myRegion
+        
+        // viewにmapViewを追加.
+        self.view.addSubview(CardMap)
+        
+        
         //***　ここから経路表示機能
         
         let request = MKDirectionsRequest()
         // 出発地をセット.
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: (myLocationManager.location?.coordinate.latitude)!, longitude: (myLocationManager.location?.coordinate.longitude)!), addressDictionary: nil))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: myLatitude, longitude: myLongitude), addressDictionary: nil))
         //目的地をセット.
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: PinArray[PinArray.count-1].x, longitude: PinArray[PinArray.count-1].y), addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: requestLatitude, longitude: requestLongitude), addressDictionary: nil))
         
         // 複数経路の検索を有効.
         request.requestsAlternateRoutes = true
@@ -180,7 +204,29 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             // mapViewにルートを描画.
             self.CardMap.addOverlay(route.polyline)
         }
+        
+        // 現在地と目的地を含む矩形を計算
+        let maxLat:Double = fmax(myLatitude,  requestLatitude)
+        let maxLon:Double = fmax(myLongitude, requestLongitude)
+        let minLat:Double = fmin(myLatitude,  requestLatitude)
+        let minLon:Double = fmin(myLongitude, requestLongitude)
+        
+        // 地図表示するときの緯度、経度の幅を計算
+        let mapMargin:Double = 1.5;  // 経路が入る幅(1.0)＋余白(0.5)
+        let leastCoordSpan:Double = 0.005;    // 拡大表示したときの最大値
+        let span_x:Double = fmax(leastCoordSpan, fabs(maxLat - minLat) * mapMargin);
+        let span_y:Double = fmax(leastCoordSpan, fabs(maxLon - minLon) * mapMargin);
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(span_x, span_y);
+        
+        // 現在地を目的地の中心を計算
+        let center2:CLLocationCoordinate2D = CLLocationCoordinate2DMake((maxLat + minLat) / 2, (maxLon + minLon) / 2);
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(center2, span);
+        
+        CardMap.setRegion(CardMap.regionThatFits(region), animated:true);
+        
     }
+    
     
     // 経路を描画するときの色や線の太さを指定
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
