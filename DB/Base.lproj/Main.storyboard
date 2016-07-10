@@ -150,7 +150,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="E06E1D64-BD4E-4FA0-95FA-F1CBD9C2C999" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="88DD1B9B-C870-4BDE-A9AB-748048F46AC0" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -617,7 +617,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="V5W-oN-SFU">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="V5W-oN-SFU">
                                                     <rect key="frame" x="0.0" y="0.0" width="383" height="251"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-Ud-E2U">
@@ -1499,14 +1499,14 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-nU-QrC">
                                                 <rect key="frame" x="580" y="22" width="260" height="368"/>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-ex-tVh">
+                                                <rect key="frame" x="415" y="21" width="120" height="171"/>
+                                            </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-Bu-Fj6">
                                                 <rect key="frame" x="288" y="22" width="119" height="170"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dZ-cn-WxH">
                                                 <rect key="frame" x="288" y="240" width="247" height="349"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-ex-tVh">
-                                                <rect key="frame" x="415" y="21" width="120" height="171"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxF-T1-tAm">
                                                 <rect key="frame" x="17" y="411" width="129" height="184"/>
@@ -1626,8 +1626,8 @@
                         <outlet property="backimage" destination="ESn-fm-E4s" id="MvR-3V-AR5"/>
                         <outlet property="navigation" destination="XAQ-4O-OJZ" id="3zv-Kp-CQu"/>
                         <outlet property="pic1" destination="ICe-DT-20c" id="YxT-GH-s4w"/>
-                        <outlet property="pic2" destination="cMy-ex-tVh" id="7c9-g0-f3w"/>
-                        <outlet property="pic3" destination="Rej-Bu-Fj6" id="DI8-my-5y9"/>
+                        <outlet property="pic2" destination="Rej-Bu-Fj6" id="XjU-2X-Xie"/>
+                        <outlet property="pic3" destination="cMy-ex-tVh" id="xCQ-L4-RkL"/>
                         <outlet property="pic4" destination="BTx-nU-QrC" id="LJo-I4-azW"/>
                         <outlet property="pic5" destination="JxF-T1-tAm" id="Zbh-1N-IiP"/>
                         <outlet property="pic6" destination="7dZ-cn-WxH" id="QRs-Vy-ukl"/>
@@ -1640,7 +1640,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E06E1D64-BD4E-4FA0-95FA-F1CBD9C2C999" width="25" height="25">
+        <image name="88DD1B9B-C870-4BDE-A9AB-748048F46AC0" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1767,7 +1767,7 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZsS-yQ-EHr"/>
         <segue reference="sEM-aE-9tf"/>
+        <segue reference="5xk-44-Lcj"/>
     </inferredMetricsTieBreakers>
 </document>
