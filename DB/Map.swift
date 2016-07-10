@@ -84,10 +84,11 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         var region:MKCoordinateRegion = self.CardMap.region
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(pic_id!).position_x, DB().getCard(pic_id!).position_y) //マップの中心を選択して来た場所に設定
+        
         region.center = location
         region.span.longitudeDelta = 0.005
         region.span.latitudeDelta = 0.005
-        
+    
         self.CardMap.setRegion(region, animated: true)
         
         myLocationManager = CLLocationManager()
@@ -154,7 +155,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         let request = MKDirectionsRequest()
         // 出発地をセット.
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 41.678215, longitude: 140.438443), addressDictionary: nil))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: (myLocationManager.location?.coordinate.latitude)!, longitude: (myLocationManager.location?.coordinate.longitude)!), addressDictionary: nil))
         //目的地をセット.
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: PinArray[PinArray.count-1].x, longitude: PinArray[PinArray.count-1].y), addressDictionary: nil))
         
