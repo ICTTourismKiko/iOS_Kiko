@@ -148,6 +148,45 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardPoemu.text = PinArray[PinArray.count-1].text
         
         CardMap.addAnnotations(PinArray)
+        
+        
+        //***　ここから経路表示機能
+        
+        let request = MKDirectionsRequest()
+        // 出発地をセット.
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 41.678215, longitude: 140.438443), addressDictionary: nil))
+        //目的地をセット.
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: PinArray[PinArray.count-1].x, longitude: PinArray[PinArray.count-1].y), addressDictionary: nil))
+        
+        // 複数経路の検索を有効.
+        request.requestsAlternateRoutes = true
+
+        // 移動手段を歩きに設定.
+        request.transportType = MKDirectionsTransportType.Walking
+        
+        // MKDirectionsを生成してRequestをセット.
+        let directions = MKDirections(request: request)
+        
+        // 経路探索.
+        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+            guard response != nil else { return }
+            
+            let route: MKRoute = response!.routes[0] as MKRoute
+            
+            print("目的地まで \(route.distance)m")
+            print("所要時間 \(Int(route.expectedTravelTime/60))分")
+            
+            // mapViewにルートを描画.
+            self.CardMap.addOverlay(route.polyline)
+        }
+    }
+    
+    // 経路を描画するときの色や線の太さを指定
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blueColor()
+        renderer.lineWidth = 5
+        return renderer
     }
     
     override func didReceiveMemoryWarning() {
@@ -255,4 +294,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
 }
