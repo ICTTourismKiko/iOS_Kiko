@@ -32,22 +32,18 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         // アクションを生成.
         let myAction_1 = UIAlertAction(title: "カメラで写真を撮る", style: UIAlertActionStyle.Default, handler: {
             (action: UIAlertAction!) in
-            
             self.camerastart()
             
         })
         let myAction_2 = UIAlertAction(title: "アルバムから写真を選ぶ", style: UIAlertActionStyle.Default, handler: {
             (action: UIAlertAction!) in
-            
             self.pickImageFromLibrary()
-            
         })
         let myAction_3 = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.Cancel, handler: {
             (action: UIAlertAction!) in
-            
             self.dismissViewControllerAnimated(true, completion: nil)
-            
         })
+        
         // アクションを追加.
         myAlert.addAction(myAction_1)
         myAlert.addAction(myAction_2)
