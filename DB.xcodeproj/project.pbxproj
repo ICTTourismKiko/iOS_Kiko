@@ -30,6 +30,7 @@
 		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
 		3B218F371D14088A00B66C6F /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F361D14088A00B66C6F /* splash640.png */; };
 		3B218F391D1408AC00B66C6F /* splash320.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F381D1408AC00B66C6F /* splash320.png */; };
+		3B46D9FF1D338144005BD81A /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D9FE1D338144005BD81A /* information.swift */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
@@ -134,6 +135,7 @@
 		3B218F321D14080D00B66C6F /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
 		3B218F361D14088A00B66C6F /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
 		3B218F381D1408AC00B66C6F /* splash320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash320.png; sourceTree = "<group>"; };
+		3B46D9FE1D338144005BD81A /* information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = information.swift; path = ../information.swift; sourceTree = "<group>"; };
 		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				379112ED1BD817D80024E678 /* Map.swift */,
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				3B46D9FE1D338144005BD81A /* information.swift */,
 				9C4D92301C141CF8009A5659 /* photoViewer.swift */,
 				8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */,
 				8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */,
@@ -522,6 +525,7 @@
 				8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */,
 				8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */,
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
+				3B46D9FF1D338144005BD81A /* information.swift in Sources */,
 				37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
 				9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */,
