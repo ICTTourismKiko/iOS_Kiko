@@ -10,7 +10,6 @@ import UIKit
 
 class information: UIViewController {
 
-    
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
