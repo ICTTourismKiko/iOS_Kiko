@@ -150,7 +150,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F699346A-ADE6-4DE4-A6F9-0AE889AC5DFC" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="68E15D71-EBCE-4C59-BBD0-18D1DF75C930" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -259,7 +259,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-LP-aDq">
                                 <rect key="frame" x="-4" y="64" width="383" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">[キーコ紀行とは]
+                                <string key="text">[キーコ紀行とは]
 キーコ紀行は木古内町観光の思い出をリーフレットにできるアプリです。
 木古内のグルメを味わえる場所や歴史的建造物などの魅力的なスポットを、「そこでどんなことができるか？」という観点で紹介します。
 このアプリを使って町歩きをしながら写真を撮ることで、自分だけのリーフレットを簡単に作ることができます。
@@ -352,7 +352,7 @@ Top画面
 Copyright(c) Future University Hakodate. All Rights Reserved.
  
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -419,7 +419,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJJ-0I-7Qx" secondAttribute="height" multiplier="144:31" id="osx-MB-DRd"/>
                                 </constraints>
-                                <state key="normal" image="s_kanko.png"/>
+                                <state key="normal" image="new_kanko.png"/>
                                 <connections>
                                     <segue destination="PGL-vA-g2r" kind="show" id="jWk-ve-ZDt"/>
                                 </connections>
@@ -1801,7 +1801,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
         </scene>
     </scenes>
     <resources>
-        <image name="F699346A-ADE6-4DE4-A6F9-0AE889AC5DFC" width="25" height="25">
+        <image name="68E15D71-EBCE-4C59-BBD0-18D1DF75C930" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1921,10 +1921,10 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="haikei.jpg" width="842" height="595"/>
         <image name="info_2.png" width="62" height="62"/>
         <image name="ki-ko01.png" width="1654" height="1654"/>
+        <image name="new_kanko.png" width="230" height="50"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
         <image name="s_hurikaeri.png" width="230" height="50"/>
-        <image name="s_kanko.png" width="230" height="50"/>
         <image name="s_print.png" width="230" height="50"/>
         <image name="s_title.png" width="242" height="64"/>
     </resources>
