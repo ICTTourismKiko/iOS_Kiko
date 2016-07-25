@@ -11,10 +11,15 @@ import UIKit
 class information: UIViewController {
     
     @IBOutlet weak var uitext: UITextView!
+    @IBOutlet weak var navigation: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        let navBarImage = UIImage(named: "bar6.png") as UIImage?
+        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+    
+        
     self.uitext.editable = false
     
     }
