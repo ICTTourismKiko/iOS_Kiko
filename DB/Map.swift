@@ -59,11 +59,34 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
-        CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardPoemu.alpha = 0.0
+        
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        //iphoneのサイズによってカードに書かれる文のサイズを変更
+        //iPhone6
+        if height >= 667 {
+            //self.title.font = UIFont.systemFontOfSize(14)
+            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            
+            //iPhone6 Plus
+            //        }else if height == 736 {
+            //            self.introText.font = UIFont.systemFontOfSize(15)
+            
+            //iPhone5・5s・5c
+        }else {
+            //self.title.font = UIFont.systemFontOfSize(15)
+            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+
+        }
+
+        
+               CardPoemu.alpha = 0.0
         CardTopPoemu.alpha = 0.0
         self.view.addSubview(CardSyousai)
         self.view.addSubview(CardPoemu)
@@ -323,8 +346,8 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardPoemu.alpha = 1.0
                 self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
-                
-                self.arrow.image = UIImage(named: "back.png")
+               
+               // self.arrow.image = UIImage(named: "back.png")
             }
         }else{      //スポット紹介を表示中
             
@@ -342,7 +365,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopSyousai.alpha = 1.0
                 self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 
-                self.arrow.image = UIImage(named: "next.png")
+               // self.arrow.image = UIImage(named: "next.png")
                 
             }
         }
