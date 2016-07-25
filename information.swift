@@ -9,7 +9,16 @@
 import UIKit
 
 class information: UIViewController {
-
+    
+    @IBOutlet weak var uitext: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+    self.uitext.editable = false
+    
+    }
+    
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
