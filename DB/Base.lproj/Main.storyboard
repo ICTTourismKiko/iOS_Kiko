@@ -150,7 +150,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4C0E1D8D-3041-47AA-97FF-58DD44A2AA80" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0EEEB111-768E-4967-83A4-A4CD731A36DF" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -258,6 +258,9 @@
                                                 <state key="normal" title="戻る">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="5Yw-qv-psP" kind="presentation" id="LW2-Rh-dMn"/>
+                                                </connections>
                                             </button>
                                             <connections>
                                                 <segue destination="5Yw-qv-psP" kind="presentation" id="Z7K-Zp-5B5"/>
@@ -387,7 +390,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nj-2i-JZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.5" y="1115.5"/>
+            <point key="canvasLocation" x="-40.5" y="1287.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P32-3L-iHC">
@@ -1815,7 +1818,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
         </scene>
     </scenes>
     <resources>
-        <image name="4C0E1D8D-3041-47AA-97FF-58DD44A2AA80" width="25" height="25">
+        <image name="0EEEB111-768E-4967-83A4-A4CD731A36DF" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1943,7 +1946,7 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZsS-yQ-EHr"/>
+        <segue reference="Z7K-Zp-5B5"/>
         <segue reference="dNd-oi-ntL"/>
     </inferredMetricsTieBreakers>
 </document>
