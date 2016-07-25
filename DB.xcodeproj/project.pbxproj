@@ -31,6 +31,8 @@
 		3B218F371D14088A00B66C6F /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F361D14088A00B66C6F /* splash640.png */; };
 		3B218F391D1408AC00B66C6F /* splash320.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F381D1408AC00B66C6F /* splash320.png */; };
 		3B46D9FF1D338144005BD81A /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D9FE1D338144005BD81A /* information.swift */; };
+		3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629631D45E28E007D0E94 /* new_kanko.png */; };
+		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
@@ -136,6 +138,8 @@
 		3B218F361D14088A00B66C6F /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
 		3B218F381D1408AC00B66C6F /* splash320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash320.png; sourceTree = "<group>"; };
 		3B46D9FE1D338144005BD81A /* information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = information.swift; path = ../information.swift; sourceTree = "<group>"; };
+		3B5629631D45E28E007D0E94 /* new_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_kanko.png; sourceTree = "<group>"; };
+		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
 		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				DC08FCC31C13EF04002252F2 /* ki-ko01.png */,
 				9C4D92421C1A4DFC009A5659 /* s_title.png */,
 				9C4D92541C1A51CE009A5659 /* s_kanko.png */,
+				3B5629631D45E28E007D0E94 /* new_kanko.png */,
 				9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */,
 				9C4D92521C1A513A009A5659 /* s_print.png */,
 				3B218F2E1D1407AC00B66C6F /* splash6plus.png */,
@@ -300,6 +305,7 @@
 				3B218F361D14088A00B66C6F /* splash640.png */,
 				3B218F381D1408AC00B66C6F /* splash320.png */,
 				8F151AE11D2F746600BED73D /* black.JPG */,
+				3B5629651D45E438007D0E94 /* info_2.png */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
@@ -456,6 +462,7 @@
 				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
 				8F151AE21D2F746600BED73D /* black.JPG in Resources */,
 				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
+				3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
@@ -472,6 +479,7 @@
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
 				3B218F391D1408AC00B66C6F /* splash320.png in Resources */,
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
+				3B5629661D45E438007D0E94 /* info_2.png in Resources */,
 				9CA1E02A1C0AEC110083591E /* kanko.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,

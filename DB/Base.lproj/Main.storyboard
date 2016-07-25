@@ -150,7 +150,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8635C65A-DDAD-4401-9C93-1EB6EC3AE18D" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5A2860F7-B913-45B1-B3B2-01CE6B77ECE1" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -229,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="1567.5" y="648.5"/>
         </scene>
-        <!--Information-->
+        <!--Title-->
         <scene sceneID="aLn-CI-NTp">
             <objects>
                 <viewController id="gWN-sg-ahK" customClass="information" customModule="DB" customModuleProvider="target" sceneMemberID="viewController">
@@ -247,37 +247,136 @@
                                     <constraint firstAttribute="height" constant="44" id="fYA-FH-Qov"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="利用規約" id="VRz-sh-QL8">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="x0P-8C-CnJ">
+                                    <navigationItem title="利用規約" id="WQP-NC-bfn">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="gEe-3Y-mdf">
                                             <connections>
-                                                <action selector="backbutton:" destination="gWN-sg-ahK" id="ihc-37-44O"/>
-                                                <segue destination="5Yw-qv-psP" kind="presentation" id="PZC-GO-DnF"/>
+                                                <segue destination="5Yw-qv-psP" kind="presentation" id="BpD-TU-CAd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-do-cR2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-LP-aDq">
                                 <rect key="frame" x="-4" y="64" width="383" height="603"/>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">[キーコ紀行とは]
+キーコ紀行は木古内町観光の思い出をリーフレットにできるアプリです。
+木古内のグルメを味わえる場所や歴史的建造物などの魅力的なスポットを、「そこでどんなことができるか？」という観点で紹介します。
+このアプリを使って町歩きをしながら写真を撮ることで、自分だけのリーフレットを簡単に作ることができます。
+キーコ紀行で木古内観光の思い出を形にして残しましょう！！！
+ 
+[キーコ紀行の主な機能]
+・木古内の観光スポット情報を見ることができます。
+・マップから現在地と観光スポットの場所を知ることができます。
+・AirPrintを使って、アプリで作ったリーフレットを印刷できます。
+ 
+[推奨環境]
+iPhone5　以降
+GPSを利用するためGPS搭載のデバイスを利用することを推奨します。
+リーフレットを印刷するためには、AirPrint対応のプリンタが必要です。
+ 
+[サポート用サイト]
+https://www.facebook.com/FUNTourismProject/
+ 
+[使い方]
+[スポットの詳細情報を見る]
+ 
+Top画面
+・「観光する」をタップします。
+ 
+カードリスト画面
+・気になったスポットのピンボタンをタップします。
+・星のボタンをタップしておくことで、お気に入りスポットを登録できます。
+ 
+マップ画面
+・詳細情報（営業時間や料金等）を閲覧できます。
+・マップ上には現在地と自分の選択したスポットとのルートが表示されます。
+・カードリスト画面でお気に入り登録しておいたスポットも、星のマークでマップ上に表示されます。
+・星をタップすると詳細情報がそのスポットの情報に切り替わります。
+ 
+[カードのタイトル・文章を編集する]
+Top画面
+・「観光する」をタップします。
+
+カードリスト画面
+・ペンボタンをタップします。
+
+編集画面
+・タイトル、紹介文を自分好みに編集できます。
+・それぞれの右下に表示されている数字は文字数制限を意味しており、あと何文字打ち込めるかを表示しています。
+・「保存する」をタップすると編集した内容が保存され、カードに反映されます。
+・「元に戻す」をタップすると編集内容を編集前に戻します。
+
+[カードに撮影した写真を反映させる]
+Top画面
+・「観光する」をタップします。
+
+カードリスト画面
+・カメラボタンをタップします。
+
+カメラ撮影画面
+・写真を撮影します。
+・「再撮影」をタップすると撮影しなおせます。
+・「使用する」をタップすると撮影した画像が、カードに反映されます。
+
+[振り返る]
+Top画面
+・「振り返る」をタップします。
+
+アルバム画面
+・アルバムが表示されます。スワイプすると違う写真を閲覧できます。撮影をしていないと写真は表示されません。
+・画面右上の「サンプル写真」をタップすると、どのような感じで写真が閲覧できるかを試すことができます。
+・画像をタップすると写真を細かく閲覧できます。
+
+[リーフレットを印刷する]
+Top画面
+・「印刷する」をタップします。
+
+写真選択画面
+・「タップして写真を選ぶ」となっているところをタップします。
+・カードリスト画面に似た画面になるので、その中から気に入ったカードを選択します。
+・選択した写真が写真選択画面の空いていた部分に反映されます。
+・この要領で全ての空欄を埋めます。
+・「完了」をタップします。
+
+印刷プレビュー画面
+・自分の選択した写真に合ったリーフレットの裏表の印刷イメージが表示されます。
+・良ければ「印刷」をタップします。やり直したければ、「戻る」をタップして選択しなおしましょう。
+・AirprintとWi-Fiで実機を接続した状態で、発行部数等を設定して印刷します。
+・自分の編集したリーフレットが印刷されます。
+
+[備考]
+本アプリケーションの利用によって発生した損害やトラブルに対しましては、一切責任を負いませんので予めご了承ください。
+ 
+キーコ紀行
+Copyright(c) Future University Hakodate. All Rights Reserved.
+ 
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rNp-DS-kR6" firstAttribute="leading" secondItem="pTk-f5-xfJ" secondAttribute="leadingMargin" constant="-20" id="C5k-Wz-U3b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rNp-DS-kR6" secondAttribute="trailing" constant="-20" id="FWG-EZ-neH"/>
-                            <constraint firstItem="4yZ-fw-ka8" firstAttribute="top" secondItem="RYx-do-cR2" secondAttribute="bottom" id="QXR-Vc-Sf0"/>
+                            <constraint firstItem="fnn-LP-aDq" firstAttribute="top" secondItem="rNp-DS-kR6" secondAttribute="bottom" id="IYl-wX-HKd"/>
                             <constraint firstItem="rNp-DS-kR6" firstAttribute="top" secondItem="wcL-vb-Fiv" secondAttribute="bottom" id="Yz2-xT-BoU"/>
-                            <constraint firstItem="RYx-do-cR2" firstAttribute="top" secondItem="rNp-DS-kR6" secondAttribute="bottom" id="lfn-2Y-YOs"/>
-                            <constraint firstItem="RYx-do-cR2" firstAttribute="top" secondItem="rNp-DS-kR6" secondAttribute="bottom" id="xvr-2h-dnB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RYx-do-cR2" secondAttribute="trailing" constant="-20" id="zkF-hs-elN"/>
-                            <constraint firstItem="RYx-do-cR2" firstAttribute="leading" secondItem="pTk-f5-xfJ" secondAttribute="leadingMargin" constant="-20" id="znA-FZ-0hC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fnn-LP-aDq" secondAttribute="trailing" constant="-20" id="hbZ-XK-b07"/>
+                            <constraint firstItem="fnn-LP-aDq" firstAttribute="leading" secondItem="pTk-f5-xfJ" secondAttribute="leadingMargin" constant="-20" id="sgX-8j-EjF"/>
+                            <constraint firstItem="4yZ-fw-ka8" firstAttribute="top" secondItem="fnn-LP-aDq" secondAttribute="bottom" id="x97-Rs-ot7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Hy4-gK-Uu0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="uitext" destination="fnn-LP-aDq" id="7vb-Fw-gac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nj-2i-JZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.5" y="1224.5"/>
+            <point key="canvasLocation" x="39.5" y="1115.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P32-3L-iHC">
@@ -323,7 +422,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJJ-0I-7Qx" secondAttribute="height" multiplier="144:31" id="osx-MB-DRd"/>
                                 </constraints>
-                                <state key="normal" image="s_kanko.png"/>
+                                <state key="normal" image="new_kanko.png"/>
                                 <connections>
                                     <segue destination="PGL-vA-g2r" kind="show" id="jWk-ve-ZDt"/>
                                 </connections>
@@ -346,11 +445,23 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-mn-Iiu">
+                                <rect key="frame" x="16" y="605" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="7Kn-4L-k8S"/>
+                                    <constraint firstAttribute="height" constant="47" id="Fn0-vH-u26"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="info_2.png"/>
+                                <connections>
+                                    <segue destination="gWN-sg-ahK" kind="presentation" id="OY3-bK-HkC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Ti-XO-UQV" firstAttribute="top" secondItem="tJJ-0I-7Qx" secondAttribute="bottom" constant="20" id="15R-4R-uHs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="46" id="1Q1-Xg-Vgd"/>
+                            <constraint firstAttribute="bottom" secondItem="HeE-mn-Iiu" secondAttribute="bottom" constant="15" id="3He-qh-rrO"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="63" id="8vE-Un-FPz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nFR-iE-WqJ" secondAttribute="trailing" constant="-20" id="Bim-iu-Tcd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="63" id="D7Y-Pv-vm8"/>
@@ -366,6 +477,9 @@
                             <constraint firstItem="nFR-iE-WqJ" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="-20" id="UWT-5A-QsM"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="47" id="Uce-5o-lJj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="18" id="d3S-1X-MdU"/>
+                            <constraint firstItem="HeE-mn-Iiu" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" id="gMD-Wj-FGZ"/>
+                            <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="HeE-mn-Iiu" secondAttribute="bottom" constant="31" id="iZ3-Jq-0iZ"/>
+                            <constraint firstItem="HeE-mn-Iiu" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" id="lkb-Tk-7tO"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="17" id="qAo-Q9-PfI"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="top" secondItem="w8d-mt-eV6" secondAttribute="bottom" constant="76" id="uPu-9g-yRT"/>
                             <constraint firstItem="tJJ-0I-7Qx" firstAttribute="top" secondItem="bqO-aE-3Vk" secondAttribute="bottom" constant="45" id="uav-bq-HDw"/>
@@ -377,6 +491,8 @@
                                 <exclude reference="D7Y-Pv-vm8"/>
                                 <exclude reference="d3S-1X-MdU"/>
                                 <exclude reference="qAo-Q9-PfI"/>
+                                <exclude reference="gMD-Wj-FGZ"/>
+                                <exclude reference="iZ3-Jq-0iZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -1688,7 +1804,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8635C65A-DDAD-4401-9C93-1EB6EC3AE18D" width="25" height="25">
+        <image name="5A2860F7-B913-45B1-B3B2-01CE6B77ECE1" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1806,16 +1922,17 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="edit_tips.png" width="460" height="56"/>
         <image name="favourites7 (1).png" width="64" height="64"/>
         <image name="haikei.jpg" width="842" height="595"/>
+        <image name="info_2.png" width="62" height="62"/>
         <image name="ki-ko01.png" width="1654" height="1654"/>
+        <image name="new_kanko.png" width="230" height="50"/>
         <image name="pencil41.png" width="64" height="64"/>
         <image name="pin56.png" width="64" height="64"/>
         <image name="s_hurikaeri.png" width="230" height="50"/>
-        <image name="s_kanko.png" width="230" height="50"/>
         <image name="s_print.png" width="230" height="50"/>
         <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sEM-aE-9tf"/>
-        <segue reference="ZsS-yQ-EHr"/>
+        <segue reference="Bda-Vk-JCy"/>
+        <segue reference="BpD-TU-CAd"/>
     </inferredMetricsTieBreakers>
 </document>
