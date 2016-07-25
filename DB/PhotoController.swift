@@ -23,6 +23,8 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         // Dispose of any resources that can be recreated.
     }
     
+    var CA_check = 0//1の時は、カメラを起動した、0の時はアルバム起動した
+    
     //選択画面表示メソッド
     func showActionSheet(){
         
@@ -64,6 +66,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     
     
     func camerastart(){
+        CA_check = 1
         let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
         // カメラが利用可能かチェック
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
@@ -89,9 +92,12 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
                 print(photoID)
                 DB().linkToCard(photoID)
             }
+            
             //ライブラリに写真を保存
-            if image != nil {
-                UIImageWriteToSavedPhotosAlbum(image, self, #selector(PhotoController.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            if(CA_check==1){
+                if image != nil {
+                    UIImageWriteToSavedPhotosAlbum(image, self, #selector(PhotoController.image(_:didFinishSavingWithError:contextInfo:)), nil)
+                }
             }
             
             
