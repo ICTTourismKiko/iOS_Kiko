@@ -88,7 +88,7 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
             DB().linkToCardData(photo)
         }
         let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
-            action in print("Pushed CANCEL")
+            action in print("CANCEL")
         }
         alertController.addAction(otherAction)
         alertController.addAction(cancelAction)
