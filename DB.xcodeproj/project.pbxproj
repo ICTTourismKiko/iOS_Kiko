@@ -34,6 +34,7 @@
 		3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629631D45E28E007D0E94 /* new_kanko.png */; };
 		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
+		8F31DF091D49E4B600758187 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F31DF081D49E4B600758187 /* omote.jpg */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
@@ -77,7 +78,6 @@
 		DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304C1C0959380006D4F5 /* favourites7 (1).png */; };
 		DC4430541C0959380006D4F5 /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304D1C0959380006D4F5 /* pencil41.png */; };
 		DC4430551C0959380006D4F5 /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304E1C0959380006D4F5 /* pin56.png */; };
-		DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430A91C0FFEA90006D4F5 /* omote.jpg */; };
 		DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
@@ -141,6 +141,7 @@
 		3B5629631D45E28E007D0E94 /* new_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_kanko.png; sourceTree = "<group>"; };
 		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
 		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
+		8F31DF081D49E4B600758187 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -192,7 +193,6 @@
 		DC44304C1C0959380006D4F5 /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites7 (1).png"; sourceTree = "<group>"; };
 		DC44304D1C0959380006D4F5 /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil41.png; sourceTree = "<group>"; };
 		DC44304E1C0959380006D4F5 /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin56.png; sourceTree = "<group>"; };
-		DC4430A91C0FFEA90006D4F5 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = omote.jpg; path = ../omote.jpg; sourceTree = "<group>"; };
 		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
@@ -272,13 +272,13 @@
 				DC08FCD91C158D09002252F2 /* fa3.png */,
 				DC08FCD31C158ADA002252F2 /* favopin7.png */,
 				DC08FCC51C1585C4002252F2 /* tablebackground.png */,
-				DC4430A91C0FFEA90006D4F5 /* omote.jpg */,
 				DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */,
 				9CA1E02D1C0AF3600083591E /* background.png */,
 				9CA1E02F1C0AF36A0083591E /* title.png */,
 				9CA1E0271C0AEC090083591E /* hurikaeri.png */,
 				9CA1E0291C0AEC110083591E /* kanko.png */,
 				9CA1E02B1C0AEC190083591E /* print.png */,
+				8F31DF081D49E4B600758187 /* omote.jpg */,
 				37FBD82C1C06B247008AAD03 /* back.png */,
 				37FBD82D1C06B247008AAD03 /* next.png */,
 				378BDDF81C05A643000DD5BB /* b300.png */,
@@ -461,9 +461,9 @@
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
 				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
 				8F151AE21D2F746600BED73D /* black.JPG in Resources */,
-				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
 				3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
+				8F31DF091D49E4B600758187 /* omote.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				3B218F331D14080D00B66C6F /* splash5.png in Resources */,
