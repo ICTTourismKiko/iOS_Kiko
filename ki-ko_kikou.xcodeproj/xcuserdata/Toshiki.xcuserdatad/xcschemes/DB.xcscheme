@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-               BuildableName = "DB.app"
-               BlueprintName = "DB"
-               ReferencedContainer = "container:DB.xcodeproj">
+               BuildableName = "ki-ko_kikou.app"
+               BlueprintName = "ki-ko_kikou"
+               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C01B1BD7826C000B2465"
-               BuildableName = "DBTests.xctest"
-               BlueprintName = "DBTests"
-               ReferencedContainer = "container:DB.xcodeproj">
+               BuildableName = "ki-ko_kikou.xctest"
+               BlueprintName = "ki-ko_kikouTests"
+               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C0261BD7826C000B2465"
-               BuildableName = "DBUITests.xctest"
-               BlueprintName = "DBUITests"
-               ReferencedContainer = "container:DB.xcodeproj">
+               BuildableName = "ki-ko_kikou.xctest"
+               BlueprintName = "ki-ko_kikouUITests"
+               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "ki-ko_kikou.app"
+            BlueprintName = "ki-ko_kikou"
+            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "ki-ko_kikou.app"
+            BlueprintName = "ki-ko_kikou"
+            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "ki-ko_kikou.app"
+            BlueprintName = "ki-ko_kikou"
+            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
