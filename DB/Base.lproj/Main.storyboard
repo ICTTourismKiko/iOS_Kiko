@@ -161,7 +161,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BB495B00-F060-4D16-970E-AB3A1923DF14" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0C83D093-B1CC-495F-8DCD-E13497A3430B" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-RK-fmw">
                                 <rect key="frame" x="317" y="491" width="25" height="36"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOo-rN-wYP">
@@ -1828,7 +1828,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
         </scene>
     </scenes>
     <resources>
-        <image name="BB495B00-F060-4D16-970E-AB3A1923DF14" width="25" height="25">
+        <image name="0C83D093-B1CC-495F-8DCD-E13497A3430B" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
