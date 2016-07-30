@@ -67,8 +67,6 @@
 		DC23C0111BD7826B000B2465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C00F1BD7826B000B2465 /* Main.storyboard */; };
 		DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC23C0121BD7826B000B2465 /* Assets.xcassets */; };
 		DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C0141BD7826B000B2465 /* LaunchScreen.storyboard */; };
-		DC23C0211BD7826C000B2465 /* DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C0201BD7826C000B2465 /* DBTests.swift */; };
-		DC23C02C1BD7826C000B2465 /* DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C02B1BD7826C000B2465 /* DBUITests.swift */; };
 		DC4430501C0959380006D4F5 /* bar6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4430491C0959380006D4F5 /* bar6.png */; };
 		DC4430511C0959380006D4F5 /* camera3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304A1C0959380006D4F5 /* camera3-3.png */; };
 		DC4430521C0959380006D4F5 /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304B1C0959380006D4F5 /* card6.png */; };
@@ -168,19 +166,15 @@
 		DC08FCC51C1585C4002252F2 /* tablebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tablebackground.png; path = ../tablebackground.png; sourceTree = "<group>"; };
 		DC08FCD91C158D09002252F2 /* fa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fa3.png; path = ../fa3.png; sourceTree = "<group>"; };
 		DC08FCE71C1A5FE5002252F2 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
-		DC23C0081BD7826B000B2465 /* ki-ko_kikou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ki-ko_kikou.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC23C0081BD7826B000B2465 /* キーコ紀行.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "キーコ紀行.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC23C00B1BD7826B000B2465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC23C00D1BD7826B000B2465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC23C0101BD7826B000B2465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC23C0121BD7826B000B2465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC23C0151BD7826B000B2465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC23C0171BD7826B000B2465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC23C01C1BD7826C000B2465 /* ki-ko_kikou.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ki-ko_kikou.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC23C0201BD7826C000B2465 /* DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTests.swift; sourceTree = "<group>"; };
-		DC23C0221BD7826C000B2465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC23C0271BD7826C000B2465 /* ki-ko_kikou.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ki-ko_kikou.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC23C02B1BD7826C000B2465 /* DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUITests.swift; sourceTree = "<group>"; };
-		DC23C02D1BD7826C000B2465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC23C01C1BD7826C000B2465 /* キーコ紀行.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "キーコ紀行.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC23C0271BD7826C000B2465 /* キーコ紀行.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "キーコ紀行.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4430491C0959380006D4F5 /* bar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar6.png; sourceTree = "<group>"; };
 		DC44304A1C0959380006D4F5 /* camera3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera3-3.png"; sourceTree = "<group>"; };
 		DC44304B1C0959380006D4F5 /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card6.png; sourceTree = "<group>"; };
@@ -243,8 +237,6 @@
 				379112F11BD818F50024E678 /* CoreLocation.framework */,
 				379112EF1BD818E90024E678 /* MapKit.framework */,
 				DC23C00A1BD7826B000B2465 /* DB */,
-				DC23C01F1BD7826C000B2465 /* DBTests */,
-				DC23C02A1BD7826C000B2465 /* DBUITests */,
 				DC23C0091BD7826B000B2465 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -252,9 +244,9 @@
 		DC23C0091BD7826B000B2465 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC23C0081BD7826B000B2465 /* ki-ko_kikou.app */,
-				DC23C01C1BD7826C000B2465 /* ki-ko_kikou.xctest */,
-				DC23C0271BD7826C000B2465 /* ki-ko_kikou.xctest */,
+				DC23C0081BD7826B000B2465 /* キーコ紀行.app */,
+				DC23C01C1BD7826C000B2465 /* キーコ紀行.xctest */,
+				DC23C0271BD7826C000B2465 /* キーコ紀行.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,30 +316,12 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
-		DC23C01F1BD7826C000B2465 /* DBTests */ = {
-			isa = PBXGroup;
-			children = (
-				DC23C0201BD7826C000B2465 /* DBTests.swift */,
-				DC23C0221BD7826C000B2465 /* Info.plist */,
-			);
-			path = DBTests;
-			sourceTree = "<group>";
-		};
-		DC23C02A1BD7826C000B2465 /* DBUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DC23C02B1BD7826C000B2465 /* DBUITests.swift */,
-				DC23C02D1BD7826C000B2465 /* Info.plist */,
-			);
-			path = DBUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC23C0071BD7826B000B2465 /* ki-ko_kikou */ = {
+		DC23C0071BD7826B000B2465 /* キーコ紀行 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikou" */;
+			buildConfigurationList = DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行" */;
 			buildPhases = (
 				DC23C0041BD7826B000B2465 /* Sources */,
 				DC23C0051BD7826B000B2465 /* Frameworks */,
@@ -358,14 +332,14 @@
 			);
 			dependencies = (
 			);
-			name = "ki-ko_kikou";
+			name = "キーコ紀行";
 			productName = DB;
-			productReference = DC23C0081BD7826B000B2465 /* ki-ko_kikou.app */;
+			productReference = DC23C0081BD7826B000B2465 /* キーコ紀行.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC23C01B1BD7826C000B2465 /* ki-ko_kikouTests */ = {
+		DC23C01B1BD7826C000B2465 /* キーコ紀行Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikouTests" */;
+			buildConfigurationList = DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行Tests" */;
 			buildPhases = (
 				DC23C0181BD7826C000B2465 /* Sources */,
 				DC23C0191BD7826C000B2465 /* Frameworks */,
@@ -376,14 +350,14 @@
 			dependencies = (
 				DC23C01E1BD7826C000B2465 /* PBXTargetDependency */,
 			);
-			name = "ki-ko_kikouTests";
+			name = "キーコ紀行Tests";
 			productName = DBTests;
-			productReference = DC23C01C1BD7826C000B2465 /* ki-ko_kikou.xctest */;
+			productReference = DC23C01C1BD7826C000B2465 /* キーコ紀行.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DC23C0261BD7826C000B2465 /* ki-ko_kikouUITests */ = {
+		DC23C0261BD7826C000B2465 /* キーコ紀行UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikouUITests" */;
+			buildConfigurationList = DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行UITests" */;
 			buildPhases = (
 				DC23C0231BD7826C000B2465 /* Sources */,
 				DC23C0241BD7826C000B2465 /* Frameworks */,
@@ -394,9 +368,9 @@
 			dependencies = (
 				DC23C0291BD7826C000B2465 /* PBXTargetDependency */,
 			);
-			name = "ki-ko_kikouUITests";
+			name = "キーコ紀行UITests";
 			productName = DBUITests;
-			productReference = DC23C0271BD7826C000B2465 /* ki-ko_kikou.xctest */;
+			productReference = DC23C0271BD7826C000B2465 /* キーコ紀行.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +395,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC23C0031BD7826B000B2465 /* Build configuration list for PBXProject "ki-ko_kikou" */;
+			buildConfigurationList = DC23C0031BD7826B000B2465 /* Build configuration list for PBXProject "キーコ紀行" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -434,9 +408,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC23C0071BD7826B000B2465 /* ki-ko_kikou */,
-				DC23C01B1BD7826C000B2465 /* ki-ko_kikouTests */,
-				DC23C0261BD7826C000B2465 /* ki-ko_kikouUITests */,
+				DC23C0071BD7826B000B2465 /* キーコ紀行 */,
+				DC23C01B1BD7826C000B2465 /* キーコ紀行Tests */,
+				DC23C0261BD7826C000B2465 /* キーコ紀行UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -540,7 +514,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC23C0211BD7826C000B2465 /* DBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC23C02C1BD7826C000B2465 /* DBUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +529,12 @@
 /* Begin PBXTargetDependency section */
 		DC23C01E1BD7826C000B2465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC23C0071BD7826B000B2465 /* ki-ko_kikou */;
+			target = DC23C0071BD7826B000B2465 /* キーコ紀行 */;
 			targetProxy = DC23C01D1BD7826C000B2465 /* PBXContainerItemProxy */;
 		};
 		DC23C0291BD7826C000B2465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC23C0071BD7826B000B2465 /* ki-ko_kikou */;
+			target = DC23C0071BD7826B000B2465 /* キーコ紀行 */;
 			targetProxy = DC23C0281BD7826C000B2465 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -683,7 +655,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiko;
-				PRODUCT_NAME = "ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -701,7 +673,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiko;
-				PRODUCT_NAME = "ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -713,8 +685,8 @@
 				INFOPLIST_FILE = DBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project03A.DBTests;
-				PRODUCT_NAME = "ki-ko_kikou";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ki-ko_kikou.app/ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/キーコ紀行.app/キーコ紀行";
 			};
 			name = Debug;
 		};
@@ -725,8 +697,8 @@
 				INFOPLIST_FILE = DBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project03A.DBTests;
-				PRODUCT_NAME = "ki-ko_kikou";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ki-ko_kikou.app/ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/キーコ紀行.app/キーコ紀行";
 			};
 			name = Release;
 		};
@@ -736,7 +708,7 @@
 				INFOPLIST_FILE = DBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project03A.DBUITests;
-				PRODUCT_NAME = "ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
 				TEST_TARGET_NAME = DB;
 				USES_XCTRUNNER = YES;
 			};
@@ -748,7 +720,7 @@
 				INFOPLIST_FILE = DBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project03A.DBUITests;
-				PRODUCT_NAME = "ki-ko_kikou";
+				PRODUCT_NAME = "キーコ紀行";
 				TEST_TARGET_NAME = DB;
 				USES_XCTRUNNER = YES;
 			};
@@ -757,7 +729,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC23C0031BD7826B000B2465 /* Build configuration list for PBXProject "ki-ko_kikou" */ = {
+		DC23C0031BD7826B000B2465 /* Build configuration list for PBXProject "キーコ紀行" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC23C02E1BD7826C000B2465 /* Debug */,
@@ -766,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikou" */ = {
+		DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC23C0311BD7826C000B2465 /* Debug */,
@@ -775,7 +747,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikouTests" */ = {
+		DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC23C0341BD7826C000B2465 /* Debug */,
@@ -784,7 +756,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "ki-ko_kikouUITests" */ = {
+		DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC23C0371BD7826C000B2465 /* Debug */,
