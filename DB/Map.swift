@@ -59,11 +59,34 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardTopPoemu.frame = CGRectMake(self.view.frame.width+150, self.view.frame.height-120, 220, 20)
         CardTopSyousai.textAlignment = NSTextAlignment.Center
         CardTopPoemu.textAlignment = NSTextAlignment.Center
-        CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-        CardPoemu.alpha = 0.0
+        
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        //iphoneのサイズによってカードに書かれる文のサイズを変更
+        //iPhone6
+        if height >= 667 {
+            //self.title.font = UIFont.systemFontOfSize(14)
+            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
+            
+            //iPhone6 Plus
+            //        }else if height == 736 {
+            //            self.introText.font = UIFont.systemFontOfSize(15)
+            
+            //iPhone5・5s・5c
+        }else {
+            //self.title.font = UIFont.systemFontOfSize(15)
+            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
+
+        }
+
+        
+               CardPoemu.alpha = 0.0
         CardTopPoemu.alpha = 0.0
         self.view.addSubview(CardSyousai)
         self.view.addSubview(CardPoemu)
@@ -80,28 +103,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardSyousai.numberOfLines = 30
         CardPoemu.numberOfLines = 30
         
-        self.CardMap.delegate = self
-        
-        var region:MKCoordinateRegion = self.CardMap.region
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(pic_id!).position_x, DB().getCard(pic_id!).position_y) //マップの中心を選択して来た場所に設定
-        region.center = location
-        region.span.longitudeDelta = 0.005
-        region.span.latitudeDelta = 0.005
-        
-        self.CardMap.setRegion(region, animated: true)
-        
-        myLocationManager = CLLocationManager()
-        myLocationManager.delegate = self
-        myLocationManager.distanceFilter = kCLHeadingFilterNone
-        myLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        myLocationManager.startUpdatingLocation()
-        
-        let status = CLLocationManager.authorizationStatus()
-        if(status == CLAuthorizationStatus.NotDetermined) {
-            print("didChangeAuthorizationStatus:\(status)");
-            self.myLocationManager.requestAlwaysAuthorization()
-        }
-
         
         let db = DB()
         db.showDBPass()
@@ -122,9 +123,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[i].imageName = "fa3.png"
         }
         
-        
-        self.CardMap.setRegion(region, animated: true)
-        
         //選択されたカードのピンを作成
         PinArray.append(Pin())
         PinArray[PinArray.count-1].ID = pic_id!
@@ -137,9 +135,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         if((flagTrueIDList.indexOf(pic_id!)) != nil){
             PinArray[flagTrueIDList.indexOf(pic_id!)!].imageName = ""
-            PinArray[PinArray.count-1].imageName = "redpin.png"
+            PinArray[PinArray.count-1].imageName = "redpin30px.png"
         }else{
-            PinArray[PinArray.count-1].imageName = "redpin.png"
+            PinArray[PinArray.count-1].imageName = "redpin30px.png"
         }
         
         CardTopSyousai.text = "詳細情報"
@@ -148,6 +146,134 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         CardPoemu.text = PinArray[PinArray.count-1].text
         
         CardMap.addAnnotations(PinArray)
+        
+        myLocationManager = CLLocationManager()
+        myLocationManager.delegate = self
+        myLocationManager.distanceFilter = kCLHeadingFilterNone
+        myLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        myLocationManager.startUpdatingLocation()
+        
+        let status = CLLocationManager.authorizationStatus()
+        if(status == CLAuthorizationStatus.NotDetermined) {
+            //print("didChangeAuthorizationStatus:\(status)");
+            self.myLocationManager.requestAlwaysAuthorization()
+        }
+        
+        /** 位置情報取得失敗時 */
+         self.CardMap.delegate = self
+        
+        var region:MKCoordinateRegion = self.CardMap.region
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(appDelegate.P_ID!).position_x, DB().getCard(appDelegate.P_ID!).position_y) //マップの中心を選択して来た場所に設定
+        
+        region.center = location
+        region.span.longitudeDelta = 0.005
+        region.span.latitudeDelta = 0.005
+        
+        self.CardMap.setRegion(region, animated: true)
+        
+        
+        /** 位置情報取得成功時 */
+        
+//        // 出発点の緯度、経度を設定.
+//        let myLatitude: CLLocationDegrees = (myLocationManager.location?.coordinate.latitude)!
+//        let myLongitude: CLLocationDegrees = (myLocationManager.location?.coordinate.longitude)!
+//        
+//        // 目的地の緯度、経度を設定.
+//        let requestLatitude: CLLocationDegrees = PinArray[PinArray.count-1].x
+//        let requestLongitude: CLLocationDegrees = PinArray[PinArray.count-1].y
+//        
+//        // Delegateを設定.
+//        self.CardMap.delegate = self
+//        
+//        // 地図の中心を出発点と目的地の中間に設定する.
+//        let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake((myLatitude + requestLatitude)/2, (myLongitude + requestLongitude)/2)
+//        
+//        // mapViewに中心をセットする.
+//        CardMap.setCenterCoordinate(center, animated: true)
+//        
+//        // 縮尺を指定.
+//        let mySpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+//        let myRegion: MKCoordinateRegion = MKCoordinateRegion(center: center, span: mySpan)
+//        
+//        CardMap.region = myRegion
+//        
+//        // viewにmapViewを追加.
+//        self.view.addSubview(CardMap)
+//        
+//        
+//        //***　ここから経路表示機能
+//        let request = MKDirectionsRequest()
+//        // 出発地をセット.
+//        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: myLatitude, longitude: myLongitude), addressDictionary: nil))
+//        //目的地をセット.
+//        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: requestLatitude, longitude: requestLongitude), addressDictionary: nil))
+//        
+//        // 複数経路の検索を有効.
+//        request.requestsAlternateRoutes = true
+//        
+//        // 移動手段を歩きに設定.
+//        request.transportType = MKDirectionsTransportType.Walking
+//        
+//        // MKDirectionsを生成してRequestをセット.
+//        let directions = MKDirections(request: request)
+//        
+//        // 経路探索.
+//        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+//            guard response != nil else { return }
+//            
+//            let route: MKRoute = response!.routes[0] as MKRoute
+//            
+//            print("目的地まで \(route.distance)m")
+//            print("所要時間 \(Int(route.expectedTravelTime/60))分")
+//            
+//            // mapViewにルートを描画.
+//            self.CardMap.addOverlay(route.polyline)
+//        }
+//        
+//        // 現在地と目的地を含む矩形を計算
+//        let maxLat:Double = fmax(myLatitude,  requestLatitude)
+//        let maxLon:Double = fmax(myLongitude, requestLongitude)
+//        let minLat:Double = fmin(myLatitude,  requestLatitude)
+//        let minLon:Double = fmin(myLongitude, requestLongitude)
+//        
+//        // 地図表示するときの緯度、経度の幅を計算
+//        let mapMargin:Double = 1.5;  // 経路が入る幅(1.0)＋余白(0.5)
+//        let leastCoordSpan:Double = 0.005;    // 拡大表示したときの最大値
+//        let span_x:Double = fmax(leastCoordSpan, fabs(maxLat - minLat) * mapMargin);
+//        let span_y:Double = fmax(leastCoordSpan, fabs(maxLon - minLon) * mapMargin);
+//        
+//        let span:MKCoordinateSpan = MKCoordinateSpanMake(span_x, span_y);
+//        
+//        // 現在地を目的地の中心を計算
+//        let center2:CLLocationCoordinate2D = CLLocationCoordinate2DMake((maxLat + minLat) / 2, (maxLon + minLon) / 2);
+//        let region:MKCoordinateRegion = MKCoordinateRegionMake(center2, span);
+//        
+//        CardMap.setRegion(CardMap.regionThatFits(region), animated:true);
+        
+    }
+    
+    // 位置情報取得成功時に呼ばれます
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        /** 位置情報取得成功時 */
+        
+        print("緯度：\(manager.location!.coordinate.latitude)")
+        print("経度：\(manager.location!.coordinate.longitude)")
+        
+        CardMap.showsUserLocation = true
+    }
+    
+    // 位置情報取得失敗時に呼ばれます
+    func locationManager(manager: CLLocationManager,didFailWithError error: NSError){
+        print("error")
+    }
+    
+    
+    // 経路を描画するときの色や線の太さを指定
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blueColor()
+        renderer.lineWidth = 5
+        return renderer
     }
     
     override func didReceiveMemoryWarning() {
@@ -155,9 +281,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        CardMap.showsUserLocation = true
-    }
     
     var UserAnnotationTap = 0     //0ならアノテーションをまだタップしていない、1なら一度でも押した状態
     
@@ -223,8 +346,8 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardPoemu.alpha = 1.0
                 self.CardTopPoemu.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 self.CardTopPoemu.alpha = 1.0
-                
-                self.arrow.image = UIImage(named: "back.png")
+               
+               // self.arrow.image = UIImage(named: "back.png")
             }
         }else{      //スポット紹介を表示中
             
@@ -242,7 +365,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
                 self.CardTopSyousai.alpha = 1.0
                 self.CardTopSyousai.frame = CGRectMake(self.view.frame.width/2-50, self.view.frame.height-140, 220, 20)
                 
-                self.arrow.image = UIImage(named: "next.png")
+               // self.arrow.image = UIImage(named: "next.png")
                 
             }
         }
@@ -255,4 +378,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
 }

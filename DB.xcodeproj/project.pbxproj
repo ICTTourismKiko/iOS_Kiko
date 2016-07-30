@@ -30,7 +30,13 @@
 		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
 		3B218F371D14088A00B66C6F /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F361D14088A00B66C6F /* splash640.png */; };
 		3B218F391D1408AC00B66C6F /* splash320.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F381D1408AC00B66C6F /* splash320.png */; };
+		3B46D9FF1D338144005BD81A /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D9FE1D338144005BD81A /* information.swift */; };
+		3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629631D45E28E007D0E94 /* new_kanko.png */; };
+		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
+		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
+		8F31DF091D49E4B600758187 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F31DF081D49E4B600758187 /* omote.jpg */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
+		8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F526FB91D4C8DA20060A4EB /* redpin30px.png */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
 		8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7AC36D1C17DC0300C51E9F /* noimage.png */; };
@@ -45,7 +51,6 @@
 		9CA1E0241C0432370083591E /* setCardList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E0231C0432370083591E /* setCardList2.swift */; };
 		9CA1E0261C0AEAC90083591E /* top画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0251C0AEAC90083591E /* top画面.png */; };
 		9CA1E0281C0AEC090083591E /* hurikaeri.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0271C0AEC090083591E /* hurikaeri.png */; };
-		9CA1E02A1C0AEC110083591E /* kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E0291C0AEC110083591E /* kanko.png */; };
 		9CA1E02C1C0AEC190083591E /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02B1C0AEC190083591E /* print.png */; };
 		9CA1E02E1C0AF3600083591E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02D1C0AF3600083591E /* background.png */; };
 		9CA1E0301C0AF36A0083591E /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1E02F1C0AF36A0083591E /* title.png */; };
@@ -53,10 +58,8 @@
 		9CACB5541BDE15760024707B /* cardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACB5531BDE15760024707B /* cardData.swift */; };
 		9CACB5561BDE15970024707B /* setCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACB5551BDE15970024707B /* setCardList.swift */; };
 		DC08FCBE1C13E6A1002252F2 /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08FCBD1C13E6A1002252F2 /* Edit.swift */; };
-		DC08FCC21C13ECD6002252F2 /* pen67.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC11C13ECD6002252F2 /* pen67.png */; };
 		DC08FCC41C13EF04002252F2 /* ki-ko01.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC31C13EF04002252F2 /* ki-ko01.png */; };
 		DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCC51C1585C4002252F2 /* tablebackground.png */; };
-		DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD31C158ADA002252F2 /* favopin7.png */; };
 		DC08FCDA1C158D09002252F2 /* fa3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCD91C158D09002252F2 /* fa3.png */; };
 		DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */ = {isa = PBXBuildFile; fileRef = DC08FCE71C1A5FE5002252F2 /* cardData.realm */; };
 		DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C00B1BD7826B000B2465 /* AppDelegate.swift */; };
@@ -66,14 +69,12 @@
 		DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC23C0141BD7826B000B2465 /* LaunchScreen.storyboard */; };
 		DC23C0211BD7826C000B2465 /* DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C0201BD7826C000B2465 /* DBTests.swift */; };
 		DC23C02C1BD7826C000B2465 /* DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23C02B1BD7826C000B2465 /* DBUITests.swift */; };
-		DC4430481C0958FC0006D4F5 /* redpin.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4430471C0958FC0006D4F5 /* redpin.png */; };
 		DC4430501C0959380006D4F5 /* bar6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4430491C0959380006D4F5 /* bar6.png */; };
 		DC4430511C0959380006D4F5 /* camera3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304A1C0959380006D4F5 /* camera3-3.png */; };
 		DC4430521C0959380006D4F5 /* card6.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304B1C0959380006D4F5 /* card6.png */; };
 		DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304C1C0959380006D4F5 /* favourites7 (1).png */; };
 		DC4430541C0959380006D4F5 /* pencil41.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304D1C0959380006D4F5 /* pencil41.png */; };
 		DC4430551C0959380006D4F5 /* pin56.png in Resources */ = {isa = PBXBuildFile; fileRef = DC44304E1C0959380006D4F5 /* pin56.png */; };
-		DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430A91C0FFEA90006D4F5 /* omote.jpg */; };
 		DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
@@ -133,9 +134,15 @@
 		3B218F321D14080D00B66C6F /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
 		3B218F361D14088A00B66C6F /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
 		3B218F381D1408AC00B66C6F /* splash320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash320.png; sourceTree = "<group>"; };
+		3B46D9FE1D338144005BD81A /* information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = information.swift; path = ../information.swift; sourceTree = "<group>"; };
+		3B5629631D45E28E007D0E94 /* new_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_kanko.png; sourceTree = "<group>"; };
+		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
+		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
+		8F31DF081D49E4B600758187 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8F526FB91D4C8DA20060A4EB /* redpin30px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin30px.png; sourceTree = "<group>"; };
 		8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintPreviewController.swift; sourceTree = "<group>"; };
 		8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		8F7AC36D1C17DC0300C51E9F /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
@@ -150,7 +157,6 @@
 		9CA1E0231C0432370083591E /* setCardList2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList2.swift; sourceTree = "<group>"; };
 		9CA1E0251C0AEAC90083591E /* top画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top画面.png"; sourceTree = "<group>"; };
 		9CA1E0271C0AEC090083591E /* hurikaeri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hurikaeri.png; sourceTree = "<group>"; };
-		9CA1E0291C0AEC110083591E /* kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanko.png; sourceTree = "<group>"; };
 		9CA1E02B1C0AEC190083591E /* print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = print.png; sourceTree = "<group>"; };
 		9CA1E02D1C0AF3600083591E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9CA1E02F1C0AF36A0083591E /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
@@ -158,10 +164,8 @@
 		9CACB5531BDE15760024707B /* cardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardData.swift; sourceTree = "<group>"; };
 		9CACB5551BDE15970024707B /* setCardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList.swift; sourceTree = "<group>"; };
 		DC08FCBD1C13E6A1002252F2 /* Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
-		DC08FCC11C13ECD6002252F2 /* pen67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen67.png; sourceTree = "<group>"; };
 		DC08FCC31C13EF04002252F2 /* ki-ko01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ki-ko01.png"; sourceTree = "<group>"; };
 		DC08FCC51C1585C4002252F2 /* tablebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tablebackground.png; path = ../tablebackground.png; sourceTree = "<group>"; };
-		DC08FCD31C158ADA002252F2 /* favopin7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favopin7.png; path = ../favopin7.png; sourceTree = "<group>"; };
 		DC08FCD91C158D09002252F2 /* fa3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fa3.png; path = ../fa3.png; sourceTree = "<group>"; };
 		DC08FCE71C1A5FE5002252F2 /* cardData.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = cardData.realm; sourceTree = "<group>"; };
 		DC23C0081BD7826B000B2465 /* DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,14 +181,12 @@
 		DC23C0271BD7826C000B2465 /* DBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC23C02B1BD7826C000B2465 /* DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUITests.swift; sourceTree = "<group>"; };
 		DC23C02D1BD7826C000B2465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC4430471C0958FC0006D4F5 /* redpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin.png; sourceTree = "<group>"; };
 		DC4430491C0959380006D4F5 /* bar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar6.png; sourceTree = "<group>"; };
 		DC44304A1C0959380006D4F5 /* camera3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera3-3.png"; sourceTree = "<group>"; };
 		DC44304B1C0959380006D4F5 /* card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card6.png; sourceTree = "<group>"; };
 		DC44304C1C0959380006D4F5 /* favourites7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites7 (1).png"; sourceTree = "<group>"; };
 		DC44304D1C0959380006D4F5 /* pencil41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil41.png; sourceTree = "<group>"; };
 		DC44304E1C0959380006D4F5 /* pin56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin56.png; sourceTree = "<group>"; };
-		DC4430A91C0FFEA90006D4F5 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = omote.jpg; path = ../omote.jpg; sourceTree = "<group>"; };
 		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
@@ -262,20 +264,18 @@
 			children = (
 				8F7AC36D1C17DC0300C51E9F /* noimage.png */,
 				DC08FCD91C158D09002252F2 /* fa3.png */,
-				DC08FCD31C158ADA002252F2 /* favopin7.png */,
 				DC08FCC51C1585C4002252F2 /* tablebackground.png */,
-				DC4430A91C0FFEA90006D4F5 /* omote.jpg */,
 				DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */,
 				9CA1E02D1C0AF3600083591E /* background.png */,
 				9CA1E02F1C0AF36A0083591E /* title.png */,
 				9CA1E0271C0AEC090083591E /* hurikaeri.png */,
-				9CA1E0291C0AEC110083591E /* kanko.png */,
 				9CA1E02B1C0AEC190083591E /* print.png */,
+				8F31DF081D49E4B600758187 /* omote.jpg */,
 				37FBD82C1C06B247008AAD03 /* back.png */,
+				8F526FB91D4C8DA20060A4EB /* redpin30px.png */,
 				37FBD82D1C06B247008AAD03 /* next.png */,
 				378BDDF81C05A643000DD5BB /* b300.png */,
 				378BDDF61C05A57A000DD5BB /* haikei.png */,
-				DC4430471C0958FC0006D4F5 /* redpin.png */,
 				DC4430491C0959380006D4F5 /* bar6.png */,
 				DC44304A1C0959380006D4F5 /* camera3-3.png */,
 				DC44304B1C0959380006D4F5 /* card6.png */,
@@ -283,11 +283,11 @@
 				DC44304D1C0959380006D4F5 /* pencil41.png */,
 				9CA1E0251C0AEAC90083591E /* top画面.png */,
 				DC44304E1C0959380006D4F5 /* pin56.png */,
-				DC08FCC11C13ECD6002252F2 /* pen67.png */,
 				9C4D92321C14623A009A5659 /* edit_tips.png */,
 				DC08FCC31C13EF04002252F2 /* ki-ko01.png */,
 				9C4D92421C1A4DFC009A5659 /* s_title.png */,
 				9C4D92541C1A51CE009A5659 /* s_kanko.png */,
+				3B5629631D45E28E007D0E94 /* new_kanko.png */,
 				9C4D924E1C1A5128009A5659 /* s_hurikaeri.png */,
 				9C4D92521C1A513A009A5659 /* s_print.png */,
 				3B218F2E1D1407AC00B66C6F /* splash6plus.png */,
@@ -295,13 +295,16 @@
 				3B218F321D14080D00B66C6F /* splash5.png */,
 				3B218F361D14088A00B66C6F /* splash640.png */,
 				3B218F381D1408AC00B66C6F /* splash320.png */,
+				8F151AE11D2F746600BED73D /* black.JPG */,
+				3B5629651D45E438007D0E94 /* info_2.png */,
+				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
 				DC75B6681BD7B16D0025142E /* DB.swift */,
 				379112ED1BD817D80024E678 /* Map.swift */,
 				8F35236B1BDA141900983274 /* PhotoController.swift */,
-				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				3B46D9FE1D338144005BD81A /* information.swift */,
 				9C4D92301C141CF8009A5659 /* photoViewer.swift */,
 				8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */,
 				8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */,
@@ -407,7 +410,6 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3W722UE7AL;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -445,16 +447,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
-				DC08FCD41C158ADA002252F2 /* favopin7.png in Resources */,
 				DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
 				9C4D924F1C1A5128009A5659 /* s_hurikaeri.png in Resources */,
-				DC4430AB1C0FFEA90006D4F5 /* omote.jpg in Resources */,
+				8F151AE21D2F746600BED73D /* black.JPG in Resources */,
+				3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */,
 				DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */,
+				8F31DF091D49E4B600758187 /* omote.jpg in Resources */,
 				378E84611C117AF9008B0E39 /* kiko.png in Resources */,
 				9CA1E0261C0AEAC90083591E /* top画面.png in Resources */,
 				3B218F331D14080D00B66C6F /* splash5.png in Resources */,
-				DC08FCC21C13ECD6002252F2 /* pen67.png in Resources */,
 				9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */,
 				378BDDF91C05A643000DD5BB /* b300.png in Resources */,
 				9C4D92331C14623A009A5659 /* edit_tips.png in Resources */,
@@ -466,16 +468,16 @@
 				DC23C0161BD7826B000B2465 /* LaunchScreen.storyboard in Resources */,
 				3B218F391D1408AC00B66C6F /* splash320.png in Resources */,
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
-				9CA1E02A1C0AEC110083591E /* kanko.png in Resources */,
+				3B5629661D45E438007D0E94 /* info_2.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
 				3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */,
 				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
+				8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */,
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
 				3B218F371D14088A00B66C6F /* splash640.png in Resources */,
-				DC4430481C0958FC0006D4F5 /* redpin.png in Resources */,
 				8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */,
 				9CA1E02C1C0AEC190083591E /* print.png in Resources */,
 				3B218F311D1407AC00B66C6F /* splash6.png in Resources */,
@@ -519,6 +521,7 @@
 				8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */,
 				8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */,
 				DC23C00E1BD7826B000B2465 /* ViewController.swift in Sources */,
+				3B46D9FF1D338144005BD81A /* information.swift in Sources */,
 				37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */,
 				9CA1E0221C0430840083591E /* cardList2.swift in Sources */,
 				9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */,

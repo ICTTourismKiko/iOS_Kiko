@@ -17,6 +17,9 @@ UINavigationControllerDelegate{
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var introText: UILabel!
     
+    //暗くする画像のところ
+    @IBOutlet weak var select_check: UIImageView!
+    
     var cardID = 0
     let appdelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -58,6 +61,18 @@ UINavigationControllerDelegate{
         self.iconImage.layer.masksToBounds = true
         
         cardID = card.id+1
+        
+        //選んだカードを暗くする機能
+        for i in 0..<8 {
+            if(cardID==appdelegate.cardID[i]){
+                self.select_check.image = UIImage(named: "black.JPG") as UIImage?
+                self.select_check.alpha = 0.3
+                break
+            }else{
+                self.select_check.image = nil
+            }
+        }
+        
     }
     
     @IBAction func openImage(sender: AnyObject) {

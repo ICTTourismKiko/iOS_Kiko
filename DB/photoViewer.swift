@@ -13,15 +13,17 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
     @IBOutlet var myImageView: UIImageView!
     @IBOutlet var myScrollView: UIScrollView!
     
+    var pic_id = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //選択したIDを持ってくる処理
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let pic_id = appDelegate.P_ID
+        pic_id = appDelegate.P_ID!
         
         //カードの画像を表示
-        myImageView.image = PhotoController().NSSImage((DB().getCard(pic_id!).photo?.photoData)!)
+        myImageView.image = PhotoController().NSSImage((DB().getCard(pic_id).photo?.photoData)!)
         
         // スクロールビューの設定
         self.myScrollView.delegate = self
@@ -75,5 +77,21 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
     
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //写真を元に戻す
+    @IBAction func changePhoto(sender: AnyObject) {
+        let alertController = UIAlertController(title: "", message: "本当に元に戻しますか？", preferredStyle: .Alert)
+        let otherAction = UIAlertAction(title: "OK", style: .Default) {
+            action in let photo = DB().getDefaultPhoto(self.pic_id)
+            self.myImageView.image = PhotoController().NSSImage(photo.photoData!)
+            DB().linkToCardData(photo)
+        }
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
+            action in print("CANCEL")
+        }
+        alertController.addAction(otherAction)
+        alertController.addAction(cancelAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }
