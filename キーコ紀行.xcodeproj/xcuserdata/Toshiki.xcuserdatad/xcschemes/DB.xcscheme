@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-               BuildableName = "ki-ko_kikou.app"
-               BlueprintName = "ki-ko_kikou"
-               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+               BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+               BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+               ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C01B1BD7826C000B2465"
-               BuildableName = "ki-ko_kikou.xctest"
-               BlueprintName = "ki-ko_kikouTests"
-               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+               BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xctest"
+               BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;Tests"
+               ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C0261BD7826C000B2465"
-               BuildableName = "ki-ko_kikou.xctest"
-               BlueprintName = "ki-ko_kikouUITests"
-               ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+               BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xctest"
+               BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;UITests"
+               ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "ki-ko_kikou.app"
-            BlueprintName = "ki-ko_kikou"
-            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "ki-ko_kikou.app"
-            BlueprintName = "ki-ko_kikou"
-            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "ki-ko_kikou.app"
-            BlueprintName = "ki-ko_kikou"
-            ReferencedContainer = "container:ki-ko_kikou.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
