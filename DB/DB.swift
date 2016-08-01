@@ -65,10 +65,9 @@ class DB {
     
     //Realmのデータベースが保存されているパスを表示
     func showDBPass(){
-        let realmPath = self.getRealmPath()
-        
+        let realmPath = NSURL(string: self.getRealmPath())!
         do{
-            print(try Realm(path: realmPath).path)
+            print(try Realm(fileURL: realmPath).configuration.fileURL)
         }catch{
             print("none")
         }
@@ -76,9 +75,8 @@ class DB {
     
     //カードリストの大きさを返す
     func cardListSize() -> Int {
-        
-        let realmPath = self.getRealmPath()
-        return try!(Realm(path: realmPath).objects(CardData).count)
+        let realmPath = NSURL(string: self.getRealmPath())!
+        return try!(Realm(fileURL: realmPath).objects(CardData).count)
         
     }
     
@@ -86,7 +84,7 @@ class DB {
     func addRecord(record: Object) {
         
         do {
-            let realm = try! Realm(path: getRealmPath())
+            let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
             try realm.write {
                 realm.add(record, update:true)
             }
@@ -98,7 +96,7 @@ class DB {
     //IDを受け取って、対応するレコードを返す
     func getCard(id: Int) -> CardData {
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let card = realm.objects(CardData).filter("ID = %@", id)[0]
         
         return card
@@ -106,7 +104,7 @@ class DB {
     
     func update(id: Int, update: Bool){
         let card = getCard(id)
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         try! realm.write{
             card.updated = update
         }
@@ -126,7 +124,7 @@ class DB {
     
     //フラグの立ってるIDを配列に詰めて返す
     func getFlagTrueIDArray() -> [Int] {
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let flagTrueList = realm.objects(CardData).filter("flag = true")
         var flagTrueID: [Int] = []
         for i in 0..<flagTrueList.count {
@@ -138,7 +136,7 @@ class DB {
     //カテゴリで絞り込み。カテゴリ条件に対応するIDを配列で返す。
     func getFilteredCategoryIDArray(categoryID: Int) -> [Int] {
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let filteredList = realm.objects(CardData).filter("categoryID = %@", categoryID)
         var filteredID: [Int] = []
         for i in 0..<filteredList.count {
@@ -150,7 +148,7 @@ class DB {
     //更新があったカードのIDを配列で返す。
     func getUpdatedCardIDArray() -> [Int] {
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let updatedList = realm.objects(CardData).filter("updated = true")
         var updatedID: [Int] = []
         for i in 0..<updatedList.count {
@@ -164,12 +162,12 @@ class DB {
     ------------------------- */
     
     func getLastPhotoID() -> Int{
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         return (realm.objects(Photo).last?.photoID)!
     }
     
     func getPhoto(photoID: Int) -> Photo{
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let photo = realm.objects(Photo).filter("photoID = %@", photoID)[0]
         return photo
     }
@@ -179,7 +177,7 @@ class DB {
     func addPhoto (id: Int, photoData: NSData){
         let photo = Photo()
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         photo.photoID = (realm.objects(Photo).last?.photoID)! + 1
         photo.ID = id
         photo.photoData = photoData
@@ -193,7 +191,7 @@ class DB {
     //photoIDに対応する写真を削除する
     func deletePhoto(photoId: Int){
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         
         let photo = realm.objects(Photo).filter("photoID = %@", photoId)[0]
         
@@ -212,13 +210,13 @@ class DB {
     
     //IDに対応する写真を全て渡す
     func getAllPhoto(id: Int) -> Results<Photo>{
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         return realm.objects(Photo).filter("ID = %@", id)
     }
     
     //photoIDに対応する写真をCardDataレコードに対応付ける
     func linkToCardData(photo: Photo){
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let card = getCard(photo.ID)
         try! realm.write {
             card.photo = photo
@@ -242,7 +240,7 @@ class DB {
     func updateTitleAndText(id: Int, title:String, text: String){
         let cardText = CardText()
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         cardText.textID = (realm.objects(CardText).last?.textID)! + 1
         
         cardText.ID = id
@@ -256,7 +254,7 @@ class DB {
     
     //CardDataレコードとCardTextレコードを関連付ける
     func linkToCardData(cardText: CardText){
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         let card = getCard(cardText.ID)
         try! realm.write {
             card.cardText = cardText
@@ -265,7 +263,7 @@ class DB {
     
     //デフォルトのテキストを取得
     func getDefaultText(id: Int) -> CardText {
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         return realm.objects(CardText).filter("ID = %@", id)[0]
         
     }
@@ -296,7 +294,7 @@ class DB {
     //カテゴリIDに対してカテゴリ名を返す。
     func getCategoryName(categoryID: Int) -> String{
         
-        let realm = try! Realm(path: getRealmPath())
+        let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
         
         return realm.objects(Category).filter("categoryID = %@", categoryID)[0].categoryName
     }
@@ -320,7 +318,7 @@ class DB {
     func setFlag(ID: Int, flagStatement: Bool){
         do{
             let realmPath = self.getRealmPath()
-            let realm = try! Realm(path: realmPath)
+            let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
             let card = getCard(ID)
             try realm.write{
                 card.flag = flagStatement
@@ -333,7 +331,7 @@ class DB {
     func setUpdated(ID: Int, flagStatement: Bool){
         do{
             let realmPath = self.getRealmPath()
-            let realm = try! Realm(path: realmPath)
+            let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
             let card = getCard(ID)
             try realm.write{
                 card.updated = flagStatement
