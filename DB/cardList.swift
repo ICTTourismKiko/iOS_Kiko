@@ -42,6 +42,11 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
     
+    override func viewDidAppear(animated: Bool) {
+        //UIScrollBar表示時にスクロールバーをフラッシュ表示
+        tableView.flashScrollIndicators()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         self.reload()
     }
