@@ -38,8 +38,14 @@ class DB {
         }
     }
     
+//    func getRealmPath() -> String {
+//        let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory , NSSearchPathDomainMask.UserDomainMask, true)[0]
+//        return documentPath.stringByAppendingString(DBName)
+//    }
+    
     func getRealmPath() -> String {
-        let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory , NSSearchPathDomainMask.UserDomainMask, true)[0]
+        let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory , NSSearchPathDomainMask.UserDomainMask, true)[0]
+        //let documentPath = NSTemporaryDirectory();
         return documentPath.stringByAppendingString(DBName)
     }
     
@@ -317,7 +323,7 @@ class DB {
     
     func setFlag(ID: Int, flagStatement: Bool){
         do{
-            let realmPath = self.getRealmPath()
+            _ = self.getRealmPath()
             let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
             let card = getCard(ID)
             try realm.write{
@@ -330,7 +336,7 @@ class DB {
     
     func setUpdated(ID: Int, flagStatement: Bool){
         do{
-            let realmPath = self.getRealmPath()
+            _ = self.getRealmPath()
             let realm = try! Realm(fileURL: NSURL(string: self.getRealmPath())!)
             let card = getCard(ID)
             try realm.write{
