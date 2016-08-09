@@ -45,6 +45,7 @@ class DB {
     
     func getRealmPath() -> String {
         let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory , NSSearchPathDomainMask.UserDomainMask, true)[0]
+        //let documentPath = NSTemporaryDirectory();
         return documentPath.stringByAppendingString(DBName)
     }
     
