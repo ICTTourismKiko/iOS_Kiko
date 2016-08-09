@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoSelectViewController: UIViewController {
 
+    @IBOutlet weak var scroll: UIScrollView!
+    
     @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var backimage: UIImageView!
     @IBOutlet weak var pic1: UIImageView!
@@ -29,8 +31,14 @@ class PhotoSelectViewController: UIViewController {
         
         backimage.image=UIImage(named:"haikei.jpg")
         
+        
 //        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
 //            userInfo: nil, repeats: true);
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //UIScrollBar表示時にスクロールバーをフラッシュ表示
+        scroll.flashScrollIndicators()
     }
     
     override func viewWillAppear(animated: Bool) {

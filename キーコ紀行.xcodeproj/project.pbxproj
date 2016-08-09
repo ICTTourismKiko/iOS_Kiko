@@ -31,9 +31,7 @@
 		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
 		7958040B1D50D70700676B2E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7958040A1D50D70700676B2E /* Realm.framework */; };
 		7958040C1D50D72000676B2E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B81248B1D4F2B1E00DB52E4 /* RealmSwift.framework */; };
-		795804131D50D79000676B2E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795804121D50D79000676B2E /* Realm.framework */; };
 		795804141D50D79000676B2E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 795804121D50D79000676B2E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		795804171D50D79900676B2E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795804161D50D79900676B2E /* RealmSwift.framework */; };
 		795804181D50D79900676B2E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 795804161D50D79900676B2E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
@@ -42,7 +40,7 @@
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
 		8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7AC36D1C17DC0300C51E9F /* noimage.png */; };
 		8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */; };
-		8FB9DBEC1D5749B400DAC5F0 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FB9DBEB1D5749B400DAC5F0 /* omote.jpg */; };
+		8FB33B441D5A061F00911C74 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FB33B431D5A061F00911C74 /* omote.jpg */; };
 		9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D92301C141CF8009A5659 /* photoViewer.swift */; };
 		9C4D92331C14623A009A5659 /* edit_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92321C14623A009A5659 /* edit_tips.png */; };
 		9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92421C1A4DFC009A5659 /* s_title.png */; };
@@ -150,7 +148,7 @@
 		8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		8F7AC36D1C17DC0300C51E9F /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		8FB9DBEB1D5749B400DAC5F0 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
+		8FB33B431D5A061F00911C74 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
 		9C4D92301C141CF8009A5659 /* photoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoViewer.swift; sourceTree = "<group>"; };
 		9C4D92321C14623A009A5659 /* edit_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_tips.png; sourceTree = "<group>"; };
 		9C4D92421C1A4DFC009A5659 /* s_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_title.png; sourceTree = "<group>"; };
@@ -199,10 +197,8 @@
 			files = (
 				7958040C1D50D72000676B2E /* RealmSwift.framework in Frameworks */,
 				379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */,
-				795804171D50D79900676B2E /* RealmSwift.framework in Frameworks */,
 				7958040B1D50D70700676B2E /* Realm.framework in Frameworks */,
 				379112F01BD818E90024E678 /* MapKit.framework in Frameworks */,
-				795804131D50D79000676B2E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +267,7 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				8FB9DBEB1D5749B400DAC5F0 /* omote.jpg */,
+				8FB33B431D5A061F00911C74 /* omote.jpg */,
 				8F7AC36D1C17DC0300C51E9F /* noimage.png */,
 				DC08FCD91C158D09002252F2 /* fa3.png */,
 				DC08FCC51C1585C4002252F2 /* tablebackground.png */,
@@ -397,7 +393,7 @@
 		DC23C0001BD7826B000B2465 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = project03A;
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
@@ -444,7 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FB9DBEC1D5749B400DAC5F0 /* omote.jpg in Resources */,
+				8FB33B441D5A061F00911C74 /* omote.jpg in Resources */,
 				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
 				DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
@@ -692,8 +688,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Future University Hakodate (64LEQXTB98)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Future University Hakodate (64LEQXTB98)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -702,7 +698,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko;
 				PRODUCT_NAME = "キーコ紀行";
-				PROVISIONING_PROFILE = "b66f12b9-d35d-4589-95b6-e4834d1bf4f1";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -710,8 +706,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Future University Hakodate (64LEQXTB98)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Future University Hakodate (64LEQXTB98)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -720,7 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko;
 				PRODUCT_NAME = "キーコ紀行";
-				PROVISIONING_PROFILE = "b66f12b9-d35d-4589-95b6-e4834d1bf4f1";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
