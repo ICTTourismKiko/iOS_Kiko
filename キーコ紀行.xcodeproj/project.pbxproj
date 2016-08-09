@@ -398,7 +398,6 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 8NQFAUAAWM;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;

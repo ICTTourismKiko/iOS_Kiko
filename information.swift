@@ -24,6 +24,11 @@ class information: UIViewController {
     
     }
     
+    override func viewDidAppear(animated: Bool) {
+        //UIScrollBar表示時にスクロールバーをフラッシュ表示
+        uitext.flashScrollIndicators()
+    }
+    
     @IBAction func backbutton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
