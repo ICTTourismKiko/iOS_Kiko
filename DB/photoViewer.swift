@@ -40,6 +40,11 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         self.myImageView.addGestureRecognizer(doubleTapGesture)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        //UIScrollBar表示時にスクロールバーをフラッシュ表示
+        myScrollView.flashScrollIndicators()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

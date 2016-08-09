@@ -17,10 +17,11 @@ class PrintPreviewController: UIViewController {
     @IBOutlet weak var navigation: UINavigationBar!
   //  @IBOutlet weak var scroll: UIScrollView!
     let image = UIImage(named: "omote.jpg")
-    let filename : NSString = "ki-ko"
-    let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-    var myData = NSData()
+    let filename : String = "ki-ko"
+    //let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    var arrayPaths = NSObject()
     
+    var myData = NSData()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,9 +51,13 @@ class PrintPreviewController: UIViewController {
         back.image=appDelegate.view_pic
         front.image=image
         
-        let path = arrayPaths[0] as NSString
+        //let path = arrayPaths[0] as NSString
+        
+
+        let path = NSTemporaryDirectory();
         let fullname : NSString = (filename as String) + ".pdf"
         let pdfFilename = (path as String) + "/"+(fullname as String)
+        arrayPaths = pdfFilename
         
         // PDFコンテキストを作成する
         UIGraphicsBeginPDFContextToFile(pdfFilename, CGRectZero, nil)
@@ -106,6 +111,12 @@ class PrintPreviewController: UIViewController {
     }
     
     @IBAction func back(sender: AnyObject) {
+        let manager = NSFileManager()
+        do {
+            try manager.removeItemAtPath(arrayPaths as! String)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
         self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
