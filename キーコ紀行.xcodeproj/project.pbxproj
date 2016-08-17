@@ -40,7 +40,7 @@
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
 		8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7AC36D1C17DC0300C51E9F /* noimage.png */; };
 		8FA413CF1C0F9441003BAD1B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */; };
-		8FB33B441D5A061F00911C74 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FB33B431D5A061F00911C74 /* omote.jpg */; };
+		8FB33B571D5F161100911C74 /* omote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FB33B561D5F161100911C74 /* omote.jpg */; };
 		9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D92301C141CF8009A5659 /* photoViewer.swift */; };
 		9C4D92331C14623A009A5659 /* edit_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92321C14623A009A5659 /* edit_tips.png */; };
 		9C4D92431C1A4DFC009A5659 /* s_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D92421C1A4DFC009A5659 /* s_title.png */; };
@@ -148,7 +148,7 @@
 		8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		8F7AC36D1C17DC0300C51E9F /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		8FB33B431D5A061F00911C74 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
+		8FB33B561D5F161100911C74 /* omote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omote.jpg; sourceTree = "<group>"; };
 		9C4D92301C141CF8009A5659 /* photoViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoViewer.swift; sourceTree = "<group>"; };
 		9C4D92321C14623A009A5659 /* edit_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_tips.png; sourceTree = "<group>"; };
 		9C4D92421C1A4DFC009A5659 /* s_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_title.png; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		DC23C00A1BD7826B000B2465 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				8FB33B431D5A061F00911C74 /* omote.jpg */,
+				8FB33B561D5F161100911C74 /* omote.jpg */,
 				8F7AC36D1C17DC0300C51E9F /* noimage.png */,
 				DC08FCD91C158D09002252F2 /* fa3.png */,
 				DC08FCC51C1585C4002252F2 /* tablebackground.png */,
@@ -398,6 +398,7 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 8NQFAUAAWM;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -440,7 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FB33B441D5A061F00911C74 /* omote.jpg in Resources */,
+				8FB33B571D5F161100911C74 /* omote.jpg in Resources */,
 				DC08FCDA1C158D09002252F2 /* fa3.png in Resources */,
 				DC08FCE81C1A5FE5002252F2 /* cardData.realm in Resources */,
 				DC08FCC71C1585C4002252F2 /* tablebackground.png in Resources */,
@@ -696,7 +697,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 			};
@@ -714,7 +715,7 @@
 				);
 				INFOPLIST_FILE = DB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 			};
