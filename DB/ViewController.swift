@@ -13,6 +13,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         DB().showDBPass()
+//        let miso = DB().getCard(7)
+//        let realm = try! Realm(fileURL: NSURL(string: DB().getRealmPath())!)
+//        do{
+//            try realm.write(){
+//                miso.position_x = 41.674582
+//                miso.position_y = 140.438397
+//            }
+//        }catch{
+//        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -56,6 +56,8 @@ UINavigationControllerDelegate{
         }else {
            //self.title.font = UIFont.systemFontOfSize(15)
            self.introText.font = UIFont.systemFontOfSize(12)
+           self.title.font = UIFont.systemFontOfSize(14)
+
         }
         
         self.title.text = card.title as String
