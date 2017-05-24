@@ -273,12 +273,9 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="5Yw-qv-psP" kind="presentation" id="LW2-Rh-dMn"/>
+                                                    <action selector="backbutton:" destination="gWN-sg-ahK" eventType="touchUpInside" id="TRl-gy-g2J"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="5Yw-qv-psP" kind="presentation" id="Z7K-Zp-5B5"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -403,7 +400,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nj-2i-JZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-441" y="1164"/>
+            <point key="canvasLocation" x="-442" y="897"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P32-3L-iHC">
@@ -480,7 +477,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </constraints>
                                 <state key="normal" backgroundImage="info_2.png"/>
                                 <connections>
-                                    <segue destination="gWN-sg-ahK" kind="presentation" id="OY3-bK-HkC"/>
+                                    <segue destination="gWN-sg-ahK" kind="show" id="OY3-bK-HkC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -489,44 +486,26 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                             <constraint firstItem="2Ti-XO-UQV" firstAttribute="top" secondItem="tJJ-0I-7Qx" secondAttribute="bottom" constant="20" id="15R-4R-uHs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="46" id="1Q1-Xg-Vgd"/>
                             <constraint firstAttribute="bottom" secondItem="HeE-mn-Iiu" secondAttribute="bottom" constant="15" id="3He-qh-rrO"/>
-                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="63" id="8vE-Un-FPz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nFR-iE-WqJ" secondAttribute="trailing" constant="-20" id="Bim-iu-Tcd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="63" id="D7Y-Pv-vm8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Ti-XO-UQV" secondAttribute="trailing" constant="24" id="DtG-XH-twF"/>
                             <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="nFR-iE-WqJ" secondAttribute="bottom" id="F4h-h1-4Ix"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yhd-N6-vAv" secondAttribute="trailing" constant="24" id="KDg-Op-GuT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tJJ-0I-7Qx" secondAttribute="trailing" constant="24" id="Lwa-j2-AsQ"/>
-                            <constraint firstItem="nFR-iE-WqJ" firstAttribute="top" secondItem="oh8-SJ-JD2" secondAttribute="topMargin" id="QH0-SS-ciE"/>
                             <constraint firstItem="2Ti-XO-UQV" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="RCW-IH-UNv"/>
                             <constraint firstItem="yhd-N6-vAv" firstAttribute="top" secondItem="2Ti-XO-UQV" secondAttribute="bottom" constant="20" id="SI2-tG-ohu"/>
                             <constraint firstItem="tJJ-0I-7Qx" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="THk-ca-alU"/>
                             <constraint firstItem="yhd-N6-vAv" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="23" id="TRh-eF-NmI"/>
                             <constraint firstItem="nFR-iE-WqJ" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="-20" id="UWT-5A-QsM"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="47" id="Uce-5o-lJj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bqO-aE-3Vk" secondAttribute="trailing" constant="18" id="d3S-1X-MdU"/>
-                            <constraint firstItem="HeE-mn-Iiu" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" id="gMD-Wj-FGZ"/>
-                            <constraint firstItem="i03-7k-JVJ" firstAttribute="top" secondItem="HeE-mn-Iiu" secondAttribute="bottom" constant="31" id="iZ3-Jq-0iZ"/>
                             <constraint firstItem="HeE-mn-Iiu" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" id="lkb-Tk-7tO"/>
-                            <constraint firstItem="bqO-aE-3Vk" firstAttribute="leading" secondItem="oh8-SJ-JD2" secondAttribute="leadingMargin" constant="17" id="qAo-Q9-PfI"/>
                             <constraint firstItem="bqO-aE-3Vk" firstAttribute="top" secondItem="w8d-mt-eV6" secondAttribute="bottom" constant="76" id="uPu-9g-yRT"/>
                             <constraint firstItem="tJJ-0I-7Qx" firstAttribute="top" secondItem="bqO-aE-3Vk" secondAttribute="bottom" constant="45" id="uav-bq-HDw"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8vE-Un-FPz"/>
-                                <exclude reference="D7Y-Pv-vm8"/>
-                                <exclude reference="d3S-1X-MdU"/>
-                                <exclude reference="qAo-Q9-PfI"/>
-                                <exclude reference="gMD-Wj-FGZ"/>
-                                <exclude reference="iZ3-Jq-0iZ"/>
-                                <exclude reference="QH0-SS-ciE"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZh-T6-NOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="420"/>
+            <point key="canvasLocation" x="242" y="206"/>
         </scene>
         <!--Edit-->
         <scene sceneID="5d5-9t-CHg">
@@ -980,7 +959,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCm-7U-Pt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.5" y="925.5"/>
+            <point key="canvasLocation" x="913" y="833"/>
         </scene>
         <!--Album userphoto-->
         <scene sceneID="l2T-Jq-vu0">
@@ -1213,7 +1192,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX7-4y-Uvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.5" y="2255.5"/>
+            <point key="canvasLocation" x="1793" y="2226"/>
         </scene>
         <!--Photo Controller-->
         <scene sceneID="It0-Zy-9Z2">
@@ -1672,6 +1651,9 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                                     <segue destination="5Yw-qv-psP" kind="show" id="5xk-44-Lcj"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="backPage:" destination="zkJ-4I-dO6" id="MFJ-P6-gwt"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="91P-3J-NxQ">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3e0-oF-A3e">
@@ -1859,7 +1841,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9H3-kX-eYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="2255.5"/>
+            <point key="canvasLocation" x="912" y="2521"/>
         </scene>
     </scenes>
     <resources>
@@ -1992,6 +1974,6 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5xk-44-Lcj"/>
-        <segue reference="Bda-Vk-JCy"/>
+        <segue reference="sEM-aE-9tf"/>
     </inferredMetricsTieBreakers>
 </document>
