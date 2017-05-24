@@ -19,7 +19,7 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         super.viewDidLoad()
         
         //選択したIDを持ってくる処理
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         pic_id = appDelegate.P_ID!
         
         //カードの画像を表示
@@ -29,18 +29,18 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         self.myScrollView.delegate = self
         self.myScrollView.minimumZoomScale = 1
         self.myScrollView.maximumZoomScale = 4
-        self.myScrollView.scrollEnabled = true
+        self.myScrollView.isScrollEnabled = true
         self.myScrollView.showsHorizontalScrollIndicator = true
         self.myScrollView.showsVerticalScrollIndicator = true
         
         let doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self
             , action:#selector(photoViewer.doubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
-        self.myImageView.userInteractionEnabled = true
+        self.myImageView.isUserInteractionEnabled = true
         self.myImageView.addGestureRecognizer(doubleTapGesture)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //UIScrollBar表示時にスクロールバーをフラッシュ表示
         myScrollView.flashScrollIndicators()
     }
@@ -50,26 +50,26 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
     }
     
     // ピンチイン・ピンチアウト
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
        // print("pinch")
         return self.myImageView
     }
     // ダブルタップ
-    func doubleTap(gesture: UITapGestureRecognizer) -> Void {
+    func doubleTap(_ gesture: UITapGestureRecognizer) -> Void {
         
         //print(self.myScrollView.zoomScale)
         if ( self.myScrollView.zoomScale < self.myScrollView.maximumZoomScale ) {
             
             let newScale:CGFloat = self.myScrollView.zoomScale * 4
-            let zoomRect:CGRect = self.zoomRectForScale(newScale, center: gesture.locationInView(gesture.view))
-            self.myScrollView.zoomToRect(zoomRect, animated: true)
+            let zoomRect:CGRect = self.zoomRectForScale(newScale, center: gesture.location(in: gesture.view))
+            self.myScrollView.zoom(to: zoomRect, animated: true)
             
         } else {
             self.myScrollView.setZoomScale(1.0, animated: true)
         }
     }
     // 領域
-    func zoomRectForScale(scale:CGFloat, center: CGPoint) -> CGRect{
+    func zoomRectForScale(_ scale:CGFloat, center: CGPoint) -> CGRect{
         var zoomRect: CGRect = CGRect()
         zoomRect.size.height = self.myScrollView.frame.size.height / scale
         zoomRect.size.width = self.myScrollView.frame.size.width / scale
@@ -80,23 +80,23 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         return zoomRect
     }
     
-    @IBAction func backbutton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backbutton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     //写真を元に戻す
-    @IBAction func changePhoto(sender: AnyObject) {
-        let alertController = UIAlertController(title: "", message: "本当に元に戻しますか？", preferredStyle: .Alert)
-        let otherAction = UIAlertAction(title: "OK", style: .Default) {
+    @IBAction func changePhoto(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: "", message: "本当に元に戻しますか？", preferredStyle: .alert)
+        let otherAction = UIAlertAction(title: "OK", style: .default) {
             action in let photo = DB().getDefaultPhoto(self.pic_id)
             self.myImageView.image = PhotoController().NSSImage(photo.photoData!)
             DB().linkToCardData(photo)
         }
-        let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .default) {
             action in print("CANCEL")
         }
         alertController.addAction(otherAction)
         alertController.addAction(cancelAction)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 }

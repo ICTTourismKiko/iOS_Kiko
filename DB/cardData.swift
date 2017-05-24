@@ -11,15 +11,15 @@ import Foundation
 class cardData : NSObject {
     var title:NSString //タイトル
     var introText:NSString //紹介文
-    var imageUrl:NSData? //画像
+    var imageUrl:Data? //画像
     var id:Int//カードID
     var flag:Bool //フラグ状態
     
     init(title: String, introText: String,
-        imageUrl: NSData?,id:Int,flag:Bool){
+        imageUrl: Data?,id:Int,flag:Bool){
             
-            self.title = title
-            self.introText = introText
+            self.title = title as NSString
+            self.introText = introText as NSString
             self.imageUrl = imageUrl
             self.id = id
             self.flag = flag

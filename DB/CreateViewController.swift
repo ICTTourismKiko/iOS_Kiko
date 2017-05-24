@@ -43,7 +43,7 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var text5: UILabel!
     @IBOutlet weak var text7: UILabel!
     
-    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,7 @@ class CreateViewController: UIViewController {
         
         appDelegate.view_pic = getUIImageFromUIView(background_view)
         
-        NSTimer.scheduledTimerWithTimeInterval(0.01,target:self,selector:#selector(CreateViewController.next),
+        Timer.scheduledTimer(timeInterval: 0.01,target:self,selector:#selector(getter: CreateViewController.next),
             userInfo: nil, repeats: false);
     }
 
@@ -93,18 +93,18 @@ class CreateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getUIImageFromUIView(myUIView:UIView) ->UIImage{
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(1754, 1240), false, 0);//必要なサイズ確保
-        let context:CGContextRef = UIGraphicsGetCurrentContext()!;
-        CGContextTranslateCTM(context, 0, 0);
-        myUIView.layer.renderInContext(context);
-        let renderedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+    func getUIImageFromUIView(_ myUIView:UIView) ->UIImage{
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1754, height: 1240), false, 0);//必要なサイズ確保
+        let context:CGContext = UIGraphicsGetCurrentContext()!;
+        context.translateBy(x: 0, y: 0);
+        myUIView.layer.render(in: context);
+        let renderedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
         UIGraphicsEndImageContext();
         return renderedImage;
     }
     func next() {
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "print" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "print" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
 
 }

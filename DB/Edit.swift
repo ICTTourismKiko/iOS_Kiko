@@ -29,9 +29,9 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         super.viewDidLoad()
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navigation.setBackgroundImage(navBarImage, for:. default)
         
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         id = appDelegate.P_ID!
         card = db.getCard(id)
         defaultText = db.getDefaultText(id)
@@ -45,7 +45,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         contentText.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(Edit.textFieldDidChange(_:)), name: UITextFieldTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(Edit.textFieldDidChange(_:)), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         
         titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
@@ -53,16 +53,16 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     }
     
     //保存ボタンを押したら
-    @IBAction func saveButton(sender: AnyObject) {
+    @IBAction func saveButton(_ sender: AnyObject) {
         //DBに保存して
         let changedTitle = titleText.text
         let changedContent = contentText.text
         
-        let myAlert = UIAlertController(title: "", message: "保存しました", preferredStyle: .Alert)
+        let myAlert = UIAlertController(title: "", message: "保存しました", preferredStyle: .alert)
         
         if(changedTitle!.characters.count > titleLength){
             myAlert.message = "タイトルは" + String(titleLength) + "文字以内で入力してください"
-        }else if(changedContent.characters.count > contentLength){
+        }else if((changedContent?.characters.count)! > contentLength){
             myAlert.message = "本文は" + String(contentLength) + "文字以内で入力してください"
         }else{
             if(titleText.text == defaultText.title && contentText.text == defaultText.text) {
@@ -77,63 +77,63 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         }
         
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         myAlert.addAction(defaultAction)
-        presentViewController(myAlert, animated: true, completion: nil)
+        present(myAlert, animated: true, completion: nil)
 
     }
     
     //戻るボタンを押したら、画面を閉じる
-    @IBAction func cancelButton(sender: AnyObject) {
+    @IBAction func cancelButton(_ sender: AnyObject) {
         if !(titleText.text == cardTitle && contentText.text == cardContent) {
-            let alertController = UIAlertController(title: "", message: "変更があります。保存せずに戻りますか？", preferredStyle: .Alert)
-            let otherAction = UIAlertAction(title: "はい", style: .Default) {
-                action in self.dismissViewControllerAnimated(true, completion: nil)
+            let alertController = UIAlertController(title: "", message: "変更があります。保存せずに戻りますか？", preferredStyle: .alert)
+            let otherAction = UIAlertAction(title: "はい", style: .default) {
+                action in self.dismiss(animated: true, completion: nil)
             }
-            let cancelAction = UIAlertAction(title: "いいえ", style: .Default) {
+            let cancelAction = UIAlertAction(title: "いいえ", style: .default) {
                 action in self.titleText.becomeFirstResponder()
             }
             self.view.endEditing(true)
             alertController.addAction(otherAction)
             alertController.addAction(cancelAction)
-            presentViewController(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
         }else{
             self.view.endEditing(true)
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
     
     //戻すボタンを押したら、テキスト切り替え
-    @IBAction func defaultButton(sender: AnyObject) {
+    @IBAction func defaultButton(_ sender: AnyObject) {
         if !(titleText.text == defaultText.title && contentText.text == defaultText.text)  {
-            let alertController = UIAlertController(title: "", message: "変更があります。元に戻しますか？", preferredStyle: .Alert)
-            let otherAction = UIAlertAction(title: "OK", style: .Default) {
+            let alertController = UIAlertController(title: "", message: "変更があります。元に戻しますか？", preferredStyle: .alert)
+            let otherAction = UIAlertAction(title: "OK", style: .default) {
                 action in self.titleText.text = self.defaultText.title
                 self.contentText.text = self.defaultText.text
                 self.titleNum.text = String(self.titleLength - self.titleText.text!.characters.count)
                 self.contentNum.text = String(self.contentLength - self.contentText.text.characters.count)
             }
-            let cancelAction = UIAlertAction(title: "CANCEL", style: .Default) {
+            let cancelAction = UIAlertAction(title: "CANCEL", style: .default) {
                 action in print("Pushed CANCEL")
             }
             
             alertController.addAction(otherAction)
             alertController.addAction(cancelAction)
-            presentViewController(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
         }
         
     }
     
-    @IBAction func openImage(sender: AnyObject) {
+    @IBAction func openImage(_ sender: AnyObject) {
         
     }
     
-    func textViewDidChange(textView: UITextView){
+    func textViewDidChange(_ textView: UITextView){
         contentNum.text = String(contentLength - contentText.text.characters.count)
     }
     
-    func textFieldDidChange(notification:NSNotification){
+    func textFieldDidChange(_ notification:Notification){
         titleNum.text = String(titleLength - titleText.text!.characters.count)
     }
 }

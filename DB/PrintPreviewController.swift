@@ -10,7 +10,7 @@ import UIKit
 
 class PrintPreviewController: UIViewController {
     
-    var print_NSData = NSData()
+    var print_NSData = Data()
 
     @IBOutlet weak var front: UIImageView!
     @IBOutlet weak var back: UIImageView!
@@ -21,14 +21,14 @@ class PrintPreviewController: UIViewController {
     //let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
     var arrayPaths = NSObject()
     
-    var myData = NSData()
+    var myData = Data()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navigation.setBackgroundImage(navBarImage, for:. default)
         
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         print_NSData = Image_NSData(appDelegate.view_pic)!
         
         
@@ -55,35 +55,35 @@ class PrintPreviewController: UIViewController {
         
 
         let path = NSTemporaryDirectory();
-        let fullname : NSString = (filename as String) + ".pdf"
+        let fullname : NSString = (filename as String) + ".pdf" as NSString
         let pdfFilename = (path as String) + "/"+(fullname as String)
-        arrayPaths = pdfFilename
+        arrayPaths = pdfFilename as NSObject
         
         // PDFコンテキストを作成する
-        UIGraphicsBeginPDFContextToFile(pdfFilename, CGRectZero, nil)
+        UIGraphicsBeginPDFContextToFile(pdfFilename, CGRect.zero, nil)
         
         // 1ページを開始する
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 1690, 1195), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRect(x: 0, y: 0, width: 1690, height: 1195), nil)
         // 1枚目画像を描画する
-        let point1 = CGPointMake(0, 0)
-        front.image?.drawAtPoint(point1)
+        let point1 = CGPoint(x: 0, y: 0)
+        front.image?.draw(at: point1)
         
         // 2ページを開始する
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 1754, 1240), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRect(x: 0, y: 0, width: 1754, height: 1240), nil)
         // 2枚目画像を描画する
-        let point2 = CGPointMake(0, 0)
-        back.image?.drawAtPoint(point2)
+        let point2 = CGPoint(x: 0, y: 0)
+        back.image?.draw(at: point2)
         
         //pdfの処理を終える
         UIGraphicsEndPDFContext()
         //pdfをnsDtataに変換
-        myData = NSData(contentsOfFile: pdfFilename)!
+        myData = try! Data(contentsOf: URL(fileURLWithPath: pdfFilename))
 
     }
     
     //画像をNSDataに変換
-    func Image_NSData(image:UIImage) -> NSData? {
-        let data:NSData = UIImagePNGRepresentation(image)!
+    func Image_NSData(_ image:UIImage) -> Data? {
+        let data:Data = UIImagePNGRepresentation(image)!
         return data
     }
 
@@ -91,32 +91,32 @@ class PrintPreviewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func print(sender: AnyObject) {
-        if(UIPrintInteractionController.canPrintData(myData)){
-            let printController = UIPrintInteractionController.sharedPrintController()
+    @IBAction func print(_ sender: AnyObject) {
+        if(UIPrintInteractionController.canPrint(myData)){
+            let printController = UIPrintInteractionController.shared
             let printInfo = UIPrintInfo(dictionary:nil)
             //カラー印刷
-            printInfo.outputType = UIPrintInfoOutputType.General
+            printInfo.outputType = UIPrintInfoOutputType.general
             printInfo.jobName = "print Job"
             // 両面印刷/片面印刷 None, LongEdge, ShortEdge の３択
-            printInfo.duplex = UIPrintInfoDuplex.LongEdge
+            printInfo.duplex = UIPrintInfoDuplex.longEdge
             // 印刷用紙の向き - 縦Portrait 横Landscape の２択
-            printInfo.orientation = UIPrintInfoOrientation.Landscape
+            printInfo.orientation = UIPrintInfoOrientation.landscape
             printController.printInfo = printInfo
             printController.showsPageRange = true
             printController.printingItem = myData
-            printController.presentAnimated(true, completionHandler: nil)
+            printController.present(animated: true, completionHandler: nil)
         }
 
     }
     
-    @IBAction func back(sender: AnyObject) {
-        let manager = NSFileManager()
+    @IBAction func back(_ sender: AnyObject) {
+        let manager = FileManager()
         do {
-            try manager.removeItemAtPath(arrayPaths as! String)
+            try manager.removeItem(atPath: arrayPaths as! String)
         } catch let error as NSError {
-            print(error.localizedDescription)
+            print(error.localizedDescription as AnyObject)
         }
-        self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

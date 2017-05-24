@@ -42,7 +42,7 @@ class Photo: Object {
     
     dynamic var photoID = 0
     dynamic var ID = 0
-    dynamic var photoData: NSData?
+    dynamic var photoData: Data?
     dynamic var photoPath = ""
     dynamic var display = false
     

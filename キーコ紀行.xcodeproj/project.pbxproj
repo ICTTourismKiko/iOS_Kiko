@@ -21,6 +21,7 @@
 		37BBBC481C095E870098B625 /* album_defaultphoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBBC471C095E870098B625 /* album_defaultphoto.swift */; };
 		37FBD82E1C06B247008AAD03 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82C1C06B247008AAD03 /* back.png */; };
 		37FBD82F1C06B247008AAD03 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FBD82D1C06B247008AAD03 /* next.png */; };
+		3A0E6CC37EF1F162F1181A67 /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E530AE0DF916C9E2C2789B /* Pods______UITests.framework */; };
 		3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2E1D1407AC00B66C6F /* splash6plus.png */; };
 		3B218F311D1407AC00B66C6F /* splash6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2F1D1407AC00B66C6F /* splash6.png */; };
 		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
@@ -29,10 +30,7 @@
 		3B46D9FF1D338144005BD81A /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D9FE1D338144005BD81A /* information.swift */; };
 		3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629631D45E28E007D0E94 /* new_kanko.png */; };
 		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
-		7958040B1D50D70700676B2E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7958040A1D50D70700676B2E /* Realm.framework */; };
-		7958040C1D50D72000676B2E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B81248B1D4F2B1E00DB52E4 /* RealmSwift.framework */; };
-		795804141D50D79000676B2E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 795804121D50D79000676B2E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		795804181D50D79900676B2E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 795804161D50D79900676B2E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80AABD046B4B864EA8372562 /* Pods______Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
 		8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F526FB91D4C8DA20060A4EB /* redpin30px.png */; };
@@ -76,6 +74,7 @@
 		DC4430AC1C0FFEA90006D4F5 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */; };
 		DC75B6691BD7B16D0025142E /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B6681BD7B16D0025142E /* DB.swift */; };
 		DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75B66A1BD7B19D0025142E /* cardDataDB.swift */; };
+		F2376AACFA2FDBB22A2F3EF5 /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454A92A94EEB495CE21F0F4C /* Pods______.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +101,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				795804181D50D79900676B2E /* RealmSwift.framework in Embed Frameworks */,
-				795804141D50D79000676B2E /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		355EB8B6F669EC0DB1423759 /* Pods-キーコ紀行Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -133,12 +131,10 @@
 		3B46D9FE1D338144005BD81A /* information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = information.swift; path = ../information.swift; sourceTree = "<group>"; };
 		3B5629631D45E28E007D0E94 /* new_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_kanko.png; sourceTree = "<group>"; };
 		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
-		3B81248B1D4F2B1E00DB52E4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		454A92A94EEB495CE21F0F4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74AE41918E512AEFEE631324 /* Pods-キーコ紀行.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行.debug.xcconfig"; sourceTree = "<group>"; };
 		795804001D50D1F600676B2E /* キーコ紀行.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "キーコ紀行.xcodeproj"; sourceTree = "<group>"; };
 		795804081D50D33B00676B2E /* PlusoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusoSDK.framework; sourceTree = "<group>"; };
-		7958040A1D50D70700676B2E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		795804121D50D79000676B2E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		795804161D50D79900676B2E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		8F151AE11D2F746600BED73D /* black.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.JPG; sourceTree = "<group>"; };
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -165,6 +161,10 @@
 		9CACB5511BDE150E0024707B /* cardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList.swift; sourceTree = "<group>"; };
 		9CACB5531BDE15760024707B /* cardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardData.swift; sourceTree = "<group>"; };
 		9CACB5551BDE15970024707B /* setCardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList.swift; sourceTree = "<group>"; };
+		A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDA2F46824DB955A912646F /* Pods-キーコ紀行.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行.release.xcconfig"; sourceTree = "<group>"; };
+		C50334F28EA93113A7287B96 /* Pods-キーコ紀行Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D496DF0563862B71E6173A82 /* Pods-キーコ紀行UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC08FCBD1C13E6A1002252F2 /* Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
 		DC08FCC31C13EF04002252F2 /* ki-ko01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ki-ko01.png"; sourceTree = "<group>"; };
 		DC08FCC51C1585C4002252F2 /* tablebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tablebackground.png; path = ../tablebackground.png; sourceTree = "<group>"; };
@@ -188,6 +188,8 @@
 		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
+		F4E530AE0DF916C9E2C2789B /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7DE7825396BFA3B440A3FD1 /* Pods-キーコ紀行UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,10 +197,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7958040C1D50D72000676B2E /* RealmSwift.framework in Frameworks */,
 				379112F21BD818F50024E678 /* CoreLocation.framework in Frameworks */,
-				7958040B1D50D70700676B2E /* Realm.framework in Frameworks */,
 				379112F01BD818E90024E678 /* MapKit.framework in Frameworks */,
+				F2376AACFA2FDBB22A2F3EF5 /* Pods______.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AABD046B4B864EA8372562 /* Pods______Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0E6CC37EF1F162F1181A67 /* Pods______UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,19 +234,40 @@
 			name = PagingCollectionView;
 			sourceTree = "<group>";
 		};
+		709D51588AF7E8239E6A2F6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				454A92A94EEB495CE21F0F4C /* Pods______.framework */,
+				A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */,
+				F4E530AE0DF916C9E2C2789B /* Pods______UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		795804011D50D1F600676B2E /* Products */ = {
 			isa = PBXGroup;
+			children = (
+			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		956C16233A6118E424FDA396 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74AE41918E512AEFEE631324 /* Pods-キーコ紀行.debug.xcconfig */,
+				AEDA2F46824DB955A912646F /* Pods-キーコ紀行.release.xcconfig */,
+				355EB8B6F669EC0DB1423759 /* Pods-キーコ紀行Tests.debug.xcconfig */,
+				C50334F28EA93113A7287B96 /* Pods-キーコ紀行Tests.release.xcconfig */,
+				F7DE7825396BFA3B440A3FD1 /* Pods-キーコ紀行UITests.debug.xcconfig */,
+				D496DF0563862B71E6173A82 /* Pods-キーコ紀行UITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DC23BFFF1BD7826B000B2465 = {
 			isa = PBXGroup;
 			children = (
-				795804161D50D79900676B2E /* RealmSwift.framework */,
-				795804121D50D79000676B2E /* Realm.framework */,
-				7958040A1D50D70700676B2E /* Realm.framework */,
 				795804001D50D1F600676B2E /* キーコ紀行.xcodeproj */,
-				3B81248B1D4F2B1E00DB52E4 /* RealmSwift.framework */,
 				DC08FCE71C1A5FE5002252F2 /* cardData.realm */,
 				378BDDED1C05A3C3000DD5BB /* PagingCollectionView */,
 				379112F11BD818F50024E678 /* CoreLocation.framework */,
@@ -251,6 +275,8 @@
 				DC23C00A1BD7826B000B2465 /* DB */,
 				DC23C0091BD7826B000B2465 /* Products */,
 				795804081D50D33B00676B2E /* PlusoSDK.framework */,
+				956C16233A6118E424FDA396 /* Pods */,
+				709D51588AF7E8239E6A2F6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,11 +362,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行" */;
 			buildPhases = (
+				799254550118CC10BBFB7ED3 /* 📦 Check Pods Manifest.lock */,
 				DC23C0041BD7826B000B2465 /* Sources */,
 				DC23C0051BD7826B000B2465 /* Frameworks */,
 				DC23C0061BD7826B000B2465 /* Resources */,
 				795804151D50D79000676B2E /* Embed Frameworks */,
-				795804191D50D82000676B2E /* Run Script */,
+				7679C588CE8AA591B6B0DC2B /* 📦 Embed Pods Frameworks */,
+				E2FE08B1967EC2D4D079039D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行Tests" */;
 			buildPhases = (
+				3ECAF837C1F31B21027CFBC7 /* 📦 Check Pods Manifest.lock */,
 				DC23C0181BD7826C000B2465 /* Sources */,
 				DC23C0191BD7826C000B2465 /* Frameworks */,
 				DC23C01A1BD7826C000B2465 /* Resources */,
+				F605A7F16D6FC748F372E07B /* 📦 Embed Pods Frameworks */,
+				D9C9CD6ECB7C32F6B1C3F9C2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,9 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行UITests" */;
 			buildPhases = (
+				3BB179125EB3F85273FC70D7 /* 📦 Check Pods Manifest.lock */,
 				DC23C0231BD7826C000B2465 /* Sources */,
 				DC23C0241BD7826C000B2465 /* Frameworks */,
 				DC23C0251BD7826C000B2465 /* Resources */,
+				366A3931ED00710FFDDD3CE1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,6 +432,7 @@
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 8NQFAUAAWM;
+						LastSwiftMigration = 0830;
 					};
 					DC23C01B1BD7826C000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -502,19 +536,125 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		795804191D50D82000676B2E /* Run Script */ = {
+		366A3931ED00710FFDDD3CE1 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BB179125EB3F85273FC70D7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3ECAF837C1F31B21027CFBC7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7679C588CE8AA591B6B0DC2B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		799254550118CC10BBFB7ED3 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9C9CD6ECB7C32F6B1C3F9C2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FE08B1967EC2D4D079039D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F605A7F16D6FC748F372E07B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -687,6 +827,7 @@
 		};
 		DC23C0311BD7826C000B2465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74AE41918E512AEFEE631324 /* Pods-キーコ紀行.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -701,11 +842,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DC23C0321BD7826C000B2465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEDA2F46824DB955A912646F /* Pods-キーコ紀行.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -720,11 +863,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		DC23C0341BD7826C000B2465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 355EB8B6F669EC0DB1423759 /* Pods-キーコ紀行Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DBTests/Info.plist;
@@ -737,6 +882,7 @@
 		};
 		DC23C0351BD7826C000B2465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50334F28EA93113A7287B96 /* Pods-キーコ紀行Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DBTests/Info.plist;
@@ -749,6 +895,7 @@
 		};
 		DC23C0371BD7826C000B2465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DE7825396BFA3B440A3FD1 /* Pods-キーコ紀行UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -761,6 +908,7 @@
 		};
 		DC23C0381BD7826C000B2465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D496DF0563862B71E6173A82 /* Pods-キーコ紀行UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

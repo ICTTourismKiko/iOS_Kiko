@@ -24,20 +24,20 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         // Do any additional setup after loading the view, typically from a nib.
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navi.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navi.setBackgroundImage(navBarImage, for:. default)
         
         self.setupLists()
         
         self.tableView2.delegate = self
         self.tableView2.dataSource = self
         
-        let imageView = UIImageView(frame: CGRectMake(0, 0, self.tableView2.frame.width, self.tableView2.frame.height))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.tableView2.frame.width, height: self.tableView2.frame.height))
         let image = UIImage(named: "tablebackground.png")
         imageView.image = image
         self.tableView2.backgroundView = imageView
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //UIScrollBar表示時にスクロールバーをフラッシュ表示
         tableView2.flashScrollIndicators()
     }
@@ -51,7 +51,7 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         for i in 1...DB().cardListSize(){
             let card = DB().getCard(i)
             let f1 = cardData(title: card.cardText!.title,
-                introText: card.cardText!.text, imageUrl: NSData(data: (DB().getCard(i).photo?.photoData)!),id: i-1,flag:DB().getFlagStatement(i))
+                introText: card.cardText!.text, imageUrl: NSData(data: (DB().getCard(i).photo?.photoData)!) as Data,id: i-1,flag:DB().getFlagStatement(i))
             cards.append(f1)
         }
     }
@@ -61,28 +61,28 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
     // for table view
     
     // セクション数
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     // セクションの行数
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cards.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
-        let cell: setCardList2 = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! setCardList2
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
+        let cell: setCardList2 = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! setCardList2
         cell.setCell(cards[indexPath.row])
-        cell.backgroundColor = UIColor.clearColor()
-        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
         return cell
     }
-    @IBAction func photo_select(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func photo_select(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func backbutton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backbutton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

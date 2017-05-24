@@ -21,13 +21,13 @@ class PhotoSelectViewController: UIViewController {
     @IBOutlet weak var pic5: UIImageView!
     @IBOutlet weak var pic6: UIImageView!
     @IBOutlet weak var pic7: UIImageView!
-    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navigation.setBackgroundImage(navBarImage, for:. default)
         
         backimage.image=UIImage(named:"haikei.jpg")
         
@@ -36,12 +36,12 @@ class PhotoSelectViewController: UIViewController {
 //            userInfo: nil, repeats: true);
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //UIScrollBar表示時にスクロールバーをフラッシュ表示
         scroll.flashScrollIndicators()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.pic_show()
     }
 
@@ -49,40 +49,40 @@ class PhotoSelectViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func photo1_select(sender: AnyObject) {
+    @IBAction func photo1_select(_ sender: AnyObject) {
         appDelegate.picID=1
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo2_select(sender: AnyObject) {
+    @IBAction func photo2_select(_ sender: AnyObject) {
         appDelegate.picID=2
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo3_select(sender: AnyObject) {
+    @IBAction func photo3_select(_ sender: AnyObject) {
         appDelegate.picID=3
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo4_select(sender: AnyObject) {
+    @IBAction func photo4_select(_ sender: AnyObject) {
         appDelegate.picID=4
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo5_select(sender: AnyObject) {
+    @IBAction func photo5_select(_ sender: AnyObject) {
         appDelegate.picID=5
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo6_select(sender: AnyObject) {
+    @IBAction func photo6_select(_ sender: AnyObject) {
         appDelegate.picID=6
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
-    @IBAction func photo7_select(sender: AnyObject) {
+    @IBAction func photo7_select(_ sender: AnyObject) {
         appDelegate.picID=7
-        let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "cardlist2" )
-        self.presentViewController( targetViewController, animated: true, completion: nil)
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
+        self.present( targetViewController, animated: true, completion: nil)
     }
     
     func pic_show(){
@@ -124,19 +124,19 @@ class PhotoSelectViewController: UIViewController {
         }
         
     }
-    @IBAction func finish(sender: AnyObject) {
+    @IBAction func finish(_ sender: AnyObject) {
         if((appDelegate.cardID[1]==0)||(appDelegate.cardID[2]==0)||(appDelegate.cardID[3]==0)||(appDelegate.cardID[4]==0)||(appDelegate.cardID[5]==0)||(appDelegate.cardID[6]==0)||(appDelegate.cardID[7]==0)
             ){
-                let myAlert: UIAlertController = UIAlertController(title: "エラー", message: "画像を全て選んでください", preferredStyle: .Alert)
+                let myAlert: UIAlertController = UIAlertController(title: "エラー", message: "画像を全て選んでください", preferredStyle: .alert)
                 // OKのアクションを作成する.
-                let myOkAction = UIAlertAction(title: "OK", style: .Default) { action in }
+                let myOkAction = UIAlertAction(title: "OK", style: .default) { action in }
                 // OKのActionを追加する.
                 myAlert.addAction(myOkAction)
                 // UIAlertを発動する.
-                presentViewController(myAlert, animated: true, completion: nil)
+                present(myAlert, animated: true, completion: nil)
         }else{
-            let targetViewController = self.storyboard!.instantiateViewControllerWithIdentifier( "sample" )
-            self.presentViewController( targetViewController, animated: true, completion: nil)
+            let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "sample" )
+            self.present( targetViewController, animated: true, completion: nil)
         }
     }
 }

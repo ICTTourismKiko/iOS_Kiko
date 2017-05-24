@@ -17,20 +17,20 @@ class information: UIViewController {
         super.viewDidLoad()
     
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navigation.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navigation.setBackgroundImage(navBarImage, for:. default)
     
         
-    self.uitext.editable = false
+    self.uitext.isEditable = false
     
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //UIScrollBar表示時にスクロールバーをフラッシュ表示
         uitext.flashScrollIndicators()
     }
     
-    @IBAction func backbutton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backbutton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

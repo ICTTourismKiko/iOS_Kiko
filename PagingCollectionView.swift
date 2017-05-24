@@ -10,14 +10,14 @@ import UIKit
 //テストコメント
 class PagingCollectionView: UIView {
     
-    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var credit = UILabel()
     
     // MARK: - Properties
-    internal let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+    internal let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     internal var contentSize: CGSize {
-        return CGSizeMake(CGRectGetWidth(UIScreen.mainScreen().bounds) - 0, CGRectGetHeight(UIScreen.mainScreen().bounds) - 0)
+        return CGSize(width: UIScreen.main.bounds.width - 0, height: UIScreen.main.bounds.height - 0)
     }
     
     // MARK: - Init
@@ -31,24 +31,24 @@ class PagingCollectionView: UIView {
         self.initView()
     }
     
-    private func initView() {
+    fileprivate func initView() {
         
         self.collectionView.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
-        self.collectionView.frame = CGRectMake(0.0, 0.0, self.contentSize.width, self.contentSize.height)
+        self.collectionView.frame = CGRect(x: 0.0, y: 0.0, width: self.contentSize.width, height: self.contentSize.height)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.showsVerticalScrollIndicator = false
         self.collectionView.clipsToBounds = false
-        self.collectionView.pagingEnabled = true
+        self.collectionView.isPagingEnabled = true
         self.collectionView.alwaysBounceHorizontal = true
         //        self.collectionView.scrollEnabled = false
         // For Cell
-        self.collectionView.registerNib(UINib(nibName: "PagingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PagingCollectionViewCell")
+        self.collectionView.register(UINib(nibName: "PagingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PagingCollectionViewCell")
         
         // Change layout
         let layout = PagingCollectionViewLayout()
-        layout.scrollDirection = .Horizontal
+        layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
@@ -58,18 +58,18 @@ class PagingCollectionView: UIView {
     }
     
     // MARK: - Override Methods
-    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-        if !CGRectContainsPoint(self.collectionView.frame, point) {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if !self.collectionView.frame.contains(point) {
             return self.collectionView
         }
-        return super.hitTest(point, withEvent: event)
+        return super.hitTest(point, with: event)
     }
 }
 
 // MARK: - UICollectionView DataSource
 extension PagingCollectionView: UICollectionViewDataSource {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if(appDelegate.pic_segmented == 0){ //撮影写真を選択している場合
             if(DB().getUpdatedCardIDArray().count == 0){    //撮影写真が0枚の場合
@@ -83,37 +83,37 @@ extension PagingCollectionView: UICollectionViewDataSource {
         
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(appDelegate.pic_segmented == 0){   //撮影写真の場合
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PagingCollectionViewCell", for: indexPath) as! PagingCollectionViewCell
             
             if(DB().getUpdatedCardIDArray().count == 0){   //撮影写真が0枚の場合
-                collectionView.scrollEnabled = false
+                collectionView.isScrollEnabled = false
                 let kikoimage = UIImage(named: "kiko.png")
                 cell.photo.image = kikoimage
                 cell.TitleLabel.text = ""
                 cell.introLabel.text = ""
                 cell.NoPhotoLabel.text = "撮影写真がありません。\n写真を撮ると表示されます。"
                 
-                let height = UIScreen.mainScreen().bounds.size.height
+                let height = UIScreen.main.bounds.size.height
                 
                 //iphoneのサイズによってカードに書かれる文のサイズを変更
                 //iPhone6
                 if height >= 667 {
-                    credit.frame = CGRectMake(20, self.contentSize.height/2, 300, 120)
+                    credit.frame = CGRect(x: 20, y: self.contentSize.height/2, width: 300, height: 120)
 
                     
                     //iPhone6 Plus
                             }else if height == 736 {
-                    credit.frame = CGRectMake(20, self.contentSize.height/1.5, 300, 120)
+                    credit.frame = CGRect(x: 20, y: self.contentSize.height/1.5, width: 300, height: 120)
                     
                     //iPhone5・5s・5c
                 }else {
-                    credit.frame = CGRectMake(20, self.contentSize.height/2.45, 300, 120)
+                    credit.frame = CGRect(x: 20, y: self.contentSize.height/2.45, width: 300, height: 120)
                 }
 
                 credit.font = UIFont(name: "HiraginoSans-W3", size: 10.0)
@@ -137,8 +137,8 @@ extension PagingCollectionView: UICollectionViewDataSource {
                 
             }
         }else{  //サンプル写真の場合
-            self.collectionView.scrollEnabled = true
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PagingCollectionViewCell", forIndexPath: indexPath) as! PagingCollectionViewCell
+            self.collectionView.isScrollEnabled = true
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PagingCollectionViewCell", for: indexPath) as! PagingCollectionViewCell
             let cardcounts = DB().cardListSize()
             var IDArray2:[Int] = []
             
@@ -166,10 +166,10 @@ extension PagingCollectionView: UICollectionViewDataSource {
 // MARK: - UICollectionView Delegate
 extension PagingCollectionView: UICollectionViewDelegate {
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         return self.contentSize
     }
     
