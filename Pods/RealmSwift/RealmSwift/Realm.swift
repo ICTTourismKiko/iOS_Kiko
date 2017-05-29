@@ -719,8 +719,8 @@ public final class Realm {
      - throws: An `NSError` if the Realm could not be initialized.
      */
     public convenience init() throws {
-        let rlmRealm = try RLMRealm(configuration: RLMRealmConfiguration.default())
-        self.init(rlmRealm)
+        let rlmRealm = try RLMRealm(configuration: RLMRealmConfiguration.,default())
+        self.dynamicType.init(rlmRealm)
     }
 
     /**
@@ -732,7 +732,7 @@ public final class Realm {
      */
     public convenience init(configuration: Configuration) throws {
         let rlmRealm = try RLMRealm(configuration: configuration.rlmConfiguration)
-        self.init(rlmRealm)
+        self.dynamicType.init(rlmRealm)
     }
 
     /**
@@ -959,7 +959,7 @@ public final class Realm {
         if update && schema[className]?.primaryKeyProperty == nil {
             throwRealmException("'\(className)' does not have a primary key and can not be updated")
         }
-        return unsafeBitCast(RLMCreateObjectInRealmWithValue(rlmRealm, className, value, update), to: T.self)
+        return unsafeBitCast(RLMCreateObjectInRealmWithValue(rlmRealm, className, value, update), T.self)
     }
 
     /**
@@ -996,7 +996,7 @@ public final class Realm {
         if update && schema[className]?.primaryKeyProperty == nil {
             throwRealmException("'\(className)' does not have a primary key and can not be updated")
         }
-        return unsafeBitCast(RLMCreateObjectInRealmWithValue(rlmRealm, className, value, update), to: DynamicObject.self)
+        return unsafeBitCast(RLMCreateObjectInRealmWithValue(rlmRealm, className, value, update), DynamicObject.self)
     }
 
     // MARK: Deleting objects
@@ -1106,7 +1106,7 @@ public final class Realm {
      - returns: An object of type `type`, or `nil` if no instance with the given primary key exists.
      */
     public func objectForPrimaryKey<T: Object>(_ type: T.Type, key: AnyObject?) -> T? {
-        return unsafeBitCast(RLMGetObject(rlmRealm, (type as Object.Type).className(), key), to: Optional<T>.self)
+        return unsafeBitCast(RLMGetObject(rlmRealm, (type as Object.Type).className(), key), Optional<T>.self)
     }
 
     /**
@@ -1132,7 +1132,7 @@ public final class Realm {
      :nodoc:
      */
     public func dynamicObjectForPrimaryKey(_ className: String, key: AnyObject?) -> DynamicObject? {
-        return unsafeBitCast(RLMGetObject(rlmRealm, className, key), to: Optional<DynamicObject>.self)
+        return unsafeBitCast(RLMGetObject(rlmRealm, className, key), Optional<DynamicObject>.self)
     }
 
     // MARK: Notifications

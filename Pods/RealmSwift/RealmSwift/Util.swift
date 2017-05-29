@@ -153,7 +153,7 @@ extension Object {
     // Must *only* be used to call Realm Objective-C APIs that are exposed on `RLMObject`
     // but actually operate on `RLMObjectBase`. Do not expose cast value to user.
     internal func unsafeCastToRLMObject() -> RLMObject {
-        return unsafeBitCast(self, to: RLMObject.self)
+        return unsafeBitCast(self, RLMObject.self)
     }
 }
 
@@ -161,7 +161,7 @@ extension Object {
 
 internal func dynamicBridgeCast<T>(fromObjectiveC x: AnyObject) -> T {
     if let BridgeableType = T.self as? CustomObjectiveCBridgeable.Type {
-        return BridgeableType.bridging(objCValue: x) as! T
+        return BridgeableType.bridging(x) as! T
     } else {
         return x as! T
     }
@@ -188,7 +188,7 @@ extension Int8: CustomObjectiveCBridgeable {
         return (objCValue as! NSNumber).int8Value
     }
     var objCValue: AnyObject {
-        return NSNumber(value: self as Int8)
+        return NSNumber(char: self as Int8)
     }
 }
 extension Int16: CustomObjectiveCBridgeable {
@@ -196,7 +196,7 @@ extension Int16: CustomObjectiveCBridgeable {
         return (objCValue as! NSNumber).int16Value
     }
     var objCValue: AnyObject {
-        return NSNumber(value: self as Int16)
+        return NSNumber(short: self as Int16)
     }
 }
 extension Int32: CustomObjectiveCBridgeable {
@@ -204,7 +204,7 @@ extension Int32: CustomObjectiveCBridgeable {
         return (objCValue as! NSNumber).int32Value
     }
     var objCValue: AnyObject {
-        return NSNumber(value: self as Int32)
+        return NSNumber(int: self as Int32)
     }
 }
 extension Int64: CustomObjectiveCBridgeable {
@@ -212,7 +212,7 @@ extension Int64: CustomObjectiveCBridgeable {
         return (objCValue as! NSNumber).int64Value
     }
     var objCValue: AnyObject {
-        return NSNumber(value: self as Int64)
+        return NSNumber(longLong: self as Int64)
     }
 }
 

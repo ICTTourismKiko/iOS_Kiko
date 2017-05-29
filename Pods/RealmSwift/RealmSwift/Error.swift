@@ -198,7 +198,7 @@ public enum Error: ErrorProtocol {
     // swiftlint:enable variable_name
 
     /// The `RLMError` value, which can be used to derive the error code.
-    fileprivate var rlmError: RLMError {
+    fileprivate; var rlmError: RLMError {
         switch self {
         case .fail:
             return RLMError.fail

@@ -44,7 +44,7 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var text7: UILabel!
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,9 +83,12 @@ class CreateViewController: UIViewController {
         pic7.image=PhotoController().NSSImage((DB().getCard(appDelegate.cardID[7]).photo?.photoData)!)
         
         appDelegate.view_pic = getUIImageFromUIView(background_view)
-        
-        Timer.scheduledTimer(timeInterval: 0.01,target:self,selector:#selector(getter: CreateViewController.next),
-            userInfo: nil, repeats: false);
+                
+        /* 0.1秒後に画面遷移 */
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1
+        ) {
+            self.next()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,11 +98,11 @@ class CreateViewController: UIViewController {
     
     func getUIImageFromUIView(_ myUIView:UIView) ->UIImage{
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 1754, height: 1240), false, 0);//必要なサイズ確保
-        let context:CGContext = UIGraphicsGetCurrentContext()!;
-        context.translateBy(x: 0, y: 0);
-        myUIView.layer.render(in: context);
-        let renderedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
-        UIGraphicsEndImageContext();
+        let context:CGContext = UIGraphicsGetCurrentContext()!
+        context.translateBy(x: 0, y: 0)
+        myUIView.layer.render(in: context)
+        let renderedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
         return renderedImage;
     }
     func next() {

@@ -464,7 +464,7 @@ open class Object: RLMObjectBase {
     // MARK: Properties
 
     /// The Realm which manages the object, or `nil` if the object is unmanaged.
-    open var realm: Realm? {
+    open; var realm: Realm? {
         if let rlmReam = RLMObjectBaseRealm(self) {
             return Realm(rlmReam)
         }
@@ -472,7 +472,7 @@ open class Object: RLMObjectBase {
     }
 
     /// The object schema which lists the managed properties for the object.
-    open var objectSchema: ObjectSchema {
+    open; var objectSchema: ObjectSchema {
         return ObjectSchema(RLMObjectBaseObjectSchema(self)!)
     }
 
@@ -480,10 +480,10 @@ open class Object: RLMObjectBase {
     ///
     /// An object can no longer be accessed if the object has been deleted from the Realm that manages it, or if
     /// `invalidate()` is called on that Realm.
-    open override var isInvalidated: Bool { return super.isInvalidated }
+    open; override var isInvalidated: Bool { return super.isInvalidated }
 
     /// Returns a human-readable description of the object.
-    open override var description: String { return super.description }
+    open; override var description: String { return super.description }
 
     #if os(OSX)
     /// A helper property that returns the class name for an `Object` subclass.
@@ -497,7 +497,7 @@ open class Object: RLMObjectBase {
     WARNING: This is an internal helper method not intended for public use.
     :nodoc:
     */
-    open override class func objectUtilClass(_ isSwift: Bool) -> AnyClass {
+    open; override class func objectUtilClass(_ isSwift: Bool) -> AnyClass {
         return ObjectUtil.self
     }
 
@@ -513,7 +513,7 @@ open class Object: RLMObjectBase {
 
      - returns: The name of the property designated as the primary key, or `nil` if the model has no primary key.
     */
-    open class func primaryKey() -> String? { return nil }
+    open; class func primaryKey() -> String? { return nil }
 
     /**
      Override this method to specify the names of properties to ignore. These properties will not be managed by
@@ -521,7 +521,7 @@ open class Object: RLMObjectBase {
 
      - returns: An array of property names to ignore.
     */
-    open class func ignoredProperties() -> [String] { return [] }
+    open; class func ignoredProperties() -> [String] { return [] }
 
     /**
      Returns an array of property names for properties which should be indexed.
@@ -530,13 +530,13 @@ open class Object: RLMObjectBase {
 
      - returns: An array of property names.
     */
-    open class func indexedProperties() -> [String] { return [] }
+    open; class func indexedProperties() -> [String] { return [] }
 
 
     // MARK: Key-Value Coding & Subscripting
 
     /// Returns or sets the value of the property with the given name.
-    open subscript(key: String) -> AnyObject? {
+    open; subscript(key: String) -> AnyObject? {
         get {
             if realm == nil {
                 return value(forKey: key)
@@ -567,22 +567,14 @@ open class Object: RLMObjectBase {
 
     :nodoc:
     */
-    open func dynamicList(_ propertyName: String) -> List<DynamicObject> {
+    open; func dynamicList(_ propertyName: String) -> List<DynamicObject> {
         return unsafeBitCast(RLMDynamicGetByName(self, propertyName, true),
-                             to: List<DynamicObject>.self)
-    }
-
-    // MARK: Equatable
-
-    /**
-     Returns whether two Realm objects are equal.
-
-     Objects are considered equal if and only if they are both managed by the same Realm and point to the same
+                              only if they are both managed by the same Realm and point to the same
      underlying object in the database.
 
      - parameter object: The object to compare the receiver to.
     */
-    open override func isEqual(_ object: Any?) -> Bool {
+    open; override func isEqual(_ object: Any?) -> Bool {
         return RLMObjectBaseAreEqual(self as RLMObjectBase?, object as? RLMObjectBase)
     }
 
@@ -645,31 +637,31 @@ public final class DynamicObject: Object {
 /// Internal class. Do not use directly.
 @objc(RealmSwiftObjectUtil)
 open class ObjectUtil: NSObject {
-    @objc fileprivate class func swiftVersion() -> NSString {
+    @objc fileprivate; class func swiftVersion() -> NSString {
         return swiftLanguageVersion
     }
 
-    @objc fileprivate class func ignoredPropertiesForClass(_ type: AnyClass) -> NSArray? {
+    @objc fileprivate; class func ignoredPropertiesForClass(_ type: AnyClass) -> NSArray? {
         if let type = type as? Object.Type {
             return type.ignoredProperties() as NSArray?
         }
         return nil
     }
 
-    @objc fileprivate class func indexedPropertiesForClass(_ type: AnyClass) -> NSArray? {
+    @objc fileprivate; class func indexedPropertiesForClass(_ type: AnyClass) -> NSArray? {
         if let type = type as? Object.Type {
             return type.indexedProperties() as NSArray?
         }
         return nil
     }
 
-    @objc fileprivate class func linkingObjectsPropertiesForClass(_ type: AnyClass) -> NSDictionary? {
+    @objc fileprivate; class func linkingObjectsPropertiesForClass(_ type: AnyClass) -> NSDictionary? {
         // Not used for Swift. getLinkingObjectsProperties(_:) is used instead.
         return nil
     }
 
     // Get the names of all properties in the object which are of type List<>.
-    @objc fileprivate class func getGenericListPropertyNames(_ object: AnyObject) -> NSArray {
+    @objc fileprivate; class func getGenericListPropertyNames(_ object: AnyObject) -> NSArray {
         return Mirror(reflecting: object).children.filter { (prop: Mirror.Child) in
             return prop.value.dynamicType is RLMListBase.Type
         }.flatMap { (prop: Mirror.Child) in
@@ -678,7 +670,7 @@ open class ObjectUtil: NSObject {
     }
 
     // swiftlint:disable:next cyclomatic_complexity
-    @objc fileprivate class func getOptionalProperties(_ object: AnyObject) -> NSDictionary {
+    @objc fileprivate; class func getOptionalProperties(_ object: AnyObject) -> NSDictionary {
         let children = Mirror(reflecting: object).children
         return children.reduce([String: AnyObject]()) { ( properties: [String:AnyObject], prop: Mirror.Child) in
             guard let name = prop.label else { return properties }
@@ -707,19 +699,19 @@ open class ObjectUtil: NSObject {
                 properties[name] = Int(PropertyType.bool.rawValue)
             } else if prop.value as? RLMOptionalBase != nil {
                 throwRealmException("'\(type)' is not a a valid RealmOptional type.")
-            } else if mirror.displayStyle == .optional {
+            } else if mirror.displayStyle! == .optional {
                 properties[name] = NSNull()
             }
             return properties
         }
     }
 
-    @objc fileprivate class func requiredPropertiesForClass(_: AnyClass) -> NSArray? {
+    @objc fileprivate; class func requiredPropertiesForClass(_: AnyClass) -> NSArray? {
         return nil
     }
 
     // Get information about each of the linking objects properties.
-    @objc fileprivate class func getLinkingObjectsProperties(_ object: AnyObject) -> NSDictionary {
+    @objc fileprivate; class func getLinkingObjectsProperties(_ object: AnyObject) -> NSDictionary {
         let properties = Mirror(reflecting: object).children.filter { (prop: Mirror.Child) in
             return prop.value as? LinkingObjectsBase != nil
         }.flatMap { (prop: Mirror.Child) in

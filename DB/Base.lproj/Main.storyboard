@@ -411,17 +411,17 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                         <viewControllerLayoutGuide type="bottom" id="i03-7k-JVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oh8-SJ-JD2">
-                        <rect key="frame" x="0.0" y="0.0" width="848" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="nFR-iE-WqJ">
-                                <rect key="frame" x="0.0" y="-841" width="848" height="1508"/>
+                                <rect key="frame" x="-4" y="-14" width="383" height="681"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nFR-iE-WqJ" secondAttribute="height" multiplier="375:667" id="4ZM-9J-DDC"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-XO-UQV">
-                                <rect key="frame" x="43" y="514" width="761" height="164"/>
+                                <rect key="frame" x="39" y="291" width="296" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Ti-XO-UQV" secondAttribute="height" multiplier="144:31" id="TK2-gR-laj"/>
@@ -432,7 +432,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-N6-vAv">
-                                <rect key="frame" x="43" y="698" width="761" height="164"/>
+                                <rect key="frame" x="39" y="375" width="296" height="63.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yhd-N6-vAv" secondAttribute="height" multiplier="144:31" id="o1O-jF-G2f"/>
                                 </constraints>
@@ -442,7 +442,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-0I-7Qx">
-                                <rect key="frame" x="43" y="330" width="761" height="164"/>
+                                <rect key="frame" x="39" y="207" width="296" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJJ-0I-7Qx" secondAttribute="height" multiplier="144:31" id="osx-MB-DRd"/>
                                 </constraints>
@@ -452,7 +452,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-aE-3Vk">
-                                <rect key="frame" x="67" y="96" width="715" height="189"/>
+                                <rect key="frame" x="63" y="96" width="250" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bqO-aE-3Vk" secondAttribute="height" multiplier="300:79" id="Fqc-by-2U1"/>
                                     <constraint firstAttribute="height" constant="79" id="KyT-A2-ae9"/>
@@ -470,7 +470,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-mn-Iiu">
-                                <rect key="frame" x="20" y="605" width="47" height="47"/>
+                                <rect key="frame" x="16" y="605" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="7Kn-4L-k8S"/>
                                     <constraint firstAttribute="height" constant="47" id="Fn0-vH-u26"/>
@@ -1087,7 +1087,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                         <rect key="frame" x="0.0" y="28" width="383" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55M-Ae-TkD" id="Gfh-SA-27o">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-mS-Nhy">
@@ -1347,7 +1347,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vR-SY-nKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.5" y="2992.5"/>
+            <point key="canvasLocation" x="1906" y="2929"/>
         </scene>
         <!--Album defaultphoto-->
         <scene sceneID="JVp-5B-DOw">
@@ -1841,7 +1841,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9H3-kX-eYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="2521"/>
+            <point key="canvasLocation" x="651" y="2522"/>
         </scene>
     </scenes>
     <resources>
@@ -1973,7 +1973,7 @@ PBg/GEQYTBhPGGEYZBhpAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAAAAAAAAAAGGs
         <image name="s_title.png" width="242" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5xk-44-Lcj"/>
-        <segue reference="sEM-aE-9tf"/>
+        <segue reference="ZsS-yQ-EHr"/>
+        <segue reference="yQM-lS-wbh"/>
     </inferredMetricsTieBreakers>
 </document>

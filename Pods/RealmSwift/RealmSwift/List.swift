@@ -542,22 +542,22 @@ extension List {
 
 /// :nodoc:
 /// Internal class. Do not use directly.
-open class ListBase: RLMListBase {
+open; class ListBase: RLMListBase {
     // Printable requires a description property defined in Swift (and not obj-c),
     // and it has to be defined as @objc override, which can't be done in a
     // generic class.
     /// Returns a human-readable description of the objects contained in the List.
-    @objc open override var description: String {
+    @objc open; override var description: String {
         return descriptionWithMaxDepth(RLMDescriptionMaxDepth)
     }
 
-    @objc fileprivate func descriptionWithMaxDepth(_ depth: UInt) -> String {
+    @objc fileprivate; func descriptionWithMaxDepth(_ depth: UInt) -> String {
         let type = "List<\(_rlmArray.objectClassName)>"
         return gsub("RLMArray <0x[a-z0-9]+>", template: type, string: _rlmArray.description(withMaxDepth: depth)) ?? type
     }
 
     /// Returns the number of objects in this List.
-    open var count: Int { return Int(_rlmArray.count) }
+    open; var count: Int { return Int(_rlmArray.count) }
 }
 
 /**

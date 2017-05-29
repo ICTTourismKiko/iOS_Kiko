@@ -53,7 +53,6 @@ class PrintPreviewController: UIViewController {
         
         //let path = arrayPaths[0] as NSString
         
-
         let path = NSTemporaryDirectory();
         let fullname : NSString = (filename as String) + ".pdf" as NSString
         let pdfFilename = (path as String) + "/"+(fullname as String)

@@ -808,7 +808,7 @@ extension AnyRealmCollection {
  An iterator for a `RealmCollectionType` instance.
 */
 public final class RLMGenerator<T: Object>: IteratorProtocol {
-    fileprivate let generatorBase: NSFastEnumerationIterator
+    fileprivate; let generatorBase: NSFastEnumerationIterator
 
     internal init(collection: RLMCollection) {
         generatorBase = NSFastEnumerationIterator(collection)
@@ -1271,7 +1271,7 @@ public final class AnyRealmCollection<T: Object>: RealmCollectionType {
 
     /// The type of the objects contained in the collection.
     public typealias Element = T
-    fileprivate let base: _AnyRealmCollectionBase<T>
+    fileprivate; let base: _AnyRealmCollectionBase<T>
 
     /// Creates an `AnyRealmCollection` wrapping `base`.
     public init<C: RealmCollectionType where C.Element == T>(_ base: C) {

@@ -466,11 +466,11 @@ extension Int64: AddableType {}
 
 /// :nodoc:
 /// Internal class. Do not use directly.
-open class ResultsBase: NSObject, NSFastEnumeration {
+open; class ResultsBase: NSObject, NSFastEnumeration {
     internal let rlmResults: RLMResults
 
     /// Returns a human-readable description of the objects contained in these results.
-    open override var description: String {
+    open; override var description: String {
         let type = "Results<\(rlmResults.objectClassName)>"
         return gsub("RLMResults <0x[a-z0-9]+>", template: type, string: rlmResults.description) ?? type
     }
@@ -483,7 +483,7 @@ open class ResultsBase: NSObject, NSFastEnumeration {
 
     // MARK: Fast Enumeration
 
-    open func countByEnumerating(with state: UnsafeMutablePointer<NSFastEnumerationState>,
+    open; func countByEnumerating(with state: UnsafeMutablePointer<NSFastEnumerationState>,
                                             objects buffer: AutoreleasingUnsafeMutablePointer<AutoreleasingUnsafeMutablePointer<AnyObject?>>,
                                             count len: Int) -> Int {
         return Int(rlmResults.countByEnumerating(with: state,
@@ -583,15 +583,15 @@ public final class Results<T: Object>: ResultsBase {
     public subscript(index: Int) -> T {
         get {
             throwForNegativeIndex(index)
-            return unsafeBitCast(rlmResults[UInt(index)], to: T.self)
+            return unsafeBitCast(rlmResults[UInt(index)], T.self)
         }
     }
 
     /// Returns the first object in the results, or `nil` if the results are empty.
-    public var first: T? { return unsafeBitCast(rlmResults.firstObject(), to: Optional<T>.self) }
+    public var first: T? { return unsafeBitCast(rlmResults.firstObject(), Optional<T>.self) }
 
     /// Returns the last object in the results, or `nil` if the results are empty.
-    public var last: T? { return unsafeBitCast(rlmResults.lastObject(), to: Optional<T>.self) }
+    public var last: T? { return unsafeBitCast(rlmResults.lastObject(), Optional<T>.self) }
 
     // MARK: KVC
 

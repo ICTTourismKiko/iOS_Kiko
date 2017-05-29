@@ -326,8 +326,8 @@ public final class Migration {
      */
     public func enumerate(_ objectClassName: String, _ block: MigrationObjectEnumerateBlock) {
         rlmMigration.enumerateObjects(objectClassName) {
-            block(oldObject: unsafeBitCast($0, to: MigrationObject.self),
-                  newObject: unsafeBitCast($1, to: MigrationObject.self))
+            block(oldObject: unsafeBitCast($0, MigrationObject.self),
+                  newObject: unsafeBitCast($1, MigrationObject.self))
         }
     }
 
@@ -348,7 +348,7 @@ public final class Migration {
      - returns: The newly created object.
      */
     public func create(_ className: String, value: AnyObject = [:]) -> MigrationObject {
-        return unsafeBitCast(rlmMigration.createObject(className, withValue: value), to: MigrationObject.self)
+        return unsafeBitCast(rlmMigration.createObject(className, withValue: value), MigrationObject.self)
     }
 
     /**

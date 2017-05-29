@@ -123,7 +123,7 @@ extension Schema: Equatable {}
 
 /// Returns whether the two schemas are equal.
 public func == (lhs: Schema, rhs: Schema) -> Bool { // swiftlint:disable:this valid_docs
-    return lhs.rlmSchema.isEqual(to: rhs.rlmSchema)
+    return lhs.rlmSchema.isEqual(rhs.rlmSchema)
 }
 
 #endif

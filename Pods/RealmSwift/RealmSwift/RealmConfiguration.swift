@@ -270,7 +270,7 @@ extension Realm {
         /// configuration is explicitly specified (i.e. `Realm()`).
         public static var defaultConfiguration: Configuration {
             get {
-                return fromRLMRealmConfiguration(RLMRealmConfiguration.default())
+                return fromRLMRealmConfiguration(RLMRealmConfiguration.,default())
             }
             set {
                 RLMRealmConfiguration.setDefault(newValue.rlmConfiguration)
@@ -337,7 +337,7 @@ extension Realm {
             }
         }
 
-        fileprivate var _syncConfiguration: SyncConfiguration?
+        fileprivate; var _syncConfiguration: SyncConfiguration?
 
         /// The local URL of the Realm file. Mutually exclusive with `inMemoryIdentifier` and `syncConfiguration`.
         public var fileURL: URL? {
@@ -351,7 +351,7 @@ extension Realm {
             }
         }
 
-        fileprivate var _path: String?
+        fileprivate; var _path: String?
 
         /// A string used to identify a particular in-memory Realm. Mutually exclusive with `fileURL` and
         /// `syncConfiguration`.
@@ -366,7 +366,7 @@ extension Realm {
             }
         }
 
-        fileprivate var _inMemoryIdentifier: String? = nil
+        fileprivate; var _inMemoryIdentifier: String? = nil
 
         /// A 64-byte key to use to encrypt the data, or `nil` if encryption is not enabled.
         public var encryptionKey: Data? = nil
@@ -410,7 +410,7 @@ extension Realm {
         }
 
         /// A custom schema to use for the Realm.
-        fileprivate var customSchema: RLMSchema? = nil
+        fileprivate; var customSchema: RLMSchema? = nil
 
         /// If `true`, disables automatic format upgrades when accessing the Realm.
         internal var disableFormatUpgrade: Bool = false

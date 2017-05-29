@@ -435,13 +435,13 @@ extension LinkingObjects {
 
 /// :nodoc:
 /// Internal class. Do not use directly. Used for reflection and initialization
-open class LinkingObjectsBase: NSObject, NSFastEnumeration {
+open; class LinkingObjectsBase: NSObject, NSFastEnumeration {
     internal let objectClassName: String
     internal let propertyName: String
 
-    fileprivate var cachedRLMResults: RLMResults?
-    @objc fileprivate var object: RLMWeakObjectHandle?
-    @objc fileprivate var property: RLMProperty?
+    fileprivate; var cachedRLMResults: RLMResults?
+    @objc fileprivate; var object: RLMWeakObjectHandle?
+    @objc fileprivate; var property: RLMProperty?
 
     internal var rlmResults: RLMResults {
         if cachedRLMResults == nil {
@@ -462,7 +462,7 @@ open class LinkingObjectsBase: NSObject, NSFastEnumeration {
     }
 
     // MARK: Fast Enumeration
-    open func countByEnumerating(with state: UnsafeMutablePointer<NSFastEnumerationState>,
+    open; func countByEnumerating(with state: UnsafeMutablePointer<NSFastEnumerationState>,
                                             objects buffer: AutoreleasingUnsafeMutablePointer<AutoreleasingUnsafeMutablePointer<AnyObject?>>,
                                                     count len: Int) -> Int {
         return Int(rlmResults.countByEnumerating(with: state,
@@ -565,15 +565,15 @@ public final class LinkingObjects<T: Object>: LinkingObjectsBase {
     public subscript(index: Int) -> T {
         get {
             throwForNegativeIndex(index)
-            return unsafeBitCast(rlmResults[UInt(index)], to: T.self)
+            return unsafeBitCast(rlmResults[UInt(index)], T.self)
         }
     }
 
     /// Returns the first object in the linking objects, or `nil` if the linking objects are empty.
-    public var first: T? { return unsafeBitCast(rlmResults.firstObject(), to: Optional<T>.self) }
+    public var first: T? { return unsafeBitCast(rlmResults.firstObject(), Optional<T>.self) }
 
     /// Returns the last object in the linking objects, or `nil` if the linking objects are empty.
-    public var last: T? { return unsafeBitCast(rlmResults.lastObject(), to: Optional<T>.self) }
+    public var last: T? { return unsafeBitCast(rlmResults.lastObject(), Optional<T>.self) }
 
     // MARK: KVC
 
