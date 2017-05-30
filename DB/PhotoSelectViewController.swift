@@ -9,7 +9,7 @@
 import UIKit
 
 class PhotoSelectViewController: UIViewController {
-
+    
     @IBOutlet weak var scroll: UIScrollView!
     
     @IBOutlet weak var navigation: UINavigationBar!
@@ -23,6 +23,8 @@ class PhotoSelectViewController: UIViewController {
     @IBOutlet weak var pic7: UIImageView!
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var imageArray: Array<UIImageView> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,9 +33,17 @@ class PhotoSelectViewController: UIViewController {
         
         backimage.image=UIImage(named:"haikei.jpg")
         
+        /* pic達を配列に格納しておく */
+        imageArray.append(pic1)
+        imageArray.append(pic2)
+        imageArray.append(pic3)
+        imageArray.append(pic4)
+        imageArray.append(pic5)
+        imageArray.append(pic6)
+        imageArray.append(pic7)
         
-//        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
-//            userInfo: nil, repeats: true);
+        //        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("pic_show"),
+        //            userInfo: nil, repeats: true);
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +54,7 @@ class PhotoSelectViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.pic_show()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -86,60 +96,30 @@ class PhotoSelectViewController: UIViewController {
     }
     
     func pic_show(){
-        
-        if(appDelegate.cardID[1] == 0){
-            pic1.image = UIImage(named: "noimage.png")
-        }else{
-            pic1.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[1]).photo?.photoData)!)
+        for i in 0 ..< 7 {
+            if(appDelegate.cardID[i+1] == 0){
+                imageArray[i].image = UIImage(named: "noimage.png")
+            }else{
+                imageArray[i].image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[i+1]).photo?.photoData)!)
+            }
         }
-        if(appDelegate.cardID[2] == 0){
-            pic2.image = UIImage(named: "noimage.png")
-        }else{
-            pic2.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[2]).photo?.photoData)!)
-        }
-        if(appDelegate.cardID[3] == 0){
-            pic3.image = UIImage(named: "noimage.png")
-        }else{
-            pic3.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[3]).photo?.photoData)!)
-        }
-        if(appDelegate.cardID[4] == 0){
-            pic4.image = UIImage(named: "noimage.png")
-        }else{
-            pic4.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[4]).photo?.photoData)!)
-        }
-        if(appDelegate.cardID[5] == 0){
-            pic5.image = UIImage(named: "noimage.png")
-        }else{
-            pic5.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[5]).photo?.photoData)!)
-        }
-        if(appDelegate.cardID[6] == 0){
-            pic6.image = UIImage(named: "noimage.png")
-        }else{
-            pic6.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[6]).photo?.photoData)!)
-        }
-        if(appDelegate.cardID[7] == 0){
-            pic7.image = UIImage(named: "noimage.png")
-        }else{
-            pic7.image = PhotoController().NSSImage((DB().getCard(appDelegate.cardID[7]).photo?.photoData)!)
-        }
-        
     }
     @IBAction func finish(_ sender: AnyObject) {
         if((appDelegate.cardID[1]==0)||(appDelegate.cardID[2]==0)||(appDelegate.cardID[3]==0)||(appDelegate.cardID[4]==0)||(appDelegate.cardID[5]==0)||(appDelegate.cardID[6]==0)||(appDelegate.cardID[7]==0)
             ){
-                let myAlert: UIAlertController = UIAlertController(title: "エラー", message: "画像を全て選んでください", preferredStyle: .alert)
-                // OKのアクションを作成する.
-                let myOkAction = UIAlertAction(title: "OK", style: .default) { action in }
-                // OKのActionを追加する.
-                myAlert.addAction(myOkAction)
-                // UIAlertを発動する.
-                present(myAlert, animated: true, completion: nil)
+            let myAlert: UIAlertController = UIAlertController(title: "エラー", message: "画像を全て選んでください", preferredStyle: .alert)
+            // OKのアクションを作成する.
+            let myOkAction = UIAlertAction(title: "OK", style: .default) { action in }
+            // OKのActionを追加する.
+            myAlert.addAction(myOkAction)
+            // UIAlertを発動する.
+            present(myAlert, animated: true, completion: nil)
         }else{
             let targetViewController = storyboard!.instantiateViewController(withIdentifier: "sample" )
             self.present(targetViewController, animated: true, completion: nil)
-//            let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
-//            let nextView = storyboard.instantiateInitialViewController()
-//            present(nextView!, animated: true, completion: nil)
+            //            let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
+            //            let nextView = storyboard.instantiateInitialViewController()
+            //            present(nextView!, animated: true, completion: nil)
         }
     }
 }
