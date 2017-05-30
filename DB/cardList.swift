@@ -17,11 +17,11 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var cards:[cardData] = [cardData]()
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-                
+        
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, for:. default)
         
@@ -35,8 +35,8 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         imageView.image = image
         self.tableView.backgroundView = imageView
         
-//        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
-//            userInfo: nil, repeats: true);
+        //        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
+        //            userInfo: nil, repeats: true);
         
         
         //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
@@ -59,8 +59,8 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         for i in 1...DB().cardListSize(){
             let card = DB().getCard(i)
             let f1 = cardData(title: card.cardText!.title,
-                introText: card.cardText!.text, imageUrl: NSData(data: (DB().getCard(i).photo?.photoData)!) as Data,id: i-1,flag:DB().getFlagStatement(i))
-             cards.append(f1)
+                              introText: card.cardText!.text, imageUrl: NSData(data: (DB().getCard(i).photo?.photoData)!) as Data,id: i-1,flag:DB().getFlagStatement(i))
+            cards.append(f1)
         }
     }
     

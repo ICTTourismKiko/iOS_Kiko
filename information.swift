@@ -15,13 +15,13 @@ class information: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
         self.navigation.setBackgroundImage(navBarImage, for:. default)
-    
         
-    self.uitext.isEditable = false
-    
+        
+        self.uitext.isEditable = false
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,5 +32,5 @@ class information: UIViewController {
     @IBAction func backbutton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
 }

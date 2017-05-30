@@ -11,11 +11,11 @@ import UIKit
 class PrintPreviewController: UIViewController {
     
     var print_NSData = Data()
-
+    
     @IBOutlet weak var front: UIImageView!
     @IBOutlet weak var back: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
-  //  @IBOutlet weak var scroll: UIScrollView!
+    //  @IBOutlet weak var scroll: UIScrollView!
     let image = UIImage(named: "omote.jpg")
     let filename : String = "ki-ko"
     //let arrayPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -32,20 +32,20 @@ class PrintPreviewController: UIViewController {
         print_NSData = Image_NSData(appDelegate.view_pic)!
         
         
-//        // スクロールビューの設定
-//        self.scroll.delegate = self
-//        self.scroll.minimumZoomScale = 1
-//        self.scroll.maximumZoomScale = 4
-//        self.scroll.scrollEnabled = true
-//        self.scroll.showsHorizontalScrollIndicator = true
-//        self.scroll.showsVerticalScrollIndicator = true
-//        
-//        
-//        // ピンチイン・ピンチアウト
-//        func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-//            // print("pinch")
-//            return self
-//        }
+        //        // スクロールビューの設定
+        //        self.scroll.delegate = self
+        //        self.scroll.minimumZoomScale = 1
+        //        self.scroll.maximumZoomScale = 4
+        //        self.scroll.scrollEnabled = true
+        //        self.scroll.showsHorizontalScrollIndicator = true
+        //        self.scroll.showsVerticalScrollIndicator = true
+        //
+        //
+        //        // ピンチイン・ピンチアウト
+        //        func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        //            // print("pinch")
+        //            return self
+        //        }
         
         //裏、表のプレビュー表示
         back.image=appDelegate.view_pic
@@ -77,7 +77,7 @@ class PrintPreviewController: UIViewController {
         UIGraphicsEndPDFContext()
         //pdfをnsDtataに変換
         myData = try! Data(contentsOf: URL(fileURLWithPath: pdfFilename))
-
+        
     }
     
     //画像をNSDataに変換
@@ -85,7 +85,7 @@ class PrintPreviewController: UIViewController {
         let data:Data = UIImagePNGRepresentation(image)!
         return data
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -106,7 +106,7 @@ class PrintPreviewController: UIViewController {
             printController.printingItem = myData
             printController.present(animated: true, completionHandler: nil)
         }
-
+        
     }
     
     @IBAction func back(_ sender: AnyObject) {

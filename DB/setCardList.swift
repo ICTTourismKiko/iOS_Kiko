@@ -47,23 +47,23 @@ UINavigationControllerDelegate{
         if height >= 667 {
             //self.title.font = UIFont.systemFontOfSize(14)
             self.introText.font = UIFont.systemFont(ofSize: 14)
-           
+            
             //iPhone6 Plus
-//        }else if height == 736 {
-//            self.introText.font = UIFont.systemFontOfSize(15)
+            //        }else if height == 736 {
+            //            self.introText.font = UIFont.systemFontOfSize(15)
             
             //iPhone5・5s・5c
         }else {
-           //self.title.font = UIFont.systemFontOfSize(15)
-           self.introText.font = UIFont.systemFont(ofSize: 12)
-           self.title.font = UIFont.systemFont(ofSize: 14)
-
+            //self.title.font = UIFont.systemFontOfSize(15)
+            self.introText.font = UIFont.systemFont(ofSize: 12)
+            self.title.font = UIFont.systemFont(ofSize: 14)
+            
         }
         
         self.title.text = card.title as String
         self.introText.text = card.introText as String
         
-            // 表示する画像を設定する.
+        // 表示する画像を設定する.
         let myImage = PhotoController().NSSImage(card.imageUrl!)
         self.iconImage.image = myImage
         self.iconImage.layer.cornerRadius = 5
@@ -72,16 +72,16 @@ UINavigationControllerDelegate{
         cardID = card.id+1
         
         /* フラグボタンの設定 */
-       flag.setImage(UIImage(named: "favourites7 (1).png")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
+        flag.setImage(UIImage(named: "favourites7 (1).png")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
         
-       flagSituation = card.flag
+        flagSituation = card.flag
         
-       flagPaint(flagSituation)
+        flagPaint(flagSituation)
         
     }
     
     func flagPaint(_ f :Bool){
-      if f == false {
+        if f == false {
             flag.tintColor = UIColor.lightGray
         }else {
             flag.tintColor = UIColor.orange

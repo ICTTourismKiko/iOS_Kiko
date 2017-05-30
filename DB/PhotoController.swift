@@ -14,10 +14,9 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Timer.scheduledTimer(timeInterval: 1.0,target:self,selector:#selector(PhotoController.showActionSheet),
-            userInfo: nil, repeats: false);
+        Timer.scheduledTimer(timeInterval: 1.0,target:self,selector:#selector(PhotoController.showActionSheet), userInfo: nil, repeats: false);
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,7 +52,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         
         self.present(myAlert, animated: true, completion: nil)
     }
-
+    
     // ライブラリから写真を選択する
     func pickImageFromLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
@@ -102,7 +101,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
             
             
             Timer.scheduledTimer(timeInterval: 0.01,target:self,selector:#selector(PhotoController.back),
-                userInfo: nil, repeats: false);
+                                 userInfo: nil, repeats: false);
         }
         
         //閉じる処理
@@ -121,7 +120,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
         Timer.scheduledTimer(timeInterval: 0.01,target:self,selector:#selector(PhotoController.back),
-            userInfo: nil, repeats: false);
+                             userInfo: nil, repeats: false);
     }
     
     //写真データをstring型に変換
@@ -138,10 +137,10 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         
         //NSDataの生成が成功していたら
         let decodeSuccess = data
-            
+        
         //NSDataからUIImageを生成
         let img = UIImage(data: decodeSuccess)
-            
+        
         //結果を返却
         return img
         
@@ -149,5 +148,5 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     func back() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
 }

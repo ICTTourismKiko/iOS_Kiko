@@ -70,17 +70,17 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
                 
             }else if !(titleText.text == cardTitle && contentText.text == cardContent) {
                 db.updateTitleAndText(id, title: titleText.text!, text: contentText.text)
-            
+                
             }
             cardTitle = changedTitle!
             cardContent = changedContent!
-        
+            
         }
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         myAlert.addAction(defaultAction)
         present(myAlert, animated: true, completion: nil)
-
+        
     }
     
     //戻るボタンを押したら、画面を閉じる

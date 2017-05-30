@@ -51,7 +51,7 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
     
     // ピンチイン・ピンチアウト
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-       // print("pinch")
+        // print("pinch")
         return self.myImageView
     }
     // ダブルタップ
