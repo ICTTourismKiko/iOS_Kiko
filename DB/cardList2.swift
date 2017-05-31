@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SKPhotoBrowser
 
 class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -77,6 +78,28 @@ class cardList2: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.contentView.backgroundColor = UIColor.clear
         return cell
     }
+    
+    
+    @IBAction func openImage(_ sender: Any) {
+        // 押されたボタンを取得
+        let botton = sender as! UIButton
+        let cell = botton.superview?.superview as! setCardList2
+        
+        // クリックされたcellの位置を取得
+        let row = tableView2.indexPath(for: cell)?.row
+        
+        // 1. create SKPhoto Array from UIImage
+        var images = [SKPhoto]()
+        let src = NSData(data: (DB().getCard(row!+1).photo?.photoData)!) as Data
+        let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
+        images.append(photo)
+        
+        // 2. create PhotoBrowser Instance, and present from your viewController.
+        let browser = SKPhotoBrowser(photos: images)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
+    }
+    
     @IBAction func photo_select(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }

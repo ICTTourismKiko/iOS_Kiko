@@ -6,6 +6,7 @@ target 'キーコ紀行' do
   use_frameworks!
 
 pod ‘RealmSwift’
+pod 'SKPhotoBrowser', :git => 'https://github.com/suzuki-0000/SKPhotoBrowser.git', :branch => 'swift3'
 
   # Pods for キーコ紀行
 

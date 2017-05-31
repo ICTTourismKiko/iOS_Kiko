@@ -77,10 +77,6 @@ UINavigationControllerDelegate{
         
     }
     
-    @IBAction func openImage(_ sender: AnyObject) {
-        appdelegate.P_ID = cardID
-    }
-    
     @IBAction func select_photo(_ sender: AnyObject) {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.cardID[appDelegate.picID] = cardID

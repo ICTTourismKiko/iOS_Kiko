@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SKPhotoBrowser
 
 class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     
@@ -40,7 +41,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var CardTopPoemu = UILabel()
     
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    
+    var pic_id = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -50,7 +53,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         self.navigation.setBackgroundImage(navBarImage, for:. default)
         
         //選択したIDを持ってくる処理
-        let pic_id = appDelegate.P_ID
+        pic_id = appDelegate.P_ID!
         
         //ラベルの設置
         CardSyousai.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-120, width: 220, height: 120)
@@ -93,10 +96,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         self.view.addSubview(CardTopSyousai)
         self.view.addSubview(CardTopPoemu)
         
-        CardSyousai.text = DB().getCard(pic_id!).cardText?.text
+        CardSyousai.text = DB().getCard(pic_id).cardText?.text
         
         //カードの画像を表示
-        camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id!).photo?.photoData)!)
+        camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id).photo?.photoData)!)
         camera2View.layer.cornerRadius = 10
         camera2View.layer.masksToBounds = true
         
@@ -125,16 +128,16 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         
         //選択されたカードのピンを作成
         PinArray.append(Pin())
-        PinArray[PinArray.count-1].ID = pic_id!
-        PinArray[PinArray.count-1].title = DB().getCard(pic_id!).spotName
-        PinArray[PinArray.count-1].text = (DB().getCard(pic_id!).cardText?.text)!
-        PinArray[PinArray.count-1].info = DB().getCard(pic_id!).info
-        PinArray[PinArray.count-1].x = DB().getCard(pic_id!).position_x
-        PinArray[PinArray.count-1].y = DB().getCard(pic_id!).position_y
+        PinArray[PinArray.count-1].ID = pic_id
+        PinArray[PinArray.count-1].title = DB().getCard(pic_id).spotName
+        PinArray[PinArray.count-1].text = (DB().getCard(pic_id).cardText?.text)!
+        PinArray[PinArray.count-1].info = DB().getCard(pic_id).info
+        PinArray[PinArray.count-1].x = DB().getCard(pic_id).position_x
+        PinArray[PinArray.count-1].y = DB().getCard(pic_id).position_y
         PinArray[PinArray.count-1].coordinate = CLLocationCoordinate2DMake(PinArray[PinArray.count-1].x, PinArray[PinArray.count-1].y)
         
-        if((flagTrueIDList.index(of: pic_id!)) != nil){
-            PinArray[flagTrueIDList.index(of: pic_id!)!].imageName = ""
+        if((flagTrueIDList.index(of: pic_id)) != nil){
+            PinArray[flagTrueIDList.index(of: pic_id)!].imageName = ""
             PinArray[PinArray.count-1].imageName = "redpin30px.png"
         }else{
             PinArray[PinArray.count-1].imageName = "redpin30px.png"
@@ -372,7 +375,16 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     }
     
     @IBAction func openImage(_ sender: AnyObject) {
-    
+        // 1. create SKPhoto Array from UIImage
+        var images = [SKPhoto]()
+        let src = NSData(data: (DB().getCard(pic_id).photo?.photoData)!) as Data
+        let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
+        images.append(photo)
+        
+        // 2. create PhotoBrowser Instance, and present from your viewController.
+        let browser = SKPhotoBrowser(photos: images)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
     }
     
     @IBAction func backbutton(_ sender: AnyObject) {

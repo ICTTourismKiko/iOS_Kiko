@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SKPhotoBrowser
 
 class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     @IBOutlet weak var titleText: UITextField!
@@ -126,7 +127,16 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     }
     
     @IBAction func openImage(_ sender: AnyObject) {
+        // 1. create SKPhoto Array from UIImage
+        var images = [SKPhoto]()
+        let src = NSData(data: (DB().getCard(id).photo?.photoData)!) as Data
+        let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
+        images.append(photo)
         
+        // 2. create PhotoBrowser Instance, and present from your viewController.
+        let browser = SKPhotoBrowser(photos: images)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
     }
     
     func textViewDidChange(_ textView: UITextView){
