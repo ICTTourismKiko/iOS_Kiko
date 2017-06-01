@@ -240,166 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vu-WT-Uq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="642"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="aLn-CI-NTp">
-            <objects>
-                <viewController id="gWN-sg-ahK" customClass="information" customModule="キーコ紀行" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wcL-vb-Fiv"/>
-                        <viewControllerLayoutGuide type="bottom" id="4yZ-fw-ka8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pTk-f5-xfJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" backIndicatorImage="bar6.png" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-DS-kR6">
-                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="fYA-FH-Qov"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="利用規約" id="WQP-NC-bfn">
-                                        <barButtonItem key="leftBarButtonItem" style="done" id="kOr-Uf-Z0J">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9J1-fr-GQw">
-                                                <rect key="frame" x="16" y="7" width="85" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="戻る">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="backbutton:" destination="gWN-sg-ahK" eventType="touchUpInside" id="TRl-gy-g2J"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-LP-aDq">
-                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">[キーコ紀行とは]
-キーコ紀行は木古内町観光の思い出をリーフレットにできるアプリです。
-木古内のグルメを味わえる場所や歴史的建造物などの魅力的なスポットを、「そこでどんなことができるか？」という観点で紹介します。
-このアプリを使って町歩きをしながら写真を撮ることで、自分だけのリーフレットを簡単に作ることができます。
-キーコ紀行で木古内観光の思い出を形にして残しましょう！！！
- 
-[キーコ紀行の主な機能]
-・木古内の観光スポット情報を見ることができます。
-・マップから現在地と観光スポットの場所を知ることができます。
-・AirPrintを使って、アプリで作ったリーフレットを印刷できます。
- 
-[推奨環境]
-iPhone5　以降
-GPSを利用するためGPS搭載のデバイスを利用することを推奨します。
-リーフレットを印刷するためには、AirPrint対応のプリンタが必要です。
- 
-[サポート用サイト]
-https://www.facebook.com/FUNTourismProject/
- 
-[使い方]
-[スポットの詳細情報を見る]
- 
-Top画面
-・「観光する」をタップします。
- 
-カードリスト画面
-・気になったスポットのピンボタンをタップします。
-・星のボタンをタップしておくことで、お気に入りスポットを登録できます。
- 
-マップ画面
-・詳細情報（営業時間や料金等）を閲覧できます。
-・マップ上には現在地と自分の選択したスポットとのルートが表示されます。
-・カードリスト画面でお気に入り登録しておいたスポットも、星のマークでマップ上に表示されます。
-・星をタップすると詳細情報がそのスポットの情報に切り替わります。
- 
-[カードのタイトル・文章を編集する]
-Top画面
-・「観光する」をタップします。
-
-カードリスト画面
-・ペンボタンをタップします。
-
-編集画面
-・タイトル、紹介文を自分好みに編集できます。
-・それぞれの右下に表示されている数字は文字数制限を意味しており、あと何文字打ち込めるかを表示しています。
-・「保存する」をタップすると編集した内容が保存され、カードに反映されます。
-・「元に戻す」をタップすると編集内容を編集前に戻します。
-
-[カードに撮影した写真を反映させる]
-Top画面
-・「観光する」をタップします。
-
-カードリスト画面
-・カメラボタンをタップします。
-
-カメラ撮影画面
-・写真を撮影します。
-・「再撮影」をタップすると撮影しなおせます。
-・「使用する」をタップすると撮影した画像が、カードに反映されます。
-
-[振り返る]
-Top画面
-・「振り返る」をタップします。
-
-アルバム画面
-・アルバムが表示されます。スワイプすると違う写真を閲覧できます。撮影をしていないと写真は表示されません。
-・画面右上の「サンプル写真」をタップすると、どのような感じで写真が閲覧できるかを試すことができます。
-・画像をタップすると写真を細かく閲覧できます。
-
-[リーフレットを印刷する]
-Top画面
-・「印刷する」をタップします。
-
-写真選択画面
-・「タップして写真を選ぶ」となっているところをタップします。
-・カードリスト画面に似た画面になるので、その中から気に入ったカードを選択します。
-・選択した写真が写真選択画面の空いていた部分に反映されます。
-・この要領で全ての空欄を埋めます。
-・「完了」をタップします。
-
-印刷プレビュー画面
-・自分の選択した写真に合ったリーフレットの裏表の印刷イメージが表示されます。
-・良ければ「印刷」をタップします。やり直したければ、「戻る」をタップして選択しなおしましょう。
-・AirprintとWi-Fiで実機を接続した状態で、発行部数等を設定して印刷します。
-・自分の編集したリーフレットが印刷されます。
-
-[備考]
-本アプリケーションの利用によって発生した損害やトラブルに対しましては、一切責任を負いませんので予めご了承ください。
- 
-キーコ紀行
-Copyright(c) Future University Hakodate. All Rights Reserved.
- 
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="rNp-DS-kR6" firstAttribute="leading" secondItem="pTk-f5-xfJ" secondAttribute="leadingMargin" constant="-20" id="C5k-Wz-U3b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rNp-DS-kR6" secondAttribute="trailing" constant="-20" id="FWG-EZ-neH"/>
-                            <constraint firstItem="fnn-LP-aDq" firstAttribute="top" secondItem="rNp-DS-kR6" secondAttribute="bottom" id="IYl-wX-HKd"/>
-                            <constraint firstItem="rNp-DS-kR6" firstAttribute="top" secondItem="wcL-vb-Fiv" secondAttribute="bottom" id="Yz2-xT-BoU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fnn-LP-aDq" secondAttribute="trailing" constant="-20" id="hbZ-XK-b07"/>
-                            <constraint firstItem="fnn-LP-aDq" firstAttribute="leading" secondItem="pTk-f5-xfJ" secondAttribute="leadingMargin" constant="-20" id="sgX-8j-EjF"/>
-                            <constraint firstItem="4yZ-fw-ka8" firstAttribute="top" secondItem="fnn-LP-aDq" secondAttribute="bottom" id="x97-Rs-ot7"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="Hy4-gK-Uu0"/>
-                    <connections>
-                        <outlet property="navigation" destination="rNp-DS-kR6" id="cVO-SZ-wI5"/>
-                        <outlet property="uitext" destination="fnn-LP-aDq" id="7vb-Fw-gac"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6nj-2i-JZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-442" y="897"/>
+            <point key="canvasLocation" x="2492" y="526"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P32-3L-iHC">
@@ -476,7 +317,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                 </constraints>
                                 <state key="normal" backgroundImage="info_2.png"/>
                                 <connections>
-                                    <segue destination="gWN-sg-ahK" kind="show" id="OY3-bK-HkC"/>
+                                    <action selector="moveInfo:" destination="5Yw-qv-psP" eventType="touchUpInside" id="ITI-RR-Fyk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -504,7 +345,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZh-T6-NOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="206"/>
+            <point key="canvasLocation" x="502" y="155"/>
         </scene>
         <!--Edit-->
         <scene sceneID="5d5-9t-CHg">
@@ -956,7 +797,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCm-7U-Pt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="833"/>
+            <point key="canvasLocation" x="1028" y="902"/>
         </scene>
         <!--Album userphoto-->
         <scene sceneID="l2T-Jq-vu0">
@@ -1035,7 +876,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlY-ZN-96G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.5" y="1924.5"/>
+            <point key="canvasLocation" x="-561" y="1814"/>
         </scene>
         <!--Card List2-->
         <scene sceneID="Ctj-P2-dDH">
@@ -1084,7 +925,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                                         <rect key="frame" x="0.0" y="28" width="383" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55M-Ae-TkD" id="Gfh-SA-27o">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-mS-Nhy">
@@ -1188,7 +1029,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX7-4y-Uvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="2226"/>
+            <point key="canvasLocation" x="2015" y="2102"/>
         </scene>
         <!--Photo Controller-->
         <scene sceneID="It0-Zy-9Z2">
@@ -1206,7 +1047,7 @@ Copyright(c) Future University Hakodate. All Rights Reserved.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpS-4F-2ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="1372"/>
+            <point key="canvasLocation" x="1905" y="1305"/>
         </scene>
         <!--Print Preview Controller-->
         <scene sceneID="zUi-2L-GK5">

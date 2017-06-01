@@ -30,4 +30,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //    @IBAction func initButton(sender: AnyObject) {
 //        DB().initAll()
 //    }
+    
+    @IBAction func moveInfo(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "information", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
 }
