@@ -382,7 +382,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
         images.append(photo)
         
-        // 2. PhotoBrowser作成 
+        // 2. PhotoBrowser作成
         let browser = SKPhotoBrowser(photos: images)
         browser.initializePageIndex(0)
         present(browser, animated: true, completion: {})
