@@ -100,6 +100,7 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.reloadData()
     }
     
+    /* Facebookみたいな画像の見方ができる関数 */
     @IBAction func openImage(_ sender: Any) {
         
         // 押されたボタンを取得
@@ -109,13 +110,13 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         // クリックされたcellの位置を取得
         let row = tableView.indexPath(for: cell)?.row
         
-        // 1. create SKPhoto Array from UIImage
+        // 1. SKPhoto作成
         var images = [SKPhoto]()
         let src = NSData(data: (DB().getCard(row!+1).photo?.photoData)!) as Data
         let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
         images.append(photo)
         
-        // 2. create PhotoBrowser Instance, and present from your viewController.
+        // 2. PhotoBrowse作成
         let browser = SKPhotoBrowser(photos: images)
         browser.initializePageIndex(0)
         present(browser, animated: true, completion: {})
