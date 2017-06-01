@@ -126,14 +126,15 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
     }
     
+    /* Facebookみたいな画像の見方ができる関数 */
     @IBAction func openImage(_ sender: AnyObject) {
-        // 1. create SKPhoto Array from UIImage
+        // 1. SKPhotoを作成
         var images = [SKPhoto]()
         let src = NSData(data: (DB().getCard(id).photo?.photoData)!) as Data
         let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
         images.append(photo)
         
-        // 2. create PhotoBrowser Instance, and present from your viewController.
+        // 2. PhotoBrowserを作成
         let browser = SKPhotoBrowser(photos: images)
         browser.initializePageIndex(0)
         present(browser, animated: true, completion: {})
