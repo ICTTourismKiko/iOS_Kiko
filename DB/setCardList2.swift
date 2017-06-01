@@ -21,27 +21,27 @@ UINavigationControllerDelegate{
     @IBOutlet weak var select_check: UIImageView!
     
     var cardID = 0
-    let appdelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
     }
     
-    func setCell(card :cardData) {
+    func setCell(_ card :cardData) {
         
-        let height = UIScreen.mainScreen().bounds.size.height
+        let height = UIScreen.main.bounds.size.height
         
         //iphoneのサイズによってカードに書かれる文のサイズを変更
         //iPhone6
         if height >= 667 {
-            self.introText.font = UIFont.systemFontOfSize(14)
+            self.introText.font = UIFont.systemFont(ofSize: 14)
             
             //iPhone6 Plus
             //        }else if height == 736 {
@@ -49,8 +49,8 @@ UINavigationControllerDelegate{
             
             //iPhone5・5s・5c
         }else {
-            self.introText.font = UIFont.systemFontOfSize(12)
-            self.title.font = UIFont.systemFontOfSize(14)
+            self.introText.font = UIFont.systemFont(ofSize: 12)
+            self.title.font = UIFont.systemFont(ofSize: 14)
 
         }
         
@@ -77,12 +77,8 @@ UINavigationControllerDelegate{
         
     }
     
-    @IBAction func openImage(sender: AnyObject) {
-        appdelegate.P_ID = cardID
-    }
-    
-    @IBAction func select_photo(sender: AnyObject) {
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    @IBAction func select_photo(_ sender: AnyObject) {
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.cardID[appDelegate.picID] = cardID
     }
 }

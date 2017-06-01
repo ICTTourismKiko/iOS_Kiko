@@ -10,7 +10,7 @@ import UIKit
 
 class album_defaultphoto: UIViewController {
     
-    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var navigationbar: UINavigationBar!
     
@@ -19,7 +19,7 @@ class album_defaultphoto: UIViewController {
         super.viewDidLoad()
         
         let navBarImage = UIImage(named: "bar6.png") as UIImage?
-        self.navigationbar.setBackgroundImage(navBarImage, forBarMetrics:. Default)
+        self.navigationbar.setBackgroundImage(navBarImage, for:. default)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "haikei.png")!)
     }
     
@@ -28,20 +28,20 @@ class album_defaultphoto: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func segmentedchanged(sender: AnyObject) {
+    @IBAction func segmentedchanged(_ sender: AnyObject) {
         switch sender.selectedSegmentIndex{
         case 0: //撮影写真
             appDelegate.pic_segmented = 0
-            self.dismissViewControllerAnimated(false, completion: nil)
+            self.dismiss(animated: false, completion: nil)
         case 1: //サンプル写真
             appDelegate.pic_segmented = 1
         default:
             break
         }
     }
-    @IBAction func backbutton(sender: AnyObject) {
+    @IBAction func backbutton(_ sender: AnyObject) {
         appDelegate.pic_segmented = 0
-        self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
