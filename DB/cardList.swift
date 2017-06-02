@@ -100,6 +100,20 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.reloadData()
     }
     
+    @IBAction func moveEdit(_ sender: Any) {
+        // 押されたボタンを取得
+        let botton = sender as! UIButton
+        let cell = botton.superview?.superview as! setCardList
+        
+        // クリックされたcellの位置を取得
+        let row = tableView.indexPath(for: cell)?.row
+        appDelegate.P_ID = row! + 1
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "edit", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
     /* Facebookみたいな画像の見方ができる関数 */
     @IBAction func openImage(_ sender: Any) {
         

@@ -31,6 +31,7 @@
 		3B5629641D45E28E007D0E94 /* new_kanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629631D45E28E007D0E94 /* new_kanko.png */; };
 		3B5629661D45E438007D0E94 /* info_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5629651D45E438007D0E94 /* info_2.png */; };
 		3BB793ED1EDFBA28007DB2FC /* information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB793EC1EDFBA28007DB2FC /* information.storyboard */; };
+		3BB793EF1EE019BB007DB2FC /* edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB793EE1EE019BB007DB2FC /* edit.storyboard */; };
 		80AABD046B4B864EA8372562 /* Pods______Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
@@ -133,6 +134,7 @@
 		3B5629631D45E28E007D0E94 /* new_kanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_kanko.png; sourceTree = "<group>"; };
 		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
 		3BB793EC1EDFBA28007DB2FC /* information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = information.storyboard; sourceTree = "<group>"; };
+		3BB793EE1EE019BB007DB2FC /* edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = edit.storyboard; sourceTree = "<group>"; };
 		454A92A94EEB495CE21F0F4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AE41918E512AEFEE631324 /* Pods-キーコ紀行.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行.debug.xcconfig"; sourceTree = "<group>"; };
 		795804001D50D1F600676B2E /* キーコ紀行.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "キーコ紀行.xcodeproj"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				8F151AE11D2F746600BED73D /* black.JPG */,
 				3B5629651D45E438007D0E94 /* info_2.png */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				3BB793EE1EE019BB007DB2FC /* edit.storyboard */,
 				3BB793EC1EDFBA28007DB2FC /* information.storyboard */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
@@ -502,6 +505,7 @@
 				DC4430531C0959380006D4F5 /* favourites7 (1).png in Resources */,
 				3B5629661D45E438007D0E94 /* info_2.png in Resources */,
 				DC23C0131BD7826B000B2465 /* Assets.xcassets in Resources */,
+				3BB793EF1EE019BB007DB2FC /* edit.storyboard in Resources */,
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
 				3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */,

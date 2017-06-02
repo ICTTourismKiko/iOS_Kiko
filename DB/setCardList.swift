@@ -96,10 +96,10 @@ UINavigationControllerDelegate{
     @IBAction func CellButtonTapped(_ sender: AnyObject) {
         appDelegate.P_ID = cardID
     }
-    
+
     /* フラグボタンを押した時の処理 */
     @IBAction func flagOnOff(_ sender: AnyObject) {
-        appDelegate.P_ID = cardID
+        
         
         //フラグ登録してなかったら赤に、してたら元どおりに
         if db.getFlagStatement(appDelegate.P_ID!) == false{
