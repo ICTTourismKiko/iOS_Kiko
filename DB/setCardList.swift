@@ -92,10 +92,6 @@ UINavigationControllerDelegate{
     @IBAction func open_photo(_ sender: AnyObject) {
         appDelegate.P_ID = cardID
     }
-    //mapボタン
-    @IBAction func CellButtonTapped(_ sender: AnyObject) {
-        appDelegate.P_ID = cardID
-    }
 
     /* フラグボタンを押した時の処理 */
     @IBAction func flagOnOff(_ sender: AnyObject) {

@@ -114,26 +114,34 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         present(next, animated: true, completion: nil)
     }
     
-    /* Facebookみたいな画像の見方ができる関数 */
-    @IBAction func openImage(_ sender: Any) {
-        
+    @IBAction func moveMap(_ sender: Any) {
         // 押されたボタンを取得
         let botton = sender as! UIButton
         let cell = botton.superview?.superview as! setCardList
         
         // クリックされたcellの位置を取得
         let row = tableView.indexPath(for: cell)?.row
+        appDelegate.P_ID = row! + 1
         
-        // 1. SKPhoto作成
-        var images = [SKPhoto]()
-        let src = NSData(data: (DB().getCard(row!+1).photo?.photoData)!) as Data
-        let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
-        images.append(photo)
+        let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
+    
+    /* Facebookみたいな画像の見方ができる関数 */
+    @IBAction func openImage(_ sender: Any) {
+        // 押されたボタンを取得
+        let botton = sender as! UIButton
+        let cell = botton.superview?.superview as! setCardList
         
-        // 2. PhotoBrowse作成
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(0)
-        present(browser, animated: true, completion: {})
+        // クリックされたcellの位置を取得
+        let row = tableView.indexPath(for: cell)?.row
+        appDelegate.P_ID = row! + 1
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
     }
     
     
