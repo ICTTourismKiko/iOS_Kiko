@@ -108,11 +108,9 @@ class PhotoSelectViewController: UIViewController {
             // UIAlertを発動する.
             present(myAlert, animated: true, completion: nil)
         }else{
-            let targetViewController = storyboard!.instantiateViewController(withIdentifier: "sample" )
-            self.present(targetViewController, animated: true, completion: nil)
-            //            let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
-            //            let nextView = storyboard.instantiateInitialViewController()
-            //            present(nextView!, animated: true, completion: nil)
+            let storyboard: UIStoryboard = UIStoryboard(name: "loadLeaflet", bundle: nil)
+            let next: UIViewController = storyboard.instantiateInitialViewController()!
+            present(next, animated: true, completion: nil)
         }
     }
     
