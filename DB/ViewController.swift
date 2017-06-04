@@ -32,6 +32,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //    }
     
     
+    
+    @IBAction func moveAlbum(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "album", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
     @IBAction func moveCL(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "createLeaflet", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!

@@ -1,7 +1,171 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ll-y2-D3V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Album userphoto-->
+        <scene sceneID="4vd-fk-2aM">
+            <objects>
+                <viewController storyboardIdentifier="album_userphoto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ll-y2-D3V" customClass="album_userphoto" customModule="キーコ紀行" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qL1-iO-Qqq"/>
+                        <viewControllerLayoutGuide type="bottom" id="BYT-Nn-16X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZb-qn-gir">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn5-WY-JCU" customClass="PagingCollectionView" customModule="キーコ紀行" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="110" width="383" height="557"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OIH-Kk-UHh">
+                                <rect key="frame" x="170" y="74" width="189" height="29"/>
+                                <segments>
+                                    <segment title="撮影写真"/>
+                                    <segment title="サンプル写真"/>
+                                </segments>
+                                <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedchanged:" destination="6ll-y2-D3V" eventType="valueChanged" id="9c8-Sm-4Ig"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajD-ci-it8">
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="アルバム" id="Jsl-18-vCg">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="UNp-SW-wf5">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vjq-qL-ltR">
+                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backbutton:" destination="6ll-y2-D3V" eventType="touchUpInside" id="xpv-Vt-bAF"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="backbutton:" destination="6ll-y2-D3V" id="cy5-LK-6JX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ajD-ci-it8" firstAttribute="top" secondItem="qL1-iO-Qqq" secondAttribute="bottom" id="2kv-cb-XPz"/>
+                            <constraint firstItem="Cn5-WY-JCU" firstAttribute="top" secondItem="OIH-Kk-UHh" secondAttribute="bottom" constant="8" id="AWD-lG-Oth"/>
+                            <constraint firstItem="Cn5-WY-JCU" firstAttribute="leading" secondItem="fZb-qn-gir" secondAttribute="leadingMargin" constant="-20" id="Ckm-cH-mPk"/>
+                            <constraint firstItem="Cn5-WY-JCU" firstAttribute="bottom" secondItem="BYT-Nn-16X" secondAttribute="top" id="EKv-hj-dM1"/>
+                            <constraint firstItem="ajD-ci-it8" firstAttribute="leading" secondItem="fZb-qn-gir" secondAttribute="leadingMargin" constant="-20" id="HTf-rJ-gFE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cn5-WY-JCU" secondAttribute="trailing" constant="-20" id="IPS-Ex-bDX"/>
+                            <constraint firstItem="OIH-Kk-UHh" firstAttribute="trailing" secondItem="fZb-qn-gir" secondAttribute="trailingMargin" id="K7x-LC-7fJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ajD-ci-it8" secondAttribute="trailing" constant="-20" id="Rt9-Ax-vL3"/>
+                            <constraint firstItem="OIH-Kk-UHh" firstAttribute="top" secondItem="ajD-ci-it8" secondAttribute="bottom" constant="10" id="sku-uP-eyt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backbutton" destination="UNp-SW-wf5" id="IHO-Be-lCJ"/>
+                        <outlet property="navigationbar" destination="ajD-ci-it8" id="rin-ay-90g"/>
+                        <outlet property="segmented" destination="OIH-Kk-UHh" id="EHe-AN-ALX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vc9-6E-TMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-561" y="1814"/>
+        </scene>
+        <!--Album defaultphoto-->
+        <scene sceneID="i7h-7X-vEp">
+            <objects>
+                <viewController storyboardIdentifier="album_defaultphoto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sTg-q7-wXC" customClass="album_defaultphoto" customModule="キーコ紀行" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zk2-ru-TMI"/>
+                        <viewControllerLayoutGuide type="bottom" id="pPQ-cR-1Pr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sRQ-Za-eZU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXJ-Pn-eON" customClass="PagingCollectionView" customModule="キーコ紀行" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="110" width="383" height="557"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1M3-QP-J26">
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="アルバム" id="6P0-mn-Cwv">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="k5c-Lc-iuE">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pVX-y3-EmB">
+                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backbutton:" destination="sTg-q7-wXC" eventType="touchUpInside" id="SCj-UA-hh9"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="aTM-SV-uxn">
+                                <rect key="frame" x="170" y="74" width="189" height="29"/>
+                                <segments>
+                                    <segment title="撮影写真"/>
+                                    <segment title="サンプル写真"/>
+                                </segments>
+                                <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedchanged:" destination="sTg-q7-wXC" eventType="valueChanged" id="2Fg-oR-Cia"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MXJ-Pn-eON" firstAttribute="leading" secondItem="sRQ-Za-eZU" secondAttribute="leadingMargin" constant="-20" id="4qo-FL-gZY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="MXJ-Pn-eON" secondAttribute="bottom" id="LOJ-DE-RCf"/>
+                            <constraint firstItem="aTM-SV-uxn" firstAttribute="trailing" secondItem="sRQ-Za-eZU" secondAttribute="trailingMargin" id="RQW-pg-A9B"/>
+                            <constraint firstItem="1M3-QP-J26" firstAttribute="top" secondItem="zk2-ru-TMI" secondAttribute="bottom" id="aiq-eW-Yy4"/>
+                            <constraint firstItem="MXJ-Pn-eON" firstAttribute="bottom" secondItem="pPQ-cR-1Pr" secondAttribute="top" id="j7A-94-dW7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MXJ-Pn-eON" secondAttribute="trailing" constant="-20" id="k76-WM-qhW"/>
+                            <constraint firstItem="MXJ-Pn-eON" firstAttribute="top" secondItem="aTM-SV-uxn" secondAttribute="bottom" constant="8" id="nU2-TL-0W7"/>
+                            <constraint firstItem="1M3-QP-J26" firstAttribute="leading" secondItem="sRQ-Za-eZU" secondAttribute="leadingMargin" constant="-20" id="pOW-Om-WrZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1M3-QP-J26" secondAttribute="trailing" constant="-20" id="sIi-nQ-j32"/>
+                            <constraint firstItem="aTM-SV-uxn" firstAttribute="top" secondItem="1M3-QP-J26" secondAttribute="bottom" constant="10" id="tpl-Nm-cSC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LOJ-DE-RCf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="navigationbar" destination="1M3-QP-J26" id="KIu-cB-zzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dg2-Xj-bkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="1814"/>
+        </scene>
+    </scenes>
 </document>
