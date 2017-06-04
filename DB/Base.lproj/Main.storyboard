@@ -123,7 +123,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-XO-UQV">
-                                <rect key="frame" x="39" y="290.5" width="296" height="64"/>
+                                <rect key="frame" x="39" y="291" width="296" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Ti-XO-UQV" secondAttribute="height" multiplier="144:31" id="TK2-gR-laj"/>
@@ -134,17 +134,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-N6-vAv">
-                                <rect key="frame" x="39" y="374.5" width="296" height="63.5"/>
+                                <rect key="frame" x="39" y="375" width="296" height="63.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yhd-N6-vAv" secondAttribute="height" multiplier="144:31" id="o1O-jF-G2f"/>
                                 </constraints>
                                 <state key="normal" image="s_print.png"/>
                                 <connections>
-                                    <segue destination="zkJ-4I-dO6" kind="show" id="r15-4z-RgU"/>
+                                    <action selector="moveCL:" destination="5Yw-qv-psP" eventType="touchUpInside" id="5lM-jn-RNf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-0I-7Qx">
-                                <rect key="frame" x="39" y="207" width="296" height="63.5"/>
+                                <rect key="frame" x="39" y="207" width="296" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJJ-0I-7Qx" secondAttribute="height" multiplier="144:31" id="osx-MB-DRd"/>
                                 </constraints>
@@ -529,7 +529,7 @@
                                         <rect key="frame" x="0.0" y="28" width="383" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55M-Ae-TkD" id="Gfh-SA-27o">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-mS-Nhy">
@@ -1057,233 +1057,6 @@
             </objects>
             <point key="canvasLocation" x="912" y="4103"/>
         </scene>
-        <!--Photo Select View Controller-->
-        <scene sceneID="XMk-vL-Hf7">
-            <objects>
-                <viewController id="zkJ-4I-dO6" customClass="PhotoSelectViewController" customModule="キーコ紀行" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lth-PD-e2b"/>
-                        <viewControllerLayoutGuide type="bottom" id="pyP-TM-eaq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n7a-fE-Fbd">
-                        <rect key="frame" x="0.0" y="0.0" width="848" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-4O-OJZ">
-                                <rect key="frame" x="0.0" y="20" width="848" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="IIJ-t1-ldJ"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="写真選択画面" id="y8n-e2-XsR">
-                                        <barButtonItem key="leftBarButtonItem" style="done" id="j4Y-eS-nB1">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5t3-pG-Jf0">
-                                                <rect key="frame" x="20" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
-                                                <state key="normal" title="戻る">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="5Yw-qv-psP" kind="show" id="5xk-44-Lcj"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <action selector="backPage:" destination="zkJ-4I-dO6" id="MFJ-P6-gwt"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="91P-3J-NxQ">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3e0-oF-A3e">
-                                                <rect key="frame" x="745" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
-                                                <state key="normal" title="完了">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="finish:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="itd-mB-ew6"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PML-vD-YNu">
-                                <rect key="frame" x="0.0" y="64" width="848" height="603"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cx-eK-Lco">
-                                        <rect key="frame" x="0.0" y="0.0" width="848" height="603"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-fm-E4s">
-                                                <rect key="frame" x="0.0" y="-1" width="848" height="604"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ESn-fm-E4s" secondAttribute="height" multiplier="212:151" id="hvs-kr-mxX"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICe-DT-20c">
-                                                <rect key="frame" x="17" y="8" width="250" height="353"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-nU-QrC">
-                                                <rect key="frame" x="580" y="22" width="260" height="368"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-ex-tVh">
-                                                <rect key="frame" x="415" y="21" width="120" height="171"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-Bu-Fj6">
-                                                <rect key="frame" x="288" y="22" width="119" height="170"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dZ-cn-WxH">
-                                                <rect key="frame" x="288" y="240" width="247" height="349"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxF-T1-tAm">
-                                                <rect key="frame" x="17" y="411" width="129" height="184"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-Ms-bBO">
-                                                <rect key="frame" x="17" y="8" width="250" height="353"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo1_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="XEw-Gn-sZJ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giM-ty-IIS">
-                                                <rect key="frame" x="288" y="22" width="119" height="170"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo2_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="O8C-U7-WPe"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytg-D2-mIc">
-                                                <rect key="frame" x="415" y="22" width="120" height="170"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo3_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="HOb-5W-xjl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdb-ch-vnH">
-                                                <rect key="frame" x="580" y="22" width="260" height="368"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo4_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="C8L-uu-IEv"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-L1-qS3">
-                                                <rect key="frame" x="17" y="411" width="129" height="184"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo5_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="hsU-qV-Cle"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vk-bc-g7J">
-                                                <rect key="frame" x="288" y="240" width="247" height="349"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo6_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="AbO-33-2Kl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54U-Vp-r64">
-                                                <rect key="frame" x="718" y="423" width="117" height="166"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="photo7_select:" destination="zkJ-4I-dO6" eventType="touchUpInside" id="RXI-Au-gjO"/>
-                                                </connections>
-                                            </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9J-5Q-7az">
-                                                <rect key="frame" x="718" y="422" width="117" height="166"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="ESn-fm-E4s" firstAttribute="top" secondItem="3Cx-eK-Lco" secondAttribute="top" constant="-1" id="1sg-dl-geX"/>
-                                            <constraint firstAttribute="width" secondItem="3Cx-eK-Lco" secondAttribute="height" multiplier="848:603" id="7xd-Mf-7hs"/>
-                                            <constraint firstAttribute="bottom" secondItem="ESn-fm-E4s" secondAttribute="bottom" id="JvL-6j-JJ8"/>
-                                            <constraint firstAttribute="height" constant="603" id="X3O-5Q-Fu8"/>
-                                            <constraint firstAttribute="width" constant="848" id="XW6-EA-4ia"/>
-                                            <constraint firstAttribute="trailing" secondItem="ESn-fm-E4s" secondAttribute="trailing" id="hoz-YN-mme"/>
-                                            <constraint firstItem="ESn-fm-E4s" firstAttribute="leading" secondItem="3Cx-eK-Lco" secondAttribute="leading" id="v3j-hs-SOi"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="centerX" secondItem="PML-vD-YNu" secondAttribute="centerX" id="53e-uR-ms4"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Cx-eK-Lco" secondAttribute="trailing" id="5BJ-im-q3M"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="centerY" secondItem="PML-vD-YNu" secondAttribute="centerY" id="8Nc-gA-uUc"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" id="8q3-ol-B6e"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="leading" secondItem="PML-vD-YNu" secondAttribute="leading" id="9gE-mj-x9X"/>
-                                    <constraint firstAttribute="width" secondItem="PML-vD-YNu" secondAttribute="height" multiplier="848:603" id="Efi-ip-VZ3"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Cx-eK-Lco" secondAttribute="trailing" id="KA6-zm-suw"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="leading" secondItem="PML-vD-YNu" secondAttribute="leading" id="LUc-RX-o1O"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" id="OjL-R4-ns0"/>
-                                    <constraint firstAttribute="bottom" secondItem="3Cx-eK-Lco" secondAttribute="bottom" id="Yfv-B2-iaz"/>
-                                    <constraint firstItem="3Cx-eK-Lco" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="top" id="waU-8z-aID"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Efi-ip-VZ3"/>
-                                        <exclude reference="53e-uR-ms4"/>
-                                        <exclude reference="8Nc-gA-uUc"/>
-                                        <exclude reference="9gE-mj-x9X"/>
-                                        <exclude reference="KA6-zm-suw"/>
-                                        <exclude reference="OjL-R4-ns0"/>
-                                        <exclude reference="Yfv-B2-iaz"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PML-vD-YNu" secondAttribute="trailing" constant="-20" id="9Wr-Yx-ejh"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="bottom" secondItem="pyP-TM-eaq" secondAttribute="top" id="CJZ-1p-sb7"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="trailing" secondItem="XAQ-4O-OJZ" secondAttribute="trailing" id="DJs-s1-ean"/>
-                            <constraint firstItem="pyP-TM-eaq" firstAttribute="top" secondItem="PML-vD-YNu" secondAttribute="bottom" id="FYL-Dr-yn9"/>
-                            <constraint firstItem="XAQ-4O-OJZ" firstAttribute="leading" secondItem="n7a-fE-Fbd" secondAttribute="leadingMargin" constant="-20" id="GCu-Zn-JGp"/>
-                            <constraint firstItem="XAQ-4O-OJZ" firstAttribute="top" secondItem="lth-PD-e2b" secondAttribute="bottom" id="SvS-CB-WeN"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="leading" secondItem="n7a-fE-Fbd" secondAttribute="leadingMargin" id="V7E-po-PAB"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="leading" secondItem="XAQ-4O-OJZ" secondAttribute="leading" id="dIK-as-cEx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XAQ-4O-OJZ" secondAttribute="trailing" constant="-20" id="fyh-Zf-gVW"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="top" secondItem="XAQ-4O-OJZ" secondAttribute="bottom" id="iCM-gE-OWh"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="top" secondItem="XAQ-4O-OJZ" secondAttribute="bottom" id="pLM-hW-wEQ"/>
-                            <constraint firstItem="PML-vD-YNu" firstAttribute="centerX" secondItem="XAQ-4O-OJZ" secondAttribute="centerX" id="xxo-V0-znv"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="DJs-s1-ean"/>
-                                <exclude reference="V7E-po-PAB"/>
-                                <exclude reference="dIK-as-cEx"/>
-                                <exclude reference="iCM-gE-OWh"/>
-                                <exclude reference="FYL-Dr-yn9"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="848" height="667"/>
-                    <connections>
-                        <outlet property="backimage" destination="ESn-fm-E4s" id="MvR-3V-AR5"/>
-                        <outlet property="navigation" destination="XAQ-4O-OJZ" id="3zv-Kp-CQu"/>
-                        <outlet property="pic1" destination="ICe-DT-20c" id="YxT-GH-s4w"/>
-                        <outlet property="pic2" destination="Rej-Bu-Fj6" id="XjU-2X-Xie"/>
-                        <outlet property="pic3" destination="cMy-ex-tVh" id="xCQ-L4-RkL"/>
-                        <outlet property="pic4" destination="BTx-nU-QrC" id="LJo-I4-azW"/>
-                        <outlet property="pic5" destination="JxF-T1-tAm" id="Zbh-1N-IiP"/>
-                        <outlet property="pic6" destination="7dZ-cn-WxH" id="QRs-Vy-ukl"/>
-                        <outlet property="pic7" destination="K9J-5Q-7az" id="LA4-Ds-Reg"/>
-                        <outlet property="scroll" destination="PML-vD-YNu" id="woT-2R-7o9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9H3-kX-eYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="651" y="2522"/>
-        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="474" height="842"/>
@@ -1299,7 +1072,4 @@
         <image name="s_print.png" width="230" height="50"/>
         <image name="s_title.png" width="242" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZsS-yQ-EHr"/>
-    </inferredMetricsTieBreakers>
 </document>

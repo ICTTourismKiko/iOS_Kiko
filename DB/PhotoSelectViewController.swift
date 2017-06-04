@@ -122,4 +122,9 @@ class PhotoSelectViewController: UIViewController {
             //            present(nextView!, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

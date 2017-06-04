@@ -31,6 +31,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //        DB().initAll()
 //    }
     
+    
+    @IBAction func moveCL(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "createLeaflet", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
     @IBAction func moveInfo(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "information", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
