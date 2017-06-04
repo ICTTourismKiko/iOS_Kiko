@@ -32,19 +32,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //    }
     
     
+    /* 「観光する」を選択 */
+    @IBAction func moveList(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "cardList", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
     
+    /* 「振り返る」を選択 */
     @IBAction func moveAlbum(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "album", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }
-    
+    /* 「印刷する」を選択 */
     @IBAction func moveCL(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "createLeaflet", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }
     
+    /* 利用規約画面へ移動 */
     @IBAction func moveInfo(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "information", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
