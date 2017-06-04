@@ -100,6 +100,23 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.reloadData()
     }
     
+    
+    /* 写真撮影画面へ移動する */
+    @IBAction func movePhoto(_ sender: Any) {
+        // 押されたボタンを取得
+        let botton = sender as! UIButton
+        let cell = botton.superview?.superview as! setCardList
+        
+        // クリックされたcellの位置を取得
+        let row = tableView.indexPath(for: cell)?.row
+        appDelegate.P_ID = row! + 1
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "photoController", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
+    /* 編集する画面へ移動する */
     @IBAction func moveEdit(_ sender: Any) {
         // 押されたボタンを取得
         let botton = sender as! UIButton
@@ -114,7 +131,10 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         present(next, animated: true, completion: nil)
     }
     
+    
+    /* map画面へ移動する */
     @IBAction func moveMap(_ sender: Any) {
+        print("おおおおお")
         // 押されたボタンを取得
         let botton = sender as! UIButton
         let cell = botton.superview?.superview as! setCardList
@@ -138,10 +158,16 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         // クリックされたcellの位置を取得
         let row = tableView.indexPath(for: cell)?.row
         appDelegate.P_ID = row! + 1
+        // 1. SKPhotoを作成
+        var images = [SKPhoto]()
+        let src = NSData(data: (DB().getCard(appDelegate.P_ID!).photo?.photoData)!) as Data
+        let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
+        images.append(photo)
         
-        let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
-        let next: UIViewController = storyboard.instantiateInitialViewController()!
-        present(next, animated: true, completion: nil)
+        // 2. PhotoBrowserを作成
+        let browser = SKPhotoBrowser(photos: images)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
     }
     
     

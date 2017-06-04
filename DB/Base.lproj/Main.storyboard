@@ -260,8 +260,7 @@
                                                     </constraints>
                                                     <state key="normal" image="camera3-3.png"/>
                                                     <connections>
-                                                        <action selector="open_photo:" destination="8lD-tQ-t7t" eventType="touchUpInside" id="Pvo-6O-CRu"/>
-                                                        <segue destination="9zx-Rg-RJh" kind="show" identifier="" id="AX8-Nu-fbl"/>
+                                                        <action selector="movePhoto:" destination="PGL-vA-g2r" eventType="touchUpInside" id="9Gj-6p-X2n"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qW-st-Ku9">
@@ -352,7 +351,6 @@
                                             <outlet property="flag" destination="bOw-z2-YPh" id="K3k-dp-Ai9"/>
                                             <outlet property="iconImage" destination="z5n-1S-iNG" id="FmN-ny-fao"/>
                                             <outlet property="introText" destination="Ghk-AS-Kiu" id="T2R-9C-9MD"/>
-                                            <outlet property="open_photo" destination="P1P-aa-2Fz" id="PuI-JB-lUO"/>
                                             <outlet property="title" destination="hEW-Ud-E2U" id="sP0-JJ-9q8"/>
                                         </connections>
                                     </tableViewCell>
@@ -402,24 +400,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCm-7U-Pt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="902"/>
-        </scene>
-        <!--Photo Controller-->
-        <scene sceneID="It0-Zy-9Z2">
-            <objects>
-                <viewController id="9zx-Rg-RJh" customClass="PhotoController" customModule="キーコ紀行" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9fV-m2-Xzp"/>
-                        <viewControllerLayoutGuide type="bottom" id="ssb-OH-0LU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jvw-ZH-XUP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gpS-4F-2ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1905" y="1305"/>
         </scene>
     </scenes>
     <resources>

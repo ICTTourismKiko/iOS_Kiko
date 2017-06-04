@@ -17,7 +17,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var introText: UILabel!
-    @IBOutlet weak var open_photo: UIButton!
+//    @IBOutlet weak var open_photo: UIButton!
     @IBOutlet weak var flag: UIButton!
     
     
@@ -88,11 +88,6 @@ UINavigationControllerDelegate{
         }
     }
     
-    //写真を選択したときに、IDを渡す
-    @IBAction func open_photo(_ sender: AnyObject) {
-        appDelegate.P_ID = cardID
-    }
-
     /* フラグボタンを押した時の処理 */
     @IBAction func flagOnOff(_ sender: AnyObject) {
         

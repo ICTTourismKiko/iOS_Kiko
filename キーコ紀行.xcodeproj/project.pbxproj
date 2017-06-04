@@ -26,6 +26,7 @@
 		3B1068701EE3F62300203416 /* createLeaflet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B10686F1EE3F62300203416 /* createLeaflet.storyboard */; };
 		3B1068721EE3F84800203416 /* album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1068711EE3F84800203416 /* album.storyboard */; };
 		3B1068741EE3FAC400203416 /* printPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1068731EE3FAC400203416 /* printPreview.storyboard */; };
+		3B1068761EE3FC4100203416 /* photoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1068751EE3FC4100203416 /* photoController.storyboard */; };
 		3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2E1D1407AC00B66C6F /* splash6plus.png */; };
 		3B218F311D1407AC00B66C6F /* splash6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F2F1D1407AC00B66C6F /* splash6.png */; };
 		3B218F331D14080D00B66C6F /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B218F321D14080D00B66C6F /* splash5.png */; };
@@ -133,6 +134,7 @@
 		3B10686F1EE3F62300203416 /* createLeaflet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createLeaflet.storyboard; sourceTree = "<group>"; };
 		3B1068711EE3F84800203416 /* album.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = album.storyboard; sourceTree = "<group>"; };
 		3B1068731EE3FAC400203416 /* printPreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = printPreview.storyboard; sourceTree = "<group>"; };
+		3B1068751EE3FC4100203416 /* photoController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = photoController.storyboard; sourceTree = "<group>"; };
 		3B218F2E1D1407AC00B66C6F /* splash6plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash6plus.png; sourceTree = "<group>"; };
 		3B218F2F1D1407AC00B66C6F /* splash6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash6.png; sourceTree = "<group>"; };
 		3B218F321D14080D00B66C6F /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				8F151AE11D2F746600BED73D /* black.JPG */,
 				3B5629651D45E438007D0E94 /* info_2.png */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				3B1068751EE3FC4100203416 /* photoController.storyboard */,
 				3B1068731EE3FAC400203416 /* printPreview.storyboard */,
 				3B1068711EE3F84800203416 /* album.storyboard */,
 				3B10686F1EE3F62300203416 /* createLeaflet.storyboard */,
@@ -449,7 +452,7 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 8NQFAUAAWM;
+						DevelopmentTeam = 3W722UE7AL;
 						LastSwiftMigration = 0830;
 					};
 					DC23C01B1BD7826C000B2465 = {
@@ -524,6 +527,7 @@
 				378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */,
 				378BDDF71C05A57A000DD5BB /* haikei.png in Resources */,
 				3B218F301D1407AC00B66C6F /* splash6plus.png in Resources */,
+				3B1068761EE3FC4100203416 /* photoController.storyboard in Resources */,
 				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
 				8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */,
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
@@ -866,6 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3W722UE7AL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -873,7 +878,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -888,6 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3W722UE7AL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -895,7 +901,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.ike;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
