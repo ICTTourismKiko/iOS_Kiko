@@ -292,7 +292,7 @@
 				378BDDED1C05A3C3000DD5BB /* PagingCollectionView */,
 				379112F11BD818F50024E678 /* CoreLocation.framework */,
 				379112EF1BD818E90024E678 /* MapKit.framework */,
-				DC23C00A1BD7826B000B2465 /* DB */,
+				DC23C00A1BD7826B000B2465 /* iOS_Kiko */,
 				DC23C0091BD7826B000B2465 /* Products */,
 				795804081D50D33B00676B2E /* PlusoSDK.framework */,
 				956C16233A6118E424FDA396 /* Pods */,
@@ -310,7 +310,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC23C00A1BD7826B000B2465 /* DB */ = {
+		DC23C00A1BD7826B000B2465 /* iOS_Kiko */ = {
 			isa = PBXGroup;
 			children = (
 				8FB33B561D5F161100911C74 /* omote.jpg */,
@@ -382,6 +382,7 @@
 				DC23C0141BD7826B000B2465 /* LaunchScreen.storyboard */,
 				DC23C0171BD7826B000B2465 /* Info.plist */,
 			);
+			name = iOS_Kiko;
 			path = DB;
 			sourceTree = "<group>";
 		};
