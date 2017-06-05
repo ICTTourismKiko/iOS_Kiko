@@ -61,38 +61,31 @@ class PhotoSelectViewController: UIViewController {
     }
     @IBAction func photo1_select(_ sender: AnyObject) {
         appDelegate.picID=1
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo2_select(_ sender: AnyObject) {
         appDelegate.picID=2
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo3_select(_ sender: AnyObject) {
         appDelegate.picID=3
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo4_select(_ sender: AnyObject) {
         appDelegate.picID=4
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo5_select(_ sender: AnyObject) {
         appDelegate.picID=5
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo6_select(_ sender: AnyObject) {
         appDelegate.picID=6
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     @IBAction func photo7_select(_ sender: AnyObject) {
         appDelegate.picID=7
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "cardlist2" )
-        self.present( targetViewController, animated: true, completion: nil)
+        moveSelectCard()
     }
     
     func pic_show(){
@@ -115,11 +108,21 @@ class PhotoSelectViewController: UIViewController {
             // UIAlertを発動する.
             present(myAlert, animated: true, completion: nil)
         }else{
-            let targetViewController = storyboard!.instantiateViewController(withIdentifier: "sample" )
-            self.present(targetViewController, animated: true, completion: nil)
-            //            let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
-            //            let nextView = storyboard.instantiateInitialViewController()
-            //            present(nextView!, animated: true, completion: nil)
+            let storyboard: UIStoryboard = UIStoryboard(name: "loadLeaflet", bundle: nil)
+            let next: UIViewController = storyboard.instantiateInitialViewController()!
+            present(next, animated: true, completion: nil)
         }
     }
+    
+    /* カード選択画面に移動するための関数 */
+    func moveSelectCard() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "selectCard", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

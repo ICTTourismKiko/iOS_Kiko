@@ -106,8 +106,9 @@ class CreateViewController: UIViewController {
         return renderedImage;
     }
     func next() {
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "print" )
-        self.present( targetViewController, animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "printPreview", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
     }
 
 }

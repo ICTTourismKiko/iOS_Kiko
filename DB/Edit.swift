@@ -26,6 +26,8 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     let titleLength = 13
     let contentLength = 70
     
+    var pic_id = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,11 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         self.navigation.setBackgroundImage(navBarImage, for:. default)
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        id = appDelegate.P_ID!
+        
+        //選択したIDを持ってくる処理
+        pic_id = appDelegate.P_ID!
+        
+        id = pic_id
         card = db.getCard(id)
         defaultText = db.getDefaultText(id)
         cardTitle = card.cardText!.title
@@ -50,7 +56,6 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
         titleNum.text = String(titleLength - titleText.text!.characters.count)
         contentNum.text = String(contentLength - contentText.text.characters.count)
-        
     }
     
     //保存ボタンを押したら
@@ -126,14 +131,15 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         
     }
     
+    /* Facebookみたいな画像の見方ができる関数 */
     @IBAction func openImage(_ sender: AnyObject) {
-        // 1. create SKPhoto Array from UIImage
+        // 1. SKPhotoを作成
         var images = [SKPhoto]()
         let src = NSData(data: (DB().getCard(id).photo?.photoData)!) as Data
         let photo = SKPhoto.photoWithImage(UIImage(data:src)!)// add some UIImage
         images.append(photo)
         
-        // 2. create PhotoBrowser Instance, and present from your viewController.
+        // 2. PhotoBrowserを作成
         let browser = SKPhotoBrowser(photos: images)
         browser.initializePageIndex(0)
         present(browser, animated: true, completion: {})
