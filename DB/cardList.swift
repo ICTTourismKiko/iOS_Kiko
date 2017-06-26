@@ -84,13 +84,15 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.setCell(cards[indexPath.row])
         cell.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
-        
+      
+    /*
         if appDelegate.flaglist[indexPath.row] == true {
             cell.flag.tintColor = UIColor.orange
         }else {
             cell.flag.tintColor = UIColor.lightGray
         }
-        
+      */
+
         return cell
     }
     
