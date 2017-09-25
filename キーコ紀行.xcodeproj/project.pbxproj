@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375FEDDD1F13540D00CFCCF7 /* camera3-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 375FEDDC1F13540D00CFCCF7 /* camera3-4.png */; };
 		378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */; };
 		378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */; };
 		378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */; };
@@ -119,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		355EB8B6F669EC0DB1423759 /* Pods-キーコ紀行Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		375FEDDC1F13540D00CFCCF7 /* camera3-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera3-4.png"; sourceTree = "<group>"; };
 		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagingCollectionViewCell.xib; sourceTree = "<group>"; };
 		378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				37FBD82D1C06B247008AAD03 /* next.png */,
 				378BDDF81C05A643000DD5BB /* b300.png */,
 				378BDDF61C05A57A000DD5BB /* haikei.png */,
+				375FEDDC1F13540D00CFCCF7 /* camera3-4.png */,
 				DC4430491C0959380006D4F5 /* bar6.png */,
 				DC44304A1C0959380006D4F5 /* camera3-3.png */,
 				DC44304B1C0959380006D4F5 /* card6.png */,
@@ -543,6 +546,7 @@
 				9CA1E0301C0AF36A0083591E /* title.png in Resources */,
 				8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */,
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
+				375FEDDD1F13540D00CFCCF7 /* camera3-4.png in Resources */,
 				3B1068651EE1474B00203416 /* map.storyboard in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
 				3B218F371D14088A00B66C6F /* splash640.png in Resources */,
