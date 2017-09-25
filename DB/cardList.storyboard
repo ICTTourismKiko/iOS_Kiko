@@ -60,7 +60,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hnc-re-WOo">
-                                                    <rect key="frame" x="53" y="202" width="45" height="45"/>
+                                                    <rect key="frame" x="53" y="204" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="pencil41.png"/>
                                                     <connections>
@@ -68,9 +68,9 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uwy-IA-TQj">
-                                                    <rect key="frame" x="169" y="204" width="45" height="45"/>
+                                                    <rect key="frame" x="169" y="206" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="camera3-3.png"/>
+                                                    <state key="normal" image="camera3-4.png"/>
                                                     <connections>
                                                         <action selector="movePhoto:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="B6w-fI-OkS"/>
                                                     </connections>
@@ -83,12 +83,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lVb-q3-W1R">
-                                                    <rect key="frame" x="284" y="204" width="45" height="45"/>
+                                                    <rect key="frame" x="284" y="206" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                                    <state key="normal" title="T">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
+                                                    <state key="normal" title="T"/>
+                                                    <connections>
+                                                        <action selector="makeTweet:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="oOp-x8-yO1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,7 +142,7 @@
     </scenes>
     <resources>
         <image name="bar6.png" width="375" height="44"/>
-        <image name="camera3-3.png" width="64" height="64"/>
+        <image name="camera3-4.png" width="64" height="64"/>
         <image name="card6.png" width="508" height="251"/>
         <image name="pencil41.png" width="64" height="64"/>
     </resources>

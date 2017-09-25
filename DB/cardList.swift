@@ -133,6 +133,11 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         present(next, animated: true, completion: nil)
     }
     
+    /*ツイートを作成する*/
+    @IBAction func makeTweet(_ sender: Any) {
+       
+    }
+    
     /* テキストでmap画面へ遷移する */
     @IBAction func moveMap2(_ sender: Any) {
         print("おおおおお")

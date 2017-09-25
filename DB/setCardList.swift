@@ -19,6 +19,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var introText: UILabel!
     @IBOutlet weak var tweet: UIButton!
+    
 //    @IBOutlet weak var open_photo: UIButton!
  //   @IBOutlet weak var flag: UIButton!
     
