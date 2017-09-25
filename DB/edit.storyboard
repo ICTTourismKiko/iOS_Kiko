@@ -62,25 +62,6 @@
                                     <constraint firstAttribute="width" secondItem="5i6-xF-QB9" secondAttribute="height" multiplier="127:166" id="ygr-Zr-1Uv"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wPC-GX-VoW">
-                                <rect key="frame" x="162" y="141.5" width="197" height="127"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="GSO-9i-32k"/>
-                                    <constraint firstAttribute="height" constant="125" id="HAr-FA-zPX"/>
-                                    <constraint firstAttribute="width" secondItem="wPC-GX-VoW" secondAttribute="height" multiplier="193:125" id="gaI-ze-aqI"/>
-                                    <constraint firstAttribute="width" secondItem="wPC-GX-VoW" secondAttribute="height" multiplier="189:125" id="mRQ-Bh-zEJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="HAr-FA-zPX"/>
-                                        <exclude reference="mRQ-Bh-zEJ"/>
-                                        <exclude reference="GSO-9i-32k"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vz-W7-QEV">
                                 <rect key="frame" x="291" y="274.5" width="68" height="29.5"/>
                                 <constraints>
@@ -157,8 +138,8 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="cEb-Ay-xTk"/>
                                         <exclude reference="Nm7-9s-Fsw"/>
+                                        <exclude reference="cEb-Ay-xTk"/>
                                         <exclude reference="ehZ-SK-mxc"/>
                                     </mask>
                                 </variation>
@@ -188,6 +169,25 @@
                                     <action selector="defaultButton:" destination="9ZF-Ge-d30" eventType="touchUpInside" id="J0R-SN-nJE"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wPC-GX-VoW">
+                                <rect key="frame" x="162" y="139" width="197" height="127"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="GSO-9i-32k"/>
+                                    <constraint firstAttribute="height" constant="125" id="HAr-FA-zPX"/>
+                                    <constraint firstAttribute="width" secondItem="wPC-GX-VoW" secondAttribute="height" multiplier="193:125" id="gaI-ze-aqI"/>
+                                    <constraint firstAttribute="width" secondItem="wPC-GX-VoW" secondAttribute="height" multiplier="189:125" id="mRQ-Bh-zEJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GSO-9i-32k"/>
+                                        <exclude reference="HAr-FA-zPX"/>
+                                        <exclude reference="mRQ-Bh-zEJ"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -246,9 +246,9 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="SGe-kV-xni"/>
+                                <exclude reference="aMs-PQ-eSW"/>
                                 <exclude reference="dqB-FW-k1E"/>
                                 <exclude reference="uJb-bg-jiX"/>
-                                <exclude reference="aMs-PQ-eSW"/>
                                 <exclude reference="8bP-M7-9Pb"/>
                                 <exclude reference="aZI-aK-Qcd"/>
                             </mask>

@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DC23C0071BD7826B000B2465"
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:../&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "42D3611B3E185C370731BD6A222030D3"
-            BuildableName = "Pods______.framework"
-            BlueprintName = "Pods-&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "DC23C0071BD7826B000B2465"
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:../&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

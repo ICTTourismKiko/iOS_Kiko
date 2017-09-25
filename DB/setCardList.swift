@@ -13,12 +13,15 @@ UINavigationControllerDelegate{
     
     
     
-    @IBOutlet weak var CellButton: UIButton!
+//    @IBOutlet weak var CellButton: UIButton!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var introText: UILabel!
+    @IBOutlet weak var tweet: UIButton!
+    
 //    @IBOutlet weak var open_photo: UIButton!
-    @IBOutlet weak var flag: UIButton!
+ //   @IBOutlet weak var flag: UIButton!
     
     
     var flagSituation = false
@@ -45,8 +48,8 @@ UINavigationControllerDelegate{
         //iphoneのサイズによってカードに書かれる文のサイズを変更
         //iPhone6
         if height >= 667 {
-            //self.title.font = UIFont.systemFontOfSize(14)
-            self.introText.font = UIFont.systemFont(ofSize: 14)
+            //self.title.font = UIFont.boldSystemFont(ofSize:18)
+            self.introText.font = UIFont.systemFont(ofSize: 16)
             
             //iPhone6 Plus
             //        }else if height == 736 {
@@ -71,6 +74,9 @@ UINavigationControllerDelegate{
         
         cardID = card.id+1
         
+    }
+    
+    /*
         /* フラグボタンの設定 */
         flag.setImage(UIImage(named: "favourites7 (1).png")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
         
@@ -105,4 +111,5 @@ UINavigationControllerDelegate{
         appDelegate.flaglist = DB().getFlagStatementList()
     }
     
+ */
 }
