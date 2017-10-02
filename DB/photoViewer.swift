@@ -83,20 +83,4 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
     @IBAction func backbutton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    //写真を元に戻す
-    @IBAction func changePhoto(_ sender: AnyObject) {
-        let alertController = UIAlertController(title: "", message: "本当に元に戻しますか？", preferredStyle: .alert)
-        let otherAction = UIAlertAction(title: "OK", style: .default) {
-            action in let photo = DB().getDefaultPhoto(self.pic_id)
-            self.myImageView.image = PhotoController().NSSImage(photo.photoData!)
-            DB().linkToCardData(photo)
-        }
-        let cancelAction = UIAlertAction(title: "CANCEL", style: .default) {
-            action in print("CANCEL")
-        }
-        alertController.addAction(otherAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
-    }
 }

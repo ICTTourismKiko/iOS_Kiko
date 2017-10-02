@@ -1,6 +1,6 @@
 {
   "name": "SKPhotoBrowser",
-  "version": "3.1.4",
+  "version": "4.1.1",
   "summary": "Simple PhotoBrowser/Viewer inspired by facebook, twitter photo browsers written by swift.",
   "homepage": "https://github.com/suzuki-0000/SKPhotoBrowser",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/suzuki-0000/SKPhotoBrowser.git",
-    "tag": "3.1.4"
+    "tag": "4.1.1"
   },
   "platforms": {
     "ios": "8.0"
