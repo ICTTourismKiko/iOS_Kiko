@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-               BuildableName = "DB.app"
-               BlueprintName = "DB"
-               ReferencedContainer = "container:DB.xcodeproj">
+               BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+               BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+               ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,34 +29,14 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC23C01B1BD7826C000B2465"
-               BuildableName = "DBTests.xctest"
-               BlueprintName = "DBTests"
-               ReferencedContainer = "container:DB.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC23C0261BD7826C000B2465"
-               BuildableName = "DBUITests.xctest"
-               BlueprintName = "DBUITests"
-               ReferencedContainer = "container:DB.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "DB.app"
-            BlueprintName = "DB"
-            ReferencedContainer = "container:DB.xcodeproj">
+            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
+            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
+            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

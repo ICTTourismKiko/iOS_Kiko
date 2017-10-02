@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "59A73D46729E670CC2F697F3E51FDE1A"
+               BlueprintIdentifier = "24F891BA66734B7AD2907839179B65DC"
                BuildableName = "Pods______Tests.framework"
                BlueprintName = "Pods-&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "59A73D46729E670CC2F697F3E51FDE1A"
+            BlueprintIdentifier = "24F891BA66734B7AD2907839179B65DC"
             BuildableName = "Pods______Tests.framework"
             BlueprintName = "Pods-&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;Tests"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +62,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "59A73D46729E670CC2F697F3E51FDE1A"
-            BuildableName = "Pods______Tests.framework"
-            BlueprintName = "Pods-&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;Tests"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

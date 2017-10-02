@@ -6,67 +6,48 @@
 	<dict>
 		<key>Pods-キーコ紀行.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>Pods-キーコ紀行Tests.xcscheme</key>
-		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-キーコ紀行UITests.xcscheme</key>
+		<key>Pods-キーコ紀行Tests.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Realm.xcscheme</key>
+		<key>Pods-キーコ紀行UITests.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>RealmSwift.xcscheme</key>
+		<key>Realm.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>SKPhotoBrowser.xcscheme</key>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SKPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>42D3611B3E185C370731BD6A222030D3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>59A73D46729E670CC2F697F3E51FDE1A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5DB6DE4420BBFAE1DBBA1E560084CACF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B96F162884961F30293B49C673150463</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E025106AB3BDE71EDC808AED4134C63B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1C8EAD169A421660CA1F755A85EC721</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
