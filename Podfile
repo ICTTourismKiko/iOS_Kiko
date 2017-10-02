@@ -5,8 +5,8 @@ target 'キーコ紀行' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-pod ‘RealmSwift’
-pod 'SKPhotoBrowser', :git => 'https://github.com/suzuki-0000/SKPhotoBrowser.git', :branch => 'swift3'
+pod 'RealmSwift'
+pod 'SKPhotoBrowser', :git => 'https://github.com/suzuki-0000/SKPhotoBrowser.git'
 
   # Pods for キーコ紀行
 

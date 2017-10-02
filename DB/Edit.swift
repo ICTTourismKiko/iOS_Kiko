@@ -16,7 +16,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     @IBOutlet weak var contentNum: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
-    
+        
     let db = DB()
     var id = 0
     var card = CardData()
@@ -151,5 +151,21 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     func textFieldDidChange(_ notification:Notification){
         titleNum.text = String(titleLength - titleText.text!.characters.count)
+    }
+    
+    //写真を元に戻す
+    @IBAction func changePhoto(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: "", message: "本当に元に戻しますか？", preferredStyle: .alert)
+        let otherAction = UIAlertAction(title: "OK", style: .default) {
+            action in let photo = DB().getDefaultPhoto(self.pic_id)
+            self.cardImage.image = PhotoController().NSSImage(photo.photoData!)
+            DB().linkToCardData(photo)
+        }
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .default) {
+            action in print("CANCEL")
+        }
+        alertController.addAction(otherAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
