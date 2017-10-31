@@ -25,7 +25,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     var CA_check = 0//1の時は、カメラを起動した、0の時はアルバム起動した
     
     //選択画面表示メソッド
-    func showActionSheet(){
+    @objc func showActionSheet(){
         
         // インスタンス生成　styleはActionSheet.
         let myAlert = UIAlertController(title: "選択して下さい", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -109,7 +109,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
     }
     
     //ライブラリに写真を保存するときのエラー内容表示
-    func image(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
         
         if error != nil {
             print(error.code)
@@ -145,7 +145,7 @@ class PhotoController: UIViewController , UIImagePickerControllerDelegate, UINav
         return img
         
     }
-    func back() {
+    @objc func back() {
         self.dismiss(animated: true, completion: nil)
     }
     

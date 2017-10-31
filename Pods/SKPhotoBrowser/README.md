@@ -1,8 +1,7 @@
 SKPhotoBrowser
 ========================
 
-![Language](https://img.shields.io/badge/language-Swift%202.3-orange.svg)
-![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
+![Swift](http://img.shields.io/badge/swift-4.0-brightgreen.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/SKPhotoBrowser.svg?style=flat)](http://cocoadocs.org/docsets/SKPhotoBrowser)
 
@@ -17,7 +16,7 @@ Simple PhotoBrowser/Viewer inspired by facebook, twitter photo browsers written 
 - Landscape handling
 - Delete photo support(by offbye). By set displayDelete=true show a delete icon in statusbar, deleted indexes can be obtain from delegate func didDeleted 
 
-![sample](Screenshots/example02.gif)
+![sample](Screenshots/example03.gif)
 
 ## Requirements
 - iOS 8.0+
@@ -28,39 +27,30 @@ Simple PhotoBrowser/Viewer inspired by facebook, twitter photo browsers written 
 
 Below is a table that shows which version of SKPhotoBrowser you should use for your Swift version.
 
-| Swift version | Moya version    |
+| Swift version | SKPhotoBrowser version    |
 | ------------- | --------------- |
-| 3.X           | >= 4.0.0-beta.1 |
-| 2.3           | 2.0.4 - 3.x.x   |
+| 4.X           | >= 5.0.0 |
+| 3.2           | >= 4.0.0 |
+| 2.3           | 2.0.4 - 3.1.4  |
 | 2.2           | <= 2.0.3        |
 
-##Installation
+## Installation
 
-####CocoaPods
+#### CocoaPods
 available on CocoaPods. Just add the following to your project Podfile:
 ```
 pod 'SKPhotoBrowser'
 use_frameworks!
 ```
 
-if you want to use in swift3, use swift3 branch 
-```
-## Swift3.0
-pod 'SKPhotoBrowser', :git => 'https://github.com/suzuki-0000/SKPhotoBrowser.git', :branch => 'swift3'
-use_frameworks!
-```
-
-####Carthage
+#### Carthage
 To integrate into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```ogdl
 github "suzuki-0000/SKPhotoBrowser"
 ```
 
-####Manually
-Add the code directly into your project.
-
-##Usage
+## Usage
 See the code snippet below for an example of how to implement, or see the example project.
 	
 from UIImages:
@@ -110,7 +100,7 @@ func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath i
    let cell = collectionView.cellForItemAtIndexPath(indexPath) 
    let originImage = cell.exampleImageView.image // some image for baseImage 
 
-   let browser = SKPhotoBrowser(originImage: originImage, photos: images, animatedFromView: cell) 
+   let browser = SKPhotoBrowser(originImage: originImage ?? UIImage(), photos: images, animatedFromView: cell) 
    browser.initializePageIndex(indexPath.row)
    presentViewController(browser, animated: true, completion: {})
 }
@@ -126,20 +116,18 @@ SKPhotoBrowserOptions.displayToolbar = false                              // all
 SKPhotoBrowserOptions.displayCounterLabel = false                         // counter label will be hidden
 SKPhotoBrowserOptions.displayBackAndForwardButton = false                 // back / forward button will be hidden
 SKPhotoBrowserOptions.displayAction = false                               // action button will be hidden
-SKPhotoBrowserOptions.displayDeleteButton = true                          // delete button will be shown
 SKPhotoBrowserOptions.displayHorizontalScrollIndicator = false            // horizontal scroll bar will be hidden
 SKPhotoBrowserOptions.displayVerticalScrollIndicator = false              // vertical scroll bar will be hidden
 let browser = SKPhotoBrowser(originImage: originImage, photos: images, animatedFromView: cell)
 ```
 
 #### Colors
-You can customize text, icon and background colors via SKPhotoBrowserOptions
+You can customize text, icon and background colors via SKPhotoBrowserOptions or SKToolbarOptions
 ```swift
 SKPhotoBrowserOptions.backgroundColor = UIColor.whiteColor()               // browser view will be white
 SKPhotoBrowserOptions.textAndIconColor = UIColor.blackColor()              // text and icons will be black
-SKPhotoBrowserOptions.toolbarTextShadowColor = UIColor.clearColor()        // shadow of toolbar text will be removed
-SKPhotoBrowserOptions.toolbarFont = UIFont(name: "Futura", size: 16.0)     // font of toolbar will be 'Futura'
-SKPhotoBrowserOptions.captionFont = UIFont(name: "Helvetica", size: 18.0)  // font of toolbar will be 'Helvetica'
+SKToolbarOptions.textShadowColor = UIColor.clearColor()                    // shadow of toolbar text will be removed
+SKToolbarOptions.font = UIFont(name: "Futura", size: 16.0)                 // font of toolbar will be 'Futura'
 ```
 
 #### Images
@@ -155,13 +143,21 @@ You can customize the visibility of the Statusbar in browser view via SKPhotoBro
 SKPhotoBrowserOptions.displayStatusbar = false                             // status bar will be hidden
 ```
 
+#### Close And Delete Buttons
+That how you can customize close and delete buttons
+```
+SKPhotoBrowserOptions.displayDeleteButton = true                           // delete button will be shown
+SKPhotoBrowserOptions.swapCloseAndDeleteButtons = true                     // now close button located on right side of screen and delete button is on left side
+SKPhotoBrowserOptions.closeAndDeleteButtonPadding = 20                     // set offset from top and from nearest screen edge of close button and delete button
+```
+
 #### Custom Cache From Web URL
 You can use SKCacheable protocol if others are adaptable. (SKImageCacheable or SKRequestResponseCacheable)
 
 ```swift
 e.g. SDWebImage
 
-// 1. create custon cache. implement function for protocol
+// 1. create custom cache, implement in accordance with the protocol 
 class CustomImageCache: SKImageCacheable { var cache: SDImageCache }
 
 // 2. replace SKCache instance with custom cache
@@ -184,7 +180,6 @@ Photo captions can be displayed simply bottom of PhotoBrowser. by setting the `c
 ``` swift
 let photo = SKPhoto.photoWithImage(UIImage())
 photo.caption = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-images.append(photo)
 ```
 
 #### SwipeGesture 
@@ -203,6 +198,7 @@ There's some trigger point you can handle using delegate. those are optional.
 - didScrollToIndex(index: Int)
 - removePhoto(browser: SKPhotoBrowser, index: Int, reload: (() -> Void))
 - viewForPhoto(browser: SKPhotoBrowser, index: Int) -> UIView?
+- controlsVisibilityToggled(hidden: Bool)
 
 ```swift
 let browser = SKPhotoBrowser(originImage: originImage, photos: images, animatedFromView: cell)

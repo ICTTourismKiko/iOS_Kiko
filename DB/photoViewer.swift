@@ -55,7 +55,7 @@ class photoViewer: UIViewController , UIScrollViewDelegate{
         return self.myImageView
     }
     // ダブルタップ
-    func doubleTap(_ gesture: UITapGestureRecognizer) -> Void {
+    @objc func doubleTap(_ gesture: UITapGestureRecognizer) -> Void {
         
         //print(self.myScrollView.zoomScale)
         if ( self.myScrollView.zoomScale < self.myScrollView.maximumZoomScale ) {
