@@ -153,7 +153,7 @@
 		3B5629651D45E438007D0E94 /* info_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_2.png; sourceTree = "<group>"; };
 		3BB793EC1EDFBA28007DB2FC /* information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = information.storyboard; sourceTree = "<group>"; };
 		3BB793EE1EE019BB007DB2FC /* edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = edit.storyboard; sourceTree = "<group>"; };
-		454A92A94EEB495CE21F0F4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454A92A94EEB495CE21F0F4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AE41918E512AEFEE631324 /* Pods-キーコ紀行.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行.debug.xcconfig"; sourceTree = "<group>"; };
 		795804001D50D1F600676B2E /* キーコ紀行.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "キーコ紀行.xcodeproj"; sourceTree = "<group>"; };
 		795804081D50D33B00676B2E /* PlusoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlusoSDK.framework; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		9CACB5511BDE150E0024707B /* cardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardList.swift; sourceTree = "<group>"; };
 		9CACB5531BDE15760024707B /* cardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardData.swift; sourceTree = "<group>"; };
 		9CACB5551BDE15970024707B /* setCardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setCardList.swift; sourceTree = "<group>"; };
-		A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDA2F46824DB955A912646F /* Pods-キーコ紀行.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行.release.xcconfig"; sourceTree = "<group>"; };
 		C50334F28EA93113A7287B96 /* Pods-キーコ紀行Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D496DF0563862B71E6173A82 /* Pods-キーコ紀行UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		DC4430AA1C0FFEA90006D4F5 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haikei.jpg; path = ../haikei.jpg; sourceTree = "<group>"; };
 		DC75B6681BD7B16D0025142E /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		DC75B66A1BD7B19D0025142E /* cardDataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardDataDB.swift; sourceTree = "<group>"; };
-		F4E530AE0DF916C9E2C2789B /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E530AE0DF916C9E2C2789B /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7DE7825396BFA3B440A3FD1 /* Pods-キーコ紀行UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

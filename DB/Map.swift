@@ -9,14 +9,45 @@
 import UIKit
 import MapKit
 import SKPhotoBrowser
+var CardTopSyousai = ["詳細","タイトル","Info","スポット紹介","info"]
 
-class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
+class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return CardTopSyousai.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // セルを取得する
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+        // セルの背景色はなし
+        cell.backgroundColor = UIColor.clear
+        // セルに表示する値を設定する
+        cell.textLabel!.text = CardTopSyousai[indexPath.row]
+        cell.textLabel!.textAlignment = .center
+        cell.textLabel!.numberOfLines = 0
+        if (indexPath.row == 0 || indexPath.row == 3) {
+            cell.textLabel!.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        }else{
+            cell.textLabel!.font = UIFont(name:"ArialHebew", size:UIFont.labelFontSize)
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100 // セルの高さの見積もり
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
     @IBOutlet weak var CardMap: MKMapView!
     @IBOutlet weak var camera2View: UIImageView!
     @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var ChangeTextButton: UIButton!
-    @IBOutlet weak var arrow: UIImageView!
+   // @IBOutlet weak var arrow: UIImageView!
     
     var myLocationManager: CLLocationManager!
     
@@ -35,11 +66,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
     var PinArray: Array<Pin> = []
     var PinAddress = 0
     
-    var CardSyousai = UILabel()
-    var CardPoemu = UILabel()
-    var CardTopSyousai = UILabel()
-    var CardTopPoemu = UILabel()
-    
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var pic_id = 0
@@ -55,57 +81,10 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         //選択したIDを持ってくる処理
         pic_id = appDelegate.P_ID!
         
-        //ラベルの設置
-        CardSyousai.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-120, width: 220, height: 120)
-        CardPoemu.frame = CGRect(x: self.view.frame.width+150, y: self.view.frame.height-120, width: 220, height: 120)
-        CardTopSyousai.frame = CGRect(x: self.view.frame.width/2-50,y: self.view.frame.height-140,width: 220,height: 20)
-        CardTopPoemu.frame = CGRect(x: self.view.frame.width+150, y: self.view.frame.height-120, width: 220, height: 20)
-        CardTopSyousai.textAlignment = NSTextAlignment.center
-        CardTopPoemu.textAlignment = NSTextAlignment.center
-        
-        let height = UIScreen.main.bounds.size.height
-        
-        //iphoneのサイズによってカードに書かれる文のサイズを変更
-        //iPhone6
-        if height >= 667 {
-            //self.title.font = UIFont.systemFontOfSize(14)
-            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 14.0)
-            
-            //iPhone6 Plus
-            //        }else if height == 736 {
-            //            self.introText.font = UIFont.systemFontOfSize(15)
-            
-            //iPhone5・5s・5c
-        }else {
-            //self.title.font = UIFont.systemFontOfSize(15)
-            CardTopSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
-            CardTopPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
-            CardSyousai.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
-            CardPoemu.font = UIFont(name: "HiraginoSans-W3", size: 12.0)
-
-        }
-
-        
-               CardPoemu.alpha = 0.0
-        CardTopPoemu.alpha = 0.0
-        self.view.addSubview(CardSyousai)
-        self.view.addSubview(CardPoemu)
-        self.view.addSubview(CardTopSyousai)
-        self.view.addSubview(CardTopPoemu)
-        
-        CardSyousai.text = DB().getCard(pic_id).cardText?.text
-        
         //カードの画像を表示
         camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id).photo?.photoData)!)
         camera2View.layer.cornerRadius = 10
         camera2View.layer.masksToBounds = true
-        
-        CardSyousai.numberOfLines = 30
-        CardPoemu.numberOfLines = 30
-        
         
         let db = DB()
         db.showDBPass()
@@ -143,10 +122,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
             PinArray[PinArray.count-1].imageName = "redpin30px.png"
         }
         
-        CardTopSyousai.text = "詳細情報"
-        CardTopPoemu.text = "スポット紹介"
-        CardSyousai.text = PinArray[PinArray.count-1].title! + "\n" + PinArray[PinArray.count-1].info
-        CardPoemu.text = PinArray[PinArray.count-1].text
+        CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
         
         CardMap.addAnnotations(PinArray)
         
@@ -283,19 +259,16 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         super.didReceiveMemoryWarning()
         
     }
-    
-    
     var UserAnnotationTap = 0     //0ならアノテーションをまだタップしていない、1なら一度でも押した状態
     
     //アノテーションがタップされた時に動作する
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         self.UserAnnotationTap = 1
-        self.CardLabelShowText = 0
         for PinAddress in 0..<PinArray.count {
             if(PinArray[PinAddress].hash == view.annotation!.hash){
-                CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
+//                CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
                 camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)
-                CardPoemu.text = PinArray[PinAddress].text
+//                CardPoemu.text = PinArray[PinAddress].text
                 
                 appDelegate.P_ID = PinArray[PinAddress].ID
                 break;
@@ -327,51 +300,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate{
         myAnnotation.annotation = annotation
         
         return myAnnotation
-    }
-    
-    
-    var CardLabelShowText = 0       //0なら詳細情報を表示中、1なら開発者作のポエムを表示中
-    
-    //カード(カード上の透明なボタン)をタップしたとき
-    @IBAction func CardLabelTapped(_ sender: AnyObject) {
-        
-        if(CardLabelShowText == 0){     //詳細情報を表示中
-            CardLabelShowText = 1
-            UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                //詳細情報を画面外へ
-                self.CardSyousai.frame = CGRect(x: -220, y: self.view.frame.height-120, width: 220, height: 120)
-                self.CardSyousai.alpha = 0.0
-                self.CardTopSyousai.frame = CGRect(x: -220, y: self.view.frame.height-140, width: 220, height: 20)
-                self.CardTopSyousai.alpha = 0.0
-                
-                //スポット紹介を表示
-                self.CardPoemu.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-120, width: 220, height: 120)
-                self.CardPoemu.alpha = 1.0
-                self.CardTopPoemu.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-140, width: 220, height: 20)
-                self.CardTopPoemu.alpha = 1.0
-               
-               // self.arrow.image = UIImage(named: "back.png")
-            }) 
-        }else{      //スポット紹介を表示中
-            
-            CardLabelShowText = 0
-            UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                //スポット紹介を画面外へ
-                self.CardPoemu.alpha = 0.0
-                self.CardPoemu.frame = CGRect(x: self.view.frame.width, y: self.view.frame.height-120, width: 220, height: 120)
-                self.CardTopPoemu.frame = CGRect(x: self.view.frame.width+30, y: self.view.frame.height-140, width: 220, height: 20)
-                self.CardTopPoemu.alpha = 0.0
-                
-                //詳細情報を表示
-                self.CardSyousai.alpha = 1.0
-                self.CardSyousai.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-120, width: 220, height: 120)
-                self.CardTopSyousai.alpha = 1.0
-                self.CardTopSyousai.frame = CGRect(x: self.view.frame.width/2-50, y: self.view.frame.height-140, width: 220, height: 20)
-                
-               // self.arrow.image = UIImage(named: "next.png")
-                
-            }) 
-        }
     }
     
     /* Facebookみたいな画像の見方ができる関数 */
