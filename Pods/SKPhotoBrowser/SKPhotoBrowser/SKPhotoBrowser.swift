@@ -62,7 +62,7 @@ open class SKPhotoBrowser: UIViewController {
     // strings
     open var cancelTitle = "Cancel"
     
-    // MARK - Initializer
+    // MARK: - Initializer
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -99,13 +99,11 @@ open class SKPhotoBrowser: UIViewController {
     }
     
     func setup() {
-        if let window = UIApplication.shared.delegate?.window {
-            applicationWindow = window
-        } else if let window = UIApplication.shared.keyWindow {
-            applicationWindow = window
-        } else {
+        guard let window = UIApplication.shared.preferredApplicationWindow else {
             return
         }
+
+        applicationWindow = window
         
         modalPresentationCapturesStatusBarAppearance = true
         modalPresentationStyle = .custom
@@ -170,7 +168,7 @@ open class SKPhotoBrowser: UIViewController {
     }
     
     // MARK: - Notification
-    open func handleSKPhotoLoadingDidEndNotification(_ notification: Notification) {
+    @objc open func handleSKPhotoLoadingDidEndNotification(_ notification: Notification) {
         guard let photo = notification.object as? SKPhotoProtocol else {
             return
         }
@@ -222,7 +220,7 @@ open class SKPhotoBrowser: UIViewController {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
     }
     
-    open func dismissPhotoBrowser(animated: Bool, completion: ((Void) -> Void)? = nil) {
+    open func dismissPhotoBrowser(animated: Bool, completion: (() -> Void)? = nil) {
         prepareForClosePhotoBrowser()
         if !animated {
             modalTransitionStyle = .crossDissolve
@@ -264,7 +262,7 @@ public extension SKPhotoBrowser {
         }
     }
     
-    func deleteButtonPressed(_ sender: UIButton) {
+    @objc func deleteButtonPressed(_ sender: UIButton) {
         delegate?.removePhoto?(self, index: currentPageIndex) { [weak self] in
             self?.deleteImage()
         }
@@ -309,19 +307,19 @@ public extension SKPhotoBrowser {
         return photos[index]
     }
     
-    func gotoPreviousPage() {
+    @objc func gotoPreviousPage() {
         jumpToPageAtIndex(currentPageIndex - 1)
     }
     
-    func gotoNextPage() {
+    @objc func gotoNextPage() {
         jumpToPageAtIndex(currentPageIndex + 1)
     }
     
-    func showDeleteButton(bool: Bool){
+    func showDeleteButton(bool: Bool) {
         self.showDeleteButton = bool
     }
     
-    func showToolbar(bool: Bool){
+    func showToolbar(bool: Bool) {
         self.showToolBar = bool
     }
     
@@ -343,7 +341,7 @@ public extension SKPhotoBrowser {
         setControlsHidden(true, animated: true, permanent: false)
     }
     
-    func hideControls(_ timer: Timer) {
+    @objc func hideControls(_ timer: Timer) {
         hideControls()
         delegate?.controlsVisibilityToggled?(self, hidden: true)
     }
@@ -435,7 +433,7 @@ internal extension SKPhotoBrowser {
         if UIInterfaceOrientationIsLandscape(currentOrientation) {
             height = 32
         }
-        return CGRect(x: 0, y: view.bounds.size.height - height, width: view.bounds.size.width, height: height)
+        return CGRect(x: 0, y: view.bounds.size.height - (height+10), width: view.bounds.size.width, height: height)
     }
     
     func frameForToolbarHideAtOrientation() -> CGRect {
@@ -459,7 +457,7 @@ internal extension SKPhotoBrowser {
 // MARK: - Internal Function For Button Pressed, UIGesture Control
 
 internal extension SKPhotoBrowser {
-    func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
+    @objc func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
         guard let zoomingScrollView: SKZoomingScrollView = pagingScrollView.pageDisplayedAtIndex(currentPageIndex) else {
             return
         }
@@ -518,11 +516,11 @@ internal extension SKPhotoBrowser {
         }
     }
     
-    func closeButtonPressed(_ sender: UIButton) {
+    @objc func closeButtonPressed(_ sender: UIButton) {
         determineAndClose()
     }
     
-    func actionButtonPressed(ignoreAndShare: Bool) {
+    @objc func actionButtonPressed(ignoreAndShare: Bool) {
         delegate?.willShowActionSheet?(currentPageIndex)
         
         guard numberOfPhotos > 0 else {
@@ -531,7 +529,7 @@ internal extension SKPhotoBrowser {
         
         if let titles = SKPhotoBrowserOptions.actionButtonTitles {
             let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            actionSheetController.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: { (action) -> Void in
+            actionSheetController.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: { (_) -> Void in
             }))
             for idx in titles.indices {
                 actionSheetController.addAction(UIAlertAction(title: titles[idx], style: .default, handler: { (_) -> Void in

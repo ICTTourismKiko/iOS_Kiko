@@ -11,16 +11,16 @@ import UIKit
 
 class CardData: Object {
     
-    dynamic var ID = 0
-    dynamic var cardText: CardText?
-    dynamic var spotName = ""
-    dynamic var info = ""
-    dynamic var photo: Photo?
-    dynamic var categoryID = 0
-    dynamic var position_x: Double = 0
-    dynamic var position_y: Double = 0
-    dynamic var flag = false
-    dynamic var updated = false
+    @objc dynamic var ID = 0
+    @objc dynamic var cardText: CardText?
+    @objc dynamic var spotName = ""
+    @objc dynamic var info = ""
+    @objc dynamic var photo: Photo?
+    @objc dynamic var categoryID = 0
+    @objc dynamic var position_x: Double = 0
+    @objc dynamic var position_y: Double = 0
+    @objc dynamic var flag = false
+    @objc dynamic var updated = false
     
     override class func primaryKey() -> String {
         return "ID"
@@ -30,8 +30,8 @@ class CardData: Object {
 
 class Category: Object {
     
-    dynamic var categoryID = 0
-    dynamic var categoryName = ""
+    @objc dynamic var categoryID = 0
+    @objc dynamic var categoryName = ""
     
     override class func primaryKey() -> String {
         return "categoryID"
@@ -40,11 +40,11 @@ class Category: Object {
 
 class Photo: Object {
     
-    dynamic var photoID = 0
-    dynamic var ID = 0
-    dynamic var photoData: Data?
-    dynamic var photoPath = ""
-    dynamic var display = false
+    @objc dynamic var photoID = 0
+    @objc dynamic var ID = 0
+    @objc dynamic var photoData: Data?
+    @objc dynamic var photoPath = ""
+    @objc dynamic var display = false
     
     override class func primaryKey() -> String {
         return "photoID"
@@ -53,10 +53,10 @@ class Photo: Object {
 
 class CardText: Object {
     
-    dynamic var textID = 0
-    dynamic var ID = 0
-    dynamic var title = ""
-    dynamic var text = ""
+    @objc dynamic var textID = 0
+    @objc dynamic var ID = 0
+    @objc dynamic var title = ""
+    @objc dynamic var text = ""
     
     override class func primaryKey() -> String {
         return "textID"
