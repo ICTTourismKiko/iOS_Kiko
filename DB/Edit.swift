@@ -149,7 +149,7 @@ class Edit: UIViewController, UITextFieldDelegate, UITextViewDelegate{
         contentNum.text = String(contentLength - contentText.text.characters.count)
     }
     
-    func textFieldDidChange(_ notification:Notification){
+    @objc func textFieldDidChange(_ notification:Notification){
         titleNum.text = String(titleLength - titleText.text!.characters.count)
     }
     

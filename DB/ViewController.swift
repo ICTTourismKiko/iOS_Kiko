@@ -40,8 +40,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     /* 「振り返る」を選択 */
+    /*@IBAction func moveAlbum(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "cardList", bundle: nil)
+        let next: UIViewController = storyboard.instantiateInitialViewController()!
+        present(next, animated: true, completion: nil)
+    }*/
     @IBAction func moveAlbum(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "album", bundle: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "diary", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }

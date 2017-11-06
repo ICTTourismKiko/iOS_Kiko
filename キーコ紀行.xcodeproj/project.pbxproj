@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137160E61FB0574100A352D3 /* diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137160E51FB0574100A352D3 /* diary.swift */; };
+		137160E81FB0574D00A352D3 /* diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137160E71FB0574D00A352D3 /* diary.storyboard */; };
 		375FEDDD1F13540D00CFCCF7 /* camera3-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 375FEDDC1F13540D00CFCCF7 /* camera3-4.png */; };
 		378BDDF01C05A3E3000DD5BB /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */; };
 		378BDDF11C05A3E3000DD5BB /* PagingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */; };
@@ -119,6 +121,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		137160E51FB0574100A352D3 /* diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diary.swift; sourceTree = "<group>"; };
+		137160E71FB0574D00A352D3 /* diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = diary.storyboard; sourceTree = "<group>"; };
 		355EB8B6F669EC0DB1423759 /* Pods-キーコ紀行Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-キーコ紀行Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		375FEDDC1F13540D00CFCCF7 /* camera3-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera3-4.png"; sourceTree = "<group>"; };
 		378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 				3B1068751EE3FC4100203416 /* photoController.storyboard */,
 				3B1068731EE3FAC400203416 /* printPreview.storyboard */,
 				3B1068711EE3F84800203416 /* album.storyboard */,
+				137160E71FB0574D00A352D3 /* diary.storyboard */,
 				3B10686F1EE3F62300203416 /* createLeaflet.storyboard */,
 				3B10687B1EE4088E00203416 /* loadLeaflet.storyboard */,
 				3B1068791EE4074200203416 /* selectCard.storyboard */,
@@ -364,6 +369,7 @@
 				3BB793EC1EDFBA28007DB2FC /* information.storyboard */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
+				137160E51FB0574100A352D3 /* diary.swift */,
 				DC75B66A1BD7B19D0025142E /* cardDataDB.swift */,
 				DC75B6681BD7B16D0025142E /* DB.swift */,
 				379112ED1BD817D80024E678 /* Map.swift */,
@@ -396,6 +402,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0301BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行" */;
 			buildPhases = (
+				B1AA457C59EFEC29C6D8D773 /* [CP] Check Pods Manifest.lock */,
 				799254550118CC10BBFB7ED3 /* [CP] Check Pods Manifest.lock */,
 				DC23C0041BD7826B000B2465 /* Sources */,
 				DC23C0051BD7826B000B2465 /* Frameworks */,
@@ -403,6 +410,8 @@
 				795804151D50D79000676B2E /* Embed Frameworks */,
 				7679C588CE8AA591B6B0DC2B /* [CP] Embed Pods Frameworks */,
 				E2FE08B1967EC2D4D079039D /* [CP] Copy Pods Resources */,
+				A212EB8D0D4BBB73964FDFDB /* 📦 Embed Pods Frameworks */,
+				1E29C47E53B395A286908909 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -417,12 +426,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0331BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行Tests" */;
 			buildPhases = (
+				635280A8975E456C7F2CD85C /* [CP] Check Pods Manifest.lock */,
 				3ECAF837C1F31B21027CFBC7 /* [CP] Check Pods Manifest.lock */,
 				DC23C0181BD7826C000B2465 /* Sources */,
 				DC23C0191BD7826C000B2465 /* Frameworks */,
 				DC23C01A1BD7826C000B2465 /* Resources */,
 				F605A7F16D6FC748F372E07B /* [CP] Embed Pods Frameworks */,
 				D9C9CD6ECB7C32F6B1C3F9C2 /* [CP] Copy Pods Resources */,
+				68D57F3BAEA9C9C2E139664B /* 📦 Embed Pods Frameworks */,
+				02A66D9C5186DE9B18E9A161 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -438,12 +450,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC23C0361BD7826C000B2465 /* Build configuration list for PBXNativeTarget "キーコ紀行UITests" */;
 			buildPhases = (
+				BC3FFD9BED2FA51C5CD529C9 /* [CP] Check Pods Manifest.lock */,
 				3BB179125EB3F85273FC70D7 /* [CP] Check Pods Manifest.lock */,
 				DC23C0231BD7826C000B2465 /* Sources */,
 				DC23C0241BD7826C000B2465 /* Frameworks */,
 				DC23C0251BD7826C000B2465 /* Resources */,
 				366A3931ED00710FFDDD3CE1 /* [CP] Copy Pods Resources */,
 				C712A371ACA0B35DA1A1DD4A /* [CP] Embed Pods Frameworks */,
+				C76A8DB67D94DCEDFBC45FBE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -549,6 +563,7 @@
 				DC4430511C0959380006D4F5 /* camera3-3.png in Resources */,
 				375FEDDD1F13540D00CFCCF7 /* camera3-4.png in Resources */,
 				3B1068651EE1474B00203416 /* map.storyboard in Resources */,
+				137160E81FB0574D00A352D3 /* diary.storyboard in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
 				3B218F371D14088A00B66C6F /* splash640.png in Resources */,
 				8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */,
@@ -582,6 +597,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02A66D9C5186DE9B18E9A161 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E29C47E53B395A286908909 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		366A3931ED00710FFDDD3CE1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +678,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		635280A8975E456C7F2CD85C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-キーコ紀行Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68D57F3BAEA9C9C2E139664B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行Tests/Pods-キーコ紀行Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7679C588CE8AA591B6B0DC2B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -673,6 +751,57 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A212EB8D0D4BBB73964FDFDB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行/Pods-キーコ紀行-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1AA457C59EFEC29C6D8D773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-キーコ紀行-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC3FFD9BED2FA51C5CD529C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-キーコ紀行UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C712A371ACA0B35DA1A1DD4A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -686,6 +815,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C76A8DB67D94DCEDFBC45FBE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-キーコ紀行UITests/Pods-キーコ紀行UITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9C9CD6ECB7C32F6B1C3F9C2 /* [CP] Copy Pods Resources */ = {
@@ -741,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378BDDF31C05A3F5000DD5BB /* PagingCollectionViewLayout.swift in Sources */,
+				137160E61FB0574100A352D3 /* diary.swift in Sources */,
 				9CACB5521BDE150E0024707B /* cardList.swift in Sources */,
 				37BBBC461C095E730098B625 /* album_userphoto.swift in Sources */,
 				DC08FCBE1C13E6A1002252F2 /* Edit.swift in Sources */,
@@ -856,7 +1001,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "b66f12b9-d35d-4589-95b6-e4834d1bf4f1";
@@ -900,7 +1045,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "b66f12b9-d35d-4589-95b6-e4834d1bf4f1";
@@ -925,12 +1070,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -948,12 +1093,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
