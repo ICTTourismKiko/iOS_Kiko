@@ -128,6 +128,28 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         //カードの情報を設定
         CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
         
+        for i in 1..<15{
+            appDelegate.P_ID = i
+            pic_id = appDelegate.P_ID!
+        //選択されたカードのピンを作成
+            PinArray.append(Pin())
+            PinArray[PinArray.count-1].ID = pic_id
+            PinArray[PinArray.count-1].title = DB().getCard(pic_id).spotName
+            PinArray[PinArray.count-1].text = (DB().getCard(pic_id).cardText?.text)!
+            PinArray[PinArray.count-1].info = DB().getCard(pic_id).info
+            PinArray[PinArray.count-1].x = DB().getCard(pic_id).position_x
+            PinArray[PinArray.count-1].y = DB().getCard(pic_id).position_y
+            PinArray[PinArray.count-1].coordinate = CLLocationCoordinate2DMake(PinArray[PinArray.count-1].x, PinArray[PinArray.count-1].y)
+            if((flagTrueIDList.index(of: pic_id)) != nil){
+                PinArray[flagTrueIDList.index(of: pic_id)!].imageName = ""
+                PinArray[PinArray.count-1].imageName = "ic_location_on_36pt_3x.png"
+            }else{
+                PinArray[PinArray.count-1].imageName = "ic_location_on_36pt_3x.png"
+            }
+            CardMap.addAnnotations(PinArray)
+        }
+            
+        
         myLocationManager = CLLocationManager()
         myLocationManager.delegate = self
         myLocationManager.distanceFilter = kCLHeadingFilterNone
@@ -269,7 +291,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         for PinAddress in 0..<PinArray.count {
             if(PinArray[PinAddress].hash == view.annotation!.hash){
 //                CardSyousai.text = PinArray[PinAddress].title! + "\n" + PinArray[PinAddress].info
-                camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)
+//                camera2View.image = PhotoController().NSSImage((DB().getCard(PinArray[PinAddress].ID).photo?.photoData)!)
 //                CardPoemu.text = PinArray[PinAddress].text
                 
                 appDelegate.P_ID = PinArray[PinAddress].ID
