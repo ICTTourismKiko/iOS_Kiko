@@ -80,6 +80,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         
         //選択したIDを持ってくる処理
         pic_id = appDelegate.P_ID!
+        let deletePic = pic_id
         
         //カードの画像を表示
         camera2View.image = PhotoController().NSSImage((DB().getCard(pic_id).photo?.photoData)!)
@@ -131,6 +132,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         for i in 1..<15{
             appDelegate.P_ID = i
             pic_id = appDelegate.P_ID!
+            if(pic_id != deletePic){
         //選択されたカードのピンを作成
             PinArray.append(Pin())
             PinArray[PinArray.count-1].ID = pic_id
@@ -147,6 +149,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
                 PinArray[PinArray.count-1].imageName = "ic_location_on_36pt_3x.png"
             }
             CardMap.addAnnotations(PinArray)
+            }
         }
             
         
