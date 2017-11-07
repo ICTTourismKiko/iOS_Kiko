@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="28" width="383" height="266"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMk-7q-Ypt" id="HHA-hB-STt">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="265.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="266"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qlr-kA-Mh2">

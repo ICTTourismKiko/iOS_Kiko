@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yLb-nJ-7lX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yLb-nJ-7lX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +45,7 @@
                                 </variation>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Stx-sk-DPM">
-                                <rect key="frame" x="14" y="476.5" width="118.5" height="174.5"/>
+                                <rect key="frame" x="14" y="483.5" width="114" height="167.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Stx-sk-DPM" secondAttribute="height" multiplier="13:19" id="GBR-m6-RYT"/>
                                 </constraints>
@@ -84,14 +83,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpZ-jw-BT6" userLabel="MyTable">
-                                <rect key="frame" x="155" y="502" width="204" height="130"/>
+                                <rect key="frame" x="150.5" y="502" width="208.5" height="130"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyCell" id="2DC-gi-FcJ">
-                                        <rect key="frame" x="0.0" y="28" width="204" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="208.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2DC-gi-FcJ" id="qCI-ci-0ue">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="208.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -121,7 +120,7 @@
                             <constraint firstItem="QpZ-jw-BT6" firstAttribute="top" secondItem="5VA-wZ-qEY" secondAttribute="bottom" constant="28.5" id="enY-NM-XUB"/>
                             <constraint firstItem="rdy-5V-J8m" firstAttribute="top" secondItem="5VA-wZ-qEY" secondAttribute="bottom" constant="6" id="fds-bP-jV6"/>
                             <constraint firstItem="QpZ-jw-BT6" firstAttribute="trailing" secondItem="cw9-Yh-hOc" secondAttribute="trailingMargin" id="gUA-Fa-t0z"/>
-                            <constraint firstItem="Stx-sk-DPM" firstAttribute="top" secondItem="5VA-wZ-qEY" secondAttribute="bottom" constant="3" id="jje-z4-Kro"/>
+                            <constraint firstItem="Stx-sk-DPM" firstAttribute="top" secondItem="5VA-wZ-qEY" secondAttribute="bottom" constant="10" id="jje-z4-Kro"/>
                             <constraint firstItem="5VA-wZ-qEY" firstAttribute="leading" secondItem="cw9-Yh-hOc" secondAttribute="leadingMargin" constant="-28" id="jmb-7U-Me1"/>
                             <constraint firstItem="wXI-E2-aYi" firstAttribute="top" secondItem="mqy-tb-HKb" secondAttribute="bottom" id="p9T-QO-jHX"/>
                             <constraint firstItem="mqy-tb-HKb" firstAttribute="leading" secondItem="cw9-Yh-hOc" secondAttribute="leadingMargin" constant="-27" id="r4d-Js-iNn"/>

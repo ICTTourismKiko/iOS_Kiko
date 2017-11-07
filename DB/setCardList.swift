@@ -48,8 +48,8 @@ UINavigationControllerDelegate{
         //iphoneのサイズによってカードに書かれる文のサイズを変更
         //iPhone6
         if height >= 667 {
-            self.title.font = UIFont.boldSystemFont(ofSize:24)
-            self.introText.font = UIFont.systemFont(ofSize: 20)
+            self.title.font = UIFont.boldSystemFont(ofSize:20)
+            self.introText.font = UIFont.systemFont(ofSize: 18)
             
             //iPhone6 Plus
             //        }else if height == 736 {
@@ -58,8 +58,8 @@ UINavigationControllerDelegate{
             //iPhone5・5s・5c
         }else {
             //self.title.font = UIFont.systemFontOfSize(15)
-            self.introText.font = UIFont.systemFont(ofSize: 18)
-            self.title.font = UIFont.systemFont(ofSize: 20)
+            self.introText.font = UIFont.systemFont(ofSize: 14)
+            self.title.font = UIFont.systemFont(ofSize: 16)
             
         }
         

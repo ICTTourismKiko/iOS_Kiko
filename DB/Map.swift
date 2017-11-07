@@ -121,10 +121,12 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         }else{
             PinArray[PinArray.count-1].imageName = "redpin30px.png"
         }
-        
-        CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
+
         
         CardMap.addAnnotations(PinArray)
+        
+        //カードの情報を設定
+        CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
         
         myLocationManager = CLLocationManager()
         myLocationManager.delegate = self
