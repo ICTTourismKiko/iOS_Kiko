@@ -480,7 +480,7 @@
 				TargetAttributes = {
 					DC23C0071BD7826B000B2465 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3W722UE7AL;
+						DevelopmentTeam = S2VVFWD7JE;
 						LastSwiftMigration = 0830;
 					};
 					DC23C01B1BD7826C000B2465 = {
@@ -1076,7 +1076,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3W722UE7AL;
+				DEVELOPMENT_TEAM = S2VVFWD7JE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1084,7 +1084,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.kalupas;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
@@ -1099,7 +1099,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3W722UE7AL;
+				DEVELOPMENT_TEAM = S2VVFWD7JE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1107,7 +1107,7 @@
 				INFOPLIST_FILE = DB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.fun.KikoKiko.takku;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.kalupas;
 				PRODUCT_NAME = "キーコ紀行";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;

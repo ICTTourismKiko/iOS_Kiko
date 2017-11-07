@@ -129,7 +129,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         //カードの情報を設定
         CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
         
-        for i in 1..<15{
+        for i in 1..<17{
             appDelegate.P_ID = i
             pic_id = appDelegate.P_ID!
             if(pic_id != deletePic){
