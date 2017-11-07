@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-               BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
-               BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
-               ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
+               BlueprintIdentifier = "D0D21B2408D5B8DB0EB302644803C84A"
+               BuildableName = "SKPhotoBrowser.framework"
+               BlueprintName = "SKPhotoBrowser"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,15 +30,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
-            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
-            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -53,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
-            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
-            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
+            BlueprintIdentifier = "D0D21B2408D5B8DB0EB302644803C84A"
+            BuildableName = "SKPhotoBrowser.framework"
+            BlueprintName = "SKPhotoBrowser"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,16 +62,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC23C0071BD7826B000B2465"
-            BuildableName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.app"
-            BlueprintName = "&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;"
-            ReferencedContainer = "container:&#x30ad;&#x30fc;&#x30b3;&#x7d00;&#x884c;.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
