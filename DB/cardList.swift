@@ -140,7 +140,6 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     /* テキストでmap画面へ遷移する */
     @IBAction func moveMap2(_ sender: Any) {
-        print("おおおおお")
         // 押されたボタンを取得
         let botton = sender as! UIButton
         let cell = botton.superview?.superview as! setCardList
