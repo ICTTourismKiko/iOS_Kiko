@@ -129,6 +129,9 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         //カードの情報を設定
         CardTopSyousai = ["詳細",PinArray[PinArray.count-1].title!,PinArray[PinArray.count-1].info,"スポット紹介",PinArray[PinArray.count-1].text]
         
+        var region:MKCoordinateRegion = self.CardMap.region
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(appDelegate.P_ID!).position_x, DB().getCard(appDelegate.P_ID!).position_y) //マップの中心を選択して来た場所に設定
+        
         for i in 1..<17{
             appDelegate.P_ID = i
             pic_id = appDelegate.P_ID!
@@ -167,9 +170,6 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         
         /** 位置情報取得失敗時 */
          self.CardMap.delegate = self
-        
-        var region:MKCoordinateRegion = self.CardMap.region
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(appDelegate.P_ID!).position_x, DB().getCard(appDelegate.P_ID!).position_y) //マップの中心を選択して来た場所に設定
         
         region.center = location
         region.span.longitudeDelta = 0.005

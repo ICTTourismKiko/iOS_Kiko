@@ -87,10 +87,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyCell" id="2DC-gi-FcJ">
-                                        <rect key="frame" x="0.0" y="28" width="208.5" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="208" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2DC-gi-FcJ" id="qCI-ci-0ue">
-                                            <rect key="frame" x="0.0" y="0.0" width="208.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="208" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
