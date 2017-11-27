@@ -132,7 +132,7 @@ class Map: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate, UITable
         var region:MKCoordinateRegion = self.CardMap.region
         let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(DB().getCard(appDelegate.P_ID!).position_x, DB().getCard(appDelegate.P_ID!).position_y) //マップの中心を選択して来た場所に設定
         
-        for i in 1..<17{
+        for i in 1..<(DB().cardListSize()+1){
             appDelegate.P_ID = i
             pic_id = appDelegate.P_ID!
             if(pic_id != deletePic){
