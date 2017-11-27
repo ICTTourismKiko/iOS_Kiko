@@ -46,6 +46,8 @@
 		80AABD046B4B864EA8372562 /* Pods______Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A68701E8B6D03755AE23FFAB /* Pods______Tests.framework */; };
 		8F151AE21D2F746600BED73D /* black.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8F151AE11D2F746600BED73D /* black.JPG */; };
 		8F35236C1BDA141900983274 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35236B1BDA141900983274 /* PhotoController.swift */; };
+		8F461D911FC1B10000D80627 /* TempSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F461D901FC1B10000D80627 /* TempSelect.storyboard */; };
+		8F461D9A1FCBF4D500D80627 /* TempController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F461D991FCBF4D500D80627 /* TempController.swift */; };
 		8F526FBA1D4C8DA20060A4EB /* redpin30px.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F526FB91D4C8DA20060A4EB /* redpin30px.png */; };
 		8F71FCB71C07AC5E00891228 /* PrintPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */; };
 		8F7AC35E1C13386400C51E9F /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */; };
@@ -165,6 +167,8 @@
 		8F35236B1BDA141900983274 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		8F3523A91BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		8F3523AA1BE358BA00983274 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8F461D901FC1B10000D80627 /* TempSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TempSelect.storyboard; sourceTree = "<group>"; };
+		8F461D991FCBF4D500D80627 /* TempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempController.swift; sourceTree = "<group>"; };
 		8F526FB91D4C8DA20060A4EB /* redpin30px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin30px.png; sourceTree = "<group>"; };
 		8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintPreviewController.swift; sourceTree = "<group>"; };
 		8F7AC35D1C13386400C51E9F /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 				8F151AE11D2F746600BED73D /* black.JPG */,
 				3B5629651D45E438007D0E94 /* info_2.png */,
 				DC23C00F1BD7826B000B2465 /* Main.storyboard */,
+				8F461D901FC1B10000D80627 /* TempSelect.storyboard */,
 				3B1068771EE404C200203416 /* cardList.storyboard */,
 				3B1068751EE3FC4100203416 /* photoController.storyboard */,
 				3B1068731EE3FAC400203416 /* printPreview.storyboard */,
@@ -367,6 +372,7 @@
 				3BB793EE1EE019BB007DB2FC /* edit.storyboard */,
 				3B1068641EE1474B00203416 /* map.storyboard */,
 				3BB793EC1EDFBA28007DB2FC /* information.storyboard */,
+				8F461D991FCBF4D500D80627 /* TempController.swift */,
 				DC23C00B1BD7826B000B2465 /* AppDelegate.swift */,
 				DC23C00D1BD7826B000B2465 /* ViewController.swift */,
 				137160E51FB0574100A352D3 /* diary.swift */,
@@ -566,6 +572,7 @@
 				137160E81FB0574D00A352D3 /* diary.storyboard in Resources */,
 				DC4430501C0959380006D4F5 /* bar6.png in Resources */,
 				3B218F371D14088A00B66C6F /* splash640.png in Resources */,
+				8F461D911FC1B10000D80627 /* TempSelect.storyboard in Resources */,
 				8F7AC36E1C17DC0300C51E9F /* noimage.png in Resources */,
 				9CA1E02C1C0AEC190083591E /* print.png in Resources */,
 				3B218F311D1407AC00B66C6F /* splash6.png in Resources */,
@@ -901,6 +908,7 @@
 				9C4D92311C141CF8009A5659 /* photoViewer.swift in Sources */,
 				DC75B66B1BD7B19D0025142E /* cardDataDB.swift in Sources */,
 				9CACB5541BDE15760024707B /* cardData.swift in Sources */,
+				8F461D9A1FCBF4D500D80627 /* TempController.swift in Sources */,
 				9CACB5561BDE15970024707B /* setCardList.swift in Sources */,
 				378BDDF51C05A406000DD5BB /* PagingCollectionView.swift in Sources */,
 				DC23C00C1BD7826B000B2465 /* AppDelegate.swift in Sources */,

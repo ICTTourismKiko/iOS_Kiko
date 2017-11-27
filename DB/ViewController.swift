@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     /* 「印刷する」を選択 */
     @IBAction func moveCL(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "createLeaflet", bundle: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "TempSelect", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }
