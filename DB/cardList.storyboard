@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="28" width="383" height="266"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMk-7q-Ypt" id="HHA-hB-STt">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="266"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="265.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qlr-kA-Mh2">
@@ -56,49 +56,33 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-aq-ICw">
-                                                    <rect key="frame" x="142" y="24" width="232" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="142" y="27" width="232" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-I7-HEV">
-                                                    <rect key="frame" x="142" y="45" width="219" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <action selector="moveMap2:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="Bue-XD-JCw"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnc-re-WOo">
-                                                    <rect key="frame" x="53" y="206" width="43" height="43"/>
+                                                    <rect key="frame" x="90" y="206" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="pencil41.png"/>
                                                     <connections>
                                                         <action selector="moveEdit:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="A15-bt-a4I"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwy-IA-TQj">
-                                                    <rect key="frame" x="170" y="206" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="camera3-4.png"/>
-                                                    <connections>
-                                                        <action selector="movePhoto:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="B6w-fI-OkS"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkr-cY-7r8">
-                                                    <rect key="frame" x="154" y="61" width="208" height="135"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="154" y="67" width="208" height="134"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-q3-W1R">
-                                                    <rect key="frame" x="294" y="206" width="43" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwy-IA-TQj">
+                                                    <rect key="frame" x="230" y="204" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                                    <state key="normal" title="T"/>
+                                                    <state key="normal" image="camera3-4.png"/>
                                                     <connections>
-                                                        <action selector="makeTweet:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="oOp-x8-yO1"/>
+                                                        <action selector="movePhoto:" destination="nTJ-7Y-I2B" eventType="touchUpInside" id="B6w-fI-OkS"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -112,11 +96,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="MapButton" destination="cfP-I7-HEV" id="8Tt-Lw-WX7"/>
                                             <outlet property="iconImage" destination="KLK-r3-mKX" id="cMq-Wk-pnQ"/>
                                             <outlet property="introText" destination="Kkr-cY-7r8" id="F8P-iW-WV5"/>
                                             <outlet property="title" destination="ZJH-aq-ICw" id="wGb-t8-QCz"/>
-                                            <outlet property="tweet" destination="lVb-q3-W1R" id="2Ed-St-UZS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

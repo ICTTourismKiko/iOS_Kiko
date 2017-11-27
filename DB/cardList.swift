@@ -36,11 +36,6 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         imageView.image = image
         self.tableView.backgroundView = imageView
         
-        //        NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"),
-        //            userInfo: nil, repeats: true);
-        
-        
-        //NSTimer.scheduledTimerWithTimeInterval(0.5,target:self,selector:Selector("reload"), userInfo: nil, repeats: true);
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,10 +60,6 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    
-    // functions needed to be implemented
-    // for table view
-    
     // セクション数
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -84,15 +75,15 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.setCell(cards[indexPath.row])
         cell.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
-      
-    /*
-        if appDelegate.flaglist[indexPath.row] == true {
-            cell.flag.tintColor = UIColor.orange
-        }else {
-            cell.flag.tintColor = UIColor.lightGray
-        }
-      */
-
+        
+        /*
+         if appDelegate.flaglist[indexPath.row] == true {
+         cell.flag.tintColor = UIColor.orange
+         }else {
+         cell.flag.tintColor = UIColor.lightGray
+         }
+         */
+        
         return cell
     }
     
@@ -133,44 +124,15 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
         present(next, animated: true, completion: nil)
     }
     
-    /*ツイートを作成する*/
-    @IBAction func makeTweet(_ sender: Any) {
-       
-    }
-    
-    /* テキストでmap画面へ遷移する */
-    @IBAction func moveMap2(_ sender: Any) {
-        // 押されたボタンを取得
-        let botton = sender as! UIButton
-        let cell = botton.superview?.superview as! setCardList
+    //セルが選択された時に動作する
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // クリックされたcellの位置を取得
-        let row = tableView.indexPath(for: cell)?.row
-        appDelegate.P_ID = row! + 1
+        appDelegate.P_ID = indexPath.row + 1
         
         let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }
-    
-    /*
-    /* map画面へ移動する */
-    @IBAction func moveMap(_ sender: Any) {
-        print("おおおおお")
-        // 押されたボタンを取得
-        let botton = sender as! UIButton
-        let cell = botton.superview?.superview as! setCardList
-        
-        // クリックされたcellの位置を取得
-        let row = tableView.indexPath(for: cell)?.row
-        appDelegate.P_ID = row! + 1
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
-        let next: UIViewController = storyboard.instantiateInitialViewController()!
-        present(next, animated: true, completion: nil)
-    }
- */
-    
     
     /* Facebookみたいな画像の見方ができる関数 */
     @IBAction func openImage(_ sender: Any) {

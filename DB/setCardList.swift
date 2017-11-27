@@ -11,18 +11,10 @@ import UIKit
 class setCardList: UITableViewCell, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
-    
-    
-//    @IBOutlet weak var CellButton: UIButton!
     @IBOutlet weak var iconImage: UIImageView!
-    @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var introText: UILabel!
-    @IBOutlet weak var tweet: UIButton!
-    
-//    @IBOutlet weak var open_photo: UIButton!
- //   @IBOutlet weak var flag: UIButton!
-    
+        
     
     var flagSituation = false
     var cardID = 0
@@ -31,13 +23,10 @@ UINavigationControllerDelegate{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func setCell(_ card :cardData) {
@@ -49,11 +38,12 @@ UINavigationControllerDelegate{
         //iPhone6
         if height >= 667 {
             self.title.font = UIFont.boldSystemFont(ofSize:20)
-            self.introText.font = UIFont.systemFont(ofSize: 18)
+            self.introText.font = UIFont.systemFont(ofSize: 17)
             
             //iPhone6 Plus
-            //        }else if height == 736 {
-            //            self.introText.font = UIFont.systemFontOfSize(15)
+        }else if height == 736 {
+            self.title.font = UIFont.boldSystemFont(ofSize:20)
+            self.introText.font = UIFont.systemFont(ofSize: 17)
             
             //iPhone5・5s・5c
         }else {
@@ -77,39 +67,39 @@ UINavigationControllerDelegate{
     }
     
     /*
-        /* フラグボタンの設定 */
-        flag.setImage(UIImage(named: "favourites7 (1).png")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
-        
-        flagSituation = card.flag
-        
-        flagPaint(flagSituation)
-        
-    }
-    
-    func flagPaint(_ f :Bool){
-        if f == false {
-            flag.tintColor = UIColor.lightGray
-        }else {
-            flag.tintColor = UIColor.orange
-        }
-    }
-    
-    /* フラグボタンを押した時の処理 */
-    @IBAction func flagOnOff(_ sender: AnyObject) {
-        
-        
-        //フラグ登録してなかったら赤に、してたら元どおりに
-        if db.getFlagStatement(appDelegate.P_ID!) == false{
-            flag.tintColor = UIColor.orange
-            db.setFlag(appDelegate.P_ID!, flagStatement: true)
-        } else {
-            flag.tintColor = UIColor.lightGray
-            db.setFlag(appDelegate.P_ID!, flagStatement: false)
-        }
-        
-        appDelegate.flaglist.removeAll()
-        appDelegate.flaglist = DB().getFlagStatementList()
-    }
-    
- */
+     /* フラグボタンの設定 */
+     flag.setImage(UIImage(named: "favourites7 (1).png")?.withRenderingMode(.alwaysTemplate), for: UIControlState())
+     
+     flagSituation = card.flag
+     
+     flagPaint(flagSituation)
+     
+     }
+     
+     func flagPaint(_ f :Bool){
+     if f == false {
+     flag.tintColor = UIColor.lightGray
+     }else {
+     flag.tintColor = UIColor.orange
+     }
+     }
+     
+     /* フラグボタンを押した時の処理 */
+     @IBAction func flagOnOff(_ sender: AnyObject) {
+     
+     
+     //フラグ登録してなかったら赤に、してたら元どおりに
+     if db.getFlagStatement(appDelegate.P_ID!) == false{
+     flag.tintColor = UIColor.orange
+     db.setFlag(appDelegate.P_ID!, flagStatement: true)
+     } else {
+     flag.tintColor = UIColor.lightGray
+     db.setFlag(appDelegate.P_ID!, flagStatement: false)
+     }
+     
+     appDelegate.flaglist.removeAll()
+     appDelegate.flaglist = DB().getFlagStatementList()
+     }
+     
+     */
 }
