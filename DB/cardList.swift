@@ -138,21 +138,15 @@ class cardList: UIViewController, UITableViewDelegate, UITableViewDataSource{
        
     }
     
-    /* テキストでmap画面へ遷移する */
-    @IBAction func moveMap2(_ sender: Any) {
-        // 押されたボタンを取得
-        let botton = sender as! UIButton
-        let cell = botton.superview?.superview as! setCardList
+    //セルが選択された時に動作する
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // クリックされたcellの位置を取得
-        let row = tableView.indexPath(for: cell)?.row
-        appDelegate.P_ID = row! + 1
+        appDelegate.P_ID = indexPath.row + 1
         
         let storyboard: UIStoryboard = UIStoryboard(name: "map", bundle: nil)
         let next: UIViewController = storyboard.instantiateInitialViewController()!
         present(next, animated: true, completion: nil)
     }
-    
     /*
     /* map画面へ移動する */
     @IBAction func moveMap(_ sender: Any) {
