@@ -7,9 +7,10 @@
 
 import UIKit
 
+
 class diary: UIViewController{
     
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     @IBOutlet weak var navigationbar: UINavigationBar!
     
@@ -26,10 +27,10 @@ class diary: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backbutton(_ sender: AnyObject) {
-        appDelegate.pic_segmented = 0
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        
     }
+    
 
 }

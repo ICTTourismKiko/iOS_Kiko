@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="goG-RA-NYB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="goG-RA-NYB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Photo Select View Controller-->
         <scene sceneID="Cpc-mP-0Eh">
@@ -36,7 +40,7 @@
                                     <navigationItem title="写真選択画面" id="z6m-lt-uch">
                                         <barButtonItem key="leftBarButtonItem" style="done" id="4WM-at-8BP">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a1W-FK-eun">
-                                                <rect key="frame" x="20" y="7" width="83" height="30"/>
+                                                <rect key="frame" x="20" y="8.5" width="30" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                 <state key="normal" title="戻る">
@@ -52,7 +56,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="pYl-Ts-fIx">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C7v-E3-TTm">
-                                                <rect key="frame" x="745" y="7" width="83" height="30"/>
+                                                <rect key="frame" x="798" y="8.5" width="30" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                 <state key="normal" title="完了">
@@ -184,12 +188,12 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="uDw-Wd-xNM"/>
-                                        <exclude reference="kpr-o6-hAI"/>
-                                        <exclude reference="I4O-pK-1rc"/>
                                         <exclude reference="AQW-kP-dQr"/>
-                                        <exclude reference="shB-i7-SSg"/>
-                                        <exclude reference="foJ-ht-I3g"/>
+                                        <exclude reference="I4O-pK-1rc"/>
                                         <exclude reference="aHy-hL-DEG"/>
+                                        <exclude reference="foJ-ht-I3g"/>
+                                        <exclude reference="kpr-o6-hAI"/>
+                                        <exclude reference="shB-i7-SSg"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -211,10 +215,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="xzf-Ur-4ur"/>
-                                <exclude reference="N87-nx-KBB"/>
                                 <exclude reference="HZU-xe-42u"/>
                                 <exclude reference="JqM-4C-Oem"/>
+                                <exclude reference="N87-nx-KBB"/>
+                                <exclude reference="xzf-Ur-4ur"/>
                                 <exclude reference="KUh-vG-ebw"/>
                             </mask>
                         </variation>

@@ -251,10 +251,10 @@
 		378BDDED1C05A3C3000DD5BB /* PagingCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */,
-				378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */,
 				378BDDF21C05A3F5000DD5BB /* PagingCollectionViewLayout.swift */,
 				378BDDF41C05A406000DD5BB /* PagingCollectionView.swift */,
+				378BDDEF1C05A3E3000DD5BB /* PagingCollectionViewCell.xib */,
+				378BDDEE1C05A3E3000DD5BB /* PagingCollectionViewCell.swift */,
 				378E84601C117AF9008B0E39 /* kiko.png */,
 			);
 			name = PagingCollectionView;
@@ -379,9 +379,9 @@
 				8FA413CE1C0F9441003BAD1B /* CreateViewController.swift */,
 				DC08FCBD1C13E6A1002252F2 /* Edit.swift */,
 				8F71FCB61C07AC5E00891228 /* PrintPreviewController.swift */,
-				137160E51FB0574100A352D3 /* diary.swift */,
 				37BBBC471C095E870098B625 /* album_defaultphoto.swift */,
 				37BBBC451C095E730098B625 /* album_userphoto.swift */,
+				137160E51FB0574100A352D3 /* diary.swift */,
 				9CA1E0231C0432370083591E /* setCardList2.swift */,
 				9CACB5551BDE15970024707B /* setCardList.swift */,
 				9CACB5531BDE15760024707B /* cardData.swift */,
